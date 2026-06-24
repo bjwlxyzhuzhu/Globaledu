@@ -1,0 +1,111 @@
+{
+  "key": "宁波",
+  "name_zh": "宁波",
+  "name_en": "Ningbo",
+  "province": "浙江",
+  "tier": "second",
+  "intro_zh": "宁波是浙江东部港口城市，海上丝绸之路的始发港之一，既有深厚的商帮文化，也有现代化的国际大港。",
+  "intro_en": "Ningbo is a port city in eastern Zhejiang and one of the starting points of the Maritime Silk Road, with a deep merchant heritage and a modern international harbor.",
+  "culture_zh": "宁波人务实善商，「宁波帮」闻名海内外。天一阁的书香、海鲜的咸鲜与汤圆的软糯，构成了这座港城的底色。",
+  "culture_en": "Ningbo people are pragmatic and enterprising; the 'Ningbo Gang' is known worldwide. The scholarship of Tianyige, the brine of seafood and the softness of tangyuan color this port city.",
+  "attractions": [
+    {
+      "name_zh": "天一阁",
+      "name_en": "Tianyige Library",
+      "desc_zh": "中国现存最早的私家藏书楼。",
+      "desc_en": "China's oldest surviving private library.",
+      "img": "宁波 天一阁",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "宁波",
+        "天一阁"
+      ],
+      "category": "heritage"
+    },
+    {
+      "name_zh": "老外滩",
+      "name_en": "Ningbo Old Bund",
+      "desc_zh": "三江口畔的近代建筑群，夜色迷人。",
+      "desc_en": "A cluster of early-modern buildings at the three-river junction, lovely by night.",
+      "img": "宁波 老外滩",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "宁波",
+        "老外滩"
+      ],
+      "category": "heritage"
+    },
+    {
+      "name_zh": "东钱湖",
+      "name_en": "Dongqian Lake",
+      "desc_zh": "浙江最大的淡水湖，湖光山色。",
+      "desc_en": "Zhejiang's largest freshwater lake, ringed by hills.",
+      "img": "宁波 东钱湖",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "宁波",
+        "东钱湖"
+      ],
+      "category": "heritage"
+    }
+  ],
+  "foods": [
+    {
+      "name_zh": "宁波汤圆",
+      "name_en": "Ningbo Tangyuan",
+      "desc_zh": "黑芝麻猪油馅，软糯香甜。",
+      "desc_en": "Glutinous rice balls with black-sesame and lard filling—soft, fragrant and sweet.",
+      "img": "宁波汤圆",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "宁波",
+        "宁波汤圆"
+      ],
+      "category": "food"
+    },
+    {
+      "name_zh": "红膏炝蟹",
+      "name_en": "Marinated Crab",
+      "desc_zh": "生腌梭子蟹，咸鲜入味。",
+      "desc_en": "Raw-marinated swimming crab, salty and umami.",
+      "img": "红膏炝蟹 宁波",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "宁波",
+        "红膏炝蟹"
+      ],
+      "category": "food"
+    },
+    {
+      "name_zh": "雪菜大汤黄鱼",
+      "name_en": "Yellow Croaker with Pickled Greens",
+      "desc_zh": "宁波名菜，鱼鲜与雪菜的咸鲜交融。",
+      "desc_en": "A Ningbo classic where fresh croaker meets savory pickled greens.",
+      "img": "雪菜黄鱼 宁波菜",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "宁波",
+        "雪菜大汤黄鱼"
+      ],
+      "category": "food"
+    }
+  ]
+}

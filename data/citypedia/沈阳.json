@@ -1,0 +1,111 @@
+{
+  "key": "沈阳",
+  "name_zh": "沈阳",
+  "name_en": "Shenyang",
+  "province": "辽宁",
+  "tier": "second",
+  "intro_zh": "沈阳是辽宁省省会，是清朝的发祥地，拥有故宫与皇陵，也是中国重要的工业重镇，被称为「共和国长子」。",
+  "intro_en": "Shenyang, capital of Liaoning, is the birthplace of the Qing dynasty, home to an imperial palace and tombs. A major industrial center, it is known as the 'eldest son of the Republic'.",
+  "culture_zh": "满清皇城的厚重与东北的豪爽在这里交融，二人转的热闹与铁锅炖的香气是地道的东北烟火。",
+  "culture_en": "The grandeur of the Manchu imperial city meets northeastern boldness; the fun of errenzhuan opera and the aroma of iron-pot stews are the city's true flavor.",
+  "attractions": [
+    {
+      "name_zh": "沈阳故宫",
+      "name_en": "Mukden Palace",
+      "desc_zh": "清初皇宫，规模仅次于北京故宫。",
+      "desc_en": "The early-Qing imperial palace, second in scale only to Beijing's.",
+      "img": "沈阳故宫",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "沈阳",
+        "沈阳故宫"
+      ],
+      "category": "heritage"
+    },
+    {
+      "name_zh": "张氏帅府",
+      "name_en": "Marshal Zhang's Mansion",
+      "desc_zh": "张作霖、张学良父子的官邸，中西合璧。",
+      "desc_en": "The residence of warlords Zhang Zuolin and Zhang Xueliang, blending East and West.",
+      "img": "沈阳 张氏帅府",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "沈阳",
+        "张氏帅府"
+      ],
+      "category": "heritage"
+    },
+    {
+      "name_zh": "北陵公园",
+      "name_en": "Beiling Park",
+      "desc_zh": "清昭陵所在，古松环绕的皇家陵园。",
+      "desc_en": "Home to the Qing Zhao Mausoleum, a royal tomb ringed by ancient pines.",
+      "img": "沈阳 北陵公园",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "沈阳",
+        "北陵"
+      ],
+      "category": "heritage"
+    }
+  ],
+  "foods": [
+    {
+      "name_zh": "锅包肉",
+      "name_en": "Guobaorou",
+      "desc_zh": "酸甜酥脆的炸里脊，东北名菜。",
+      "desc_en": "Sweet-and-sour crispy fried pork—a Northeastern classic.",
+      "img": "锅包肉 东北菜",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "沈阳",
+        "锅包肉"
+      ],
+      "category": "food"
+    },
+    {
+      "name_zh": "老边饺子",
+      "name_en": "Laobian Dumplings",
+      "desc_zh": "百年老字号的煸馅蒸饺，皮薄馅香。",
+      "desc_en": "A century-old brand of steamed dumplings with savory sautéed filling.",
+      "img": "沈阳 老边饺子",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "沈阳",
+        "老边饺子"
+      ],
+      "category": "food"
+    },
+    {
+      "name_zh": "鸡架",
+      "name_en": "Chicken Frame",
+      "desc_zh": "沈阳人钟爱的下酒小吃，做法多样。",
+      "desc_en": "A beloved Shenyang beer snack, prepared in many ways.",
+      "img": "沈阳 鸡架",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "沈阳",
+        "鸡架"
+      ],
+      "category": "food"
+    }
+  ]
+}

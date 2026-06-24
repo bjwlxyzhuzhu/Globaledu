@@ -1,0 +1,102 @@
+[
+  {
+    "code": "CN",
+    "name_zh": "中国",
+    "name_en": "China",
+    "lat": 35.8617,
+    "lng": 104.1954,
+    "hasContent": true,
+    "native_lang": "zh",
+    "welcome_native": "欢迎来到寰语星球"
+  },
+  {
+    "code": "ID",
+    "name_zh": "印度尼西亚",
+    "name_en": "Indonesia",
+    "lat": -6.2088,
+    "lng": 106.8456,
+    "hasContent": true,
+    "native_lang": "id",
+    "welcome_native": "Selamat datang di Planet Huanyu"
+  },
+  {
+    "code": "TH",
+    "name_zh": "泰国",
+    "name_en": "Thailand",
+    "lat": 13.7563,
+    "lng": 100.5018,
+    "hasContent": true,
+    "native_lang": "th",
+    "welcome_native": "ยินดีต้อนรับสู่ดาวหวนอวี่"
+  },
+  {
+    "code": "PK",
+    "name_zh": "巴基斯坦",
+    "name_en": "Pakistan",
+    "lat": 33.6844,
+    "lng": 73.0479,
+    "hasContent": true,
+    "native_lang": "ur",
+    "welcome_native": "ہوان یو سیارے میں خوش آمدید"
+  },
+  {
+    "code": "KZ",
+    "name_zh": "哈萨克斯坦",
+    "name_en": "Kazakhstan",
+    "lat": 51.1605,
+    "lng": 71.4704,
+    "hasContent": false,
+    "native_lang": "kk",
+    "welcome_native": "Хуанью планетасына қош келдіңіз"
+  },
+  {
+    "code": "RU",
+    "name_zh": "俄罗斯",
+    "name_en": "Russia",
+    "lat": 55.7558,
+    "lng": 37.6173,
+    "hasContent": false,
+    "native_lang": "ru",
+    "welcome_native": "Добро пожаловать на планету Хуаньюй"
+  },
+  {
+    "code": "VN",
+    "name_zh": "越南",
+    "name_en": "Vietnam",
+    "lat": 21.0285,
+    "lng": 105.8542,
+    "hasContent": true,
+    "native_lang": "vi",
+    "welcome_native": "Chào mừng đến hành tinh Hoàn Ngữ"
+  },
+  {
+    "code": "LA",
+    "name_zh": "老挝",
+    "name_en": "Laos",
+    "lat": 17.9757,
+    "lng": 102.6331,
+    "hasContent": false,
+    "native_lang": "lo",
+    "welcome_native": "ຍິນດີຕ້ອນຮັບສູ່ດາວຫວນຢູ່"
+  },
+  {
+    "code": "MY",
+    "name_zh": "马来西亚",
+    "name_en": "Malaysia",
+    "lat": 3.139,
+    "lng": 101.6869,
+    "hasContent": false,
+    "native_lang": "ms",
+    "welcome_native": "Selamat datang ke Planet Huanyu"
+  },
+  {
+    "code": "MN",
+    "name_zh": "蒙古",
+    "name_en": "Mongolia",
+    "lat": 47.8864,
+    "lng": 106.9057,
+    "hasContent": false,
+    "native_lang": "mn",
+    "welcome_native": "Хуанью гарагт тавтай морилно уу"
+  }
+]

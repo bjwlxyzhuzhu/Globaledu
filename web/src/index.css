@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  /* 深空背景：青紫双色辉光 + 深蓝底 */
+  background:
+    radial-gradient(1200px 800px at 72% -12%, rgba(139, 108, 255, 0.18), transparent 60%),
+    radial-gradient(900px 700px at 8% 112%, rgba(63, 210, 255, 0.14), transparent 60%),
+    #05060f;
+  color: #e8ecff;
+  font-family: 'Noto Sans SC', system-ui, -apple-system, 'Microsoft YaHei', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+@layer utilities {
+  /* 玻璃拟态卡片 */
+  .glass {
+    background: rgba(16, 20, 46, 0.55);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(139, 108, 255, 0.25);
+  }
+  .text-glow {
+    text-shadow: 0 0 18px rgba(63, 210, 255, 0.55);
+  }
+  .gold-glow {
+    text-shadow: 0 0 16px rgba(245, 197, 66, 0.6);
+  }
+  /* 主按钮 */
+  .btn-primary {
+    background: linear-gradient(135deg, #8b6cff, #3fd2ff);
+    color: #06122a;
+    font-weight: 600;
+  }
+}
+
+/* Leaflet 暗色主题适配 */
+.leaflet-container {
+  background: #05060f;
+  font-family: inherit;
+}
+.leaflet-interactive {
+  cursor: pointer;
+}
+.leaflet-control-attribution {
+  background: rgba(8, 12, 30, 0.6) !important;
+  color: rgba(255, 255, 255, 0.45) !important;
+  font-size: 10px;
+}
+.leaflet-control-attribution a {
+  color: rgba(127, 201, 255, 0.7) !important;
+}
+.leaflet-bar a {
+  background: rgba(16, 20, 46, 0.85) !important;
+  color: #cdd6ff !important;
+  border-bottom-color: rgba(139, 108, 255, 0.3) !important;
+}
+.leaflet-bar a:hover {
+  background: rgba(40, 48, 96, 0.9) !important;
+}
+.leaflet-tooltip.hyxq-tip {
+  background: rgba(8, 12, 30, 0.92);
+  border: 1px solid rgba(127, 201, 255, 0.45);
+  color: #eaf2ff;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+}
+.leaflet-tooltip.hyxq-tip::before {
+  display: none;
+}

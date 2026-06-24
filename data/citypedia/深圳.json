@@ -1,0 +1,111 @@
+{
+  "key": "深圳",
+  "name_zh": "深圳",
+  "name_en": "Shenzhen",
+  "province": "广东",
+  "tier": "first",
+  "intro_zh": "深圳是中国改革开放的窗口，从小渔村发展成国际化大都市仅用四十余年，是充满活力与创新精神的「青春之城」。",
+  "intro_en": "Shenzhen is a window of China's reform and opening-up, growing from a fishing village into an international metropolis in just over forty years—a youthful city full of energy and innovation.",
+  "culture_zh": "移民城市的包容与创新塑造了深圳的气质，这里少有方言隔阂，多的是「敢闯敢试」的拼搏与日新月异的科技。",
+  "culture_en": "The inclusiveness and innovation of an immigrant city shape Shenzhen's spirit; with few dialect barriers, it is defined by a daring, striving energy and fast-changing technology.",
+  "attractions": [
+    {
+      "name_zh": "世界之窗",
+      "name_en": "Window of the World",
+      "desc_zh": "汇集世界著名景观微缩模型的主题公园。",
+      "desc_en": "A theme park of miniature replicas of famous world landmarks.",
+      "img": "深圳 世界之窗",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "深圳",
+        "世界之窗"
+      ],
+      "category": "modern"
+    },
+    {
+      "name_zh": "莲花山公园",
+      "name_en": "Lianhuashan Park",
+      "desc_zh": "登顶可俯瞰市中心天际线的城市公园。",
+      "desc_en": "A city park whose summit overlooks the downtown skyline.",
+      "img": "深圳 莲花山公园",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "深圳",
+        "莲花山"
+      ],
+      "category": "modern"
+    },
+    {
+      "name_zh": "深圳湾公园",
+      "name_en": "Shenzhen Bay Park",
+      "desc_zh": "滨海绿道，可远眺对岸的香港。",
+      "desc_en": "A seaside greenway with views across to Hong Kong.",
+      "img": "深圳湾公园 海岸",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "深圳",
+        "深圳湾"
+      ],
+      "category": "heritage"
+    }
+  ],
+  "foods": [
+    {
+      "name_zh": "沙井蚝",
+      "name_en": "Shajing Oysters",
+      "desc_zh": "深圳本地特产生蚝，肥美鲜甜。",
+      "desc_en": "Shenzhen's local Shajing oysters—plump, fresh and sweet.",
+      "img": "沙井生蚝",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "深圳",
+        "沙井蚝"
+      ],
+      "category": "food"
+    },
+    {
+      "name_zh": "肠粉",
+      "name_en": "Rice Noodle Rolls",
+      "desc_zh": "街头早餐，米皮滑嫩，酱汁鲜香。",
+      "desc_en": "A street breakfast of silky rice rolls in savory sauce.",
+      "img": "广东 肠粉",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "深圳",
+        "肠粉"
+      ],
+      "category": "food"
+    },
+    {
+      "name_zh": "客家盆菜",
+      "name_en": "Hakka Poon Choi",
+      "desc_zh": "原住民客家人的丰盛大盆菜，层层叠味。",
+      "desc_en": "The lavish layered 'big bowl feast' of the native Hakka people.",
+      "img": "客家盆菜",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "深圳",
+        "客家盆菜"
+      ],
+      "category": "food"
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "key": "无锡",
+  "name_zh": "无锡",
+  "name_en": "Wuxi",
+  "province": "江苏",
+  "tier": "second",
+  "intro_zh": "无锡是江苏南部城市，太湖明珠，京杭大运河穿城而过，是江南鱼米之乡，也是近代民族工商业的发祥地之一。",
+  "intro_en": "Wuxi, in southern Jiangsu, is a 'pearl of Lake Tai'. The Grand Canal runs through it; a land of fish and rice, it was also a cradle of modern Chinese industry.",
+  "culture_zh": "无锡人精致温婉，太湖的水与江南的园林滋养了这里的生活，惠山泥人、锡剧与酱排骨的甜香是地道的无锡味道。",
+  "culture_en": "Wuxi people are refined and gentle; the waters of Lake Tai and the gardens of the south nourish daily life, while clay figurines, Xi opera and sweet braised ribs are its authentic flavors.",
+  "attractions": [
+    {
+      "name_zh": "鼋头渚",
+      "name_en": "Yuantouzhu",
+      "desc_zh": "太湖边的赏樱胜地，烟波浩渺。",
+      "desc_en": "A cherry-blossom spot on the misty shore of Lake Tai.",
+      "img": "无锡 鼋头渚 太湖",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "无锡",
+        "鼋头渚"
+      ],
+      "category": "heritage"
+    },
+    {
+      "name_zh": "灵山大佛",
+      "name_en": "Lingshan Grand Buddha",
+      "desc_zh": "高大庄严的青铜立佛，气势恢宏。",
+      "desc_en": "A towering, solemn standing bronze Buddha.",
+      "img": "无锡 灵山大佛",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "无锡",
+        "灵山大佛"
+      ],
+      "category": "heritage"
+    },
+    {
+      "name_zh": "南长街",
+      "name_en": "Nanchang Street",
+      "desc_zh": "运河边的古街，枕河人家，灯影摇曳。",
+      "desc_en": "An old street along the canal, with riverside homes and shimmering lights.",
+      "img": "无锡 南长街 运河",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "无锡",
+        "南长街"
+      ],
+      "category": "heritage"
+    }
+  ],
+  "foods": [
+    {
+      "name_zh": "无锡酱排骨",
+      "name_en": "Wuxi Spare Ribs",
+      "desc_zh": "色泽红亮、咸中带甜的招牌菜。",
+      "desc_en": "The signature dish: glossy red ribs, savory with a sweet finish.",
+      "img": "无锡 酱排骨",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "无锡",
+        "无锡酱排骨"
+      ],
+      "category": "food"
+    },
+    {
+      "name_zh": "小笼包",
+      "name_en": "Soup Dumplings",
+      "desc_zh": "无锡小笼皮薄汁多，口味偏甜。",
+      "desc_en": "Wuxi soup dumplings: thin skins, plenty of juice, slightly sweet.",
+      "img": "无锡 小笼包",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "无锡",
+        "小笼包"
+      ],
+      "category": "food"
+    },
+    {
+      "name_zh": "太湖三白",
+      "name_en": "Three Whites of Lake Tai",
+      "desc_zh": "白鱼、白虾、银鱼，太湖时鲜。",
+      "desc_en": "Whitefish, white shrimp and icefish—seasonal delicacies of Lake Tai.",
+      "img": "太湖三白 白虾",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "无锡",
+        "太湖三白"
+      ],
+      "category": "food"
+    }
+  ]
+}

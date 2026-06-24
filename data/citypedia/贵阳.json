@@ -1,0 +1,111 @@
+{
+  "key": "贵阳",
+  "name_zh": "贵阳",
+  "name_en": "Guiyang",
+  "province": "贵州",
+  "tier": "second",
+  "intro_zh": "贵阳是贵州省省会，群山环抱，气候凉爽，被称为「林城」与「避暑之都」，也是新兴的大数据产业之城。",
+  "intro_en": "Guiyang, capital of Guizhou, is cradled by mountains with a cool climate—the 'Forest City' and a 'summer-cool capital', and a rising hub for the big-data industry.",
+  "culture_zh": "山地与多民族赋予贵阳独特气质，酸辣的黔味令人上瘾，甲秀楼见证着城市的文脉。",
+  "culture_en": "Mountains and many ethnic groups give Guiyang a unique character; its sour-and-spicy Guizhou flavors are addictive, and Jiaxiu Tower watches over the city's heritage.",
+  "attractions": [
+    {
+      "name_zh": "甲秀楼",
+      "name_en": "Jiaxiu Tower",
+      "desc_zh": "南明河上的古楼，贵阳的标志。",
+      "desc_en": "An old tower on the Nanming River, the emblem of Guiyang.",
+      "img": "贵阳 甲秀楼",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "贵阳",
+        "甲秀楼"
+      ],
+      "category": "heritage"
+    },
+    {
+      "name_zh": "黔灵山公园",
+      "name_en": "Qianling Mountain Park",
+      "desc_zh": "城中森林公园，可见成群的猕猴。",
+      "desc_en": "A forest park in the city, home to troops of wild macaques.",
+      "img": "贵阳 黔灵山 猕猴",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "贵阳",
+        "黔灵山"
+      ],
+      "category": "heritage"
+    },
+    {
+      "name_zh": "青岩古镇",
+      "name_en": "Qingyan Ancient Town",
+      "desc_zh": "明清军事古镇，石巷与城墙古朴。",
+      "desc_en": "A Ming-Qing garrison town with stone lanes and old walls.",
+      "img": "贵阳 青岩古镇",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "贵阳",
+        "青岩"
+      ],
+      "category": "heritage"
+    }
+  ],
+  "foods": [
+    {
+      "name_zh": "丝娃娃",
+      "name_en": "Siwawa",
+      "desc_zh": "薄饼卷各种素菜，淋上酸辣汤汁。",
+      "desc_en": "Thin pancakes rolled with vegetables and a sour-spicy sauce.",
+      "img": "贵阳 丝娃娃",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "贵阳",
+        "丝娃娃"
+      ],
+      "category": "food"
+    },
+    {
+      "name_zh": "肠旺面",
+      "name_en": "Changwang Noodles",
+      "desc_zh": "猪肠与血旺同煮的红汤面，香辣浓郁。",
+      "desc_en": "Red-broth noodles with pork intestine and blood curd—spicy and rich.",
+      "img": "贵阳 肠旺面",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "贵阳",
+        "肠旺面"
+      ],
+      "category": "food"
+    },
+    {
+      "name_zh": "酸汤鱼",
+      "name_en": "Sour Soup Fish",
+      "desc_zh": "苗家酸汤煮鱼，开胃醒神。",
+      "desc_en": "Fish in a Miao-style fermented sour soup—bright and refreshing.",
+      "img": "贵州 酸汤鱼",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "贵阳",
+        "酸汤鱼"
+      ],
+      "category": "food"
+    }
+  ]
+}

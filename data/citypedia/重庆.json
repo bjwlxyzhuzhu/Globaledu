@@ -1,0 +1,111 @@
+{
+  "key": "重庆",
+  "name_zh": "重庆",
+  "name_en": "Chongqing",
+  "province": "重庆",
+  "tier": "new-first",
+  "intro_zh": "重庆是中国西南的直辖市，山城江城，两江交汇，以麻辣火锅、立体魔幻的城市景观和热情豪爽的性格闻名。",
+  "intro_en": "Chongqing, a municipality in southwest China, is a mountain-and-river city at the meeting of two rivers, famed for spicy hotpot, a magical multi-level cityscape and a bold, warm character.",
+  "culture_zh": "建在山上的「8D 魔幻城市」、轻轨穿楼、洪崖洞的夜景，加上麻辣鲜香的火锅与码头文化，重庆充满烟火气与江湖气。",
+  "culture_en": "An '8D magical city' built on hills, a light-rail that runs through a building, the night view of Hongya Cave, plus spicy hotpot and dockside culture—Chongqing brims with life.",
+  "attractions": [
+    {
+      "name_zh": "洪崖洞",
+      "name_en": "Hongya Cave",
+      "desc_zh": "依崖而建的吊脚楼群，夜景宛如宫崎骏动画。",
+      "desc_en": "Stilted houses built into the cliff, lit at night like a Miyazaki film.",
+      "img": "重庆 洪崖洞 夜景",
+      "category": "art",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "重庆",
+        "洪崖洞"
+      ]
+    },
+    {
+      "name_zh": "解放碑",
+      "name_en": "Jiefangbei",
+      "desc_zh": "市中心地标商圈，繁华热闹。",
+      "desc_en": "The downtown landmark and bustling commercial hub.",
+      "img": "重庆 解放碑",
+      "category": "modern",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "重庆",
+        "解放碑"
+      ]
+    },
+    {
+      "name_zh": "长江索道",
+      "name_en": "Yangtze Cableway",
+      "desc_zh": "横跨长江的空中缆车，俯瞰山城两岸。",
+      "desc_en": "A cable car across the Yangtze with views over the mountain city.",
+      "img": "重庆 长江索道",
+      "category": "heritage",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "重庆",
+        "长江索道"
+      ]
+    }
+  ],
+  "foods": [
+    {
+      "name_zh": "重庆火锅",
+      "name_en": "Chongqing Hotpot",
+      "desc_zh": "牛油红汤、又麻又辣，重庆人的灵魂。",
+      "desc_en": "Beef-tallow red broth, intensely numbing-spicy—the soul of Chongqing.",
+      "img": "重庆 火锅",
+      "category": "food",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "重庆",
+        "重庆火锅"
+      ]
+    },
+    {
+      "name_zh": "重庆小面",
+      "name_en": "Chongqing Noodles",
+      "desc_zh": "麻辣鲜香的街头小面，早餐一碗最巴适。",
+      "desc_en": "Spicy street noodles—a perfect bowl for breakfast.",
+      "img": "重庆小面",
+      "category": "food",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "重庆",
+        "重庆小面"
+      ]
+    },
+    {
+      "name_zh": "酸辣粉",
+      "name_en": "Hot & Sour Noodles",
+      "desc_zh": "红薯粉配酸辣汤，爽滑开胃。",
+      "desc_en": "Sweet-potato noodles in a hot-and-sour broth—smooth and appetizing.",
+      "img": "重庆 酸辣粉",
+      "category": "food",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "重庆",
+        "酸辣粉"
+      ]
+    }
+  ]
+}

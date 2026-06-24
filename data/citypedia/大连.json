@@ -1,0 +1,111 @@
+{
+  "key": "大连",
+  "name_zh": "大连",
+  "name_en": "Dalian",
+  "province": "辽宁",
+  "tier": "second",
+  "intro_zh": "大连是辽宁南部的海滨城市，三面环海，气候凉爽，以浪漫的海岸线、广场与有轨电车闻名。",
+  "intro_en": "Dalian is a coastal city in southern Liaoning, surrounded by sea on three sides with a cool climate, famed for its romantic coastline, squares and old trams.",
+  "culture_zh": "历史在这里留下了欧式建筑与广场，海洋赋予了大连开放浪漫的气质，海鲜与足球是这座城市共同的热爱。",
+  "culture_en": "History left European squares and buildings, the sea gave Dalian an open, romantic spirit, and seafood and football are the city's shared loves.",
+  "attractions": [
+    {
+      "name_zh": "星海广场",
+      "name_en": "Xinghai Square",
+      "desc_zh": "临海开阔的城市广场，视野壮阔。",
+      "desc_en": "A vast seaside city square with sweeping views.",
+      "img": "大连 星海广场",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "大连",
+        "星海广场"
+      ],
+      "category": "modern"
+    },
+    {
+      "name_zh": "滨海路",
+      "name_en": "Binhai Road",
+      "desc_zh": "沿海崖壁公路，是绝佳的观海路线。",
+      "desc_en": "A clifftop coastal road and a superb route for sea views.",
+      "img": "大连 滨海路 海岸",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "大连",
+        "滨海路"
+      ],
+      "category": "heritage"
+    },
+    {
+      "name_zh": "老虎滩",
+      "name_en": "Laohutan",
+      "desc_zh": "海洋公园与礁石海岸相依。",
+      "desc_en": "An ocean park set against a rocky shore.",
+      "img": "大连 老虎滩 海洋公园",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "大连",
+        "老虎滩"
+      ],
+      "category": "heritage"
+    }
+  ],
+  "foods": [
+    {
+      "name_zh": "焖子",
+      "name_en": "Menzi",
+      "desc_zh": "大连特色小吃，凉粉煎制后浇上麻酱蒜汁。",
+      "desc_en": "A Dalian street snack: pan-fried starch jelly with sesame-garlic sauce.",
+      "img": "大连 焖子 小吃",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "大连",
+        "焖子"
+      ],
+      "category": "food"
+    },
+    {
+      "name_zh": "鲅鱼饺子",
+      "name_en": "Mackerel Dumplings",
+      "desc_zh": "海鲜馅饺子，鲜香多汁。",
+      "desc_en": "Seafood dumplings filled with fresh mackerel.",
+      "img": "大连 鲅鱼饺子",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "大连",
+        "鲅鱼饺子"
+      ],
+      "category": "food"
+    },
+    {
+      "name_zh": "海鲜烧烤",
+      "name_en": "Grilled Seafood",
+      "desc_zh": "新鲜的扇贝、海螺等炭火烧烤。",
+      "desc_en": "Fresh scallops, conch and more grilled over charcoal.",
+      "img": "大连 烤海鲜 扇贝",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "大连",
+        "海鲜烧烤"
+      ],
+      "category": "food"
+    }
+  ]
+}

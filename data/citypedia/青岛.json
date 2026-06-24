@@ -1,0 +1,111 @@
+{
+  "key": "青岛",
+  "name_zh": "青岛",
+  "name_en": "Qingdao",
+  "province": "山东",
+  "tier": "second",
+  "intro_zh": "青岛是山东沿海城市，红瓦绿树、碧海蓝天，曾受德国建筑文化影响，是著名的海滨旅游与啤酒之城。",
+  "intro_en": "Qingdao is a coastal city in Shandong of red roofs, green trees, blue sea and sky. Once shaped by German architecture, it is famed for its seaside tourism and its beer.",
+  "culture_zh": "海洋塑造了青岛的性格，海鲜与啤酒是市民生活的日常。八大关的老建筑与栈桥的海风，记录着这座城市的中西交融。",
+  "culture_en": "The sea shapes Qingdao's character, with seafood and beer a daily ritual. The old villas of Badaguan and the breeze off Zhanqiao Pier record its blend of East and West.",
+  "attractions": [
+    {
+      "name_zh": "栈桥",
+      "name_en": "Zhanqiao Pier",
+      "desc_zh": "伸入大海的百年长桥，青岛的象征。",
+      "desc_en": "A century-old pier reaching into the sea—the symbol of Qingdao.",
+      "img": "青岛 栈桥",
+      "category": "heritage",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "青岛",
+        "栈桥"
+      ]
+    },
+    {
+      "name_zh": "八大关",
+      "name_en": "Badaguan",
+      "desc_zh": "万国建筑博览，绿荫掩映的老别墅区。",
+      "desc_en": "A leafy district of villas in styles from around the world.",
+      "img": "青岛 八大关 建筑",
+      "category": "heritage",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "青岛",
+        "八大关"
+      ]
+    },
+    {
+      "name_zh": "崂山",
+      "name_en": "Mount Lao",
+      "desc_zh": "海上名山，道教圣地，山海相连。",
+      "desc_en": "A famous coastal mountain and Taoist holy site where peaks meet the sea.",
+      "img": "青岛 崂山",
+      "category": "heritage",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "青岛",
+        "崂山"
+      ]
+    }
+  ],
+  "foods": [
+    {
+      "name_zh": "青岛啤酒",
+      "name_en": "Tsingtao Beer",
+      "desc_zh": "百年品牌，海鲜配扎啤是当地标配。",
+      "desc_en": "A century-old brand; fresh seafood with draft beer is the local way.",
+      "img": "青岛啤酒 海鲜",
+      "category": "food",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "青岛",
+        "青岛啤酒"
+      ]
+    },
+    {
+      "name_zh": "鲅鱼饺子",
+      "name_en": "Mackerel Dumplings",
+      "desc_zh": "用新鲜鲅鱼做馅，鲜美多汁。",
+      "desc_en": "Dumplings filled with fresh mackerel—savory and juicy.",
+      "img": "鲅鱼饺子",
+      "category": "food",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "青岛",
+        "鲅鱼饺子"
+      ]
+    },
+    {
+      "name_zh": "辣炒蛤蜊",
+      "name_en": "Spicy Clams",
+      "desc_zh": "青岛人下啤酒的经典海鲜小炒。",
+      "desc_en": "Stir-fried spicy clams, the classic companion to a Qingdao beer.",
+      "img": "辣炒蛤蜊 青岛",
+      "category": "food",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "青岛",
+        "辣炒蛤蜊"
+      ]
+    }
+  ]
+}

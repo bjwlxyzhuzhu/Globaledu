@@ -1,0 +1,111 @@
+{
+  "key": "南昌",
+  "name_zh": "南昌",
+  "name_en": "Nanchang",
+  "province": "江西",
+  "tier": "second",
+  "intro_zh": "南昌是江西省省会，赣江穿城，是「英雄城」（八一南昌起义所在地），也是滕王阁所在的历史文化名城。",
+  "intro_en": "Nanchang, capital of Jiangxi, is split by the Gan River. The 'Heroic City' where the August 1st Uprising began, it is also the historic home of the Tengwang Pavilion.",
+  "culture_zh": "红色文化与赣鄱文化在此交汇，王勃一篇《滕王阁序》让南昌名传千古，瓦罐汤是市井的暖意。",
+  "culture_en": "Revolutionary heritage meets Gan-Poyang culture here; Wang Bo's preface to the Tengwang Pavilion made Nanchang immortal, and clay-pot soup is the warmth of its streets.",
+  "attractions": [
+    {
+      "name_zh": "滕王阁",
+      "name_en": "Tengwang Pavilion",
+      "desc_zh": "江南三大名楼之一，凭栏赣江。",
+      "desc_en": "One of the three great towers south of the Yangtze, overlooking the Gan River.",
+      "img": "南昌 滕王阁",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "南昌",
+        "滕王阁"
+      ],
+      "category": "heritage"
+    },
+    {
+      "name_zh": "八一广场",
+      "name_en": "Bayi Square",
+      "desc_zh": "城市中心广场，纪念南昌起义。",
+      "desc_en": "The central city square commemorating the Nanchang Uprising.",
+      "img": "南昌 八一广场",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "南昌",
+        "八一广场"
+      ],
+      "category": "modern"
+    },
+    {
+      "name_zh": "秋水广场",
+      "name_en": "Qiushui Square",
+      "desc_zh": "赣江畔的音乐喷泉，夜景璀璨。",
+      "desc_en": "Musical fountains on the bank of the Gan River, dazzling at night.",
+      "img": "南昌 秋水广场 喷泉",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "南昌",
+        "秋水广场"
+      ],
+      "category": "modern"
+    }
+  ],
+  "foods": [
+    {
+      "name_zh": "瓦罐汤",
+      "name_en": "Clay-pot Soup",
+      "desc_zh": "瓦罐久煨的汤品，配拌粉是经典早餐。",
+      "desc_en": "Soup slow-simmered in clay pots, classic with mixed rice noodles for breakfast.",
+      "img": "南昌 瓦罐汤",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "南昌",
+        "瓦罐汤"
+      ],
+      "category": "food"
+    },
+    {
+      "name_zh": "南昌拌粉",
+      "name_en": "Nanchang Mixed Rice Noodles",
+      "desc_zh": "爽滑米粉拌上酱料，酸辣开胃。",
+      "desc_en": "Smooth rice noodles tossed in sauce—sour, spicy and appetizing.",
+      "img": "南昌 拌粉",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "南昌",
+        "南昌拌粉"
+      ],
+      "category": "food"
+    },
+    {
+      "name_zh": "藜蒿炒腊肉",
+      "name_en": "Artemisia with Cured Pork",
+      "desc_zh": "鄱阳湖藜蒿配腊肉，鲜香爽脆。",
+      "desc_en": "Poyang Lake artemisia stir-fried with cured pork—fresh and crisp.",
+      "img": "藜蒿炒腊肉 江西菜",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "南昌",
+        "藜蒿炒腊肉"
+      ],
+      "category": "food"
+    }
+  ]
+}

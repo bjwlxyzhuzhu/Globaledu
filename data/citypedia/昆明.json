@@ -1,0 +1,111 @@
+{
+  "key": "昆明",
+  "name_zh": "昆明",
+  "name_en": "Kunming",
+  "province": "云南",
+  "tier": "second",
+  "intro_zh": "昆明是云南省省会，四季如春，被誉为「春城」，是滇池之畔的高原明珠，也是通往东南亚的门户。",
+  "intro_en": "Kunming, capital of Yunnan, enjoys spring-like weather year-round—the 'Spring City'. A highland pearl on the shore of Dianchi Lake, it is China's gateway to Southeast Asia.",
+  "culture_zh": "多民族文化在这里交融，茶花与鲜花常年盛开，过桥米线的故事温暖动人。",
+  "culture_en": "Many ethnic cultures meet here; camellias and fresh flowers bloom all year, and the legend behind crossing-the-bridge rice noodles is heart-warming.",
+  "attractions": [
+    {
+      "name_zh": "滇池",
+      "name_en": "Dianchi Lake",
+      "desc_zh": "云南最大的高原湖泊，冬日红嘴鸥群飞。",
+      "desc_en": "Yunnan's largest highland lake, where black-headed gulls flock in winter.",
+      "img": "昆明 滇池 海鸥",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "昆明",
+        "滇池"
+      ],
+      "category": "heritage"
+    },
+    {
+      "name_zh": "石林",
+      "name_en": "Stone Forest",
+      "desc_zh": "壮观的喀斯特石林奇观，世界自然遗产。",
+      "desc_en": "A spectacular karst stone forest and World Natural Heritage site.",
+      "img": "昆明 石林",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "昆明",
+        "石林"
+      ],
+      "category": "heritage"
+    },
+    {
+      "name_zh": "翠湖",
+      "name_en": "Green Lake",
+      "desc_zh": "城中静谧的园林湖泊，杨柳依依。",
+      "desc_en": "A tranquil garden lake in the city, fringed with willows.",
+      "img": "昆明 翠湖公园",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "昆明",
+        "翠湖"
+      ],
+      "category": "art"
+    }
+  ],
+  "foods": [
+    {
+      "name_zh": "过桥米线",
+      "name_en": "Crossing-the-Bridge Rice Noodles",
+      "desc_zh": "滚汤现烫米线与配料，鲜美一绝。",
+      "desc_en": "Rice noodles and toppings cooked at the table in piping-hot broth.",
+      "img": "昆明 过桥米线",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "昆明",
+        "过桥米线"
+      ],
+      "category": "food"
+    },
+    {
+      "name_zh": "汽锅鸡",
+      "name_en": "Steam-pot Chicken",
+      "desc_zh": "汽锅蒸出的清鸡汤，原汁原味。",
+      "desc_en": "Chicken steamed in a special pot for a pure, clear broth.",
+      "img": "云南 汽锅鸡",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "昆明",
+        "汽锅鸡"
+      ],
+      "category": "food"
+    },
+    {
+      "name_zh": "鲜花饼",
+      "name_en": "Flower Cake",
+      "desc_zh": "玫瑰花瓣入馅的酥饼，香甜不腻。",
+      "desc_en": "A flaky pastry filled with rose petals—sweet and fragrant.",
+      "img": "云南 鲜花饼 玫瑰",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "昆明",
+        "鲜花饼"
+      ],
+      "category": "food"
+    }
+  ]
+}

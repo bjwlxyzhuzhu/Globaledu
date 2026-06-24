@@ -1,0 +1,21 @@
+{
+  "name": "huanyu-planet",
+  "private": true,
+  "version": "0.1.0",
+  "description": "寰语星球 · 来华留学生分级中文与中华文化学习智能体平台",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -k -n web,server -c cyan,magenta \"pnpm -C web dev\" \"pnpm -C server dev\"",
+    "build": "pnpm -C web build",
+    "start": "pnpm -C server start",
+    "seed": "pnpm -C server seed",
+    "typecheck": "pnpm -C web typecheck && pnpm -C server typecheck"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "packageManager": "pnpm@10.33.0",
+  "pnpm": {
+    "onlyBuiltDependencies": ["esbuild"]
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "key": "北京",
+  "name_zh": "北京",
+  "name_en": "Beijing",
+  "province": "北京",
+  "tier": "first",
+  "intro_zh": "北京是中国的首都，有三千余年建城史、八百余年建都史。这座古都既有故宫、长城的恢宏，也有胡同、四合院的市井烟火。",
+  "intro_en": "Beijing, the capital of China, has over 3,000 years of history as a city and 800 as a capital. The ancient city holds both the grandeur of the Forbidden City and Great Wall and the everyday life of its hutongs.",
+  "culture_zh": "红墙黄瓦的皇城气派与胡同里的「京味儿」生活并存，京剧、相声、四合院与冰糖葫芦，处处是老北京的文化记忆。",
+  "culture_en": "Imperial grandeur of red walls and golden tiles coexists with hutong life; Peking opera, crosstalk, courtyard homes and candied haws are all memories of old Beijing.",
+  "attractions": [
+    {
+      "name_zh": "故宫",
+      "name_en": "The Forbidden City",
+      "desc_zh": "明清两代皇宫，世界最大的古代宫殿建筑群。",
+      "desc_en": "Imperial palace of the Ming and Qing—the world's largest ancient palace complex.",
+      "img": "北京 故宫",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "北京",
+        "故宫"
+      ],
+      "category": "heritage"
+    },
+    {
+      "name_zh": "长城",
+      "name_en": "The Great Wall",
+      "desc_zh": "八达岭一段最为著名，万里长城蜿蜒于群山。",
+      "desc_en": "The Badaling section is the most famous, as the wall winds across the mountains.",
+      "img": "北京 八达岭长城",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "北京",
+        "长城"
+      ],
+      "category": "heritage"
+    },
+    {
+      "name_zh": "天坛",
+      "name_en": "Temple of Heaven",
+      "desc_zh": "明清皇帝祭天之所，祈年殿庄严优美。",
+      "desc_en": "Where Ming and Qing emperors prayed to Heaven; the Hall of Prayer is solemn and elegant.",
+      "img": "北京 天坛 祈年殿",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "北京",
+        "天坛"
+      ],
+      "category": "heritage"
+    },
+    {
+      "name_zh": "颐和园",
+      "name_en": "Summer Palace",
+      "desc_zh": "皇家园林典范，昆明湖与万寿山相映。",
+      "desc_en": "A masterpiece of imperial gardens, with Kunming Lake set off by Longevity Hill.",
+      "img": "北京 颐和园",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "北京",
+        "颐和园"
+      ],
+      "category": "art"
+    }
+  ],
+  "foods": [
+    {
+      "name_zh": "北京烤鸭",
+      "name_en": "Peking Duck",
+      "desc_zh": "皮酥肉嫩，卷饼蘸酱，京城名菜之首。",
+      "desc_en": "Crisp skin and tender meat wrapped in pancakes—Beijing's foremost dish.",
+      "img": "北京烤鸭",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "北京",
+        "北京烤鸭"
+      ],
+      "category": "food"
+    },
+    {
+      "name_zh": "炸酱面",
+      "name_en": "Zhajiangmian",
+      "desc_zh": "黄酱炒肉丁配菜码的老北京面。",
+      "desc_en": "Old-Beijing noodles with fried soybean-paste pork and crisp vegetables.",
+      "img": "老北京 炸酱面",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "北京",
+        "炸酱面"
+      ],
+      "category": "food"
+    },
+    {
+      "name_zh": "豆汁焦圈",
+      "name_en": "Douzhi & Jiaoquan",
+      "desc_zh": "老北京独特的发酵豆汁配炸焦圈。",
+      "desc_en": "A uniquely old-Beijing fermented mung-bean drink with fried dough rings.",
+      "img": "北京 豆汁 焦圈",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "北京",
+        "豆汁焦圈"
+      ],
+      "category": "food"
+    }
+  ]
+}

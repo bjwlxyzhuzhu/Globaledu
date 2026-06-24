@@ -1,0 +1,111 @@
+{
+  "key": "郑州",
+  "name_zh": "郑州",
+  "name_en": "Zhengzhou",
+  "province": "河南",
+  "tier": "second",
+  "intro_zh": "郑州是河南省省会，地处中原，是中国重要的铁路交通枢纽（被称为「火车拉来的城市」），也是华夏文明的重要发源地之一。",
+  "intro_en": "Zhengzhou, capital of Henan, lies in the Central Plains. A major railway hub often called 'the city the trains built', it is also one of the cradles of Chinese civilization.",
+  "culture_zh": "中原文化的厚重在这里随处可见，嵩山少林功夫名扬天下，烩面的热气里是河南人的实在与豪爽。",
+  "culture_en": "The weight of Central Plains culture is everywhere; Shaolin kung fu from nearby Mount Song is world-famous, and the steam of a bowl of huimian carries Henan's honest warmth.",
+  "attractions": [
+    {
+      "name_zh": "少林寺",
+      "name_en": "Shaolin Temple",
+      "desc_zh": "嵩山脚下的千年古刹，中国武术的发源地。",
+      "desc_en": "An ancient temple at the foot of Mount Song, birthplace of Chinese martial arts.",
+      "img": "嵩山 少林寺",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "郑州",
+        "少林寺"
+      ],
+      "category": "heritage"
+    },
+    {
+      "name_zh": "黄河风景区",
+      "name_en": "Yellow River Scenic Area",
+      "desc_zh": "近观母亲河，感受中华文明的源流。",
+      "desc_en": "View the Mother River up close and feel the source of Chinese civilization.",
+      "img": "郑州 黄河 风景",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "郑州",
+        "黄河"
+      ],
+      "category": "heritage"
+    },
+    {
+      "name_zh": "二七纪念塔",
+      "name_en": "Erqi Memorial Tower",
+      "desc_zh": "市中心的标志性建筑，纪念二七大罢工。",
+      "desc_en": "A landmark tower in the city center commemorating the 1923 railway strike.",
+      "img": "郑州 二七纪念塔",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "郑州",
+        "二七纪念塔"
+      ],
+      "category": "modern"
+    }
+  ],
+  "foods": [
+    {
+      "name_zh": "烩面",
+      "name_en": "Huimian",
+      "desc_zh": "羊肉烩面，汤鲜面筋，河南招牌。",
+      "desc_en": "Mutton braised noodles in a rich broth—Henan's signature bowl.",
+      "img": "河南 烩面",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "郑州",
+        "烩面"
+      ],
+      "category": "food"
+    },
+    {
+      "name_zh": "胡辣汤",
+      "name_en": "Hulatang",
+      "desc_zh": "辛辣浓稠的早餐汤，暖胃提神。",
+      "desc_en": "A spicy, thick breakfast soup that warms and wakes you up.",
+      "img": "胡辣汤 河南",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "郑州",
+        "胡辣汤"
+      ],
+      "category": "food"
+    },
+    {
+      "name_zh": "道口烧鸡",
+      "name_en": "Daokou Roast Chicken",
+      "desc_zh": "色香味俱佳的中华老字号卤鸡。",
+      "desc_en": "A time-honored braised chicken, fragrant and tender.",
+      "img": "道口烧鸡",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "郑州",
+        "道口烧鸡"
+      ],
+      "category": "food"
+    }
+  ]
+}

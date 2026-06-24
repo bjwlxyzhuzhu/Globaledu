@@ -1,0 +1,111 @@
+{
+  "key": "南宁",
+  "name_zh": "南宁",
+  "name_en": "Nanning",
+  "province": "广西",
+  "tier": "second",
+  "intro_zh": "南宁是广西壮族自治区首府，「绿城」，邕江穿城，四季常绿，是面向东盟的门户与多民族交融的城市。",
+  "intro_en": "Nanning, capital of Guangxi, is the 'Green City' on the Yong River—evergreen year-round, a gateway to ASEAN and a meeting point of many ethnic groups.",
+  "culture_zh": "壮族歌圩与「三月三」的山歌、满城的绿树繁花，还有酸辣鲜香的老友粉，南宁悠闲包容、东盟风情浓。",
+  "culture_en": "Zhuang folk-song festivals and the 'Triple Third' singing day, a city full of greenery and flowers, plus tangy laoyou noodles—Nanning is relaxed, inclusive and rich in ASEAN flavor.",
+  "attractions": [
+    {
+      "name_zh": "青秀山",
+      "name_en": "Qingxiu Mountain",
+      "desc_zh": "城中绿肺，热带植物与塔影相映。",
+      "desc_en": "The city's green lung, with tropical plants and a pagoda.",
+      "img": "南宁 青秀山",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "南宁",
+        "青秀山"
+      ],
+      "category": "heritage"
+    },
+    {
+      "name_zh": "南湖公园",
+      "name_en": "Nanhu Park",
+      "desc_zh": "碧波环城的湖滨公园，夜跑赏景皆宜。",
+      "desc_en": "A lakeside park ringing the city—great for evening strolls.",
+      "img": "南宁 南湖公园",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "南宁",
+        "南湖"
+      ],
+      "category": "heritage"
+    },
+    {
+      "name_zh": "三街两巷",
+      "name_en": "Three Streets & Two Lanes",
+      "desc_zh": "老南宁的历史街区，骑楼与小吃聚集。",
+      "desc_en": "Old Nanning's historic quarter of arcades and snacks.",
+      "img": "南宁 三街两巷",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "南宁",
+        "三街两巷"
+      ],
+      "category": "heritage"
+    }
+  ],
+  "foods": [
+    {
+      "name_zh": "老友粉",
+      "name_en": "Laoyou Rice Noodles",
+      "desc_zh": "酸辣浓香的米粉，南宁的味觉名片。",
+      "desc_en": "Tangy, spicy, savory rice noodles—Nanning's flavor calling card.",
+      "img": "南宁 老友粉",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "南宁",
+        "老友粉"
+      ],
+      "category": "food"
+    },
+    {
+      "name_zh": "柠檬鸭",
+      "name_en": "Lemon Duck",
+      "desc_zh": "酸柠檬与酸辣椒焖鸭，开胃解腻。",
+      "desc_en": "Duck braised with pickled lemon and chili—bright and appetizing.",
+      "img": "广西 柠檬鸭",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "南宁",
+        "柠檬鸭"
+      ],
+      "category": "food"
+    },
+    {
+      "name_zh": "粉饺",
+      "name_en": "Rice-skin Dumplings",
+      "desc_zh": "晶莹米皮包馅，皮薄馅鲜。",
+      "desc_en": "Translucent rice-skin dumplings with a savory filling.",
+      "img": "南宁 粉饺",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "南宁",
+        "粉饺"
+      ],
+      "category": "food"
+    }
+  ]
+}

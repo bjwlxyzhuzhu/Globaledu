@@ -1,0 +1,127 @@
+{
+  "key": "广州",
+  "name_zh": "广州",
+  "name_en": "Guangzhou",
+  "province": "广东",
+  "tier": "first",
+  "intro_zh": "广州是广东省省会与华南中心城市，有两千多年的商都历史。「食在广州」名扬天下，是岭南文化的核心。",
+  "intro_en": "Guangzhou, capital of Guangdong and the hub of South China, has over two thousand years as a trading city. 'For food, Guangzhou' is famous nationwide, and it is the heart of Lingnan culture.",
+  "culture_zh": "务实包容的广府文化、精致的早茶、悠扬的粤剧与生猛的市井烟火，构成了这座千年商都的底色。",
+  "culture_en": "Pragmatic, inclusive Cantonese culture, refined morning tea, melodious Cantonese opera and bustling street life color this thousand-year trading city.",
+  "attractions": [
+    {
+      "name_zh": "广州塔",
+      "name_en": "Canton Tower",
+      "desc_zh": "珠江畔纤细的「小蛮腰」高塔，城市地标。",
+      "desc_en": "The slender 'slim waist' tower on the Pearl River—the city's landmark.",
+      "img": "广州塔 小蛮腰",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "广州",
+        "广州塔"
+      ],
+      "category": "modern"
+    },
+    {
+      "name_zh": "陈家祠",
+      "name_en": "Chen Clan Academy",
+      "desc_zh": "岭南建筑装饰艺术的集大成者。",
+      "desc_en": "A showcase of Lingnan architectural and decorative arts.",
+      "img": "广州 陈家祠",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "广州",
+        "陈家祠"
+      ],
+      "category": "art"
+    },
+    {
+      "name_zh": "沙面岛",
+      "name_en": "Shamian Island",
+      "desc_zh": "欧陆风情的近代租界建筑群。",
+      "desc_en": "A small island of European-style early-modern concession buildings.",
+      "img": "广州 沙面岛",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "广州",
+        "沙面岛"
+      ],
+      "category": "heritage"
+    },
+    {
+      "name_zh": "上下九步行街",
+      "name_en": "Shangxiajiu Street",
+      "desc_zh": "骑楼老街，满是老广味道与商铺。",
+      "desc_en": "An old arcade-house street full of Cantonese flavor and shops.",
+      "img": "广州 上下九 骑楼",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "广州",
+        "上下九步行街"
+      ],
+      "category": "modern"
+    }
+  ],
+  "foods": [
+    {
+      "name_zh": "早茶点心",
+      "name_en": "Dim Sum",
+      "desc_zh": "虾饺、烧卖、肠粉，一盅两件慢享。",
+      "desc_en": "Shrimp dumplings, siu mai and rice rolls—'one pot, two dishes' enjoyed slowly.",
+      "img": "广州 早茶 虾饺",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "广州",
+        "早茶点心"
+      ],
+      "category": "food"
+    },
+    {
+      "name_zh": "白切鸡",
+      "name_en": "White-cut Chicken",
+      "desc_zh": "皮爽肉滑，蘸姜葱，粤菜经典。",
+      "desc_en": "Silky poached chicken with ginger-scallion dip—a Cantonese classic.",
+      "img": "广东 白切鸡",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "广州",
+        "白切鸡"
+      ],
+      "category": "food"
+    },
+    {
+      "name_zh": "艇仔粥",
+      "name_en": "Sampan Congee",
+      "desc_zh": "料足味鲜的广式生滚粥。",
+      "desc_en": "A hearty Cantonese congee cooked fresh with plentiful toppings.",
+      "img": "广州 艇仔粥",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "广州",
+        "艇仔粥"
+      ],
+      "category": "food"
+    }
+  ]
+}

@@ -1,0 +1,1299 @@
+[
+  {
+    "char": "人",
+    "pinyin": "rén",
+    "strokes": 2,
+    "radical": "人",
+    "hsk": 1,
+    "story_zh": "「人」像一个迈步走路的人，左边是腿，右边也是腿。古人用最简单的两笔，画出了直立行走的我们。",
+    "story_native": "The character 人 (rén, person) looks like a walking figure with two legs. Two strokes capture a human standing upright.",
+    "words": [
+      {
+        "word": "人们",
+        "pinyin": "rénmen",
+        "meaning_en": "people"
+      },
+      {
+        "word": "中国人",
+        "pinyin": "Zhōngguórén",
+        "meaning_en": "Chinese (person)"
+      }
+    ]
+  },
+  {
+    "char": "你",
+    "pinyin": "nǐ",
+    "strokes": 7,
+    "radical": "亻",
+    "hsk": 1,
+    "story_zh": "「你」左边是「亻」（人），右边是「尔」。和人有关，指我对面的那个人——就是「你」。",
+    "story_native": "你 (nǐ, you) has the person radical 亻 on the left. It points to the person facing you.",
+    "words": [
+      {
+        "word": "你好",
+        "pinyin": "nǐ hǎo",
+        "meaning_en": "hello"
+      },
+      {
+        "word": "你们",
+        "pinyin": "nǐmen",
+        "meaning_en": "you (plural)"
+      }
+    ]
+  },
+  {
+    "char": "好",
+    "pinyin": "hǎo",
+    "strokes": 6,
+    "radical": "女",
+    "hsk": 1,
+    "story_zh": "「好」左边是「女」（女子），右边是「子」（孩子）。妈妈抱着孩子，就是最美好的画面——所以是「好」。",
+    "story_native": "好 (hǎo, good) combines 女 (woman) and 子 (child). A mother with her child — a picture of what is good.",
+    "words": [
+      {
+        "word": "你好",
+        "pinyin": "nǐ hǎo",
+        "meaning_en": "hello"
+      },
+      {
+        "word": "好吃",
+        "pinyin": "hǎochī",
+        "meaning_en": "delicious"
+      }
+    ]
+  },
+  {
+    "char": "我",
+    "pinyin": "wǒ",
+    "strokes": 7,
+    "radical": "戈",
+    "hsk": 1,
+    "story_zh": "「我」右边是「戈」（一种兵器）。古时拿着武器、能保护自己的，就是「我」。",
+    "story_native": "我 (wǒ, I/me) contains 戈 (a weapon). The one who holds the weapon to protect themselves — that is 'me'.",
+    "words": [
+      {
+        "word": "我们",
+        "pinyin": "wǒmen",
+        "meaning_en": "we / us"
+      },
+      {
+        "word": "我的",
+        "pinyin": "wǒ de",
+        "meaning_en": "my / mine"
+      }
+    ]
+  },
+  {
+    "char": "中",
+    "pinyin": "zhōng",
+    "strokes": 4,
+    "radical": "丨",
+    "hsk": 1,
+    "story_zh": "「中」一竖穿过一个方框的正中间，表示「中央、中间」。中国，就是「位于中央的国家」。",
+    "story_native": "中 (zhōng, middle/center) is a line through the center of a box. 中国 means 'the central country'.",
+    "words": [
+      {
+        "word": "中国",
+        "pinyin": "Zhōngguó",
+        "meaning_en": "China"
+      },
+      {
+        "word": "中文",
+        "pinyin": "Zhōngwén",
+        "meaning_en": "Chinese language"
+      }
+    ]
+  },
+  {
+    "char": "国",
+    "pinyin": "guó",
+    "strokes": 8,
+    "radical": "囗",
+    "hsk": 1,
+    "story_zh": "「国」外面是「囗」（城墙、边界），里面是「玉」（珍宝）。有边界、守护着珍宝的地方，就是「国」。",
+    "story_native": "国 (guó, country) is a treasure 玉 inside a wall 囗. A bordered land guarding what it treasures — a country.",
+    "words": [
+      {
+        "word": "中国",
+        "pinyin": "Zhōngguó",
+        "meaning_en": "China"
+      },
+      {
+        "word": "国家",
+        "pinyin": "guójiā",
+        "meaning_en": "country / nation"
+      }
+    ]
+  },
+  {
+    "char": "学",
+    "pinyin": "xué",
+    "strokes": 8,
+    "radical": "子",
+    "hsk": 1,
+    "story_zh": "「学」上面是双手与知识，下面是「子」（孩子）。孩子在双手的帮助下接受知识，就是「学习」。",
+    "story_native": "学 (xué, to study) shows a child 子 receiving knowledge from above. To learn.",
+    "words": [
+      {
+        "word": "学习",
+        "pinyin": "xuéxí",
+        "meaning_en": "to study / learn"
+      },
+      {
+        "word": "学生",
+        "pinyin": "xuésheng",
+        "meaning_en": "student"
+      }
+    ]
+  },
+  {
+    "char": "生",
+    "pinyin": "shēng",
+    "strokes": 5,
+    "radical": "生",
+    "hsk": 1,
+    "story_zh": "「生」像一株草从泥土里长出来。新芽破土，代表「生长、出生、生命」。",
+    "story_native": "生 (shēng, to grow/be born) pictures a sprout pushing up from the soil — life and growth.",
+    "words": [
+      {
+        "word": "学生",
+        "pinyin": "xuésheng",
+        "meaning_en": "student"
+      },
+      {
+        "word": "生日",
+        "pinyin": "shēngrì",
+        "meaning_en": "birthday"
+      }
+    ]
+  },
+  {
+    "char": "家",
+    "pinyin": "jiā",
+    "strokes": 10,
+    "radical": "宀",
+    "hsk": 1,
+    "story_zh": "「家」上面是「宀」（屋顶），下面是「豕」（猪）。古时屋里养着猪，代表有了财产和安定——这就是「家」。",
+    "story_native": "家 (jiā, home/family) is a pig 豕 under a roof 宀. In ancient times, a household raising livestock meant a settled home.",
+    "words": [
+      {
+        "word": "家人",
+        "pinyin": "jiārén",
+        "meaning_en": "family members"
+      },
+      {
+        "word": "国家",
+        "pinyin": "guójiā",
+        "meaning_en": "country"
+      }
+    ]
+  },
+  {
+    "char": "水",
+    "pinyin": "shuǐ",
+    "strokes": 4,
+    "radical": "水",
+    "hsk": 1,
+    "story_zh": "「水」像一条河流，中间是主流，两边是水花。它是最早的象形字之一。",
+    "story_native": "水 (shuǐ, water) pictures a flowing river with ripples on both sides — one of the oldest pictographs.",
+    "words": [
+      {
+        "word": "喝水",
+        "pinyin": "hē shuǐ",
+        "meaning_en": "to drink water"
+      },
+      {
+        "word": "水果",
+        "pinyin": "shuǐguǒ",
+        "meaning_en": "fruit"
+      }
+    ]
+  },
+  {
+    "char": "爱",
+    "pinyin": "ài",
+    "strokes": 10,
+    "radical": "爫",
+    "hsk": 2,
+    "story_zh": "「爱」中间藏着「心」。把真心给出去、放在心上，就是「爱」。",
+    "story_native": "爱 (ài, love) hides a heart 心 inside. To give your true heart to someone — that is love.",
+    "words": [
+      {
+        "word": "爱好",
+        "pinyin": "àihào",
+        "meaning_en": "hobby"
+      },
+      {
+        "word": "喜爱",
+        "pinyin": "xǐ'ài",
+        "meaning_en": "to like / be fond of"
+      }
+    ]
+  },
+  {
+    "char": "茶",
+    "pinyin": "chá",
+    "strokes": 9,
+    "radical": "艹",
+    "hsk": 2,
+    "story_zh": "「茶」上面是「艹」（草木），中间是「人」，下面是「木」。人在草木之间采叶煮饮，便有了「茶」——中华文化的代表。",
+    "story_native": "茶 (chá, tea) places a person 人 between grass 艹 and tree 木 — picking leaves to brew. Tea is a symbol of Chinese culture.",
+    "words": [
+      {
+        "word": "喝茶",
+        "pinyin": "hē chá",
+        "meaning_en": "to drink tea"
+      },
+      {
+        "word": "茶馆",
+        "pinyin": "cháguǎn",
+        "meaning_en": "teahouse"
+      }
+    ]
+  },
+  {
+    "char": "大",
+    "pinyin": "dà",
+    "strokes": 3,
+    "radical": "大",
+    "hsk": 1,
+    "story_zh": "像一个人张开双臂，表示\"大\"。",
+    "story_native": "A person stretching out both arms — meaning \"big\".",
+    "words": [
+      {
+        "word": "大学",
+        "pinyin": "dàxué",
+        "meaning_en": "university"
+      },
+      {
+        "word": "大家",
+        "pinyin": "dàjiā",
+        "meaning_en": "everyone"
+      }
+    ]
+  },
+  {
+    "char": "小",
+    "pinyin": "xiǎo",
+    "strokes": 3,
+    "radical": "小",
+    "hsk": 1,
+    "story_zh": "中间一竖、两边两点，小小的样子。",
+    "story_native": "A center stroke with two dots — something small.",
+    "words": [
+      {
+        "word": "小时",
+        "pinyin": "xiǎoshí",
+        "meaning_en": "hour"
+      },
+      {
+        "word": "小心",
+        "pinyin": "xiǎoxīn",
+        "meaning_en": "careful"
+      }
+    ]
+  },
+  {
+    "char": "不",
+    "pinyin": "bù",
+    "strokes": 4,
+    "radical": "一",
+    "hsk": 1,
+    "story_zh": "表示否定，\"不\"。",
+    "story_native": "Marks negation — \"not / no\".",
+    "words": [
+      {
+        "word": "不要",
+        "pinyin": "búyào",
+        "meaning_en": "don't"
+      },
+      {
+        "word": "不错",
+        "pinyin": "búcuò",
+        "meaning_en": "not bad"
+      }
+    ]
+  },
+  {
+    "char": "月",
+    "pinyin": "yuè",
+    "strokes": 4,
+    "radical": "月",
+    "hsk": 1,
+    "story_zh": "像弯弯的月亮。",
+    "story_native": "Shaped like a crescent moon.",
+    "words": [
+      {
+        "word": "月亮",
+        "pinyin": "yuèliang",
+        "meaning_en": "moon"
+      },
+      {
+        "word": "月份",
+        "pinyin": "yuèfèn",
+        "meaning_en": "month"
+      }
+    ]
+  },
+  {
+    "char": "日",
+    "pinyin": "rì",
+    "strokes": 4,
+    "radical": "日",
+    "hsk": 1,
+    "story_zh": "像太阳，中间一横。",
+    "story_native": "Like the sun with a line in the middle.",
+    "words": [
+      {
+        "word": "生日",
+        "pinyin": "shēngrì",
+        "meaning_en": "birthday"
+      },
+      {
+        "word": "日子",
+        "pinyin": "rìzi",
+        "meaning_en": "day / life"
+      }
+    ]
+  },
+  {
+    "char": "吃",
+    "pinyin": "chī",
+    "strokes": 6,
+    "radical": "口",
+    "hsk": 2,
+    "story_zh": "口字旁，用嘴吃东西。",
+    "story_native": "Mouth radical — to eat with the mouth.",
+    "words": [
+      {
+        "word": "吃饭",
+        "pinyin": "chīfàn",
+        "meaning_en": "eat (a meal)"
+      },
+      {
+        "word": "好吃",
+        "pinyin": "hǎochī",
+        "meaning_en": "tasty"
+      }
+    ]
+  },
+  {
+    "char": "喝",
+    "pinyin": "hē",
+    "strokes": 12,
+    "radical": "口",
+    "hsk": 2,
+    "story_zh": "口字旁，用嘴喝水。",
+    "story_native": "Mouth radical — to drink.",
+    "words": [
+      {
+        "word": "喝茶",
+        "pinyin": "hēchá",
+        "meaning_en": "drink tea"
+      },
+      {
+        "word": "喝水",
+        "pinyin": "hēshuǐ",
+        "meaning_en": "drink water"
+      }
+    ]
+  },
+  {
+    "char": "走",
+    "pinyin": "zǒu",
+    "strokes": 7,
+    "radical": "走",
+    "hsk": 2,
+    "story_zh": "像人迈步走路。",
+    "story_native": "A figure striding — to walk.",
+    "words": [
+      {
+        "word": "走路",
+        "pinyin": "zǒulù",
+        "meaning_en": "walk"
+      },
+      {
+        "word": "走开",
+        "pinyin": "zǒukāi",
+        "meaning_en": "go away"
+      }
+    ]
+  },
+  {
+    "char": "跑",
+    "pinyin": "pǎo",
+    "strokes": 12,
+    "radical": "足",
+    "hsk": 2,
+    "story_zh": "足字旁，用脚跑。",
+    "story_native": "Foot radical — to run.",
+    "words": [
+      {
+        "word": "跑步",
+        "pinyin": "pǎobù",
+        "meaning_en": "run / jog"
+      },
+      {
+        "word": "长跑",
+        "pinyin": "chángpǎo",
+        "meaning_en": "long-distance run"
+      }
+    ]
+  },
+  {
+    "char": "高",
+    "pinyin": "gāo",
+    "strokes": 10,
+    "radical": "高",
+    "hsk": 2,
+    "story_zh": "像一座高高的楼。",
+    "story_native": "Like a tall building — high.",
+    "words": [
+      {
+        "word": "高兴",
+        "pinyin": "gāoxìng",
+        "meaning_en": "happy"
+      },
+      {
+        "word": "高山",
+        "pinyin": "gāoshān",
+        "meaning_en": "high mountain"
+      }
+    ]
+  },
+  {
+    "char": "兴",
+    "pinyin": "xìng",
+    "strokes": 6,
+    "radical": "八",
+    "hsk": 2,
+    "story_zh": "高兴、兴趣的\"兴\"。",
+    "story_native": "As in \"happy\" and \"interest\".",
+    "words": [
+      {
+        "word": "高兴",
+        "pinyin": "gāoxìng",
+        "meaning_en": "happy"
+      },
+      {
+        "word": "兴趣",
+        "pinyin": "xìngqù",
+        "meaning_en": "interest"
+      }
+    ]
+  },
+  {
+    "char": "城",
+    "pinyin": "chéng",
+    "strokes": 9,
+    "radical": "土",
+    "hsk": 3,
+    "story_zh": "土字旁，城墙用土筑成。",
+    "story_native": "Earth radical — city walls were built of earth.",
+    "words": [
+      {
+        "word": "城市",
+        "pinyin": "chéngshì",
+        "meaning_en": "city"
+      },
+      {
+        "word": "长城",
+        "pinyin": "Chángchéng",
+        "meaning_en": "Great Wall"
+      }
+    ]
+  },
+  {
+    "char": "市",
+    "pinyin": "shì",
+    "strokes": 5,
+    "radical": "巾",
+    "hsk": 3,
+    "story_zh": "集市、城市的\"市\"。",
+    "story_native": "A market; a city.",
+    "words": [
+      {
+        "word": "城市",
+        "pinyin": "chéngshì",
+        "meaning_en": "city"
+      },
+      {
+        "word": "市场",
+        "pinyin": "shìchǎng",
+        "meaning_en": "market"
+      }
+    ]
+  },
+  {
+    "char": "关",
+    "pinyin": "guān",
+    "strokes": 6,
+    "radical": "八",
+    "hsk": 3,
+    "story_zh": "关门、关心的\"关\"。",
+    "story_native": "To close; to be concerned.",
+    "words": [
+      {
+        "word": "关心",
+        "pinyin": "guānxīn",
+        "meaning_en": "to care"
+      },
+      {
+        "word": "关系",
+        "pinyin": "guānxì",
+        "meaning_en": "relationship"
+      }
+    ]
+  },
+  {
+    "char": "心",
+    "pinyin": "xīn",
+    "strokes": 4,
+    "radical": "心",
+    "hsk": 3,
+    "story_zh": "像心脏的形状。",
+    "story_native": "Shaped like a heart.",
+    "words": [
+      {
+        "word": "关心",
+        "pinyin": "guānxīn",
+        "meaning_en": "to care"
+      },
+      {
+        "word": "小心",
+        "pinyin": "xiǎoxīn",
+        "meaning_en": "careful"
+      }
+    ]
+  },
+  {
+    "char": "努",
+    "pinyin": "nǔ",
+    "strokes": 7,
+    "radical": "力",
+    "hsk": 3,
+    "story_zh": "奴+力，使出力气。",
+    "story_native": "Slave + strength — to exert effort.",
+    "words": [
+      {
+        "word": "努力",
+        "pinyin": "nǔlì",
+        "meaning_en": "to work hard"
+      }
+    ]
+  },
+  {
+    "char": "力",
+    "pinyin": "lì",
+    "strokes": 2,
+    "radical": "力",
+    "hsk": 3,
+    "story_zh": "像用力的手臂。",
+    "story_native": "Like a flexed arm — strength.",
+    "words": [
+      {
+        "word": "努力",
+        "pinyin": "nǔlì",
+        "meaning_en": "effort"
+      },
+      {
+        "word": "力量",
+        "pinyin": "lìliàng",
+        "meaning_en": "strength"
+      }
+    ]
+  },
+  {
+    "char": "经",
+    "pinyin": "jīng",
+    "strokes": 8,
+    "radical": "纟",
+    "hsk": 4,
+    "story_zh": "丝字旁，经线、经过。",
+    "story_native": "Silk radical — warp threads; to pass through.",
+    "words": [
+      {
+        "word": "经验",
+        "pinyin": "jīngyàn",
+        "meaning_en": "experience"
+      },
+      {
+        "word": "经济",
+        "pinyin": "jīngjì",
+        "meaning_en": "economy"
+      }
+    ]
+  },
+  {
+    "char": "验",
+    "pinyin": "yàn",
+    "strokes": 10,
+    "radical": "马",
+    "hsk": 4,
+    "story_zh": "检验、试验的\"验\"。",
+    "story_native": "To test or examine.",
+    "words": [
+      {
+        "word": "经验",
+        "pinyin": "jīngyàn",
+        "meaning_en": "experience"
+      },
+      {
+        "word": "实验",
+        "pinyin": "shíyàn",
+        "meaning_en": "experiment"
+      }
+    ]
+  },
+  {
+    "char": "提",
+    "pinyin": "tí",
+    "strokes": 12,
+    "radical": "扌",
+    "hsk": 4,
+    "story_zh": "提手旁，用手提起。",
+    "story_native": "Hand radical — to lift, to raise.",
+    "words": [
+      {
+        "word": "提供",
+        "pinyin": "tígōng",
+        "meaning_en": "to provide"
+      },
+      {
+        "word": "提高",
+        "pinyin": "tígāo",
+        "meaning_en": "to improve"
+      }
+    ]
+  },
+  {
+    "char": "供",
+    "pinyin": "gōng",
+    "strokes": 8,
+    "radical": "亻",
+    "hsk": 4,
+    "story_zh": "人字旁，供给、提供。",
+    "story_native": "Person radical — to supply.",
+    "words": [
+      {
+        "word": "提供",
+        "pinyin": "tígōng",
+        "meaning_en": "to provide"
+      },
+      {
+        "word": "供应",
+        "pinyin": "gōngyìng",
+        "meaning_en": "supply"
+      }
+    ]
+  },
+  {
+    "char": "改",
+    "pinyin": "gǎi",
+    "strokes": 7,
+    "radical": "攵",
+    "hsk": 4,
+    "story_zh": "改变、改正的\"改\"。",
+    "story_native": "To change, to correct.",
+    "words": [
+      {
+        "word": "改变",
+        "pinyin": "gǎibiàn",
+        "meaning_en": "to change"
+      },
+      {
+        "word": "改革",
+        "pinyin": "gǎigé",
+        "meaning_en": "reform"
+      }
+    ]
+  },
+  {
+    "char": "变",
+    "pinyin": "biàn",
+    "strokes": 8,
+    "radical": "又",
+    "hsk": 4,
+    "story_zh": "变化、改变的\"变\"。",
+    "story_native": "To change, to transform.",
+    "words": [
+      {
+        "word": "改变",
+        "pinyin": "gǎibiàn",
+        "meaning_en": "to change"
+      },
+      {
+        "word": "变化",
+        "pinyin": "biànhuà",
+        "meaning_en": "change"
+      }
+    ]
+  },
+  {
+    "char": "创",
+    "pinyin": "chuàng",
+    "strokes": 6,
+    "radical": "刂",
+    "hsk": 5,
+    "story_zh": "立刀旁，开创、创造。",
+    "story_native": "Knife radical — to initiate, to create.",
+    "words": [
+      {
+        "word": "创造",
+        "pinyin": "chuàngzào",
+        "meaning_en": "to create"
+      },
+      {
+        "word": "创新",
+        "pinyin": "chuàngxīn",
+        "meaning_en": "innovation"
+      }
+    ]
+  },
+  {
+    "char": "造",
+    "pinyin": "zào",
+    "strokes": 10,
+    "radical": "辶",
+    "hsk": 5,
+    "story_zh": "走之旁，制造、建造。",
+    "story_native": "Movement radical — to make, to build.",
+    "words": [
+      {
+        "word": "创造",
+        "pinyin": "chuàngzào",
+        "meaning_en": "to create"
+      },
+      {
+        "word": "制造",
+        "pinyin": "zhìzào",
+        "meaning_en": "to manufacture"
+      }
+    ]
+  },
+  {
+    "char": "传",
+    "pinyin": "chuán",
+    "strokes": 6,
+    "radical": "亻",
+    "hsk": 5,
+    "story_zh": "人字旁，一人传一人。",
+    "story_native": "Person radical — to pass on from one to another.",
+    "words": [
+      {
+        "word": "传统",
+        "pinyin": "chuántǒng",
+        "meaning_en": "tradition"
+      },
+      {
+        "word": "传播",
+        "pinyin": "chuánbō",
+        "meaning_en": "to spread"
+      }
+    ]
+  },
+  {
+    "char": "统",
+    "pinyin": "tǒng",
+    "strokes": 9,
+    "radical": "纟",
+    "hsk": 5,
+    "story_zh": "丝字旁，统一、系统。",
+    "story_native": "Silk radical — to unify; a system.",
+    "words": [
+      {
+        "word": "传统",
+        "pinyin": "chuántǒng",
+        "meaning_en": "tradition"
+      },
+      {
+        "word": "统一",
+        "pinyin": "tǒngyī",
+        "meaning_en": "to unify"
+      }
+    ]
+  },
+  {
+    "char": "优",
+    "pinyin": "yōu",
+    "strokes": 6,
+    "radical": "亻",
+    "hsk": 5,
+    "story_zh": "人字旁，优秀、优点。",
+    "story_native": "Person radical — excellent, superior.",
+    "words": [
+      {
+        "word": "优秀",
+        "pinyin": "yōuxiù",
+        "meaning_en": "excellent"
+      },
+      {
+        "word": "优点",
+        "pinyin": "yōudiǎn",
+        "meaning_en": "strength / merit"
+      }
+    ]
+  },
+  {
+    "char": "秀",
+    "pinyin": "xiù",
+    "strokes": 7,
+    "radical": "禾",
+    "hsk": 5,
+    "story_zh": "禾苗秀美、优秀。",
+    "story_native": "Grain growing beautifully — outstanding.",
+    "words": [
+      {
+        "word": "优秀",
+        "pinyin": "yōuxiù",
+        "meaning_en": "excellent"
+      },
+      {
+        "word": "秀丽",
+        "pinyin": "xiùlì",
+        "meaning_en": "graceful"
+      }
+    ]
+  },
+  {
+    "char": "智",
+    "pinyin": "zhì",
+    "strokes": 12,
+    "radical": "日",
+    "hsk": 6,
+    "story_zh": "知+日，智慧、聪明。",
+    "story_native": "Knowledge + sun — wisdom.",
+    "words": [
+      {
+        "word": "智慧",
+        "pinyin": "zhìhuì",
+        "meaning_en": "wisdom"
+      },
+      {
+        "word": "智能",
+        "pinyin": "zhìnéng",
+        "meaning_en": "intelligence"
+      }
+    ]
+  },
+  {
+    "char": "慧",
+    "pinyin": "huì",
+    "strokes": 15,
+    "radical": "心",
+    "hsk": 6,
+    "story_zh": "心上生慧，聪慧。",
+    "story_native": "Wisdom arising in the heart.",
+    "words": [
+      {
+        "word": "智慧",
+        "pinyin": "zhìhuì",
+        "meaning_en": "wisdom"
+      },
+      {
+        "word": "聪慧",
+        "pinyin": "cōnghuì",
+        "meaning_en": "bright / clever"
+      }
+    ]
+  },
+  {
+    "char": "探",
+    "pinyin": "tàn",
+    "strokes": 11,
+    "radical": "扌",
+    "hsk": 6,
+    "story_zh": "提手旁，探索、探求。",
+    "story_native": "Hand radical — to explore, to probe.",
+    "words": [
+      {
+        "word": "探索",
+        "pinyin": "tànsuǒ",
+        "meaning_en": "to explore"
+      },
+      {
+        "word": "探险",
+        "pinyin": "tànxiǎn",
+        "meaning_en": "adventure"
+      }
+    ]
+  },
+  {
+    "char": "索",
+    "pinyin": "suǒ",
+    "strokes": 10,
+    "radical": "糸",
+    "hsk": 6,
+    "story_zh": "绳索，思索、探索。",
+    "story_native": "A rope — to search, to seek.",
+    "words": [
+      {
+        "word": "探索",
+        "pinyin": "tànsuǒ",
+        "meaning_en": "to explore"
+      },
+      {
+        "word": "思索",
+        "pinyin": "sīsuǒ",
+        "meaning_en": "to ponder"
+      }
+    ]
+  },
+  {
+    "char": "繁",
+    "pinyin": "fán",
+    "strokes": 17,
+    "radical": "糸",
+    "hsk": 6,
+    "story_zh": "繁多、繁荣。",
+    "story_native": "Numerous, flourishing.",
+    "words": [
+      {
+        "word": "繁荣",
+        "pinyin": "fánróng",
+        "meaning_en": "prosperous"
+      },
+      {
+        "word": "繁忙",
+        "pinyin": "fánmáng",
+        "meaning_en": "busy"
+      }
+    ]
+  },
+  {
+    "char": "荣",
+    "pinyin": "róng",
+    "strokes": 9,
+    "radical": "艹",
+    "hsk": 6,
+    "story_zh": "草字头，草木繁荣。",
+    "story_native": "Grass radical — plants flourishing; glory.",
+    "words": [
+      {
+        "word": "繁荣",
+        "pinyin": "fánróng",
+        "meaning_en": "prosperous"
+      },
+      {
+        "word": "光荣",
+        "pinyin": "guāngróng",
+        "meaning_en": "glory"
+      }
+    ]
+  },
+  {
+    "char": "钱",
+    "pinyin": "qián",
+    "strokes": 10,
+    "radical": "钅",
+    "hsk": 2,
+    "story_zh": "金字旁，与钱财有关。",
+    "story_native": "Metal radical — related to money.",
+    "words": [
+      {
+        "word": "价钱",
+        "pinyin": "jiàqián",
+        "meaning_en": "price"
+      },
+      {
+        "word": "零钱",
+        "pinyin": "língqián",
+        "meaning_en": "small change"
+      }
+    ]
+  },
+  {
+    "char": "票",
+    "pinyin": "piào",
+    "strokes": 11,
+    "radical": "示",
+    "hsk": 2,
+    "story_zh": "车票、门票的\"票\"。",
+    "story_native": "A ticket.",
+    "words": [
+      {
+        "word": "车票",
+        "pinyin": "chēpiào",
+        "meaning_en": "ticket"
+      },
+      {
+        "word": "门票",
+        "pinyin": "ménpiào",
+        "meaning_en": "entry ticket"
+      }
+    ]
+  },
+  {
+    "char": "间",
+    "pinyin": "jiān",
+    "strokes": 7,
+    "radical": "门",
+    "hsk": 2,
+    "story_zh": "门字框，房间、中间。",
+    "story_native": "Gate radical — a room; in between.",
+    "words": [
+      {
+        "word": "时间",
+        "pinyin": "shíjiān",
+        "meaning_en": "time"
+      },
+      {
+        "word": "房间",
+        "pinyin": "fángjiān",
+        "meaning_en": "room"
+      }
+    ]
+  },
+  {
+    "char": "帮",
+    "pinyin": "bāng",
+    "strokes": 9,
+    "radical": "巾",
+    "hsk": 3,
+    "story_zh": "帮助、帮忙。",
+    "story_native": "To help.",
+    "words": [
+      {
+        "word": "帮助",
+        "pinyin": "bāngzhù",
+        "meaning_en": "to help"
+      },
+      {
+        "word": "帮忙",
+        "pinyin": "bāngmáng",
+        "meaning_en": "lend a hand"
+      }
+    ]
+  },
+  {
+    "char": "题",
+    "pinyin": "tí",
+    "strokes": 15,
+    "radical": "页",
+    "hsk": 3,
+    "story_zh": "题目、问题的\"题\"。",
+    "story_native": "A topic; a question.",
+    "words": [
+      {
+        "word": "问题",
+        "pinyin": "wèntí",
+        "meaning_en": "question / problem"
+      },
+      {
+        "word": "题目",
+        "pinyin": "tímù",
+        "meaning_en": "title / topic"
+      }
+    ]
+  },
+  {
+    "char": "然",
+    "pinyin": "rán",
+    "strokes": 12,
+    "radical": "灬",
+    "hsk": 3,
+    "story_zh": "然后、自然。",
+    "story_native": "So; thus; natural.",
+    "words": [
+      {
+        "word": "然后",
+        "pinyin": "ránhòu",
+        "meaning_en": "then / afterward"
+      },
+      {
+        "word": "自然",
+        "pinyin": "zìrán",
+        "meaning_en": "nature; natural"
+      }
+    ]
+  },
+  {
+    "char": "计",
+    "pinyin": "jì",
+    "strokes": 4,
+    "radical": "讠",
+    "hsk": 4,
+    "story_zh": "言字旁，计算、计划。",
+    "story_native": "Speech radical — to count; to plan.",
+    "words": [
+      {
+        "word": "计划",
+        "pinyin": "jìhuà",
+        "meaning_en": "plan"
+      },
+      {
+        "word": "计算",
+        "pinyin": "jìsuàn",
+        "meaning_en": "to calculate"
+      }
+    ]
+  },
+  {
+    "char": "划",
+    "pinyin": "huà",
+    "strokes": 6,
+    "radical": "刂",
+    "hsk": 4,
+    "story_zh": "计划、划分。",
+    "story_native": "To plan; to divide.",
+    "words": [
+      {
+        "word": "计划",
+        "pinyin": "jìhuà",
+        "meaning_en": "plan"
+      },
+      {
+        "word": "划分",
+        "pinyin": "huàfēn",
+        "meaning_en": "to divide"
+      }
+    ]
+  },
+  {
+    "char": "解",
+    "pinyin": "jiě",
+    "strokes": 13,
+    "radical": "角",
+    "hsk": 4,
+    "story_zh": "用刀分牛角，引申为\"解开、解决\"。",
+    "story_native": "A knife parting an ox horn — to untie, to solve.",
+    "words": [
+      {
+        "word": "解决",
+        "pinyin": "jiějué",
+        "meaning_en": "to solve"
+      },
+      {
+        "word": "理解",
+        "pinyin": "lǐjiě",
+        "meaning_en": "to understand"
+      }
+    ]
+  },
+  {
+    "char": "维",
+    "pinyin": "wéi",
+    "strokes": 11,
+    "radical": "纟",
+    "hsk": 5,
+    "story_zh": "丝字旁，维系、思维。",
+    "story_native": "Silk radical — to maintain; thinking.",
+    "words": [
+      {
+        "word": "维护",
+        "pinyin": "wéihù",
+        "meaning_en": "to maintain"
+      },
+      {
+        "word": "思维",
+        "pinyin": "sīwéi",
+        "meaning_en": "thinking"
+      }
+    ]
+  },
+  {
+    "char": "念",
+    "pinyin": "niàn",
+    "strokes": 8,
+    "radical": "心",
+    "hsk": 5,
+    "story_zh": "今+心，心里想着。",
+    "story_native": "Now + heart — to think of, to miss.",
+    "words": [
+      {
+        "word": "纪念",
+        "pinyin": "jìniàn",
+        "meaning_en": "to commemorate"
+      },
+      {
+        "word": "观念",
+        "pinyin": "guānniàn",
+        "meaning_en": "concept"
+      }
+    ]
+  },
+  {
+    "char": "析",
+    "pinyin": "xī",
+    "strokes": 8,
+    "radical": "木",
+    "hsk": 5,
+    "story_zh": "用斧劈木，引申为\"分析\"。",
+    "story_native": "Splitting wood with an axe — to analyze.",
+    "words": [
+      {
+        "word": "分析",
+        "pinyin": "fēnxī",
+        "meaning_en": "to analyze"
+      },
+      {
+        "word": "解析",
+        "pinyin": "jiěxī",
+        "meaning_en": "to parse / analyze"
+      }
+    ]
+  },
+  {
+    "char": "卓",
+    "pinyin": "zhuó",
+    "strokes": 8,
+    "radical": "十",
+    "hsk": 6,
+    "story_zh": "高而出众，卓越。",
+    "story_native": "High and outstanding — eminent.",
+    "words": [
+      {
+        "word": "卓越",
+        "pinyin": "zhuóyuè",
+        "meaning_en": "outstanding"
+      },
+      {
+        "word": "卓著",
+        "pinyin": "zhuózhù",
+        "meaning_en": "distinguished"
+      }
+    ]
+  },
+  {
+    "char": "越",
+    "pinyin": "yuè",
+    "strokes": 12,
+    "radical": "走",
+    "hsk": 6,
+    "story_zh": "走字旁，超越、越过。",
+    "story_native": "Walk radical — to exceed, to cross over.",
+    "words": [
+      {
+        "word": "超越",
+        "pinyin": "chāoyuè",
+        "meaning_en": "to surpass"
+      },
+      {
+        "word": "卓越",
+        "pinyin": "zhuóyuè",
+        "meaning_en": "excellence"
+      }
+    ]
+  },
+  {
+    "char": "凝",
+    "pinyin": "níng",
+    "strokes": 16,
+    "radical": "冫",
+    "hsk": 6,
+    "story_zh": "两点水（冰），凝结、凝聚。",
+    "story_native": "Ice radical — to congeal, to gather.",
+    "words": [
+      {
+        "word": "凝聚",
+        "pinyin": "níngjù",
+        "meaning_en": "to cohere / unite"
+      },
+      {
+        "word": "凝视",
+        "pinyin": "níngshì",
+        "meaning_en": "to gaze"
+      }
+    ]
+  }
+]

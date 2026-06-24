@@ -1,0 +1,3594 @@
+[
+  {
+    "id": "spring-festival",
+    "emoji": "🧧",
+    "title_zh": "春节",
+    "title_en": "Spring Festival",
+    "body_zh": "春节是中国最重要的传统节日，在农历新年。人们贴春联、放鞭炮、吃年夜饭、给红包，全家团圆。",
+    "body_en": "Spring Festival is China's most important traditional holiday, on the lunar new year. Families reunite, paste couplets, set off firecrackers, share a reunion dinner, and give red envelopes.",
+    "scenario_zh": "情境：除夕夜你第一次到中国朋友家过年。请用中文向长辈拜年、说几句祝福的话。",
+    "scenario_en": "Scenario: It's New Year's Eve and you're celebrating at a Chinese friend's home for the first time. Greet the elders and offer New Year blessings in Chinese.",
+    "city": "西安",
+    "category": "festival",
+    "province": "陕西",
+    "hskRange": [
+      1,
+      3
+    ],
+    "refs": [
+      "农历新年",
+      "红包",
+      "团圆",
+      "春联"
+    ]
+  },
+  {
+    "id": "tea",
+    "emoji": "🍵",
+    "title_zh": "中国茶文化",
+    "title_en": "Chinese Tea Culture",
+    "body_zh": "中国是茶的故乡。绿茶、红茶、乌龙茶各有风味。喝茶讲究静心与待客之道，朋友相聚常以茶代酒。",
+    "body_en": "China is the homeland of tea. Green, black and oolong teas each have their character. Tea-drinking values calm and hospitality; friends often 'toast with tea instead of wine'.",
+    "scenario_zh": "情境：你走进一家茶馆，想点一壶茶并请老板介绍。请用中文和老板对话。",
+    "scenario_en": "Scenario: You walk into a teahouse and want to order a pot of tea and ask the owner for a recommendation. Chat with the owner in Chinese.",
+    "city": "杭州",
+    "category": "food",
+    "province": "浙江",
+    "hskRange": [
+      2,
+      4
+    ],
+    "refs": [
+      "绿茶",
+      "红茶",
+      "待客之道",
+      "静心"
+    ]
+  },
+  {
+    "id": "mid-autumn",
+    "emoji": "🥮",
+    "title_zh": "中秋节",
+    "title_en": "Mid-Autumn Festival",
+    "body_zh": "中秋节在农历八月十五，月亮最圆。人们赏月、吃月饼，表达团圆和思念。",
+    "body_en": "The Mid-Autumn Festival falls on the 15th day of the 8th lunar month, when the moon is fullest. People admire the moon and eat mooncakes to express reunion and longing.",
+    "scenario_zh": "情境：中秋夜你和同学一起赏月吃月饼。请用中文说说你家乡有没有类似的节日。",
+    "scenario_en": "Scenario: On Mid-Autumn night you admire the moon and eat mooncakes with classmates. Tell them in Chinese whether your hometown has a similar festival.",
+    "city": "北京",
+    "category": "festival",
+    "province": "北京",
+    "hskRange": [
+      1,
+      3
+    ],
+    "refs": [
+      "农历八月十五",
+      "赏月",
+      "月饼",
+      "团圆"
+    ]
+  },
+  {
+    "id": "etiquette",
+    "emoji": "🥢",
+    "title_zh": "餐桌礼仪",
+    "title_en": "Table Etiquette",
+    "body_zh": "用筷子时不要插在米饭里，也不要敲碗。长辈先动筷，主人会为客人夹菜，表示热情。",
+    "body_en": "Don't stick chopsticks upright in rice or tap the bowl. Elders start first, and hosts serve dishes to guests as a sign of warmth.",
+    "scenario_zh": "情境：你被邀请到中国家庭吃饭。主人给你夹菜，你该怎么礼貌回应？请用中文表达。",
+    "scenario_en": "Scenario: You're invited to dinner at a Chinese home. The host serves food onto your plate—how do you respond politely? Express it in Chinese.",
+    "city": "成都",
+    "category": "food",
+    "province": "四川",
+    "hskRange": [
+      2,
+      4
+    ],
+    "refs": [
+      "筷子",
+      "长辈",
+      "夹菜",
+      "热情"
+    ]
+  },
+  {
+    "id": "calligraphy",
+    "emoji": "🖌️",
+    "title_zh": "书法",
+    "title_en": "Calligraphy",
+    "body_zh": "书法是用毛笔写汉字的艺术，讲究笔画的轻重和节奏。练字也是修身养性的方式。",
+    "body_en": "Calligraphy is the art of writing characters with a brush, attentive to the weight and rhythm of strokes. Practicing it also cultivates patience and character.",
+    "scenario_zh": "情境：在书法体验课上，老师问你想写哪个字、为什么。请用中文回答。",
+    "scenario_en": "Scenario: In a calligraphy class the teacher asks which character you want to write and why. Answer in Chinese.",
+    "city": "西安",
+    "category": "art",
+    "province": "陕西",
+    "hskRange": [
+      3,
+      5
+    ],
+    "refs": [
+      "毛笔",
+      "汉字",
+      "修身养性",
+      "笔画"
+    ]
+  },
+  {
+    "id": "peking-opera",
+    "emoji": "🎭",
+    "title_zh": "京剧脸谱",
+    "title_en": "Peking Opera Masks",
+    "body_zh": "京剧的脸谱用颜色表现人物性格：红色表示忠勇，黑色表示正直，白色常表示奸诈。",
+    "body_en": "Peking Opera face paint uses color to show character: red for loyalty and courage, black for integrity, white often for cunning.",
+    "scenario_zh": "情境：看完一场京剧，朋友问你最喜欢哪个角色。请用中文说说你的感受。",
+    "scenario_en": "Scenario: After a Peking Opera show, a friend asks which role you liked best. Share your impressions in Chinese.",
+    "city": "北京",
+    "category": "intangible",
+    "province": "北京",
+    "hskRange": [
+      3,
+      5
+    ],
+    "refs": [
+      "脸谱",
+      "颜色",
+      "性格",
+      "京剧"
+    ]
+  },
+  {
+    "id": "terracotta",
+    "emoji": "🏺",
+    "title_zh": "兵马俑",
+    "title_en": "Terracotta Warriors",
+    "body_zh": "兵马俑是秦始皇陵的陪葬军队，被誉为「世界第八大奇迹」。每个陶俑的面容、姿态都不相同，气势宏大。",
+    "body_en": "The Terracotta Warriors are the buried army of Emperor Qin's mausoleum, hailed as the 'Eighth Wonder of the World'. Each figure has a unique face and pose, forming a magnificent army.",
+    "scenario_zh": "情境：你在西安参观兵马俑，遇到一位讲解员。请用中文问几个你好奇的问题。",
+    "scenario_en": "Scenario: You're visiting the Terracotta Warriors in Xi'an and meet a guide. Ask a few questions you're curious about in Chinese.",
+    "city": "西安",
+    "category": "heritage",
+    "province": "陕西",
+    "hskRange": [
+      3,
+      5
+    ],
+    "refs": [
+      "秦始皇陵",
+      "世界第八大奇迹",
+      "陶俑",
+      "周代"
+    ]
+  },
+  {
+    "id": "suzhou-garden",
+    "emoji": "🏡",
+    "title_zh": "苏州园林",
+    "title_en": "Suzhou Gardens",
+    "body_zh": "苏州园林讲究「移步换景」，用假山、池水、亭台和花木营造出诗一样的意境，是中国古典园林的代表。",
+    "body_en": "Suzhou's classical gardens are designed so the view changes with every step, using rockeries, ponds, pavilions and plants to create a poetic atmosphere—icons of classical Chinese garden art.",
+    "scenario_zh": "情境：你和朋友在苏州园林散步。请用中文描述你看到的景色，并说说感受。",
+    "scenario_en": "Scenario: You stroll through a Suzhou garden with a friend. Describe the scenery you see and your feelings in Chinese.",
+    "city": "苏州",
+    "category": "art",
+    "province": "江苏",
+    "hskRange": [
+      3,
+      5
+    ],
+    "refs": [
+      "假山",
+      "池水",
+      "亭台",
+      "古典园林"
+    ]
+  },
+  {
+    "id": "west-lake",
+    "emoji": "🌅",
+    "title_zh": "杭州西湖",
+    "title_en": "West Lake, Hangzhou",
+    "body_zh": "西湖以秀美的湖光山色闻名，「断桥残雪」「三潭印月」等十景四季各异，自古有「上有天堂，下有苏杭」之说。",
+    "body_en": "West Lake is famous for its graceful waters and hills. Its ten scenic spots change with the seasons; an old saying goes, 'In heaven there is paradise; on earth, Suzhou and Hangzhou.'",
+    "scenario_zh": "情境：你想在西湖边租一条船游湖，我是船夫。请用中文问价并约定时间。",
+    "scenario_en": "Scenario: You want to rent a boat on West Lake; I'm the boatman. Ask the price and agree on a time in Chinese.",
+    "city": "杭州",
+    "category": "heritage",
+    "province": "浙江",
+    "hskRange": [
+      2,
+      4
+    ],
+    "refs": [
+      "断桥残雪",
+      "三潭印月",
+      "苏杭",
+      "湖光山色"
+    ]
+  },
+  {
+    "id": "hotpot",
+    "emoji": "🌶️",
+    "title_zh": "成都火锅",
+    "title_en": "Chengdu Hotpot",
+    "body_zh": "成都火锅以麻辣鲜香著称，红汤里翻滚着花椒和辣椒。大家围坐一锅，边煮边吃，热闹又暖和。",
+    "body_en": "Chengdu hotpot is known for its numbing-spicy, savory flavor, with Sichuan pepper and chili bubbling in the red broth. Everyone sits around one pot, cooking and eating together—lively and warm.",
+    "scenario_zh": "情境：第一次吃成都火锅，你不太能吃辣。请用中文向服务员说明，并点一个合适的锅底。",
+    "scenario_en": "Scenario: It's your first Chengdu hotpot and you can't take much spice. Explain to the waiter in Chinese and order a suitable broth.",
+    "city": "成都",
+    "category": "food",
+    "province": "四川",
+    "hskRange": [
+      1,
+      3
+    ],
+    "refs": [
+      "麻辣",
+      "花椒",
+      "辣椒",
+      "围坐"
+    ]
+  },
+  {
+    "id": "hutong",
+    "emoji": "🧱",
+    "title_zh": "北京胡同",
+    "title_en": "Beijing Hutong",
+    "body_zh": "胡同是北京老城的小巷，两旁是四合院。这里保留着老北京的生活气息，骑车穿行能感受到城市的历史。",
+    "body_en": "Hutongs are the narrow lanes of old Beijing, lined with courtyard houses (siheyuan). They preserve the flavor of old Beijing life; cycling through them lets you feel the city's history.",
+    "scenario_zh": "情境：你在胡同里迷路了，想找一家有名的小吃店。请用中文向当地居民问路。",
+    "scenario_en": "Scenario: You're lost in a hutong and want to find a famous snack shop. Ask a local resident for directions in Chinese.",
+    "city": "北京",
+    "category": "folklore",
+    "province": "北京",
+    "hskRange": [
+      2,
+      4
+    ],
+    "refs": [
+      "四合院",
+      "老北京",
+      "小巷",
+      "历史"
+    ]
+  },
+  {
+    "id": "the-bund",
+    "emoji": "🌃",
+    "title_zh": "上海外滩",
+    "title_en": "The Bund, Shanghai",
+    "body_zh": "外滩一边是百年的西式建筑，一边是现代的高楼大厦。夜晚灯光璀璨，是上海中西交融、新旧并存的象征。",
+    "body_en": "On one side of the Bund stand century-old Western buildings, on the other, modern skyscrapers. Brilliantly lit at night, it symbolizes Shanghai's blend of East and West, old and new.",
+    "scenario_zh": "情境：你在外滩看夜景，遇到一位中国游客想合影。请用中文友好地交流几句。",
+    "scenario_en": "Scenario: You're enjoying the night view on the Bund and a Chinese tourist wants a photo together. Have a friendly chat in Chinese.",
+    "city": "上海",
+    "category": "modern",
+    "province": "上海",
+    "hskRange": [
+      2,
+      4
+    ],
+    "refs": [
+      "西式建筑",
+      "高楼大厦",
+      "中西交融",
+      "上海"
+    ]
+  },
+  {
+    "id": "baoji-bronze",
+    "emoji": "⚱️",
+    "title_zh": "宝鸡青铜器",
+    "title_en": "Baoji Bronze Ware",
+    "body_zh": "宝鸡被称为「青铜器之乡」，出土了大量西周青铜器。器物上的铭文记录了三千年前的历史，是研究周代文化的珍贵资料。",
+    "body_en": "Baoji is known as the 'hometown of bronze ware', where many Western Zhou bronzes were unearthed. Their inscriptions record history from 3,000 years ago—precious material for studying Zhou culture.",
+    "scenario_zh": "情境：在宝鸡青铜器博物院，讲解员问你对哪件文物最感兴趣。请用中文回答。",
+    "scenario_en": "Scenario: At the Baoji Bronze Ware Museum, the guide asks which artifact interests you most. Answer in Chinese.",
+    "city": "宝鸡",
+    "category": "heritage",
+    "province": "陕西",
+    "hskRange": [
+      4,
+      6
+    ],
+    "refs": [
+      "西周",
+      "青铜器",
+      "铭文",
+      "周代文化"
+    ]
+  },
+  {
+    "id": "zhenjiang-vinegar",
+    "emoji": "🍶",
+    "title_zh": "镇江香醋",
+    "title_en": "Zhenjiang Vinegar",
+    "body_zh": "镇江位于长江边，以「香醋」闻名，俗话说「香醋摆不坏」。这里还有金山寺，传说《白蛇传》的故事就发生在这里。",
+    "body_en": "Zhenjiang sits on the Yangtze and is famous for its aromatic vinegar; as the saying goes, 'the vinegar never spoils'. It is also home to Jinshan Temple, the legendary setting of the Legend of the White Snake.",
+    "scenario_zh": "情境：你在镇江的餐馆吃饭，想尝尝当地有名的香醋。请用中文向服务员询问。",
+    "scenario_en": "Scenario: Dining at a Zhenjiang restaurant, you want to try the famous local vinegar. Ask the waiter in Chinese.",
+    "city": "镇江",
+    "category": "food",
+    "province": "江苏",
+    "hskRange": [
+      3,
+      5
+    ],
+    "refs": [
+      "长江",
+      "香醋",
+      "金山寺",
+      "白蛇传"
+    ]
+  },
+  {
+    "id": "guangzhou-yumcha",
+    "emoji": "🥟",
+    "title_zh": "广州早茶",
+    "title_en": "Guangzhou Morning Tea",
+    "body_zh": "广州人爱「叹早茶」，一壶茶配上虾饺、烧卖、肠粉等点心，一家人慢慢吃、慢慢聊，是岭南悠闲生活的写照。",
+    "body_en": "People in Guangzhou love 'yum cha'—a pot of tea with dim sum like shrimp dumplings, siu mai and rice rolls. Families eat and chat slowly, a picture of leisurely Lingnan life.",
+    "scenario_zh": "情境：你第一次去广州喝早茶，面对琳琅满目的点心。请用中文向服务员请教怎么点。",
+    "scenario_en": "Scenario: It's your first time at yum cha in Guangzhou, facing a dazzling array of dim sum. Ask the waiter how to order, in Chinese.",
+    "city": "广州",
+    "category": "food",
+    "province": "广东",
+    "hskRange": [
+      2,
+      4
+    ],
+    "refs": [
+      "叹早茶",
+      "虾饺",
+      "烧卖",
+      "岭南"
+    ]
+  },
+  {
+    "id": "shenzhen-tech",
+    "emoji": "🌆",
+    "title_zh": "深圳·创新之城",
+    "title_en": "Shenzhen, City of Innovation",
+    "body_zh": "深圳从一个小渔村发展成国际化大都市，只用了四十多年。这里聚集了许多科技公司，以速度和创新闻名，被称为「中国硅谷」。",
+    "body_en": "In just over forty years Shenzhen grew from a small fishing village into an international metropolis. Home to many tech companies and famous for speed and innovation, it is called 'China's Silicon Valley'.",
+    "scenario_zh": "情境：在深圳的科技展上，你遇到一位工程师。请用中文聊聊你对科技的看法。",
+    "scenario_en": "Scenario: At a tech expo in Shenzhen you meet an engineer. Share your views on technology in Chinese.",
+    "city": "深圳",
+    "category": "modern",
+    "province": "广东",
+    "hskRange": [
+      2,
+      4
+    ],
+    "refs": [
+      "深圳",
+      "科技",
+      "创新",
+      "中国硅谷",
+      "改革开放"
+    ]
+  },
+  {
+    "id": "wuhan-yellowcrane",
+    "emoji": "🏯",
+    "title_zh": "武汉黄鹤楼",
+    "title_en": "Yellow Crane Tower, Wuhan",
+    "body_zh": "黄鹤楼矗立在长江边，是江南三大名楼之一。古代许多诗人在这里留下了名篇。武汉的热干面也是有名的小吃。",
+    "body_en": "The Yellow Crane Tower stands by the Yangtze, one of the three great towers south of the river, where many ancient poets left famous verses. Wuhan's hot-dry noodles are also a well-known snack.",
+    "scenario_zh": "情境：你登上黄鹤楼远眺长江，朋友问你看到了什么、有什么感受。请用中文描述。",
+    "scenario_en": "Scenario: Atop the Yellow Crane Tower you gaze at the Yangtze; a friend asks what you see and feel. Describe it in Chinese.",
+    "city": "武汉",
+    "category": "heritage",
+    "province": "湖北",
+    "hskRange": [
+      2,
+      4
+    ],
+    "refs": [
+      "武汉",
+      "黄鹤楼",
+      "长江",
+      "诗人",
+      "热干面"
+    ]
+  },
+  {
+    "id": "changsha",
+    "emoji": "🌶️",
+    "title_zh": "长沙·星城",
+    "title_en": "Changsha",
+    "body_zh": "长沙是一座充满活力的城市，湘菜以香辣著称，臭豆腐是有名的小吃。橘子洲头风景优美，夜晚湘江两岸灯火辉煌。",
+    "body_en": "Changsha is a lively city. Hunan cuisine is known for being spicy, and stinky tofu is a famous snack. Orange Isle offers fine scenery, and both banks of the Xiang River glow at night.",
+    "scenario_zh": "情境：你在长沙的夜市，想试试有名的臭豆腐又有点犹豫。请用中文和摊主交流。",
+    "scenario_en": "Scenario: At a Changsha night market you're tempted yet hesitant to try the famous stinky tofu. Chat with the stall owner in Chinese.",
+    "city": "长沙",
+    "category": "modern",
+    "province": "湖南",
+    "hskRange": [
+      2,
+      4
+    ],
+    "refs": [
+      "长沙",
+      "湘菜",
+      "臭豆腐",
+      "橘子洲",
+      "小吃"
+    ]
+  },
+  {
+    "id": "chongqing",
+    "emoji": "🌃",
+    "title_zh": "重庆·山城",
+    "title_en": "Chongqing, the Mountain City",
+    "body_zh": "重庆建在山上，道路高低起伏，被称为「8D 魔幻城市」。这里的火锅麻辣鲜香，两江交汇处的夜景十分迷人。",
+    "body_en": "Built on hills with winding, undulating roads, Chongqing is dubbed an '8D magical city'. Its hotpot is numbing and savory, and the night view where two rivers meet is enchanting.",
+    "scenario_zh": "情境：你在重庆坐轻轨「穿楼而过」，觉得很神奇。请用中文向朋友描述这次体验。",
+    "scenario_en": "Scenario: In Chongqing you ride a light-rail train that 'passes through a building' and find it amazing. Describe the experience to a friend in Chinese.",
+    "city": "重庆",
+    "category": "modern",
+    "province": "重庆",
+    "hskRange": [
+      2,
+      4
+    ],
+    "refs": [
+      "重庆",
+      "火锅",
+      "山城",
+      "夜景",
+      "麻辣"
+    ]
+  },
+  {
+    "id": "qingdao",
+    "emoji": "🍺",
+    "title_zh": "青岛·海滨之城",
+    "title_en": "Qingdao, the Seaside City",
+    "body_zh": "青岛是一座美丽的海滨城市，红瓦绿树、碧海蓝天。这里的啤酒闻名全国，每年夏天的啤酒节都吸引大量游客。",
+    "body_en": "Qingdao is a beautiful seaside city of red roofs, green trees, blue sea and sky. Its beer is famous nationwide, and the summer beer festival draws crowds each year.",
+    "scenario_zh": "情境：你在青岛海边散步，想找一家能看海的餐厅吃海鲜。请用中文向当地人打听。",
+    "scenario_en": "Scenario: Strolling the Qingdao shore, you want a seafood restaurant with a sea view. Ask a local in Chinese.",
+    "city": "青岛",
+    "category": "modern",
+    "province": "山东",
+    "hskRange": [
+      2,
+      4
+    ],
+    "refs": [
+      "青岛",
+      "海滨",
+      "啤酒",
+      "啤酒节",
+      "红瓦绿树"
+    ]
+  },
+  {
+    "id": "harbin",
+    "emoji": "❄️",
+    "title_zh": "哈尔滨·冰城",
+    "title_en": "Harbin, the Ice City",
+    "body_zh": "哈尔滨的冬天非常寒冷，却因此有了世界闻名的冰雪大世界。巨大的冰雕在灯光下晶莹剔透。中央大街上还保留着许多欧式建筑。",
+    "body_en": "Harbin's winters are bitterly cold, which gives rise to the world-famous Ice and Snow World. Giant ice sculptures glitter under the lights, and Central Street preserves many European-style buildings.",
+    "scenario_zh": "情境：第一次见到这么大的冰雕，你很兴奋。请用中文向朋友描述你看到的景象。",
+    "scenario_en": "Scenario: Seeing such huge ice sculptures for the first time, you're thrilled. Describe the scene to a friend in Chinese.",
+    "city": "哈尔滨",
+    "category": "modern",
+    "province": "黑龙江",
+    "hskRange": [
+      2,
+      4
+    ],
+    "refs": [
+      "哈尔滨",
+      "冰城",
+      "冰雪大世界",
+      "冰雕",
+      "中央大街"
+    ]
+  },
+  {
+    "id": "hongkong",
+    "emoji": "🌉",
+    "title_zh": "香港·东方之珠",
+    "title_en": "Hong Kong, Pearl of the Orient",
+    "body_zh": "香港是中国的特别行政区，中西文化在这里交融。维多利亚港两岸高楼林立，夜景璀璨；茶餐厅里的奶茶和菠萝包是地道的港式味道。",
+    "body_en": "Hong Kong is a Special Administrative Region of China where Chinese and Western cultures blend. Skyscrapers line Victoria Harbour with a dazzling night view; milk tea and pineapple buns in the cha chaan teng are authentic local flavors.",
+    "scenario_zh": "情境：你在香港的茶餐厅，想点一杯奶茶和一个菠萝包。请用中文点单。",
+    "scenario_en": "Scenario: In a Hong Kong cha chaan teng you want to order a milk tea and a pineapple bun. Order in Chinese.",
+    "city": "香港",
+    "category": "modern",
+    "province": "香港",
+    "hskRange": [
+      2,
+      4
+    ],
+    "refs": [
+      "香港",
+      "维多利亚港",
+      "茶餐厅",
+      "奶茶",
+      "中西文化"
+    ]
+  },
+  {
+    "id": "macau",
+    "emoji": "⛪",
+    "title_zh": "澳门·中葡风情",
+    "title_en": "Macau, Sino-Portuguese Charm",
+    "body_zh": "澳门是中国的特别行政区，曾受葡萄牙文化影响。大三巴牌坊是它的标志，街道上中葡风格的建筑并存，葡式蛋挞更是必尝的美食。",
+    "body_en": "Macau is a Special Administrative Region of China once influenced by Portuguese culture. The Ruins of St. Paul's are its landmark; Chinese and Portuguese architecture stand side by side, and Portuguese egg tarts are a must-try.",
+    "scenario_zh": "情境：你在澳门的老城区散步，想买几个有名的葡式蛋挞。请用中文向店员询问。",
+    "scenario_en": "Scenario: Strolling Macau's old town, you want to buy some famous Portuguese egg tarts. Ask the clerk in Chinese.",
+    "city": "澳门",
+    "category": "modern",
+    "province": "澳门",
+    "hskRange": [
+      2,
+      4
+    ],
+    "refs": [
+      "澳门",
+      "大三巴牌坊",
+      "葡式蛋挞",
+      "葡萄牙",
+      "特别行政区"
+    ]
+  },
+  {
+    "id": "taipei",
+    "emoji": "🏮",
+    "title_zh": "台北·夜市文化",
+    "title_en": "Taipei Night-Market Culture",
+    "body_zh": "台北是中国台湾地区的城市，夜市文化十分热闹。士林夜市里有各种小吃，如蚵仔煎、珍珠奶茶。台北故宫博物院收藏着许多珍贵的中华文物。",
+    "body_en": "Taipei is a city in China's Taiwan region with a lively night-market culture. Shilin Night Market offers snacks like oyster omelets and bubble tea, while the National Palace Museum houses many precious Chinese cultural relics.",
+    "scenario_zh": "情境：你逛台北的夜市，想尝尝珍珠奶茶。请用中文向摊主点单并问问味道。",
+    "scenario_en": "Scenario: Wandering a Taipei night market, you want to try bubble tea. Order from the vendor and ask about the flavor, in Chinese.",
+    "city": "台北",
+    "category": "modern",
+    "province": "台湾",
+    "hskRange": [
+      2,
+      4
+    ],
+    "refs": [
+      "台北",
+      "夜市",
+      "士林夜市",
+      "蚵仔煎",
+      "珍珠奶茶"
+    ]
+  },
+  {
+    "id": "yuanmingyuan",
+    "emoji": "🏛️",
+    "title_zh": "圆明园·万园之园",
+    "title_en": "The Old Summer Palace",
+    "body_zh": "圆明园是清代的皇家园林，集中外园林艺术之大成，被誉为「万园之园」。1860 年第二次鸦片战争中，被英法联军劫掠并焚毁。今天人们把这片遗址保留下来，既是欣赏园林之美，也是铭记历史、珍视和平。",
+    "body_en": "The Old Summer Palace (Yuanmingyuan) was a Qing imperial garden, a masterpiece blending Chinese and foreign garden art—the 'Garden of Gardens'. In 1860, during the Second Opium War, it was looted and burned by Anglo-French forces. Its ruins are preserved today both for their beauty and as a reminder to cherish history and peace.",
+    "scenario_zh": "情境：你在圆明园遗址参观，朋友问你这里曾经发生了什么。请用中文简单讲讲你的感受。",
+    "scenario_en": "Scenario: Visiting the ruins of the Old Summer Palace, a friend asks what once happened here. Share your thoughts in simple Chinese.",
+    "city": "北京",
+    "category": "heritage",
+    "province": "北京",
+    "hskRange": [
+      3,
+      5
+    ],
+    "refs": [
+      "圆明园",
+      "清代",
+      "皇家园林",
+      "英法联军",
+      "1860"
+    ]
+  },
+  {
+    "id": "shou-shou",
+    "emoji": "🐲",
+    "title_zh": "圆明园十二生肖兽首",
+    "title_en": "The Twelve Zodiac Bronze Heads",
+    "body_zh": "十二生肖兽首原是圆明园海晏堂前喷泉「水力钟」的部件，由意大利传教士郎世宁设计、清宫匠人铸造：每到一个时辰，对应生肖的兽首便会喷水报时，是中西合璧的智慧。1860 年它们被劫流散海外。如今鼠、牛、虎、兔、猴、猪、马七尊已通过捐赠或回购等方式回归祖国，龙、蛇、羊、鸡、狗五尊仍下落不明。它们既是中外交流的见证，也是「国宝回归」与文化遗产保护的象征。",
+    "body_en": "The twelve bronze zodiac heads were once part of a water-clock fountain before the Haiyantang hall in the Old Summer Palace. Designed by the Italian Jesuit Giuseppe Castiglione and cast by Qing court craftsmen, each animal head spouted water to mark its two-hour period—a blend of Chinese and Western ingenuity. Looted abroad in 1860, seven (rat, ox, tiger, rabbit, monkey, pig, horse) have since returned home through donation or repurchase, while five (dragon, snake, goat, rooster, dog) remain missing. They symbolize cross-cultural exchange and the cause of returning lost national treasures.",
+    "scenario_zh": "情境：朋友问你「国宝回归」意味着什么，你的生肖兽首回来了吗。请用中文谈谈你的看法。",
+    "scenario_en": "Scenario: A friend asks what 'returning national treasures' means, and whether your zodiac's head has come home. Share your view in Chinese.",
+    "city": "北京",
+    "category": "heritage",
+    "province": "北京",
+    "hskRange": [
+      3,
+      5
+    ],
+    "refs": [
+      "圆明园",
+      "十二生肖",
+      "兽首",
+      "郎世宁",
+      "水力钟"
+    ]
+  },
+  {
+    "id": "paper-cutting",
+    "emoji": "✂️",
+    "category": "intangible",
+    "city": "西安",
+    "title_zh": "剪纸",
+    "title_en": "Paper-cutting",
+    "body_zh": "剪纸是用剪刀或刻刀在纸上剪出花鸟、人物、吉祥图案的民间艺术，常贴在窗户上叫\"窗花\"，红色寓意喜庆。2009 年列入联合国教科文组织人类非物质文化遗产。",
+    "body_en": "Paper-cutting is the folk art of cutting flowers, figures and lucky patterns from paper, often pasted on windows as \"window flowers\"; red means joy. It was inscribed on UNESCO's Intangible Cultural Heritage list in 2009.",
+    "scenario_zh": "你在陕西的剪纸艺人摊位前，想学剪一个\"福\"字窗花送给朋友，向艺人请教。",
+    "scenario_en": "At a Shaanxi paper-cutting stall, you want to learn to cut a \"福\" window flower for a friend—ask the artisan how.",
+    "province": "陕西",
+    "hskRange": [
+      2,
+      4
+    ],
+    "refs": [
+      "剪纸",
+      "窗花",
+      "民间艺术",
+      "红色",
+      "联合国非遗"
+    ]
+  },
+  {
+    "id": "sichuan-opera",
+    "emoji": "🎭",
+    "category": "intangible",
+    "city": "成都",
+    "title_zh": "川剧变脸",
+    "title_en": "Sichuan Opera Face-changing",
+    "body_zh": "川剧\"变脸\"是四川戏曲的绝活：演员在转身、甩袖的一瞬间换出一张张不同的脸谱，快到肉眼难辨，象征人物情绪与命运的突变。",
+    "body_en": "\"Face-changing\" is a stunning skill in Sichuan opera: actors swap painted masks in a blink while turning or flicking a sleeve—too fast for the eye—symbolizing sudden shifts of emotion and fate.",
+    "scenario_zh": "在成都的茶馆看完川剧变脸，你很好奇脸谱是怎么换的，和邻座的本地观众聊起来。",
+    "scenario_en": "After a face-changing show in a Chengdu teahouse, curious how the masks switch, you strike up a chat with the local viewer beside you.",
+    "province": "四川",
+    "hskRange": [
+      2,
+      4
+    ],
+    "refs": [
+      "川剧",
+      "变脸",
+      "脸谱",
+      "四川",
+      "戏曲"
+    ]
+  },
+  {
+    "id": "porcelain",
+    "emoji": "🏺",
+    "category": "intangible",
+    "city": "景德镇",
+    "title_zh": "景德镇陶瓷",
+    "title_en": "Jingdezhen Porcelain",
+    "body_zh": "景德镇被称为\"瓷都\"，制瓷一千多年，青花瓷以白底蓝纹闻名世界。英文 \"china\"（瓷器）正源于中国。",
+    "body_en": "Jingdezhen, the \"Porcelain Capital,\" has made ceramics for over 1,000 years; its blue-and-white porcelain is world-famous. The word \"china\" (porcelain) comes from China itself.",
+    "scenario_zh": "你在景德镇的瓷器作坊体验拉坯，想给家人挑一只青花茶杯，向店主询问纹样的寓意。",
+    "scenario_en": "Trying the potter's wheel in a Jingdezhen workshop, you want a blue-and-white teacup for family—ask the owner what the patterns mean.",
+    "province": "江西",
+    "hskRange": [
+      2,
+      4
+    ],
+    "refs": [
+      "景德镇",
+      "陶瓷",
+      "青花瓷",
+      "瓷都",
+      "china"
+    ]
+  },
+  {
+    "id": "dragon-boat",
+    "emoji": "🛶",
+    "category": "festival",
+    "city": "全国",
+    "title_zh": "端午节",
+    "title_en": "Dragon Boat Festival",
+    "body_zh": "端午节在农历五月初五，人们吃粽子、赛龙舟，纪念爱国诗人屈原。门上挂艾草，孩子佩戴香囊驱邪祈福。",
+    "body_en": "The Dragon Boat Festival falls on the 5th day of the 5th lunar month: people eat zongzi (sticky-rice dumplings) and race dragon boats to honor the patriotic poet Qu Yuan, hanging mugwort and wearing scented pouches for protection.",
+    "scenario_zh": "端午节你被中国朋友邀请去看龙舟赛、学包粽子，你想了解这个节日的来历。",
+    "scenario_en": "Invited by a Chinese friend to watch dragon-boat races and learn to wrap zongzi on Duanwu, you want to know the festival's origin.",
+    "province": "全国",
+    "hskRange": [
+      2,
+      4
+    ],
+    "refs": [
+      "端午节",
+      "屈原",
+      "粽子",
+      "赛龙舟",
+      "艾草"
+    ]
+  },
+  {
+    "id": "solar-terms",
+    "emoji": "🌾",
+    "category": "festival",
+    "city": "全国",
+    "title_zh": "二十四节气",
+    "title_en": "24 Solar Terms",
+    "body_zh": "二十四节气是古代中国根据太阳运行划分的农事历法，如立春、清明、夏至、冬至，指导农耕与饮食起居。2016 年列入人类非物质文化遗产。",
+    "body_en": "The 24 Solar Terms are an ancient Chinese calendar dividing the year by the sun's path—Start of Spring, Qingming, Summer Solstice, Winter Solstice—guiding farming, food and daily life. Inscribed by UNESCO in 2016.",
+    "scenario_zh": "冬至那天中国朋友说\"冬至大如年，要吃饺子\"，你想知道节气和饮食的关系。",
+    "scenario_en": "On Winter Solstice a friend says \"Dongzhi is as big as New Year—eat dumplings!\"; you want to learn how solar terms connect to food.",
+    "province": "全国",
+    "hskRange": [
+      2,
+      4
+    ],
+    "refs": [
+      "节气",
+      "农耕",
+      "历法",
+      "非物质文化遗产"
+    ]
+  },
+  {
+    "id": "zodiac",
+    "emoji": "🐭",
+    "category": "folklore",
+    "city": "全国",
+    "title_zh": "十二生肖",
+    "title_en": "Chinese Zodiac",
+    "body_zh": "十二生肖用鼠、牛、虎、兔、龙、蛇、马、羊、猴、鸡、狗、猪十二种动物配十二地支，每人按出生年有一个属相，常用来推算年龄、形容性格、说吉祥话。",
+    "body_en": "The 12 zodiac animals—Rat, Ox, Tiger, Rabbit, Dragon, Snake, Horse, Goat, Monkey, Rooster, Dog, Pig—cycle through the years; everyone has a sign by birth year, used to guess age, describe character and give blessings.",
+    "scenario_zh": "中国朋友问你\"你属什么的？\"，你想搞清楚自己的属相，并问问龙年有什么讲究。",
+    "scenario_en": "A friend asks \"What's your zodiac sign?\"; you want to find yours and ask what's special about the Year of the Dragon.",
+    "province": "全国",
+    "hskRange": [
+      1,
+      3
+    ],
+    "refs": [
+      "生肖",
+      "地支",
+      "属相",
+      "动物"
+    ]
+  },
+  {
+    "id": "hanfu",
+    "emoji": "👘",
+    "category": "folklore",
+    "city": "西安",
+    "title_zh": "汉服",
+    "title_en": "Hanfu",
+    "body_zh": "汉服是汉民族的传统服饰，特点是交领右衽、宽袍大袖、系带不用纽扣。近年\"汉服热\"兴起，年轻人穿汉服逛街、拍照、过节，成为国潮的一部分。",
+    "body_en": "Hanfu is the traditional dress of the Han people—cross-collar closing to the right, wide flowing sleeves, tied with sashes instead of buttons. A recent \"Hanfu revival\" sees young people wear it on streets, in photos and at festivals, part of the guochao trend.",
+    "scenario_zh": "你在西安大唐不夜城看到很多人穿汉服，也想租一套体验，向租赁店店员咨询。",
+    "scenario_en": "Seeing many people in Hanfu at Xi'an's Tang night city, you want to rent an outfit to try—ask the rental-shop clerk.",
+    "province": "陕西",
+    "hskRange": [
+      2,
+      4
+    ],
+    "refs": [
+      "汉服",
+      "传统服饰",
+      "交领右衽",
+      "国潮"
+    ]
+  },
+  {
+    "id": "temple-fair",
+    "emoji": "🎏",
+    "category": "folklore",
+    "city": "北京",
+    "title_zh": "庙会",
+    "title_en": "Temple Fair",
+    "body_zh": "庙会是中国传统的集市活动，多在春节或庙宇节日举办，有小吃、杂耍、舞龙舞狮和民间手艺，热闹喜庆，是体验市井民俗的好去处。",
+    "body_en": "A temple fair is a traditional Chinese market, often held at Spring Festival or temple holidays, with snacks, acrobatics, dragon and lion dances and folk crafts—lively and festive, a great way to feel grassroots customs.",
+    "scenario_zh": "春节期间你去北京地坛庙会，想尝小吃、看舞狮，向身边的中国家庭打听哪里最好玩。",
+    "scenario_en": "At Beijing's Ditan temple fair during Spring Festival, you want snacks and lion dances—ask a Chinese family nearby what's most fun.",
+    "province": "北京",
+    "hskRange": [
+      2,
+      4
+    ],
+    "refs": [
+      "庙会",
+      "春节",
+      "集市",
+      "民俗"
+    ]
+  },
+  {
+    "id": "confucius",
+    "emoji": "📜",
+    "category": "thought",
+    "city": "曲阜",
+    "title_zh": "孔子与儒家",
+    "title_en": "Confucius & Confucianism",
+    "body_zh": "孔子是两千多年前的思想家、教育家，儒家学说讲\"仁、义、礼、智、信\"，重视家庭、教育与社会和谐，深刻影响了中国人的处世之道。",
+    "body_en": "Confucius, a thinker and teacher from over 2,000 years ago, founded Confucianism—benevolence, righteousness, ritual, wisdom and trust—stressing family, education and social harmony, deeply shaping how Chinese people relate to one another.",
+    "scenario_zh": "你读到\"己所不欲，勿施于人\"很有感触，想和老师讨论这句话在今天的意义。",
+    "scenario_en": "Moved by \"Do not do to others what you would not want done to you,\" you want to discuss its meaning today with your teacher.",
+    "province": "山东",
+    "hskRange": [
+      3,
+      5
+    ],
+    "refs": [
+      "孔子",
+      "儒家",
+      "仁义礼智信",
+      "教育"
+    ]
+  },
+  {
+    "id": "taichi",
+    "emoji": "☯️",
+    "category": "thought",
+    "city": "全国",
+    "title_zh": "太极与道家",
+    "title_en": "Tai Chi & Daoism",
+    "body_zh": "道家主张\"道法自然\"\"无为而治\"，追求人与自然的和谐。太极拳把道家思想化为缓慢圆柔的动作，刚柔相济，是世界闻名的养生功夫。",
+    "body_en": "Daoism teaches \"follow nature\" and \"govern by non-action,\" seeking harmony between people and nature. Tai Chi turns these ideas into slow, round, soft movements blending hardness and softness—a world-famous health practice.",
+    "scenario_zh": "清晨你在公园看到老人打太极，动作很柔和，你想跟着学几招，向他请教。",
+    "scenario_en": "At dawn you see elders doing Tai Chi in the park; the moves look gentle and you want to learn a few—ask one to teach you.",
+    "province": "全国",
+    "hskRange": [
+      2,
+      4
+    ],
+    "refs": [
+      "太极",
+      "道家",
+      "道法自然",
+      "养生"
+    ]
+  },
+  {
+    "id": "idioms",
+    "emoji": "📚",
+    "category": "thought",
+    "city": "邯郸",
+    "title_zh": "成语典故",
+    "title_en": "Chinese Idioms",
+    "body_zh": "成语多为四个字，背后常有历史故事或寓言，如\"画蛇添足\"\"守株待兔\"。学会成语既能把中文说得地道，又能了解中国的历史与智慧。",
+    "body_en": "Chinese idioms (chengyu) are usually four characters with a story or fable behind them—like \"drawing legs on a snake\" or \"waiting by a tree for a rabbit.\" Learning them makes your Chinese idiomatic and reveals Chinese history and wisdom.",
+    "scenario_zh": "你想用一个成语夸朋友进步快，但不确定用得对不对，向老师请教合适的成语。",
+    "scenario_en": "You want to praise a friend's fast progress with an idiom but aren't sure it fits—ask your teacher for the right one.",
+    "province": "河北",
+    "hskRange": [
+      3,
+      5
+    ],
+    "refs": [
+      "成语",
+      "典故",
+      "寓言",
+      "历史故事"
+    ]
+  },
+  {
+    "id": "tcm",
+    "emoji": "🌿",
+    "category": "thought",
+    "city": "全国",
+    "title_zh": "中医养生",
+    "title_en": "Traditional Chinese Medicine",
+    "body_zh": "中医有几千年历史，讲究\"阴阳平衡\"\"治未病\"，用中药、针灸、推拿、食疗来调理身体。很多中国人按节气和体质来养生。",
+    "body_en": "Traditional Chinese Medicine, thousands of years old, emphasizes \"yin-yang balance\" and \"treating illness before it arises,\" using herbs, acupuncture, massage and food therapy. Many Chinese adjust their health care to the season and body type.",
+    "scenario_zh": "你最近容易上火，中国朋友建议你喝菊花茶、少吃辣，你想了解中医怎么看\"上火\"。",
+    "scenario_en": "Feeling \"heaty\" lately, a friend suggests chrysanthemum tea and less spice; you want to learn how TCM sees \"internal heat.\"",
+    "province": "全国",
+    "hskRange": [
+      3,
+      5
+    ],
+    "refs": [
+      "中医",
+      "养生",
+      "阴阳",
+      "针灸"
+    ]
+  },
+  {
+    "id": "ink-painting",
+    "emoji": "🎨",
+    "category": "art",
+    "city": "全国",
+    "title_zh": "国画",
+    "title_en": "Chinese Ink Painting",
+    "body_zh": "中国画用毛笔、墨和宣纸，讲究\"留白\"与意境，山水、花鸟、人物各成一派。与西方油画不同，国画重神似而非形似。",
+    "body_en": "Chinese painting uses brush, ink and rice paper, prizing \"blank space\" and mood; landscapes, birds-and-flowers and figures form distinct schools. Unlike Western oil painting, it values spirit over exact likeness.",
+    "scenario_zh": "你在美术馆看到一幅山水画大片留白，不太理解，向讲解员请教国画的\"留白\"。",
+    "scenario_en": "Seeing a landscape with lots of blank space in a gallery, puzzled, you ask the guide about \"blank space\" in Chinese painting.",
+    "province": "全国",
+    "hskRange": [
+      3,
+      5
+    ],
+    "refs": [
+      "国画",
+      "水墨画",
+      "留白",
+      "山水"
+    ]
+  },
+  {
+    "id": "poetry",
+    "emoji": "✍️",
+    "category": "art",
+    "city": "全国",
+    "title_zh": "唐诗宋词",
+    "title_en": "Tang Poetry & Song Lyrics",
+    "body_zh": "唐诗、宋词是中国古典文学的高峰。李白、杜甫、苏轼的诗词朗朗上口，写景抒情，许多中国人从小背诵，至今常被引用。",
+    "body_en": "Tang poetry and Song lyrics are peaks of classical Chinese literature. Verses by Li Bai, Du Fu and Su Shi are musical and evocative; many Chinese memorize them from childhood and still quote them today.",
+    "scenario_zh": "中秋夜朋友念了\"但愿人长久，千里共婵娟\"，你很喜欢，想了解这句词的意思和作者。",
+    "scenario_en": "On Mid-Autumn night a friend recites \"May we all be blessed with longevity, sharing the moon though miles apart\"; charmed, you ask its meaning and author.",
+    "province": "全国",
+    "hskRange": [
+      3,
+      5
+    ],
+    "refs": [
+      "唐诗",
+      "宋词",
+      "李白",
+      "杜甫",
+      "苏轼"
+    ]
+  },
+  {
+    "id": "forbidden-city",
+    "emoji": "🏯",
+    "category": "heritage",
+    "province": "北京",
+    "city": "北京",
+    "title_zh": "故宫",
+    "title_en": "The Forbidden City",
+    "body_zh": "故宫是明清两代的皇宫，世界现存最大的木结构宫殿群，红墙黄瓦、九千多间房，珍藏百万件文物，是中国古代建筑与皇家文化的巅峰。",
+    "body_en": "The Forbidden City was the imperial palace of the Ming and Qing dynasties—the world's largest surviving wooden palace complex, with red walls, yellow tiles, 9,000+ rooms and a million relics, the pinnacle of ancient Chinese architecture.",
+    "scenario_zh": "你第一次走进故宫，被红墙金瓦震撼，想请导游讲讲太和殿的故事。",
+    "scenario_en": "Awed by the red walls and golden tiles on your first visit, you ask the guide about the Hall of Supreme Harmony.",
+    "hskRange": [
+      2,
+      4
+    ],
+    "refs": [
+      "故宫",
+      "明清",
+      "宫殿",
+      "文物"
+    ]
+  },
+  {
+    "id": "great-wall",
+    "emoji": "🧱",
+    "category": "heritage",
+    "province": "北京",
+    "city": "北京",
+    "title_zh": "长城",
+    "title_en": "The Great Wall",
+    "body_zh": "万里长城始建于两千多年前，蜿蜒于群山之间，是古代抵御外敌的军事工程，也是中华民族坚韧不屈的象征。北京八达岭最为著名。",
+    "body_en": "Begun over 2,000 years ago and winding across mountains, the Great Wall was an ancient defense work and a symbol of Chinese perseverance. The Badaling section near Beijing is the most famous.",
+    "scenario_zh": "登上八达岭长城，你想知道\"不到长城非好汉\"这句话的意思。",
+    "scenario_en": "Atop Badaling, you ask what the saying \"You're not a true hero until you reach the Great Wall\" means.",
+    "hskRange": [
+      1,
+      3
+    ],
+    "refs": [
+      "长城",
+      "八达岭",
+      "军事工程",
+      "象征"
+    ]
+  },
+  {
+    "id": "peking-duck",
+    "emoji": "🦆",
+    "category": "food",
+    "province": "北京",
+    "city": "北京",
+    "title_zh": "北京烤鸭",
+    "title_en": "Peking Duck",
+    "body_zh": "北京烤鸭皮脆肉嫩，用果木炭火烤制，片成薄片，配薄饼、葱丝、甜面酱卷着吃，是北京最有名的菜肴。",
+    "body_en": "Peking duck has crisp skin and tender meat, roasted over fruit-wood fire and sliced thin, eaten wrapped in thin pancakes with scallions and sweet bean sauce—Beijing's most famous dish.",
+    "scenario_zh": "在全聚德点了烤鸭，服务员现场片鸭，你想学怎么卷着吃。",
+    "scenario_en": "At Quanjude the server carves the duck tableside; you want to learn how to wrap it.",
+    "hskRange": [
+      1,
+      3
+    ],
+    "refs": [
+      "北京烤鸭",
+      "美食",
+      "甜面酱",
+      "薄饼"
+    ]
+  },
+  {
+    "id": "crosstalk",
+    "emoji": "🎙️",
+    "category": "intangible",
+    "province": "北京",
+    "city": "北京",
+    "title_zh": "相声",
+    "title_en": "Crosstalk (Xiangsheng)",
+    "body_zh": "相声是一种逗笑的语言艺术，通常两人一捧一逗，用\"说学逗唱\"调侃生活、抖包袱，京津两地最盛行。",
+    "body_en": "Xiangsheng is a comic verbal art, usually a duo trading straight-man and funny-man lines, using \"speaking, imitating, teasing and singing\" to joke about daily life. It thrives in Beijing and Tianjin.",
+    "scenario_zh": "在茶馆听完相声笑个不停，你想知道\"捧哏\"\"逗哏\"是什么意思。",
+    "scenario_en": "Laughing after a teahouse xiangsheng show, you ask what \"straight man\" and \"funny man\" mean.",
+    "hskRange": [
+      3,
+      5
+    ],
+    "refs": [
+      "相声",
+      "说学逗唱",
+      "捧逗",
+      "京津"
+    ]
+  },
+  {
+    "id": "goubuli",
+    "emoji": "🥟",
+    "category": "food",
+    "province": "天津",
+    "city": "天津",
+    "title_zh": "狗不理包子",
+    "title_en": "Goubuli Buns",
+    "body_zh": "狗不理是天津百年老字号包子，皮薄馅大、十八个褶，汤汁鲜美，名字背后还有一段有趣的民间故事。",
+    "body_en": "Goubuli is a century-old Tianjin bun brand—thin skin, juicy filling and eighteen pleats, with a funny folk story behind its odd name (\"dog ignores\").",
+    "scenario_zh": "你好奇\"狗不理\"这个奇怪的名字怎么来的，问问本地老板。",
+    "scenario_en": "Curious how the odd name \"Goubuli\" came about, you ask the local shop owner.",
+    "hskRange": [
+      2,
+      4
+    ],
+    "refs": [
+      "狗不理",
+      "包子",
+      "天津",
+      "老字号"
+    ]
+  },
+  {
+    "id": "clay-figurine",
+    "emoji": "🧙",
+    "category": "intangible",
+    "province": "天津",
+    "city": "天津",
+    "title_zh": "泥人张",
+    "title_en": "Clay Figurine Zhang",
+    "body_zh": "\"泥人张\"是天津的彩塑绝活，用普通泥巴捏出栩栩如生的人物，神态毕现，传承一百多年，是国家级非遗。",
+    "body_en": "\"Clay Figurine Zhang\" is a Tianjin sculpting craft that shapes lifelike figures from ordinary clay with vivid expressions—over 100 years old and a national intangible heritage.",
+    "scenario_zh": "看艺人几分钟捏出一个人像，你想请他捏一个你的样子。",
+    "scenario_en": "Watching the artist shape a figure in minutes, you ask him to model one of you.",
+    "hskRange": [
+      2,
+      5
+    ],
+    "refs": [
+      "天津",
+      "非遗",
+      "彩塑",
+      "泥人张"
+    ]
+  },
+  {
+    "id": "yangliuqing",
+    "emoji": "🖼️",
+    "category": "intangible",
+    "province": "天津",
+    "city": "天津",
+    "title_zh": "杨柳青年画",
+    "title_en": "Yangliuqing New Year Prints",
+    "body_zh": "杨柳青年画是天津的木版彩绘年画，画面喜庆吉祥，常见胖娃娃抱鱼，寓意\"连年有余\"，过年时贴在家里。",
+    "body_en": "Yangliuqing prints are Tianjin's woodblock New Year pictures—festive and auspicious, often a chubby baby holding a fish for \"abundance year after year,\" pasted up at New Year.",
+    "scenario_zh": "你想买一幅\"年年有余\"的年画送朋友，问问画里的寓意。",
+    "scenario_en": "Wanting to buy an \"abundance\" print for a friend, you ask what the image means.",
+    "hskRange": [
+      2,
+      5
+    ],
+    "refs": [
+      "天津",
+      "年画",
+      "木版画",
+      "连年有余"
+    ]
+  },
+  {
+    "id": "shikumen",
+    "emoji": "🏘️",
+    "category": "folklore",
+    "province": "上海",
+    "city": "上海",
+    "title_zh": "石库门",
+    "title_en": "Shikumen Houses",
+    "body_zh": "石库门是上海特有的里弄住宅，中西合璧，黑漆大门配石头门框，弄堂里晾衣、聊天，承载了老上海的市井生活。",
+    "body_en": "Shikumen are Shanghai's signature lane houses, blending Chinese and Western styles with black doors in stone frames; their alleys—washing hung out, neighbors chatting—hold old Shanghai's daily life.",
+    "scenario_zh": "走进新天地的石库门弄堂，你好奇这种老房子以前住着什么样的人家。",
+    "scenario_en": "Strolling the Xintiandi shikumen lanes, you wonder what families once lived in these old houses.",
+    "hskRange": [
+      3,
+      6
+    ],
+    "refs": [
+      "上海",
+      "里弄",
+      "建筑",
+      "市井生活"
+    ]
+  },
+  {
+    "id": "xiaolongbao",
+    "emoji": "🥟",
+    "category": "food",
+    "province": "上海",
+    "city": "上海",
+    "title_zh": "上海小笼包",
+    "title_en": "Shanghai Xiaolongbao",
+    "body_zh": "小笼包皮薄如纸、内含滚烫汤汁，吃法讲究\"轻轻提、慢慢移、先开窗、后喝汤\"，南翔小笼最为出名。",
+    "body_en": "Xiaolongbao have paper-thin skins and hot soup inside; the trick is \"lift gently, move slowly, open a window, then sip the soup.\" Nanxiang xiaolongbao are the most famous.",
+    "scenario_zh": "第一次吃小笼包被汤汁烫到，你想请教正确的吃法。",
+    "scenario_en": "Burned by the soup on your first xiaolongbao, you ask for the right way to eat it.",
+    "hskRange": [
+      1,
+      4
+    ],
+    "refs": [
+      "上海",
+      "小吃",
+      "南翔",
+      "汤包"
+    ]
+  },
+  {
+    "id": "haipai",
+    "emoji": "🌆",
+    "category": "modern",
+    "province": "上海",
+    "city": "上海",
+    "title_zh": "海派文化",
+    "title_en": "Haipai (Shanghai-Style) Culture",
+    "body_zh": "海派文化是上海中西交融、开放包容的都市气质，体现在旗袍、爵士、月份牌、咖啡馆里，既时髦又精致。",
+    "body_en": "Haipai culture is Shanghai's open, East-meets-West urban character—seen in qipao, jazz, calendar posters and cafés—both fashionable and refined.",
+    "scenario_zh": "在老洋房咖啡馆，你想了解\"海派\"为什么既洋气又中国。",
+    "scenario_en": "In an old-villa café, you ask why \"haipai\" feels both Western and Chinese.",
+    "hskRange": [
+      3,
+      6
+    ],
+    "refs": [
+      "上海",
+      "文化",
+      "中西交融",
+      "旗袍"
+    ]
+  },
+  {
+    "id": "kunqu",
+    "emoji": "🎶",
+    "category": "intangible",
+    "province": "江苏",
+    "city": "苏州",
+    "title_zh": "昆曲",
+    "title_en": "Kunqu Opera",
+    "body_zh": "昆曲发源于苏州，有六百多年历史，唱腔婉转柔美，被誉为\"百戏之祖\"，2001 年成为首批人类非物质文化遗产。",
+    "body_en": "Kunqu, born in Suzhou over 600 years ago, has gentle, flowing melodies and is called \"the ancestor of all Chinese opera.\" It was among UNESCO's first intangible heritage in 2001.",
+    "scenario_zh": "在园林里听了一段《牡丹亭》，你想了解昆曲为什么这么慢这么美。",
+    "scenario_en": "After a \"Peony Pavilion\" excerpt in a garden, you ask why Kunqu is so slow and so beautiful.",
+    "hskRange": [
+      3,
+      6
+    ],
+    "refs": [
+      "苏州",
+      "戏曲",
+      "非遗",
+      "百戏之祖"
+    ]
+  },
+  {
+    "id": "su-embroidery",
+    "emoji": "🪡",
+    "category": "intangible",
+    "province": "江苏",
+    "city": "苏州",
+    "title_zh": "苏绣",
+    "title_en": "Su Embroidery",
+    "body_zh": "苏绣是苏州的刺绣艺术，针法细密、色彩雅致，双面绣可正反两面看到不同图案，是中国四大名绣之首。",
+    "body_en": "Su embroidery from Suzhou is fine-stitched and elegantly colored; its double-sided pieces show different images on each face. It ranks first among China's four great embroideries.",
+    "scenario_zh": "看到一幅双面绣的小猫，正反不同，你惊叹之余想了解针法。",
+    "scenario_en": "Amazed by a double-sided cat embroidery, you ask about the stitching technique.",
+    "hskRange": [
+      2,
+      5
+    ],
+    "refs": [
+      "苏州",
+      "刺绣",
+      "四大名绣",
+      "双面绣"
+    ]
+  },
+  {
+    "id": "nanjing-yunjin",
+    "emoji": "🧵",
+    "category": "intangible",
+    "province": "江苏",
+    "city": "南京",
+    "title_zh": "南京云锦",
+    "title_en": "Nanjing Yunjin Brocade",
+    "body_zh": "云锦因绚丽如天上云霞得名，曾是明清皇家御用织物，用真金线手工织造，一天只能织几厘米，极为珍贵。",
+    "body_en": "Yunjin (\"cloud brocade\") is named for its sky-like splendor; once reserved for Ming-Qing royalty, it is hand-woven with real gold thread—only a few centimeters a day—and extremely precious.",
+    "scenario_zh": "在云锦博物馆看到大花楼木织机，你想知道一匹云锦要织多久。",
+    "scenario_en": "Seeing the giant loom in the Yunjin museum, you ask how long one bolt takes to weave.",
+    "hskRange": [
+      3,
+      6
+    ],
+    "refs": [
+      "南京",
+      "织物",
+      "皇家",
+      "云锦"
+    ]
+  },
+  {
+    "id": "qinhuai",
+    "emoji": "🏮",
+    "category": "heritage",
+    "province": "江苏",
+    "city": "南京",
+    "title_zh": "夫子庙·秦淮河",
+    "title_en": "Confucius Temple & Qinhuai River",
+    "body_zh": "南京夫子庙临秦淮河，是祭祀孔子之地，也是古代江南科举与商市中心；如今灯影桨声、小吃林立，夜景尤美。",
+    "body_en": "Nanjing's Confucius Temple by the Qinhuai River honored Confucius and was a hub of imperial exams and trade in old Jiangnan; today its lantern-lit boats and snack stalls make a gorgeous night scene.",
+    "scenario_zh": "夜游秦淮河，看着两岸灯笼，你想了解这里和古代科举的关系。",
+    "scenario_en": "Cruising the lantern-lit Qinhuai at night, you ask about its link to the old imperial exams.",
+    "hskRange": [
+      2,
+      5
+    ],
+    "refs": [
+      "南京",
+      "夫子庙",
+      "秦淮河",
+      "科举"
+    ]
+  },
+  {
+    "id": "huaiyang",
+    "emoji": "🍤",
+    "category": "food",
+    "province": "江苏",
+    "city": "扬州",
+    "title_zh": "淮扬菜",
+    "title_en": "Huaiyang Cuisine",
+    "body_zh": "淮扬菜是中国四大菜系之一，发源于扬州、淮安，刀工精细、口味清淡平和，文思豆腐、扬州炒饭都是名菜。",
+    "body_en": "Huaiyang cuisine, one of China's four great culinary traditions, arose in Yangzhou and Huai'an; known for fine knife skills and mild, balanced flavors, with dishes like Wensi tofu and Yangzhou fried rice.",
+    "scenario_zh": "看厨师把一块豆腐切成上千根细丝，你惊叹淮扬菜的刀工。",
+    "scenario_en": "Watching a chef slice tofu into thousands of threads, you marvel at Huaiyang knife work.",
+    "hskRange": [
+      2,
+      5
+    ],
+    "refs": [
+      "扬州",
+      "淮安",
+      "菜系",
+      "文思豆腐"
+    ]
+  },
+  {
+    "id": "yixing-teapot",
+    "emoji": "🫖",
+    "category": "intangible",
+    "province": "江苏",
+    "city": "无锡",
+    "title_zh": "宜兴紫砂壶",
+    "title_en": "Yixing Zisha Teapot",
+    "body_zh": "宜兴紫砂壶用当地特有的紫砂泥手工制成，透气不烫手、泡茶愈久愈香，是文人雅士钟爱的茶器。",
+    "body_en": "Yixing zisha teapots are hand-made from local purple clay; breathable and cool to hold, they make tea more fragrant over time, beloved by scholars and tea lovers.",
+    "scenario_zh": "茶店老板说紫砂壶要\"养\"，你好奇怎么养一把壶。",
+    "scenario_en": "The shop owner says a zisha pot must be \"raised\"; you wonder how to nurture one.",
+    "hskRange": [
+      2,
+      5
+    ],
+    "refs": [
+      "宜兴",
+      "紫砂",
+      "茶器",
+      "文人"
+    ]
+  },
+  {
+    "id": "yue-opera",
+    "emoji": "👰",
+    "category": "intangible",
+    "province": "浙江",
+    "city": "绍兴",
+    "title_zh": "越剧",
+    "title_en": "Yue Opera",
+    "body_zh": "越剧发源于浙江绍兴嵊州，唱腔柔美抒情，多演才子佳人故事，演员常为女性，《梁山伯与祝英台》最为人熟知。",
+    "body_en": "Yue opera, born in Shengzhou, Shaoxing, has soft, lyrical singing and often tells love stories with mostly female performers; \"Butterfly Lovers\" is its best-known work.",
+    "scenario_zh": "听完越剧《梁祝》，你被故事打动，想了解这个中国版\"罗密欧与朱丽叶\"。",
+    "scenario_en": "Moved by the Yue opera \"Butterfly Lovers,\" you ask about this Chinese \"Romeo and Juliet.\"",
+    "hskRange": [
+      2,
+      5
+    ],
+    "refs": [
+      "浙江",
+      "越剧",
+      "戏曲",
+      "梁山伯与祝英台"
+    ]
+  },
+  {
+    "id": "hangzhou-silk",
+    "emoji": "🧣",
+    "category": "intangible",
+    "province": "浙江",
+    "city": "杭州",
+    "title_zh": "杭州丝绸",
+    "title_en": "Hangzhou Silk",
+    "body_zh": "杭州自古是\"丝绸之府\"，养蚕缫丝织绸已有数千年，丝绸轻柔光亮，是古代丝绸之路上最珍贵的中国商品之一。",
+    "body_en": "Hangzhou has been a \"home of silk\" for thousands of years; light and lustrous, its silk was among China's most prized goods on the ancient Silk Road.",
+    "scenario_zh": "在丝绸博物馆看蚕吐丝，你想了解一条丝巾是怎么织出来的。",
+    "scenario_en": "Watching silkworms spin at the silk museum, you ask how a scarf is woven.",
+    "hskRange": [
+      2,
+      5
+    ],
+    "refs": [
+      "杭州",
+      "丝绸",
+      "丝绸之路",
+      "养蚕"
+    ]
+  },
+  {
+    "id": "shaoxing-wine",
+    "emoji": "🍶",
+    "category": "food",
+    "province": "浙江",
+    "city": "绍兴",
+    "title_zh": "绍兴黄酒",
+    "title_en": "Shaoxing Rice Wine",
+    "body_zh": "绍兴黄酒是中国最古老的酒之一，用糯米酿造，色泽琥珀、醇厚温和，既可饮用也是烹饪佳料，女儿出生时埋酒称\"女儿红\"。",
+    "body_en": "Shaoxing rice wine is one of China's oldest wines—amber, mellow and made from glutinous rice—used for drinking and cooking; wine buried at a daughter's birth is called \"Daughter's Red.\"",
+    "scenario_zh": "听说\"女儿红\"的习俗，你觉得很浪漫，想了解它的来历。",
+    "scenario_en": "Charmed by the \"Daughter's Red\" custom, you ask about its origin.",
+    "hskRange": [
+      2,
+      5
+    ],
+    "refs": [
+      "绍兴",
+      "黄酒",
+      "女儿红",
+      "糯米"
+    ]
+  },
+  {
+    "id": "liangzhu",
+    "emoji": "🟢",
+    "category": "heritage",
+    "province": "浙江",
+    "city": "杭州",
+    "title_zh": "良渚古城",
+    "title_en": "Liangzhu Ancient City",
+    "body_zh": "良渚古城距今约五千年，有发达的水利系统和精美玉器，证明中华文明五千年，2019 年列入世界遗产。",
+    "body_en": "Liangzhu, about 5,000 years old, had advanced water systems and exquisite jade, proving 5,000 years of Chinese civilization; it became a World Heritage Site in 2019.",
+    "scenario_zh": "看到良渚的玉琮上刻着神秘纹样，你想了解五千年前的人怎么生活。",
+    "scenario_en": "Seeing mysterious carvings on a Liangzhu jade cong, you ask how people lived 5,000 years ago.",
+    "hskRange": [
+      3,
+      6
+    ],
+    "refs": [
+      "杭州",
+      "古城",
+      "玉器",
+      "世界遗产"
+    ]
+  },
+  {
+    "id": "cantonese-opera",
+    "emoji": "🎭",
+    "category": "intangible",
+    "province": "广东",
+    "city": "广州",
+    "title_zh": "粤剧",
+    "title_en": "Cantonese Opera",
+    "body_zh": "粤剧用粤语演唱，融唱念做打与华丽戏服于一体，流行于广东、香港、澳门及海外华人社区，是人类非物质文化遗产。",
+    "body_en": "Cantonese opera is sung in Cantonese, blending singing, acting and martial arts with gorgeous costumes; popular in Guangdong, Hong Kong, Macau and overseas Chinese communities, it is a UNESCO heritage.",
+    "scenario_zh": "在广州看粤剧，演员戏服华丽，你想了解脸上的妆容代表什么。",
+    "scenario_en": "Watching Cantonese opera in Guangzhou, you ask what the elaborate face make-up signifies.",
+    "hskRange": [
+      3,
+      5
+    ],
+    "refs": [
+      "粤语",
+      "广东",
+      "香港",
+      "非物质文化遗产",
+      "戏曲"
+    ]
+  },
+  {
+    "id": "lion-dance",
+    "emoji": "🦁",
+    "category": "intangible",
+    "province": "广东",
+    "city": "佛山",
+    "title_zh": "醒狮",
+    "title_en": "Lion Dance",
+    "body_zh": "广东醒狮起源于佛山，逢年过节、开业庆典必有舞狮，狮子采青、跳桩，鼓声震天，象征驱邪纳福、生意兴隆。",
+    "body_en": "The Guangdong awakening-lion dance began in Foshan; at festivals and openings, lions \"pluck the greens\" and leap on poles to thunderous drums, symbolizing warding off evil and bringing prosperity.",
+    "scenario_zh": "看到舞狮\"采青\"跳上高桩，你想知道这个动作的寓意。",
+    "scenario_en": "Seeing the lion leap onto poles to \"pluck the greens,\" you ask what the move means.",
+    "hskRange": [
+      2,
+      4
+    ],
+    "refs": [
+      "佛山",
+      "广东",
+      "舞狮",
+      "春节",
+      "驱邪"
+    ]
+  },
+  {
+    "id": "chaozhou-tea",
+    "emoji": "🍵",
+    "category": "food",
+    "province": "广东",
+    "city": "潮州",
+    "title_zh": "潮州工夫茶",
+    "title_en": "Chaozhou Gongfu Tea",
+    "body_zh": "潮州工夫茶是一套讲究的泡茶礼仪，小壶小杯、关公巡城、韩信点兵，重在慢品与待客之道，是潮汕人的生活方式。",
+    "body_en": "Chaozhou gongfu tea is an elaborate brewing ritual—tiny pots and cups, pouring \"Lord Guan patrols the city,\" \"Han Xin counts troops\"—prizing slow sipping and hospitality, a Chaoshan way of life.",
+    "scenario_zh": "潮汕朋友请你喝工夫茶，三个杯子摆成品字，你想学怎么喝。",
+    "scenario_en": "A Chaoshan friend serves gongfu tea in three cups set in a triangle; you want to learn the etiquette.",
+    "hskRange": [
+      3,
+      5
+    ],
+    "refs": [
+      "潮汕",
+      "茶道",
+      "工夫茶",
+      "礼仪",
+      "待客"
+    ]
+  },
+  {
+    "id": "qilou",
+    "emoji": "🏬",
+    "category": "heritage",
+    "province": "广东",
+    "city": "广州",
+    "title_zh": "骑楼",
+    "title_en": "Qilou Arcades",
+    "body_zh": "骑楼是岭南特色商住建筑，楼上住人、楼下店铺，临街一层缩进形成走廊，遮阳挡雨，方便逛街，体现南方湿热气候的智慧。",
+    "body_en": "Qilou are Lingnan arcade buildings—homes above, shops below, with the ground floor set back to form a covered walkway that shades sun and rain, a smart response to the hot, humid south.",
+    "scenario_zh": "在广州老城区的骑楼下避雨逛街，你好奇这种建筑为什么这样设计。",
+    "scenario_en": "Sheltering from rain under Guangzhou's qilou while shopping, you wonder why they're built this way.",
+    "hskRange": [
+      3,
+      5
+    ],
+    "refs": [
+      "岭南",
+      "建筑",
+      "广东",
+      "商业",
+      "气候"
+    ]
+  },
+  {
+    "id": "chuan-cuisine",
+    "emoji": "🌶️",
+    "category": "food",
+    "province": "四川",
+    "city": "成都",
+    "title_zh": "川菜",
+    "title_en": "Sichuan Cuisine",
+    "body_zh": "川菜以\"麻辣鲜香\"闻名，讲究一菜一格、百菜百味，麻婆豆腐、回锅肉、夫妻肺片都是代表，花椒带来的\"麻\"是它的灵魂。",
+    "body_en": "Sichuan cuisine is famed for \"numbing-spicy\" flavor with endless variety—Mapo tofu, twice-cooked pork, fuqi feipian—and the tingling \"ma\" from Sichuan pepper is its soul.",
+    "scenario_zh": "第一次吃到花椒，舌头发麻，你想了解这种奇特的\"麻\"是什么。",
+    "scenario_en": "Your tongue tingles at first taste of Sichuan pepper; you ask what this strange \"numbing\" feeling is.",
+    "hskRange": [
+      2,
+      4
+    ],
+    "refs": [
+      "四川",
+      "麻辣",
+      "花椒",
+      "麻婆豆腐",
+      "菜系"
+    ]
+  },
+  {
+    "id": "shu-embroidery",
+    "emoji": "🧵",
+    "category": "intangible",
+    "province": "四川",
+    "city": "成都",
+    "title_zh": "蜀绣",
+    "title_en": "Shu Embroidery",
+    "body_zh": "蜀绣是成都的传统刺绣，针法严谨、色彩明丽，常绣芙蓉鲤鱼、熊猫，是中国四大名绣之一，已有两千多年历史。",
+    "body_en": "Shu embroidery from Chengdu is precise and brightly colored—often hibiscus, carp or pandas—one of China's four great embroideries, with over 2,000 years of history.",
+    "scenario_zh": "看到一幅蜀绣熊猫栩栩如生，你想了解它和苏绣有什么不同。",
+    "scenario_en": "Seeing a lifelike Shu-embroidered panda, you ask how it differs from Su embroidery.",
+    "hskRange": [
+      3,
+      5
+    ],
+    "refs": [
+      "成都",
+      "刺绣",
+      "四大名绣",
+      "四川",
+      "传统工艺"
+    ]
+  },
+  {
+    "id": "panda-culture",
+    "emoji": "🐼",
+    "category": "modern",
+    "province": "四川",
+    "city": "成都",
+    "title_zh": "大熊猫文化",
+    "title_en": "Giant Panda Culture",
+    "body_zh": "大熊猫是中国的国宝，主要生活在四川，憨态可掬、爱吃竹子，是世界自然保护的标志，也是中国\"萌\"文化与友谊的使者。",
+    "body_en": "The giant panda, China's national treasure, lives mainly in Sichuan; chubby and bamboo-loving, it is a global symbol of conservation and an envoy of China's \"cute\" culture and friendship.",
+    "scenario_zh": "在成都熊猫基地看到熊猫宝宝，你想了解为什么熊猫是中国的国宝。",
+    "scenario_en": "Seeing baby pandas at the Chengdu base, you ask why the panda is China's national treasure.",
+    "hskRange": [
+      1,
+      3
+    ],
+    "refs": [
+      "四川",
+      "国宝",
+      "熊猫",
+      "保护",
+      "萌"
+    ]
+  },
+  {
+    "id": "sanxingdui",
+    "emoji": "🗿",
+    "category": "heritage",
+    "province": "四川",
+    "city": "广汉",
+    "title_zh": "三星堆",
+    "title_en": "Sanxingdui",
+    "body_zh": "三星堆是四川广汉的古蜀文明遗址，出土青铜大立人、纵目面具、黄金面罩，造型奇异神秘，改写了人们对中华文明的认识。",
+    "body_en": "Sanxingdui in Guanghan, Sichuan, is an ancient Shu site whose bronze giant figure, protruding-eyed masks and gold face covers—strange and mysterious—reshaped views of early Chinese civilization.",
+    "scenario_zh": "看到三星堆那双\"千里眼\"青铜面具，你觉得很神秘，想了解古蜀人。",
+    "scenario_en": "The \"far-seeing\" bronze mask of Sanxingdui feels mysterious; you ask about the ancient Shu people.",
+    "hskRange": [
+      4,
+      6
+    ],
+    "refs": [
+      "四川",
+      "古蜀",
+      "青铜",
+      "考古",
+      "文明"
+    ]
+  },
+  {
+    "id": "dujiangyan",
+    "emoji": "🌊",
+    "category": "heritage",
+    "province": "四川",
+    "city": "都江堰",
+    "title_zh": "都江堰",
+    "title_en": "Dujiangyan",
+    "body_zh": "都江堰是两千多年前李冰父子修建的水利工程，无坝引水、自动分流防洪灌溉，至今仍在使用，被誉为\"活的水利博物馆\"。",
+    "body_en": "Built over 2,000 years ago by Li Bing and his son, Dujiangyan diverts water without a dam to control floods and irrigate; still in use today, it is called a \"living museum of hydraulics.\"",
+    "scenario_zh": "站在都江堰边，你惊讶两千年前的工程现在还在用，想了解原理。",
+    "scenario_en": "Amazed a 2,000-year-old waterwork still runs, you ask how Dujiangyan works.",
+    "hskRange": [
+      3,
+      5
+    ],
+    "refs": [
+      "李冰",
+      "四川",
+      "水利",
+      "灌溉",
+      "古代工程"
+    ]
+  },
+  {
+    "id": "qinqiang",
+    "emoji": "🎭",
+    "category": "intangible",
+    "province": "陕西",
+    "city": "西安",
+    "title_zh": "秦腔",
+    "title_en": "Qinqiang Opera",
+    "body_zh": "秦腔是中国最古老的剧种之一，发源于陕西，唱腔高亢激越、粗犷豪放，被称为\"百戏之祖\"，最能体现西北人的性格。",
+    "body_en": "Qinqiang, one of China's oldest operas, arose in Shaanxi; its high, fierce, bold singing—called \"ancestor of all operas\"—captures the character of the northwest.",
+    "scenario_zh": "在西安听到一嗓子高亢的秦腔，震撼之余你想了解它为什么这么\"吼\"。",
+    "scenario_en": "Struck by a powerful Qinqiang note in Xi'an, you ask why it's sung so loudly.",
+    "hskRange": [
+      4,
+      6
+    ],
+    "refs": [
+      "陕西",
+      "戏曲",
+      "百戏之祖",
+      "西北",
+      "高亢"
+    ]
+  },
+  {
+    "id": "shadow-puppet",
+    "emoji": "🐴",
+    "category": "intangible",
+    "province": "陕西",
+    "city": "华县",
+    "title_zh": "皮影戏",
+    "title_en": "Shadow Puppetry",
+    "body_zh": "皮影戏用兽皮刻成的人物，在灯光下投影到白布上表演，配以唱腔锣鼓，陕西华县皮影最为精细，是人类非物质文化遗产。",
+    "body_en": "Shadow puppetry projects leather figures onto a white screen behind a lamp, with singing and gongs; Huaxian shadow play in Shaanxi is the finest, a UNESCO intangible heritage.",
+    "scenario_zh": "幕布后艺人一人操纵几个皮影还要唱，你想了解这门手艺。",
+    "scenario_en": "One artist works several puppets and sings behind the screen; you ask about this craft.",
+    "hskRange": [
+      3,
+      5
+    ],
+    "refs": [
+      "陕西",
+      "华县",
+      "非物质文化遗产",
+      "戏曲",
+      "民间艺术"
+    ]
+  },
+  {
+    "id": "roujiamo",
+    "emoji": "🥙",
+    "category": "food",
+    "province": "陕西",
+    "city": "西安",
+    "title_zh": "肉夹馍",
+    "title_en": "Roujiamo",
+    "body_zh": "肉夹馍被称为\"中国汉堡\"，把炖得软烂的腊汁肉剁碎，夹进刚烤好的白吉馍里，外脆里嫩、肉香四溢，是西安街头第一小吃。",
+    "body_en": "Roujiamo, the \"Chinese hamburger,\" stuffs chopped, slow-stewed pork into a freshly baked flatbread—crisp outside, tender inside—Xi'an's top street snack.",
+    "scenario_zh": "在回民街买肉夹馍，老板问你要\"肥的瘦的\"，你不知怎么选。",
+    "scenario_en": "Buying roujiamo on Muslim Street, the vendor asks \"fatty or lean?\" and you're unsure.",
+    "hskRange": [
+      2,
+      4
+    ],
+    "refs": [
+      "西安",
+      "陕西",
+      "小吃",
+      "腊汁肉",
+      "白吉馍"
+    ]
+  },
+  {
+    "id": "wild-goose-pagoda",
+    "emoji": "🛕",
+    "category": "heritage",
+    "province": "陕西",
+    "city": "西安",
+    "title_zh": "大雁塔",
+    "title_en": "Giant Wild Goose Pagoda",
+    "body_zh": "大雁塔建于唐代，是高僧玄奘西天取经归来后保存佛经的地方，七层砖塔古朴庄严，见证了丝绸之路上的中外文化交流。",
+    "body_en": "Built in the Tang dynasty, the Giant Wild Goose Pagoda housed the Buddhist scriptures the monk Xuanzang brought back from India; its seven sturdy brick tiers witnessed Silk Road exchange.",
+    "scenario_zh": "听说玄奘就是《西游记》唐僧的原型，你想了解他取经的真实故事。",
+    "scenario_en": "Hearing Xuanzang inspired the monk in \"Journey to the West,\" you ask his real pilgrimage story.",
+    "hskRange": [
+      3,
+      5
+    ],
+    "refs": [
+      "西安",
+      "唐代",
+      "玄奘",
+      "佛经",
+      "丝绸之路"
+    ]
+  },
+  {
+    "id": "mount-tai",
+    "emoji": "⛰️",
+    "category": "heritage",
+    "province": "山东",
+    "city": "泰安",
+    "title_zh": "泰山",
+    "title_en": "Mount Tai",
+    "body_zh": "泰山是\"五岳之首\"，自古帝王在此封禅祭天，\"会当凌绝顶，一览众山小\"，象征稳重崇高，\"稳如泰山\"成了中国人的口头语。",
+    "body_en": "Mount Tai, \"first of the Five Great Mountains,\" was where emperors offered heaven worship; symbolizing dignity and height, it gives the saying \"steady as Mount Tai.\"",
+    "scenario_zh": "爬泰山看日出，听人说\"稳如泰山\"，你想了解泰山的特殊地位。",
+    "scenario_en": "Watching sunrise atop Mount Tai and hearing \"steady as Mount Tai,\" you ask why it's so revered.",
+    "hskRange": [
+      2,
+      4
+    ],
+    "refs": [
+      "山东",
+      "五岳",
+      "封禅",
+      "泰山",
+      "稳重"
+    ]
+  },
+  {
+    "id": "lu-cuisine",
+    "emoji": "🍲",
+    "category": "food",
+    "province": "山东",
+    "city": "济南",
+    "title_zh": "鲁菜",
+    "title_en": "Shandong (Lu) Cuisine",
+    "body_zh": "鲁菜是中国四大菜系中历史最久、影响最广的一支，讲究火候与汤的鲜美，糖醋鲤鱼、葱烧海参是名菜，奠定了北方菜的基础。",
+    "body_en": "Lu cuisine is the oldest and most influential of China's four great traditions, prizing heat control and rich stock; sweet-and-sour carp and scallion sea cucumber are classics that shaped northern cooking.",
+    "scenario_zh": "吃到糖醋鲤鱼摆成跃龙门的造型，你想了解鲁菜的讲究。",
+    "scenario_en": "Served sweet-and-sour carp shaped leaping like a dragon, you ask about Lu cuisine's refinements.",
+    "hskRange": [
+      3,
+      5
+    ],
+    "refs": [
+      "山东",
+      "四大菜系",
+      "北方菜",
+      "糖醋鲤鱼",
+      "葱烧海参"
+    ]
+  },
+  {
+    "id": "weifang-kite",
+    "emoji": "🪁",
+    "category": "intangible",
+    "province": "山东",
+    "city": "潍坊",
+    "title_zh": "潍坊风筝",
+    "title_en": "Weifang Kites",
+    "body_zh": "潍坊是\"世界风筝之都\"，扎制风筝有两千多年历史，造型有龙、蝴蝶、燕子，每年举办国际风筝节，放风筝寓意放走晦气、带来好运。",
+    "body_en": "Weifang is the \"world kite capital,\" making kites for over 2,000 years—dragons, butterflies, swallows—and hosting a global kite festival; flying a kite means letting bad luck go and inviting good fortune.",
+    "scenario_zh": "在风筝节看到几十米长的龙形风筝飞上天，你想自己也放一只。",
+    "scenario_en": "Seeing a dozens-of-meters dragon kite soar at the festival, you want to fly one too.",
+    "hskRange": [
+      2,
+      4
+    ],
+    "refs": [
+      "风筝",
+      "潍坊",
+      "国际风筝节",
+      "民间艺术",
+      "吉祥寓意"
+    ]
+  },
+  {
+    "id": "three-confucius",
+    "emoji": "🎓",
+    "category": "heritage",
+    "province": "山东",
+    "city": "曲阜",
+    "title_zh": "曲阜三孔",
+    "title_en": "Confucius Sites of Qufu",
+    "body_zh": "曲阜的孔庙、孔府、孔林合称\"三孔\"，是祭祀孔子、孔氏家族居住和墓葬之地，规模宏大、保存完整，是儒家文化的圣地与世界遗产。",
+    "body_en": "Qufu's Confucius Temple, Mansion and Cemetery—\"the Three Confucian Sites\"—are where Confucius is venerated and his family lived and is buried; grand and well preserved, a holy land of Confucian culture and World Heritage.",
+    "scenario_zh": "走进孔庙看到历代皇帝立的石碑，你想了解孔子为何受这么高的尊崇。",
+    "scenario_en": "Seeing stelae raised by emperors in the Confucius Temple, you ask why he is so revered.",
+    "hskRange": [
+      3,
+      5
+    ],
+    "refs": [
+      "孔子",
+      "曲阜",
+      "儒家文化",
+      "世界遗产",
+      "祭祀"
+    ]
+  },
+  {
+    "id": "shaolin",
+    "emoji": "🥋",
+    "category": "intangible",
+    "province": "河南",
+    "city": "登封",
+    "title_zh": "少林功夫",
+    "title_en": "Shaolin Kungfu",
+    "body_zh": "少林功夫源于河南登封嵩山少林寺，禅武合一，刚猛迅捷，僧人习武强身护寺，电影让少林功夫名扬世界。",
+    "body_en": "Shaolin Kungfu comes from Shaolin Temple on Mount Song in Dengfeng, Henan—uniting Zen and martial arts, powerful and swift; monks train to strengthen body and guard the temple, and films made it world-famous.",
+    "scenario_zh": "在少林寺看小武僧表演，动作又快又稳，你想了解\"禅武合一\"。",
+    "scenario_en": "Watching young monks perform fast, steady moves at Shaolin, you ask about \"uniting Zen and martial arts.\"",
+    "hskRange": [
+      2,
+      4
+    ],
+    "refs": [
+      "少林寺",
+      "武术",
+      "禅宗",
+      "河南",
+      "电影"
+    ]
+  },
+  {
+    "id": "longmen",
+    "emoji": "🪨",
+    "category": "heritage",
+    "province": "河南",
+    "city": "洛阳",
+    "title_zh": "龙门石窟",
+    "title_en": "Longmen Grottoes",
+    "body_zh": "龙门石窟在洛阳伊河两岸的崖壁上，开凿于北魏至唐代，有十万余尊佛像，卢舍那大佛慈祥庄严，是中国石刻艺术的高峰，世界遗产。",
+    "body_en": "The Longmen Grottoes line the cliffs by the Yi River in Luoyang; carved from the Northern Wei to Tang, they hold 100,000+ Buddha statues—the serene Vairocana Buddha a peak of Chinese stone art and World Heritage.",
+    "scenario_zh": "仰望十几米高的卢舍那大佛，你想了解古人怎么在悬崖上雕佛。",
+    "scenario_en": "Gazing up at the towering Vairocana Buddha, you ask how ancients carved Buddhas on cliffs.",
+    "hskRange": [
+      3,
+      5
+    ],
+    "refs": [
+      "洛阳",
+      "石窟",
+      "佛像",
+      "北魏",
+      "世界遗产"
+    ]
+  },
+  {
+    "id": "luoyang-peony",
+    "emoji": "🌺",
+    "category": "folklore",
+    "province": "河南",
+    "city": "洛阳",
+    "title_zh": "洛阳牡丹",
+    "title_en": "Luoyang Peonies",
+    "body_zh": "牡丹是中国的\"花中之王\"，象征富贵吉祥，洛阳牡丹尤为有名，每年四月牡丹盛开举办牡丹文化节，\"唯有牡丹真国色\"传诵千年。",
+    "body_en": "The peony is China's \"king of flowers,\" symbolizing wealth and luck; Luoyang's are most famous, with an April peony festival in full bloom—\"only the peony is the true national beauty,\" sung for a thousand years.",
+    "scenario_zh": "四月到洛阳赶上牡丹花会，满城花开，你想了解牡丹的寓意。",
+    "scenario_en": "Catching the April peony festival in Luoyang amid blooms, you ask what the peony symbolizes.",
+    "hskRange": [
+      2,
+      4
+    ],
+    "refs": [
+      "洛阳",
+      "牡丹",
+      "花",
+      "富贵",
+      "文化节"
+    ]
+  },
+  {
+    "id": "yu-opera",
+    "emoji": "🎭",
+    "category": "intangible",
+    "province": "河南",
+    "city": "开封",
+    "title_zh": "豫剧",
+    "title_en": "Yu Opera",
+    "body_zh": "豫剧是河南的代表剧种，也是中国最大的地方戏之一，唱腔铿锵有力、贴近生活，《花木兰》\"谁说女子不如男\"广为传唱。",
+    "body_en": "Yu opera is Henan's signature form and one of China's largest regional operas—forceful and down-to-earth; its \"Hua Mulan\" aria \"Who says women are lesser than men\" is widely loved.",
+    "scenario_zh": "听到豫剧《花木兰》\"谁说女子不如男\"，你被打动，想了解木兰的故事。",
+    "scenario_en": "Moved by the Yu-opera line \"Who says women are lesser than men,\" you ask about Mulan's story.",
+    "hskRange": [
+      3,
+      5
+    ],
+    "refs": [
+      "豫剧",
+      "河南",
+      "地方戏",
+      "花木兰",
+      "唱腔"
+    ]
+  },
+  {
+    "id": "oracle-bone",
+    "emoji": "🦴",
+    "category": "thought",
+    "province": "河南",
+    "city": "安阳",
+    "title_zh": "甲骨文",
+    "title_en": "Oracle Bone Script",
+    "body_zh": "甲骨文是三千多年前商代刻在龟甲兽骨上的文字，用于占卜，是汉字最早的成熟形态，在河南安阳殷墟出土，让汉字的源头清晰可见。",
+    "body_en": "Oracle bone script is writing carved on turtle shells and bones for divination over 3,000 years ago in the Shang dynasty—the earliest mature form of Chinese characters, unearthed at Yinxu in Anyang, Henan.",
+    "scenario_zh": "看到甲骨上像图画一样的\"日\"\"月\"\"马\"，你想了解汉字怎么演变到今天。",
+    "scenario_en": "Seeing picture-like \"sun,\" \"moon,\" \"horse\" on a bone, you ask how characters evolved to today.",
+    "hskRange": [
+      4,
+      6
+    ],
+    "refs": [
+      "甲骨文",
+      "商代",
+      "安阳",
+      "汉字",
+      "占卜"
+    ]
+  },
+  {
+    "id": "reganmian",
+    "emoji": "🍜",
+    "category": "food",
+    "province": "湖北",
+    "city": "武汉",
+    "title_zh": "热干面",
+    "title_en": "Hot Dry Noodles",
+    "body_zh": "热干面是武汉的招牌早餐，碱面煮熟拌上浓郁芝麻酱、萝卜丁、葱花，干香爽滑，武汉人叫吃早餐\"过早\"。",
+    "body_en": "Hot dry noodles are Wuhan's signature breakfast—alkaline noodles tossed in rich sesame paste with diced radish and scallion, dry, fragrant and smooth; locals call breakfast \"guozao.\"",
+    "scenario_zh": "武汉朋友带你\"过早\"吃热干面，你想知道为什么面是\"干\"的。",
+    "scenario_en": "A Wuhan friend takes you for \"guozao\" hot dry noodles; you ask why they're \"dry.\"",
+    "hskRange": [
+      1,
+      3
+    ],
+    "refs": [
+      "热干面",
+      "武汉",
+      "早餐",
+      "芝麻酱",
+      "过早"
+    ]
+  },
+  {
+    "id": "bianzhong",
+    "emoji": "🔔",
+    "category": "heritage",
+    "province": "湖北",
+    "city": "随州",
+    "title_zh": "曾侯乙编钟",
+    "title_en": "Bells of Marquis Yi",
+    "body_zh": "曾侯乙编钟出土于湖北随州，是两千四百多年前的大型青铜乐器，六十五件钟一钟双音，至今能演奏乐曲，展现古代中国惊人的音律成就。",
+    "body_en": "The Bells of Marquis Yi, unearthed in Suizhou, Hubei, are a huge set of 2,400-year-old bronze chime bells—65 bells, each making two tones—still playable, showing ancient China's astonishing musical science.",
+    "scenario_zh": "听到编钟演奏出完整乐曲，你惊叹两千年前怎么造出这样的乐器。",
+    "scenario_en": "Hearing the bells play a full melody, you marvel how such instruments were made 2,000 years ago.",
+    "hskRange": [
+      4,
+      6
+    ],
+    "refs": [
+      "编钟",
+      "曾侯乙",
+      "青铜器",
+      "音乐",
+      "湖北"
+    ]
+  },
+  {
+    "id": "xiang-cuisine",
+    "emoji": "🌶️",
+    "category": "food",
+    "province": "湖南",
+    "city": "长沙",
+    "title_zh": "湘菜",
+    "title_en": "Hunan (Xiang) Cuisine",
+    "body_zh": "湘菜以\"香辣\"著称，和川菜的\"麻辣\"不同，湖南人嗜辣如命，剁椒鱼头、辣椒炒肉色红味浓，长沙小龙虾夜宵更是火遍全国。",
+    "body_en": "Xiang cuisine is famed for fragrant chili heat—different from Sichuan's numbing spice; Hunanese love chili, with fish head in chopped chili and stir-fried pork, while Changsha's late-night crayfish is a national craze.",
+    "scenario_zh": "湖南朋友说\"川菜麻、湘菜辣\"，你想了解两种辣有什么区别。",
+    "scenario_en": "A Hunan friend says \"Sichuan numbs, Hunan burns\"; you ask how the two heats differ.",
+    "hskRange": [
+      2,
+      4
+    ],
+    "refs": [
+      "湘菜",
+      "湖南",
+      "辣椒",
+      "剁椒鱼头",
+      "小龙虾"
+    ]
+  },
+  {
+    "id": "xiang-embroidery",
+    "emoji": "🐯",
+    "category": "intangible",
+    "province": "湖南",
+    "city": "长沙",
+    "title_zh": "湘绣",
+    "title_en": "Xiang Embroidery",
+    "body_zh": "湘绣是湖南的传统刺绣，以绣狮虎闻名，针法能表现毛发的蓬松与眼神的凶猛，栩栩如生，是中国四大名绣之一。",
+    "body_en": "Xiang embroidery from Hunan is famous for lions and tigers; its stitches capture fluffy fur and fierce eyes so vividly the animals seem alive—one of China's four great embroideries.",
+    "scenario_zh": "看到一幅湘绣老虎仿佛要扑出来，你想了解怎么绣出毛发的质感。",
+    "scenario_en": "A Xiang-embroidered tiger looks ready to pounce; you ask how the fur texture is stitched.",
+    "hskRange": [
+      3,
+      5
+    ],
+    "refs": [
+      "湘绣",
+      "湖南",
+      "刺绣",
+      "四大名绣",
+      "狮虎"
+    ]
+  },
+  {
+    "id": "yueyang-tower",
+    "emoji": "🏯",
+    "category": "heritage",
+    "province": "湖南",
+    "city": "岳阳",
+    "title_zh": "岳阳楼",
+    "title_en": "Yueyang Tower",
+    "body_zh": "岳阳楼临洞庭湖而立，是江南三大名楼之一，因范仲淹《岳阳楼记》\"先天下之忧而忧，后天下之乐而乐\"而名垂千古。",
+    "body_en": "Yueyang Tower stands by Dongting Lake, one of the three great towers of the south, immortalized by Fan Zhongyan's essay: \"Be the first to worry for the world, the last to enjoy its pleasures.\"",
+    "scenario_zh": "登岳阳楼读到\"先天下之忧而忧\"，你很有感触，想了解范仲淹。",
+    "scenario_en": "Moved by \"be first to worry for the world\" atop Yueyang Tower, you ask about Fan Zhongyan.",
+    "hskRange": [
+      3,
+      5
+    ],
+    "refs": [
+      "岳阳楼",
+      "范仲淹",
+      "洞庭湖",
+      "江南三大名楼",
+      "古文"
+    ]
+  },
+  {
+    "id": "tulou",
+    "emoji": "🏯",
+    "category": "heritage",
+    "province": "福建",
+    "city": "永定",
+    "title_zh": "福建土楼",
+    "title_en": "Fujian Tulou",
+    "body_zh": "福建土楼是客家人建的大型环形夯土楼，一座可住几百人，外墙厚实防御、内部共享天井，是聚族而居、团结互助的活态建筑，世界遗产。",
+    "body_en": "Fujian tulou are huge round rammed-earth houses built by the Hakka; one can hold hundreds, with thick defensive walls and a shared courtyard—living architecture of clan unity, and World Heritage.",
+    "scenario_zh": "走进圆形土楼，几百人住一栋楼，你想了解客家人为什么这样建房。",
+    "scenario_en": "Entering a round tulou housing hundreds, you ask why the Hakka built homes this way.",
+    "hskRange": [
+      3,
+      5
+    ],
+    "refs": [
+      "福建土楼",
+      "客家",
+      "建筑",
+      "世界遗产",
+      "聚族而居"
+    ]
+  },
+  {
+    "id": "mazu",
+    "emoji": "🌊",
+    "category": "folklore",
+    "province": "福建",
+    "city": "莆田",
+    "title_zh": "妈祖信俗",
+    "title_en": "Mazu Belief",
+    "body_zh": "妈祖是中国东南沿海供奉的海上女神，传说她常救助遇险渔民。妈祖信俗从福建莆田传遍沿海与海外华人，是人类非物质文化遗产。",
+    "body_en": "Mazu is the sea goddess worshipped along China's southeast coast, said to rescue endangered fishermen; the Mazu belief spread from Putian, Fujian, across coasts and overseas Chinese—a UNESCO heritage.",
+    "scenario_zh": "在妈祖庙看到渔民出海前祭拜，你想了解这位\"海上女神\"。",
+    "scenario_en": "Seeing fishermen pray before sailing at a Mazu temple, you ask about this \"sea goddess.\"",
+    "hskRange": [
+      3,
+      5
+    ],
+    "refs": [
+      "妈祖",
+      "福建",
+      "海上女神",
+      "信俗",
+      "非物质文化遗产"
+    ]
+  },
+  {
+    "id": "tieguanyin",
+    "emoji": "🍵",
+    "category": "food",
+    "province": "福建",
+    "city": "安溪",
+    "title_zh": "铁观音",
+    "title_en": "Tieguanyin Tea",
+    "body_zh": "铁观音是福建安溪的乌龙茶，半发酵，香气兰花般高雅、回甘悠长，\"七泡有余香\"，是中国十大名茶之一。",
+    "body_en": "Tieguanyin is an oolong from Anxi, Fujian—semi-fermented, with an elegant orchid aroma and lasting sweet aftertaste, \"fragrant even after seven brews,\" one of China's ten famous teas.",
+    "scenario_zh": "茶农说铁观音\"七泡有余香\"，你想了解乌龙茶和绿茶的区别。",
+    "scenario_en": "A grower says Tieguanyin is \"fragrant after seven brews\"; you ask how oolong differs from green tea.",
+    "hskRange": [
+      3,
+      5
+    ],
+    "refs": [
+      "铁观音",
+      "安溪",
+      "乌龙茶",
+      "十大名茶",
+      "茶文化"
+    ]
+  },
+  {
+    "id": "nanyin",
+    "emoji": "🎼",
+    "category": "intangible",
+    "province": "福建",
+    "city": "泉州",
+    "title_zh": "泉州南音",
+    "title_en": "Nanyin Music",
+    "body_zh": "南音是泉州的古老乐种，被称为\"中国音乐的活化石\"，用琵琶、洞箫缓缓演奏，唱词保留古汉语发音，是人类非物质文化遗产。",
+    "body_en": "Nanyin from Quanzhou is an ancient music called \"a living fossil of Chinese music,\" played slowly on pipa and flute with lyrics preserving old Chinese pronunciation—a UNESCO heritage.",
+    "scenario_zh": "听南音感觉穿越千年，你想了解它为什么是\"音乐活化石\"。",
+    "scenario_en": "Nanyin feels like time travel; you ask why it's called a \"living fossil of music.\"",
+    "hskRange": [
+      3,
+      6
+    ],
+    "refs": [
+      "泉州",
+      "琵琶",
+      "洞箫",
+      "古汉语",
+      "非物质文化遗产"
+    ]
+  },
+  {
+    "id": "lijiang",
+    "emoji": "🏞️",
+    "category": "heritage",
+    "province": "云南",
+    "city": "丽江",
+    "title_zh": "丽江古城",
+    "title_en": "Lijiang Old Town",
+    "body_zh": "丽江古城是纳西族聚居的高原水乡，小桥流水、青石板路，保留东巴文化与纳西古乐，雪山下的古城被列入世界遗产。",
+    "body_en": "Lijiang Old Town is a highland water town of the Naxi people—little bridges, flowing streams, stone-paved lanes—keeping Dongba culture and Naxi ancient music; beneath snow mountains, it is World Heritage.",
+    "scenario_zh": "在丽江古城看到纳西族的象形文字\"东巴文\"，你觉得很神奇。",
+    "scenario_en": "Seeing the Naxi pictographic \"Dongba script\" in Lijiang, you find it fascinating.",
+    "hskRange": [
+      2,
+      5
+    ],
+    "refs": [
+      "纳西族",
+      "东巴文化",
+      "世界遗产",
+      "云南",
+      "古城"
+    ]
+  },
+  {
+    "id": "guoqiao-noodles",
+    "emoji": "🍜",
+    "category": "food",
+    "province": "云南",
+    "city": "昆明",
+    "title_zh": "过桥米线",
+    "title_en": "Crossing-the-Bridge Noodles",
+    "body_zh": "过桥米线是云南名小吃，一大碗滚烫鸡汤上盖着油，把生肉片、蔬菜、米线依次烫熟，背后有一个妻子为读书丈夫送饭的温情故事。",
+    "body_en": "Crossing-the-bridge noodles is a Yunnan classic: a big bowl of scalding chicken broth sealed with oil cooks raw meat, vegetables and rice noodles added in turn—named for a wife who carried meals to her studying husband.",
+    "scenario_zh": "服务员端来生肉和滚汤让你自己烫，你想了解\"过桥\"名字的由来。",
+    "scenario_en": "Served raw meat and hot broth to cook yourself, you ask the story behind \"crossing the bridge.\"",
+    "hskRange": [
+      2,
+      4
+    ],
+    "refs": [
+      "云南",
+      "米线",
+      "鸡汤",
+      "小吃",
+      "温情故事"
+    ]
+  },
+  {
+    "id": "water-splashing",
+    "emoji": "💦",
+    "category": "festival",
+    "province": "云南",
+    "city": "西双版纳",
+    "title_zh": "泼水节",
+    "title_en": "Water-Splashing Festival",
+    "body_zh": "泼水节是傣族的新年，在四月举行，人们互相泼水祝福，水越泼越旺、福气越多，还有赛龙舟、放孔明灯，热闹非凡。",
+    "body_en": "The Water-Splashing Festival is the Dai New Year in April; people splash water to bless one another—the more water, the more luck—with dragon-boat races and sky lanterns, joyfully lively.",
+    "scenario_zh": "泼水节被陌生人泼了一身水，你不知该不该高兴，问问当地人。",
+    "scenario_en": "Soaked by strangers at the festival, unsure whether to be happy, you ask a local what it means.",
+    "hskRange": [
+      2,
+      4
+    ],
+    "refs": [
+      "傣族",
+      "新年",
+      "泼水",
+      "龙舟",
+      "孔明灯"
+    ]
+  },
+  {
+    "id": "puer-tea",
+    "emoji": "🫖",
+    "category": "food",
+    "province": "云南",
+    "city": "普洱",
+    "title_zh": "普洱茶",
+    "title_en": "Pu'er Tea",
+    "body_zh": "普洱茶产自云南，是后发酵的黑茶，可压成茶饼长期存放，越陈越香、越存越值钱，藏茶如藏酒，深受茶人喜爱。",
+    "body_en": "Pu'er from Yunnan is a post-fermented dark tea, pressed into cakes and aged for years—better and more valuable with time, collected like fine wine and loved by tea connoisseurs.",
+    "scenario_zh": "听说普洱茶饼越老越贵，你很好奇，想了解怎么存茶。",
+    "scenario_en": "Hearing aged Pu'er cakes grow pricier, intrigued, you ask how tea is stored.",
+    "hskRange": [
+      3,
+      5
+    ],
+    "refs": [
+      "云南",
+      "黑茶",
+      "茶饼",
+      "发酵",
+      "陈香"
+    ]
+  },
+  {
+    "id": "miao-silver",
+    "emoji": "🪙",
+    "category": "folklore",
+    "province": "贵州",
+    "city": "黔东南",
+    "title_zh": "苗族银饰",
+    "title_en": "Miao Silver Ornaments",
+    "body_zh": "苗族姑娘盛装时戴满银冠、银项圈、银衣，叮当作响、光彩夺目，银饰象征财富与吉祥，是母女相传的嫁妆与身份标志。",
+    "body_en": "In full dress, Miao women wear silver crowns, collars and robes that jingle and dazzle; the silver signifies wealth and luck—dowry and identity passed from mother to daughter.",
+    "scenario_zh": "苗年节上姑娘们的银饰叮当作响，你想了解这些银饰的意义。",
+    "scenario_en": "Hearing the women's silver jingle at the Miao New Year, you ask what it signifies.",
+    "hskRange": [
+      2,
+      5
+    ],
+    "refs": [
+      "苗族",
+      "银饰",
+      "嫁妆",
+      "财富",
+      "吉祥"
+    ]
+  },
+  {
+    "id": "dong-song",
+    "emoji": "🎶",
+    "category": "intangible",
+    "province": "贵州",
+    "city": "黔东南",
+    "title_zh": "侗族大歌",
+    "title_en": "Dong Grand Song",
+    "body_zh": "侗族大歌是无指挥、无伴奏的多声部合唱，模仿蝉鸣流水，一领众和、和声天成，被誉为\"清泉般的歌声\"，是人类非物质文化遗产。",
+    "body_en": "Dong Grand Song is multi-part choral singing with no conductor or accompaniment, imitating cicadas and streams in natural harmony—called \"singing like a clear spring,\" a UNESCO heritage.",
+    "scenario_zh": "听侗族大歌几十人和声却没有指挥，你惊叹他们怎么配合。",
+    "scenario_en": "Hearing dozens harmonize with no conductor, you marvel how the Dong singers coordinate.",
+    "hskRange": [
+      3,
+      6
+    ],
+    "refs": [
+      "侗族",
+      "多声部合唱",
+      "非物质文化遗产",
+      "蝉鸣",
+      "和声"
+    ]
+  },
+  {
+    "id": "maotai",
+    "emoji": "🍶",
+    "category": "food",
+    "province": "贵州",
+    "city": "仁怀",
+    "title_zh": "茅台酒",
+    "title_en": "Moutai Liquor",
+    "body_zh": "茅台是中国最著名的白酒，产自贵州仁怀赤水河畔，酱香浓郁、工艺复杂，常用于国宴与重要场合，是中国白酒文化的代表。",
+    "body_en": "Moutai is China's most famous baijiu, from Renhuai by the Chishui River in Guizhou—rich \"sauce aroma\" and complex craft, served at state banquets and key occasions, an icon of Chinese liquor culture.",
+    "scenario_zh": "中国朋友说茅台是\"国酒\"，敬酒有讲究，你想了解中国的酒桌文化。",
+    "scenario_en": "A friend calls Moutai the \"national liquor\" with toasting etiquette; you ask about Chinese drinking culture.",
+    "hskRange": [
+      3,
+      5
+    ],
+    "refs": [
+      "贵州",
+      "白酒",
+      "酱香",
+      "国宴",
+      "赤水河"
+    ]
+  },
+  {
+    "id": "guilin",
+    "emoji": "🏞️",
+    "category": "heritage",
+    "province": "广西",
+    "city": "桂林",
+    "title_zh": "桂林山水",
+    "title_en": "Guilin Landscape",
+    "body_zh": "\"桂林山水甲天下\"，漓江两岸奇峰倒影、绿水青山，宛如水墨画，二十元人民币背面的图案就取自这里，是中国山水的名片。",
+    "body_en": "\"Guilin's scenery is the finest under heaven\": jagged peaks mirror in the Li River amid green hills like an ink painting—the scene on the 20-yuan note—a calling card of Chinese landscape.",
+    "scenario_zh": "坐竹筏游漓江，发现风景和二十元纸币一样，你想了解这句\"甲天下\"。",
+    "scenario_en": "Rafting the Li River and spotting the 20-yuan-note view, you ask about \"finest under heaven.\"",
+    "hskRange": [
+      1,
+      4
+    ],
+    "refs": [
+      "漓江",
+      "山水",
+      "人民币",
+      "水墨画",
+      "广西"
+    ]
+  },
+  {
+    "id": "luosifen",
+    "emoji": "🍜",
+    "category": "food",
+    "province": "广西",
+    "city": "柳州",
+    "title_zh": "螺蛳粉",
+    "title_en": "Luosifen",
+    "body_zh": "螺蛳粉是广西柳州的米粉，汤用螺蛳熬制，配酸笋、花生、腐竹，又酸又辣又\"臭\"，闻着冲、吃着香，近年红遍全国和海外。",
+    "body_en": "Luosifen from Liuzhou, Guangxi, is rice noodles in river-snail broth with sour bamboo shoots, peanuts and tofu skin—sour, spicy and pungent; off-putting to smell yet delicious, now a craze in China and abroad.",
+    "scenario_zh": "第一次闻到螺蛳粉的\"臭\"味，你犹豫要不要尝，问问朋友。",
+    "scenario_en": "Hesitant at luosifen's pungent smell on first encounter, you ask a friend if you should try it.",
+    "hskRange": [
+      2,
+      4
+    ],
+    "refs": [
+      "柳州",
+      "米粉",
+      "酸笋",
+      "螺蛳",
+      "广西"
+    ]
+  },
+  {
+    "id": "sanyuesan",
+    "emoji": "🎏",
+    "category": "festival",
+    "province": "广西",
+    "city": "南宁",
+    "title_zh": "壮族三月三",
+    "title_en": "Zhuang March 3rd Festival",
+    "body_zh": "\"三月三\"是壮族最盛大的节日，人们对唱山歌、抛绣球、吃五色糯米饭，青年男女以歌传情，广西还会放假庆祝。",
+    "body_en": "The \"Third of March\" is the Zhuang people's grandest festival: antiphonal mountain songs, embroidered-ball tossing and five-color glutinous rice; young people court through song, and Guangxi even gives a holiday.",
+    "scenario_zh": "三月三看到男女对唱山歌传情，你觉得很浪漫，想了解抛绣球。",
+    "scenario_en": "Charmed by courting song duets at the festival, you ask about the embroidered-ball toss.",
+    "hskRange": [
+      2,
+      4
+    ],
+    "refs": [
+      "壮族",
+      "山歌",
+      "绣球",
+      "五色糯米饭",
+      "广西"
+    ]
+  },
+  {
+    "id": "huangshan",
+    "emoji": "⛰️",
+    "category": "heritage",
+    "province": "安徽",
+    "city": "黄山",
+    "title_zh": "黄山",
+    "title_en": "Mount Huang",
+    "body_zh": "黄山以奇松、怪石、云海、温泉\"四绝\"闻名，\"五岳归来不看山，黄山归来不看岳\"，迎客松伸臂迎宾，是中国山水画的灵感之源，世界遗产。",
+    "body_en": "Mount Huang is famed for its \"four wonders\"—pines, rocks, sea of clouds and hot springs; \"after Huangshan, no other mountain\"—its Greeting Pine welcomes guests, an inspiration for landscape painting and World Heritage.",
+    "scenario_zh": "在黄山云海中看到\"迎客松\"，你想了解它为何成为中国的待客象征。",
+    "scenario_en": "Spotting the Greeting Pine in Huangshan's clouds, you ask why it symbolizes Chinese hospitality.",
+    "hskRange": [
+      2,
+      5
+    ],
+    "refs": [
+      "奇松",
+      "怪石",
+      "云海",
+      "温泉",
+      "迎客松"
+    ]
+  },
+  {
+    "id": "huizhou-arch",
+    "emoji": "🏚️",
+    "category": "heritage",
+    "province": "安徽",
+    "city": "宏村",
+    "title_zh": "徽派建筑",
+    "title_en": "Huizhou Architecture",
+    "body_zh": "徽派建筑白墙黑瓦、马头墙高耸，依山傍水、布局精巧，宏村、西递的古村落如水墨画，体现徽商富而崇文的审美，是世界遗产。",
+    "body_en": "Huizhou architecture has white walls, black tiles and soaring \"horse-head\" gables; nestled by hills and water, the old villages of Hongcun and Xidi look like ink paintings, reflecting the cultured taste of Huizhou merchants—World Heritage.",
+    "scenario_zh": "在宏村看到白墙黑瓦倒映水中，你想了解\"马头墙\"有什么用。",
+    "scenario_en": "Seeing white walls mirror in Hongcun's pond, you ask what the \"horse-head gables\" are for.",
+    "hskRange": [
+      3,
+      5
+    ],
+    "refs": [
+      "徽派",
+      "马头墙",
+      "宏村",
+      "西递",
+      "世界遗产"
+    ]
+  },
+  {
+    "id": "xuan-paper",
+    "emoji": "📜",
+    "category": "intangible",
+    "province": "安徽",
+    "city": "宣城",
+    "title_zh": "宣纸徽墨",
+    "title_en": "Xuan Paper & Hui Ink",
+    "body_zh": "宣纸产自安徽宣城，洁白柔韧、保存千年不坏，号称\"纸寿千年\"；徽墨乌黑发亮、香气持久。两者是中国书画离不开的\"文房珍宝\"。",
+    "body_en": "Xuan paper from Xuancheng, Anhui, is white, supple and lasts a thousand years (\"paper that lives a millennium\"); Hui ink is glossy black and long-scented—both treasures essential to Chinese painting and calligraphy.",
+    "scenario_zh": "听说宣纸能保存千年，你好奇为什么古画能流传到今天。",
+    "scenario_en": "Hearing Xuan paper lasts a millennium, you ask why ancient paintings survive to today.",
+    "hskRange": [
+      3,
+      5
+    ],
+    "refs": [
+      "宣城",
+      "宣纸",
+      "徽墨",
+      "文房四宝",
+      "书画"
+    ]
+  },
+  {
+    "id": "huangmei-opera",
+    "emoji": "🎭",
+    "category": "intangible",
+    "province": "安徽",
+    "city": "安庆",
+    "title_zh": "黄梅戏",
+    "title_en": "Huangmei Opera",
+    "body_zh": "黄梅戏发源于安徽安庆，唱腔清新质朴、贴近百姓，《天仙配》\"夫妻双双把家还\"家喻户晓，是中国五大戏曲剧种之一。",
+    "body_en": "Huangmei opera from Anqing, Anhui, has fresh, simple, folk-friendly singing; its \"Married to a Fairy\" aria \"husband and wife return home together\" is a household tune—one of China's five major operas.",
+    "scenario_zh": "听到黄梅戏《天仙配》轻快好记，你想了解中国不同的地方戏。",
+    "scenario_en": "Finding the Huangmei \"Married to a Fairy\" tune light and catchy, you ask about China's regional operas.",
+    "hskRange": [
+      3,
+      5
+    ],
+    "refs": [
+      "安庆",
+      "黄梅戏",
+      "天仙配",
+      "戏曲",
+      "安徽"
+    ]
+  },
+  {
+    "id": "tengwang",
+    "emoji": "🏯",
+    "category": "heritage",
+    "province": "江西",
+    "city": "南昌",
+    "title_zh": "滕王阁",
+    "title_en": "Tengwang Pavilion",
+    "body_zh": "滕王阁立于南昌赣江之畔，是江南三大名楼之一，因王勃《滕王阁序》\"落霞与孤鹜齐飞，秋水共长天一色\"的千古名句而闻名天下。",
+    "body_en": "Tengwang Pavilion stands by the Gan River in Nanchang, one of the three great southern towers, famed for Wang Bo's line \"the setting sun and a lone duck fly together; autumn waters merge with the boundless sky.\"",
+    "scenario_zh": "登滕王阁读到\"落霞与孤鹜齐飞\"，你想了解这位天才少年王勃。",
+    "scenario_en": "Reading \"the sunset and a lone duck fly together\" atop Tengwang, you ask about the prodigy Wang Bo.",
+    "hskRange": [
+      3,
+      5
+    ],
+    "refs": [
+      "王勃",
+      "滕王阁序",
+      "南昌",
+      "江南三大名楼",
+      "唐代"
+    ]
+  },
+  {
+    "id": "wuyuan",
+    "emoji": "🌼",
+    "category": "modern",
+    "province": "江西",
+    "city": "婺源",
+    "title_zh": "婺源",
+    "title_en": "Wuyuan",
+    "body_zh": "婺源被誉为\"中国最美乡村\"，春天油菜花铺满山谷，金黄花海中点缀着徽派白墙黑瓦的古村，是体验田园中国的热门去处。",
+    "body_en": "Wuyuan is called \"China's most beautiful countryside\": in spring, rapeseed flowers fill the valleys, dotted with white-walled Huizhou villages—a favorite for experiencing pastoral China.",
+    "scenario_zh": "春天到婺源看到漫山金黄油菜花，你想了解中国的乡村旅游。",
+    "scenario_en": "Seeing golden rapeseed blanket the hills of Wuyuan in spring, you ask about rural tourism in China.",
+    "hskRange": [
+      2,
+      4
+    ],
+    "refs": [
+      "油菜花",
+      "徽派建筑",
+      "田园",
+      "江西",
+      "乡村"
+    ]
+  },
+  {
+    "id": "chengde",
+    "emoji": "🏯",
+    "category": "heritage",
+    "province": "河北",
+    "city": "承德",
+    "title_zh": "承德避暑山庄",
+    "title_en": "Chengde Mountain Resort",
+    "body_zh": "避暑山庄是清代皇帝的夏宫，融合江南园林与塞外风光，皇帝在此避暑、处理朝政、接见少数民族首领，是清代民族团结的见证，世界遗产。",
+    "body_en": "The Chengde Mountain Resort was the Qing emperors' summer palace, blending southern gardens with frontier scenery; here they escaped heat, governed and received ethnic leaders—a witness to Qing unity and World Heritage.",
+    "scenario_zh": "在避暑山庄看到江南园林和草原同在一处，你想了解皇帝为何来这。",
+    "scenario_en": "Seeing southern gardens beside grassland at the resort, you ask why emperors came here.",
+    "hskRange": [
+      3,
+      5
+    ],
+    "refs": [
+      "清代",
+      "避暑山庄",
+      "世界遗产",
+      "民族团结",
+      "江南园林"
+    ]
+  },
+  {
+    "id": "wuqiao-acrobatics",
+    "emoji": "🤸",
+    "category": "intangible",
+    "province": "河北",
+    "city": "沧州",
+    "title_zh": "吴桥杂技",
+    "title_en": "Wuqiao Acrobatics",
+    "body_zh": "河北吴桥是\"中国杂技之乡\"，几乎人人会两手，顶碗、走钢丝、车技代代相传，惊险又幽默，杂技节闻名中外。",
+    "body_en": "Wuqiao in Hebei is \"China's home of acrobatics,\" where nearly everyone can perform—bowl-balancing, tightrope, bicycle tricks passed down generations—thrilling and funny, with a world-renowned festival.",
+    "scenario_zh": "看到艺人头顶十几个碗还翻跟头，你想了解杂技是怎么练成的。",
+    "scenario_en": "Seeing an artist flip while balancing a dozen bowls, you ask how acrobatics are trained.",
+    "hskRange": [
+      2,
+      4
+    ],
+    "refs": [
+      "杂技",
+      "河北",
+      "表演",
+      "传统技艺",
+      "幽默"
+    ]
+  },
+  {
+    "id": "pingyao",
+    "emoji": "🏯",
+    "category": "heritage",
+    "province": "山西",
+    "city": "平遥",
+    "title_zh": "平遥古城",
+    "title_en": "Pingyao Ancient City",
+    "body_zh": "平遥古城保存完好，明清城墙、街巷、票号一应俱全。中国第一家银行\"日昇昌\"票号就在这里，见证晋商当年\"汇通天下\"，是世界遗产。",
+    "body_en": "Pingyao is a well-preserved walled city with Ming-Qing walls, lanes and banks; China's first bank, the Rishengchang draft house, was here, witnessing the Shanxi merchants' \"remit across the land\"—World Heritage.",
+    "scenario_zh": "在平遥看到古代\"票号\"，你想了解中国最早的银行怎么运作。",
+    "scenario_en": "Seeing an old \"draft house\" in Pingyao, you ask how China's earliest banks worked.",
+    "hskRange": [
+      3,
+      5
+    ],
+    "refs": [
+      "平遥古城",
+      "晋商",
+      "票号",
+      "日昇昌",
+      "世界遗产"
+    ]
+  },
+  {
+    "id": "yungang",
+    "emoji": "🪨",
+    "category": "heritage",
+    "province": "山西",
+    "city": "大同",
+    "title_zh": "云冈石窟",
+    "title_en": "Yungang Grottoes",
+    "body_zh": "云冈石窟在山西大同，开凿于一千五百多年前的北魏，五万多尊佛像高低错落，最大的露天大佛高十七米，融汇中外艺术，是世界遗产。",
+    "body_en": "The Yungang Grottoes in Datong, Shanxi, were carved 1,500+ years ago in the Northern Wei; over 50,000 Buddha figures rise in tiers, the largest open-air Buddha 17 meters tall, blending Chinese and foreign art—World Heritage.",
+    "scenario_zh": "面对十七米高的露天大佛，你想了解佛教如何沿丝路传入中国。",
+    "scenario_en": "Facing the 17-meter open-air Buddha, you ask how Buddhism came to China along the Silk Road.",
+    "hskRange": [
+      3,
+      5
+    ],
+    "refs": [
+      "云冈石窟",
+      "北魏",
+      "大同",
+      "佛教",
+      "世界遗产"
+    ]
+  },
+  {
+    "id": "shanxi-noodles",
+    "emoji": "🍜",
+    "category": "food",
+    "province": "山西",
+    "city": "太原",
+    "title_zh": "山西面食",
+    "title_en": "Shanxi Noodles",
+    "body_zh": "山西被称为\"面食王国\"，号称有上百种做法，刀削面用刀把面飞快削进锅里，棱角分明、筋道爽口，还有剔尖、猫耳朵等花样。",
+    "body_en": "Shanxi is the \"kingdom of noodles\" with hundreds of styles; knife-shaved noodles are sliced flying into the pot for chewy, ridged strands, alongside tijian, cat-ear pasta and more.",
+    "scenario_zh": "看师傅把面团飞快削成面条下锅，你想了解山西为什么这么爱面。",
+    "scenario_en": "Watching a cook shave dough into the pot at speed, you ask why Shanxi loves noodles so.",
+    "hskRange": [
+      1,
+      3
+    ],
+    "refs": [
+      "山西",
+      "面食",
+      "刀削面",
+      "筋道",
+      "传统美食"
+    ]
+  },
+  {
+    "id": "jin-merchants",
+    "emoji": "🏘️",
+    "category": "folklore",
+    "province": "山西",
+    "city": "晋中",
+    "title_zh": "晋商大院",
+    "title_en": "Shanxi Merchant Courtyards",
+    "body_zh": "明清晋商富甲天下，乔家大院、王家大院等深宅大院规模宏大、砖雕精美，体现了晋商勤俭、诚信经商的家风，电影《大红灯笼高高挂》在此取景。",
+    "body_en": "Ming-Qing Shanxi merchants were among the richest in China; grand compounds like the Qiao and Wang family courtyards, with fine brick carving, reflect their thrift and honesty—the film \"Raise the Red Lantern\" was shot here.",
+    "scenario_zh": "走进乔家大院，院落一进接一进，你想了解晋商的家族故事。",
+    "scenario_en": "Entering the Qiao courtyard's endless halls, you ask about the Shanxi merchant families' story.",
+    "hskRange": [
+      3,
+      5
+    ],
+    "refs": [
+      "晋商",
+      "乔家大院",
+      "王家大院",
+      "明清",
+      "诚信"
+    ]
+  },
+  {
+    "id": "shenyang-palace",
+    "emoji": "🏯",
+    "category": "heritage",
+    "province": "辽宁",
+    "city": "沈阳",
+    "title_zh": "沈阳故宫",
+    "title_en": "Shenyang Imperial Palace",
+    "body_zh": "沈阳故宫是清朝入关前的皇宫，规模虽小于北京故宫，却融合满、汉、蒙建筑风格，红黄琉璃配八旗特色，是满族崛起的见证，世界遗产。",
+    "body_en": "The Shenyang Imperial Palace was the Qing palace before they entered Beijing; smaller than the Forbidden City, it blends Manchu, Han and Mongol styles—a witness to the Manchu rise and World Heritage.",
+    "scenario_zh": "在沈阳故宫看到圆顶的\"大政殿\"，和北京故宫不一样，你想了解满族建筑。",
+    "scenario_en": "Seeing the round-roofed Hall of Great Affairs, unlike Beijing's palace, you ask about Manchu architecture.",
+    "hskRange": [
+      3,
+      5
+    ],
+    "refs": [
+      "沈阳故宫",
+      "清代",
+      "满族",
+      "世界遗产",
+      "建筑风格"
+    ]
+  },
+  {
+    "id": "errenzhuan",
+    "emoji": "🪭",
+    "category": "intangible",
+    "province": "辽宁",
+    "city": "沈阳",
+    "title_zh": "二人转",
+    "title_en": "Errenzhuan",
+    "body_zh": "二人转是东北的民间说唱表演，一男一女连说带唱、又扭又逗，手绢手帕飞转，语言幽默接地气，是东北人最爱的乡土娱乐。",
+    "body_en": "Errenzhuan is a Northeast folk song-and-dance: a man and woman sing, joke and twirl handkerchiefs together with earthy humor—the beloved homegrown entertainment of the Northeast.",
+    "scenario_zh": "看二人转演员一边转手绢一边逗乐，你想了解东北人的幽默。",
+    "scenario_en": "Watching performers spin handkerchiefs and crack jokes, you ask about Northeastern humor.",
+    "hskRange": [
+      2,
+      4
+    ],
+    "refs": [
+      "二人转",
+      "东北",
+      "民间说唱",
+      "幽默",
+      "乡土"
+    ]
+  },
+  {
+    "id": "changbai",
+    "emoji": "🏔️",
+    "category": "heritage",
+    "province": "吉林",
+    "city": "长白山",
+    "title_zh": "长白山天池",
+    "title_en": "Changbai Mountain & Heaven Lake",
+    "body_zh": "长白山是中国东北的圣山，山顶火山口积水成\"天池\"，碧蓝如镜、神秘壮美，是松花江、图们江的源头，也是满族、朝鲜族心中的神山。",
+    "body_en": "Changbai Mountain is a sacred peak in Northeast China; its crater holds \"Heaven Lake,\" mirror-blue and mysterious—source of the Songhua and Tumen rivers and a holy mountain to the Manchu and Korean peoples.",
+    "scenario_zh": "爬上长白山看到碧蓝的天池，你想了解这座\"神山\"的传说。",
+    "scenario_en": "Reaching the blue Heaven Lake atop Changbai, you ask about this \"sacred mountain's\" legends.",
+    "hskRange": [
+      2,
+      4
+    ],
+    "refs": [
+      "长白山",
+      "天池",
+      "火山",
+      "满族",
+      "圣山"
+    ]
+  },
+  {
+    "id": "korean-ethnic",
+    "emoji": "🥁",
+    "category": "folklore",
+    "province": "吉林",
+    "city": "延边",
+    "title_zh": "朝鲜族风情",
+    "title_en": "Korean Ethnic Culture",
+    "body_zh": "吉林延边是中国朝鲜族聚居区，能歌善舞，长鼓舞、伽倻琴优美动人，冷面、打糕、辣白菜是特色美食，节日里身着鲜艳的韩服跳起圆圈舞。",
+    "body_en": "Yanbian in Jilin is home to China's Korean ethnic group—great singers and dancers, with graceful long-drum dance and gayageum; cold noodles, rice cake and kimchi are local foods, and bright hanbok circle dances mark festivals.",
+    "scenario_zh": "在延边吃到劲道的冷面，看到长鼓舞，你想了解中国的朝鲜族。",
+    "scenario_en": "Eating chewy cold noodles and seeing the long-drum dance in Yanbian, you ask about China's Korean ethnic group.",
+    "hskRange": [
+      2,
+      4
+    ],
+    "refs": [
+      "朝鲜族",
+      "延边",
+      "长鼓舞",
+      "冷面",
+      "民族风情"
+    ]
+  },
+  {
+    "id": "ice-festival",
+    "emoji": "🧊",
+    "category": "festival",
+    "province": "黑龙江",
+    "city": "哈尔滨",
+    "title_zh": "哈尔滨冰雪大世界",
+    "title_en": "Harbin Ice & Snow World",
+    "body_zh": "哈尔滨冰雪节是世界最大的冰雪盛会，工匠用松花江的冰块雕出晶莹的城堡、长城，夜晚彩灯透过冰墙流光溢彩，把寒冬变成童话世界。",
+    "body_en": "The Harbin Ice Festival is the world's largest ice event: artisans carve glittering castles and walls from Songhua River ice, and at night colored lights glow through the ice into a fairy-tale world.",
+    "scenario_zh": "走进零下二十度的冰雪大世界，看到发光的冰城堡，你想了解怎么雕冰。",
+    "scenario_en": "Entering the −20°C Ice World among glowing ice castles, you ask how the ice is carved.",
+    "hskRange": [
+      1,
+      3
+    ],
+    "refs": [
+      "哈尔滨",
+      "冰雪节",
+      "冰雕",
+      "童话",
+      "冬季"
+    ]
+  },
+  {
+    "id": "mogao",
+    "emoji": "🪷",
+    "category": "heritage",
+    "province": "甘肃",
+    "city": "敦煌",
+    "title_zh": "敦煌莫高窟",
+    "title_en": "Mogao Caves of Dunhuang",
+    "body_zh": "莫高窟开凿于丝绸之路重镇敦煌，历经千年，七百多个洞窟满是精美壁画与彩塑，飞天衣袂飘飘，是世界上规模最大的佛教艺术宝库，世界遗产。",
+    "body_en": "The Mogao Caves at Dunhuang, a Silk Road hub, were carved over a thousand years; 700+ grottoes brim with exquisite murals and painted sculptures—flying apsaras with flowing robes—the world's greatest Buddhist art treasury and World Heritage.",
+    "scenario_zh": "在莫高窟看到飞天壁画，色彩依旧鲜艳，你想了解这些画怎么保存千年。",
+    "scenario_en": "Seeing the still-vivid flying-apsara murals at Mogao, you ask how they survived a thousand years.",
+    "hskRange": [
+      3,
+      5
+    ],
+    "refs": [
+      "敦煌",
+      "莫高窟",
+      "丝绸之路",
+      "佛教",
+      "世界遗产"
+    ]
+  },
+  {
+    "id": "lanzhou-noodles",
+    "emoji": "🍜",
+    "category": "food",
+    "province": "甘肃",
+    "city": "兰州",
+    "title_zh": "兰州牛肉拉面",
+    "title_en": "Lanzhou Beef Noodles",
+    "body_zh": "兰州牛肉拉面讲究\"一清二白三红四绿五黄\"——清汤、白萝卜、红辣油、绿香菜、黄面条，师傅手工拉面，可拉出粗细十几种，是西北人的最爱。",
+    "body_en": "Lanzhou beef noodles prize \"clear soup, white radish, red chili oil, green coriander, yellow noodles\"; the cook hand-pulls dough into a dozen thicknesses—the pride of the northwest.",
+    "scenario_zh": "点拉面时老板问你要\"二细\"还是\"毛细\"，你不懂，想了解面的粗细。",
+    "scenario_en": "Ordering noodles, the cook asks \"thin\" or \"extra-fine?\"; puzzled, you ask about the widths.",
+    "hskRange": [
+      1,
+      3
+    ],
+    "refs": [
+      "兰州",
+      "牛肉拉面",
+      "手工拉面",
+      "西北",
+      "传统美食"
+    ]
+  },
+  {
+    "id": "silk-road",
+    "emoji": "🐪",
+    "category": "thought",
+    "province": "甘肃",
+    "city": "敦煌",
+    "title_zh": "丝绸之路",
+    "title_en": "The Silk Road",
+    "body_zh": "丝绸之路是两千年前连接中国与中亚、欧洲的商路，驼铃声中，丝绸、瓷器西去，葡萄、佛教东来，是中外文明交流互鉴的伟大见证，甘肃河西走廊是必经之地。",
+    "body_en": "The Silk Road linked China with Central Asia and Europe 2,000 years ago; amid camel bells, silk and porcelain went west while grapes and Buddhism came east—a great witness to civilizational exchange, with Gansu's Hexi Corridor a key passage.",
+    "scenario_zh": "走在河西走廊，你想象古代商队的样子，想了解丝绸之路带来了什么。",
+    "scenario_en": "Walking the Hexi Corridor, imagining caravans, you ask what the Silk Road brought to the world.",
+    "hskRange": [
+      2,
+      4
+    ],
+    "refs": [
+      "丝绸之路",
+      "张骞",
+      "中亚",
+      "佛教",
+      "瓷器"
+    ]
+  },
+  {
+    "id": "naadam",
+    "emoji": "🏇",
+    "category": "festival",
+    "province": "内蒙古",
+    "city": "呼和浩特",
+    "title_zh": "那达慕大会",
+    "title_en": "Naadam Festival",
+    "body_zh": "那达慕是蒙古族盛大的传统节日，在夏季草原举行，赛马、摔跤、射箭\"男儿三艺\"激烈精彩，牧民盛装欢聚，载歌载舞庆丰收。",
+    "body_en": "Naadam is the Mongols' grand traditional festival on the summer grassland, featuring the \"three manly games\"—horse racing, wrestling and archery—as herders gather in fine dress to sing, dance and celebrate the harvest.",
+    "scenario_zh": "在草原那达慕看到摔跤手跳着鹰步入场，你想了解蒙古族的\"男儿三艺\"。",
+    "scenario_en": "Seeing wrestlers enter with an eagle dance at Naadam, you ask about the Mongols' \"three manly games.\"",
+    "hskRange": [
+      2,
+      4
+    ],
+    "refs": [
+      "蒙古族",
+      "那达慕",
+      "草原",
+      "摔跤",
+      "赛马"
+    ]
+  },
+  {
+    "id": "grassland-life",
+    "emoji": "⛺",
+    "category": "folklore",
+    "province": "内蒙古",
+    "city": "呼伦贝尔",
+    "title_zh": "草原游牧",
+    "title_en": "Grassland Nomadic Life",
+    "body_zh": "蒙古族世代逐水草而居，住可移动的蒙古包，喝奶茶、吃手把肉，献上洁白的哈达表示最高敬意，\"天苍苍，野茫茫，风吹草低见牛羊\"。",
+    "body_en": "The Mongols have herded with the seasons for generations, living in portable yurts, drinking milk tea, eating hand-held mutton and offering white hada scarves as the highest respect—\"the sky vast, the steppe boundless, cattle and sheep appear as the grass bends.\"",
+    "scenario_zh": "住进草原上的蒙古包，主人献上哈达和奶茶，你想了解待客礼仪。",
+    "scenario_en": "Staying in a grassland yurt, offered a hada scarf and milk tea, you ask about the hospitality customs.",
+    "hskRange": [
+      2,
+      4
+    ],
+    "refs": [
+      "蒙古族",
+      "蒙古包",
+      "奶茶",
+      "哈达",
+      "草原"
+    ]
+  },
+  {
+    "id": "morin-khuur",
+    "emoji": "🎻",
+    "category": "intangible",
+    "province": "内蒙古",
+    "city": "呼和浩特",
+    "title_zh": "马头琴",
+    "title_en": "Morin Khuur (Horsehead Fiddle)",
+    "body_zh": "马头琴是蒙古族的两弦乐器，琴杆顶端雕着马头，音色低沉悠远、如泣如诉，能模仿骏马嘶鸣，是草原文化的象征，人类非物质文化遗产。",
+    "body_en": "The morin khuur is the Mongols' two-stringed fiddle topped with a carved horse head; its deep, faraway, plaintive tone can mimic a neighing horse—a symbol of grassland culture and UNESCO heritage.",
+    "scenario_zh": "听到马头琴低沉悠远的琴声仿佛骏马奔腾，你想了解这件乐器。",
+    "scenario_en": "Hearing the morin khuur's deep tone like galloping horses, you ask about this instrument.",
+    "hskRange": [
+      3,
+      5
+    ],
+    "refs": [
+      "马头琴",
+      "蒙古族",
+      "乐器",
+      "非物质文化遗产",
+      "草原"
+    ]
+  },
+  {
+    "id": "muqam",
+    "emoji": "🎵",
+    "category": "intangible",
+    "province": "新疆",
+    "city": "喀什",
+    "title_zh": "十二木卡姆",
+    "title_en": "The Twelve Muqam",
+    "body_zh": "十二木卡姆是维吾尔族的大型音乐套曲，集歌、舞、乐于一体，演奏可达数小时，旋律热烈奔放，被誉为\"维吾尔音乐之母\"，人类非物质文化遗产。",
+    "body_en": "The Twelve Muqam is the Uyghurs' grand musical suite uniting song, dance and music—performances lasting hours with passionate melodies—called \"the mother of Uyghur music,\" a UNESCO heritage.",
+    "scenario_zh": "在喀什听木卡姆，人们边奏边舞，你想了解维吾尔族的音乐。",
+    "scenario_en": "Hearing Muqam in Kashgar as people play and dance, you ask about Uyghur music.",
+    "hskRange": [
+      3,
+      5
+    ],
+    "refs": [
+      "十二木卡姆",
+      "维吾尔族",
+      "音乐",
+      "非物质文化遗产",
+      "新疆"
+    ]
+  },
+  {
+    "id": "xinjiang-food",
+    "emoji": "🍖",
+    "category": "food",
+    "province": "新疆",
+    "city": "乌鲁木齐",
+    "title_zh": "新疆烤馕与抓饭",
+    "title_en": "Xinjiang Naan & Pilaf",
+    "body_zh": "新疆人主食是馕，用馕坑烤制、金黄酥香、可存多日；手抓饭用羊肉、胡萝卜、葡萄干焖米饭，香甜油润，配上烤羊肉串，是丝路风味的代表。",
+    "body_en": "Naan is the Xinjiang staple—oven-baked golden and crisp, keeping for days; pilaf braises rice with lamb, carrot and raisins, sweet and rich, paired with lamb skewers—classic Silk Road flavor.",
+    "scenario_zh": "在巴扎看到大大的金黄烤馕，你想了解新疆的饮食。",
+    "scenario_en": "Seeing big golden naan at the bazaar, you ask about Xinjiang food.",
+    "hskRange": [
+      2,
+      4
+    ],
+    "refs": [
+      "新疆",
+      "馕",
+      "抓饭",
+      "烤羊肉串",
+      "丝绸之路"
+    ]
+  },
+  {
+    "id": "karez",
+    "emoji": "💧",
+    "category": "heritage",
+    "province": "新疆",
+    "city": "吐鲁番",
+    "title_zh": "坎儿井",
+    "title_en": "Karez Wells",
+    "body_zh": "坎儿井是吐鲁番的古老地下水利系统，把天山雪水通过地下暗渠引到绿洲，减少蒸发，让火洲长出甜葡萄，是干旱地区智慧的杰作。",
+    "body_en": "The karez of Turpan is an ancient underground water system that channels Tianshan snowmelt through tunnels to oases, cutting evaporation so sweet grapes grow in the \"land of fire\"—a masterpiece of arid-land ingenuity.",
+    "scenario_zh": "在吐鲁番这么热的地方却有甜葡萄，你想了解坎儿井的原理。",
+    "scenario_en": "Finding sweet grapes in scorching Turpan, you ask how the karez works.",
+    "hskRange": [
+      3,
+      5
+    ],
+    "refs": [
+      "坎儿井",
+      "吐鲁番",
+      "水利",
+      "天山",
+      "葡萄"
+    ]
+  },
+  {
+    "id": "potala",
+    "emoji": "🏔️",
+    "category": "heritage",
+    "province": "西藏",
+    "city": "拉萨",
+    "title_zh": "布达拉宫",
+    "title_en": "Potala Palace",
+    "body_zh": "布达拉宫屹立在拉萨红山之上，是世界海拔最高的宫殿，红白相间、依山而建，曾是政教中心，珍藏无数佛像唐卡，是藏族建筑与信仰的象征，世界遗产。",
+    "body_en": "The Potala Palace rises on Red Hill in Lhasa, the world's highest palace—red and white, built into the mountain; once a center of religion and rule, it holds countless statues and thangkas, a symbol of Tibetan architecture and faith, and World Heritage.",
+    "scenario_zh": "仰望布达拉宫，你想了解它为何建在这么高的山上。",
+    "scenario_en": "Gazing up at the Potala, you ask why it was built so high on the mountain.",
+    "hskRange": [
+      2,
+      4
+    ],
+    "refs": [
+      "布达拉宫",
+      "拉萨",
+      "藏族",
+      "宫殿",
+      "佛教"
+    ]
+  },
+  {
+    "id": "thangka",
+    "emoji": "🖼️",
+    "category": "art",
+    "province": "西藏",
+    "city": "拉萨",
+    "title_zh": "唐卡",
+    "title_en": "Thangka Painting",
+    "body_zh": "唐卡是藏族的卷轴画，用矿物颜料在布上绘佛像、菩萨、故事，色彩历经百年不褪，画一幅常需数月乃至数年，既是艺术也是修行。",
+    "body_en": "Thangka are Tibetan scroll paintings of Buddhas, bodhisattvas and stories in mineral pigments that stay vivid for centuries; one piece can take months or years to paint—both art and spiritual practice.",
+    "scenario_zh": "看到画师用金粉细细描绘唐卡，你想了解一幅唐卡要画多久。",
+    "scenario_en": "Watching an artist add gold detail to a thangka, you ask how long one takes to paint.",
+    "hskRange": [
+      3,
+      5
+    ],
+    "refs": [
+      "唐卡",
+      "藏族",
+      "绘画",
+      "佛教",
+      "艺术"
+    ]
+  },
+  {
+    "id": "tibetan-life",
+    "emoji": "🧈",
+    "category": "folklore",
+    "province": "西藏",
+    "city": "拉萨",
+    "title_zh": "藏族风情",
+    "title_en": "Tibetan Customs",
+    "body_zh": "藏族人热情虔诚，献哈达表示祝福，喝酥油茶、青稞酒，转经筒、磕长头朝圣，雪山下的信仰与歌舞构成独特的高原文化。",
+    "body_en": "Tibetans are warm and devout—offering hada scarves as blessings, drinking butter tea and barley wine, spinning prayer wheels and prostrating on pilgrimage; their faith and dance beneath snow peaks form a unique plateau culture.",
+    "scenario_zh": "看到藏族同胞一路磕长头去拉萨朝圣，你深受触动，想了解他们的信仰。",
+    "scenario_en": "Moved by pilgrims prostrating all the way to Lhasa, you ask about their faith.",
+    "hskRange": [
+      2,
+      4
+    ],
+    "refs": [
+      "藏族",
+      "哈达",
+      "酥油茶",
+      "转经筒",
+      "高原"
+    ]
+  },
+  {
+    "id": "xixia-tombs",
+    "emoji": "🏜️",
+    "category": "heritage",
+    "province": "宁夏",
+    "city": "银川",
+    "title_zh": "西夏王陵",
+    "title_en": "Western Xia Imperial Tombs",
+    "body_zh": "西夏王陵在银川贺兰山下，是已消失的西夏王朝的皇家陵墓，一座座土黄色的陵台矗立于荒漠，被称为\"东方金字塔\"，诉说着一段神秘的历史。",
+    "body_en": "The Western Xia tombs lie below Helan Mountain near Yinchuan—royal mausoleums of the vanished Western Xia dynasty; earth-yellow mounds standing in the desert, called \"the Pyramids of the East,\" telling a mysterious history.",
+    "scenario_zh": "在荒漠看到像金字塔的西夏王陵，你想了解这个消失的王朝。",
+    "scenario_en": "Seeing the pyramid-like Western Xia tombs in the desert, you ask about this vanished dynasty.",
+    "hskRange": [
+      3,
+      5
+    ],
+    "refs": [
+      "西夏王陵",
+      "西夏",
+      "贺兰山",
+      "陵墓",
+      "宁夏"
+    ]
+  },
+  {
+    "id": "kumbum",
+    "emoji": "🛕",
+    "category": "heritage",
+    "province": "青海",
+    "city": "西宁",
+    "title_zh": "塔尔寺",
+    "title_en": "Kumbum Monastery",
+    "body_zh": "塔尔寺在青海西宁，是藏传佛教格鲁派圣地，以酥油花、壁画、堆绣\"艺术三绝\"闻名，金顶辉煌、香火鼎盛，是青藏高原的宗教文化中心。",
+    "body_en": "Kumbum Monastery near Xining, Qinghai, is a holy site of Tibetan Buddhism's Gelug school, famed for its \"three arts\"—butter sculpture, murals and appliqué; with golden roofs and busy worship, a religious-cultural center of the plateau.",
+    "scenario_zh": "在塔尔寺看到用酥油雕成的彩色花朵，你惊叹这门\"酥油花\"艺术。",
+    "scenario_en": "Seeing colorful flowers sculpted from butter at Kumbum, you marvel at the \"butter sculpture\" art.",
+    "hskRange": [
+      3,
+      5
+    ],
+    "refs": [
+      "塔尔寺",
+      "青海",
+      "藏传佛教",
+      "格鲁派",
+      "酥油花"
+    ]
+  },
+  {
+    "id": "qinghai-lake",
+    "emoji": "🏞️",
+    "category": "modern",
+    "province": "青海",
+    "city": "西宁",
+    "title_zh": "青海湖",
+    "title_en": "Qinghai Lake",
+    "body_zh": "青海湖是中国最大的咸水湖，碧蓝的湖水与金黄的油菜花、连绵的雪山相映，每年举办环湖自行车赛，是高原上令人心醉的风景。",
+    "body_en": "Qinghai Lake is China's largest saltwater lake; its blue waters set against golden rapeseed and snow ranges host an annual round-the-lake bike race—a breathtaking plateau landscape.",
+    "scenario_zh": "在青海湖边看到蓝湖配金色花海，你想了解这片高原湖泊。",
+    "scenario_en": "Seeing the blue lake amid golden flowers at Qinghai Lake, you ask about this plateau lake.",
+    "hskRange": [
+      2,
+      4
+    ],
+    "refs": [
+      "青海湖",
+      "青海",
+      "高原",
+      "油菜花",
+      "自行车赛"
+    ]
+  },
+  {
+    "id": "sanya",
+    "emoji": "🏝️",
+    "category": "modern",
+    "province": "海南",
+    "city": "三亚",
+    "title_zh": "三亚椰风海韵",
+    "title_en": "Sanya Tropical Coast",
+    "body_zh": "三亚位于海南岛最南端，椰林沙滩、碧海蓝天，是中国著名的热带度假胜地，潜水、冲浪、吃海鲜，被称为\"东方夏威夷\"。",
+    "body_en": "Sanya, at the southern tip of Hainan Island, offers coconut palms, white sand and turquoise sea—a famous tropical resort for diving, surfing and seafood, dubbed \"the Hawaii of the East.\"",
+    "scenario_zh": "在三亚海边晒太阳吃海鲜，你想了解海南的热带风情。",
+    "scenario_en": "Sunbathing and eating seafood on Sanya's beach, you ask about Hainan's tropical life.",
+    "hskRange": [
+      1,
+      3
+    ],
+    "refs": [
+      "三亚",
+      "海南",
+      "热带",
+      "海滩",
+      "度假"
+    ]
+  },
+  {
+    "id": "li-brocade",
+    "emoji": "🧶",
+    "category": "intangible",
+    "province": "海南",
+    "city": "五指山",
+    "title_zh": "黎族织锦",
+    "title_en": "Li Brocade",
+    "body_zh": "黎族织锦是海南黎族妇女用棉麻手工织成的彩锦，图案有人形、动物、几何纹，色彩绚丽，已有三千年历史，是中国最早的棉纺织品之一，世界级非遗。",
+    "body_en": "Li brocade is colorful cloth hand-woven by Hainan's Li women from cotton and hemp, with human, animal and geometric motifs; 3,000 years old, among China's earliest cotton textiles—a UNESCO heritage.",
+    "scenario_zh": "看到黎族阿婆用古老的腰织机织出彩锦，你想了解这门古老手艺。",
+    "scenario_en": "Seeing a Li grandmother weave bright brocade on an ancient back-strap loom, you ask about this old craft.",
+    "hskRange": [
+      3,
+      5
+    ],
+    "refs": [
+      "黎族",
+      "织锦",
+      "海南",
+      "棉纺织",
+      "手工"
+    ]
+  },
+  {
+    "id": "chongqing-hotpot",
+    "emoji": "🍲",
+    "category": "food",
+    "province": "重庆",
+    "city": "重庆",
+    "title_zh": "重庆火锅",
+    "title_en": "Chongqing Hotpot",
+    "body_zh": "重庆火锅是麻辣火锅的发源地，红汤翻滚、牛油浓香，九宫格里涮毛肚、鸭肠、黄喉，越烫越鲜，重庆人无辣不欢，火锅就是这座江城的性格。",
+    "body_en": "Chongqing is the birthplace of spicy hotpot—bubbling red broth rich with beef tallow, its nine-grid pot cooking tripe, duck intestine and aorta; the hotter the better. Spice-loving Chongqing wears hotpot as its character.",
+    "scenario_zh": "面对九宫格火锅不知道哪格涮什么、涮多久，你向重庆朋友请教。",
+    "scenario_en": "Facing the nine-grid hotpot, unsure what to cook where and how long, you ask a Chongqing friend.",
+    "hskRange": [
+      2,
+      4
+    ],
+    "refs": [
+      "重庆",
+      "麻辣",
+      "九宫格",
+      "毛肚",
+      "川菜"
+    ]
+  },
+  {
+    "id": "dazu",
+    "emoji": "🪨",
+    "category": "heritage",
+    "province": "重庆",
+    "city": "重庆",
+    "title_zh": "大足石刻",
+    "title_en": "Dazu Rock Carvings",
+    "body_zh": "大足石刻在重庆大足，开凿于唐宋，五万多尊造像把佛教、道教、儒家题材刻于山崖，内容贴近生活、雕刻精美生动，是石窟艺术的最后高峰，世界遗产。",
+    "body_en": "The Dazu Rock Carvings in Chongqing, carved in the Tang and Song, set 50,000+ Buddhist, Daoist and Confucian figures into cliffs; lifelike and exquisite, they are the last peak of grotto art and World Heritage.",
+    "scenario_zh": "在大足石刻看到佛、道、儒的造像同在一处，你想了解三教合一。",
+    "scenario_en": "Seeing Buddhist, Daoist and Confucian carvings together at Dazu, you ask about the \"three teachings as one.\"",
+    "hskRange": [
+      3,
+      5
+    ],
+    "refs": [
+      "重庆",
+      "唐宋",
+      "佛教",
+      "道教",
+      "石窟"
+    ]
+  },
+  {
+    "id": "hk-chacanteng",
+    "emoji": "🍽️",
+    "category": "food",
+    "province": "香港",
+    "city": "香港",
+    "title_zh": "香港茶餐厅",
+    "title_en": "Hong Kong Cha Chaan Teng",
+    "body_zh": "茶餐厅是香港平民食堂，中西合璧，丝袜奶茶、菠萝包、蛋挞、干炒牛河样样有，\"冻柠茶\"\"餐蛋面\"是地道港味，体现香港快节奏的市井文化。",
+    "body_en": "The cha chaan teng is Hong Kong's everyday diner—East-meets-West, with silk-stocking milk tea, pineapple buns, egg tarts and fried beef noodles; \"iced lemon tea\" and \"luncheon-meat egg noodles\" are local staples reflecting fast-paced Hong Kong life.",
+    "scenario_zh": "在香港茶餐厅看到菜单上\"丝袜奶茶\"\"菠萝油\"，你很好奇，想点来试试。",
+    "scenario_en": "Seeing \"silk-stocking milk tea\" and \"pineapple butter bun\" on a Hong Kong menu, curious, you want to order and try.",
+    "hskRange": [
+      2,
+      4
+    ],
+    "refs": [
+      "香港",
+      "中西合璧",
+      "丝袜奶茶",
+      "菠萝包",
+      "快餐文化"
+    ]
+  },
+  {
+    "id": "macau-eggtart",
+    "emoji": "🥮",
+    "category": "heritage",
+    "province": "澳门",
+    "city": "澳门",
+    "title_zh": "大三巴与葡式蛋挞",
+    "title_en": "Ruins of St. Paul's & Egg Tarts",
+    "body_zh": "大三巴牌坊是澳门的地标，是四百年前圣保禄教堂烧毁后仅存的石façade，中西雕刻交融；澳门的葡式蛋挞焦香酥脆，都见证了中葡文化交汇，世界遗产。",
+    "body_en": "The Ruins of St. Paul's are Macau's landmark—the stone façade left after the 400-year-old church burned, carved in blended Chinese-Western style; Macau's caramelized egg tarts likewise witness the meeting of Chinese and Portuguese culture, a World Heritage city.",
+    "scenario_zh": "在大三巴牌坊下吃葡式蛋挞，你想了解澳门的中葡历史。",
+    "scenario_en": "Eating a Portuguese egg tart below the Ruins of St. Paul's, you ask about Macau's Chinese-Portuguese history.",
+    "hskRange": [
+      2,
+      4
+    ],
+    "refs": [
+      "澳门",
+      "大三巴",
+      "葡萄牙",
+      "蛋挞",
+      "中西文化"
+    ]
+  },
+  {
+    "id": "taiwan-nightmarket",
+    "emoji": "🏮",
+    "category": "food",
+    "province": "台湾",
+    "city": "台北",
+    "title_zh": "台湾夜市",
+    "title_en": "Taiwan Night Markets",
+    "body_zh": "夜市是台湾最有活力的市井文化，士林、饶河夜市人声鼎沸，蚵仔煎、卤肉饭、珍珠奶茶、臭豆腐香气四溢，一条街就能吃遍台湾小吃。",
+    "body_en": "Night markets are Taiwan's liveliest street culture; bustling Shilin and Raohe markets brim with oyster omelets, braised pork rice, bubble tea and stinky tofu—one street tastes all of Taiwan's snacks.",
+    "scenario_zh": "在台北士林夜市面对琳琅满目的小吃，你不知从哪样吃起。",
+    "scenario_en": "Facing the dazzling snacks of Taipei's Shilin night market, you don't know where to start.",
+    "hskRange": [
+      2,
+      4
+    ],
+    "refs": [
+      "台湾",
+      "小吃",
+      "蚵仔煎",
+      "珍珠奶茶",
+      "夜市"
+    ]
+  },
+  {
+    "id": "guqin",
+    "emoji": "🎼",
+    "category": "art",
+    "province": "全国",
+    "city": "全国",
+    "title_zh": "古琴",
+    "title_en": "Guqin (Seven-String Zither)",
+    "body_zh": "古琴是中国最古老的弹拨乐器，已有三千年历史，音色清幽深远，讲究\"高山流水\"觅知音，是文人修身养性的\"琴棋书画\"之首，人类非物质文化遗产。",
+    "body_en": "The guqin is China's oldest plucked instrument, 3,000 years old—quiet and profound in tone; the \"high mountains, flowing water\" tale of true friendship made it first of the scholar's arts and a UNESCO heritage.",
+    "scenario_zh": "听到古琴弹奏《高山流水》，你想了解\"知音\"这个词的由来。",
+    "scenario_en": "Hearing the guqin play \"High Mountains, Flowing Water,\" you ask the origin of the word \"zhiyin\" (soulmate).",
+    "hskRange": [
+      3,
+      5
+    ],
+    "refs": [
+      "古琴",
+      "高山流水",
+      "文人",
+      "琴棋书画",
+      "非物质文化遗产"
+    ]
+  },
+  {
+    "id": "seal-carving",
+    "emoji": "🔖",
+    "category": "art",
+    "province": "全国",
+    "city": "全国",
+    "title_zh": "篆刻",
+    "title_en": "Seal Carving",
+    "body_zh": "篆刻是在石头上刻印章的艺术，方寸之间见笔法刀法，朱红印泥盖在书画上既是签名也是点睛，融书法、雕刻于一体，人类非物质文化遗产。",
+    "body_en": "Seal carving is the art of cutting seals in stone—calligraphy and blade within an inch square; the vermilion stamp on a painting is both signature and finishing touch, uniting writing and carving, a UNESCO heritage.",
+    "scenario_zh": "看到书画角落盖着红色印章，你想了解为什么中国画上要盖章。",
+    "scenario_en": "Seeing a red seal in the corner of a painting, you ask why Chinese art bears stamps.",
+    "hskRange": [
+      3,
+      5
+    ],
+    "refs": [
+      "篆刻",
+      "印章",
+      "书法",
+      "雕刻",
+      "非物质文化遗产"
+    ]
+  },
+  {
+    "id": "mortise-tenon",
+    "emoji": "🪵",
+    "category": "art",
+    "province": "全国",
+    "city": "全国",
+    "title_zh": "榫卯",
+    "title_en": "Mortise & Tenon",
+    "body_zh": "榫卯是中国古建筑与家具的连接智慧，木头凹凸相扣、不用一钉，越摇越紧，故宫、应县木塔历经地震千年不倒，是东方营造的精髓。",
+    "body_en": "Mortise and tenon is the joinery wisdom of Chinese architecture and furniture—wood interlocking with no nails, tightening as it shakes; the Forbidden City and Yingxian wooden pagoda survive quakes for centuries, the essence of Eastern construction.",
+    "scenario_zh": "听说中国古建筑不用钉子也能千年不倒，你觉得不可思议，想了解榫卯。",
+    "scenario_en": "Amazed Chinese buildings stand for centuries without nails, you ask about mortise-and-tenon joints.",
+    "hskRange": [
+      3,
+      5
+    ],
+    "refs": [
+      "榫卯",
+      "木结构",
+      "故宫",
+      "应县木塔",
+      "建筑"
+    ]
+  },
+  {
+    "id": "chinese-knot",
+    "emoji": "🪢",
+    "category": "art",
+    "province": "全国",
+    "city": "全国",
+    "title_zh": "中国结",
+    "title_en": "Chinese Knot",
+    "body_zh": "中国结用一根红绳编出对称美丽的结饰，\"结\"与\"吉\"谐音，盘长结、如意结寓意吉祥团圆，常在春节挂起或作礼物，是中国人的祝福密码。",
+    "body_en": "The Chinese knot is woven from a single red cord into symmetrical beauty; \"knot\" sounds like \"luck,\" and the endless and ruyi knots mean fortune and reunion—hung at New Year or given as gifts, a code of Chinese blessings.",
+    "scenario_zh": "收到朋友送的中国结，你想了解不同结饰代表什么寓意。",
+    "scenario_en": "Given a Chinese knot by a friend, you ask what the different knots symbolize.",
+    "hskRange": [
+      2,
+      4
+    ],
+    "refs": [
+      "中国结",
+      "红绳",
+      "吉祥",
+      "春节",
+      "装饰"
+    ]
+  },
+  {
+    "id": "weiqi",
+    "emoji": "⚫",
+    "category": "thought",
+    "province": "全国",
+    "city": "全国",
+    "title_zh": "围棋",
+    "title_en": "Go (Weiqi)",
+    "body_zh": "围棋起源于中国，已有四千多年历史，黑白子在棋盘上圈地为势，规则简单却变化无穷，讲究全局与取舍，被视为东方智慧与谋略的缩影。",
+    "body_en": "Go (weiqi) began in China over 4,000 years ago; black and white stones claim territory on the board with simple rules yet endless variation, prizing the whole and trade-offs—seen as a microcosm of Eastern wisdom and strategy.",
+    "scenario_zh": "看两人下围棋很安静却很激烈，你想了解这个古老的游戏。",
+    "scenario_en": "Watching a quiet yet intense game of Go, you ask about this ancient game.",
+    "hskRange": [
+      3,
+      5
+    ],
+    "refs": [
+      "围棋",
+      "黑白",
+      "智慧",
+      "谋略",
+      "棋类"
+    ]
+  },
+  {
+    "id": "fengshui",
+    "emoji": "🧭",
+    "category": "thought",
+    "province": "全国",
+    "city": "全国",
+    "title_zh": "风水",
+    "title_en": "Fengshui",
+    "body_zh": "风水是中国古人对人与环境关系的理解，讲究房屋朝向、山水布局以求与自然和谐、趋吉避凶，影响着建筑选址与家居摆设，至今仍有人讲究。",
+    "body_en": "Fengshui is the ancient Chinese understanding of people and their surroundings—orienting homes and arranging landscape to harmonize with nature and invite good fortune; it still shapes where buildings sit and how homes are arranged.",
+    "scenario_zh": "中国朋友说沙发不要正对大门，你很好奇，想了解风水的道理。",
+    "scenario_en": "A friend says the sofa shouldn't face the door; curious, you ask about the logic of fengshui.",
+    "hskRange": [
+      3,
+      5
+    ],
+    "refs": [
+      "风水",
+      "环境",
+      "建筑",
+      "阴阳",
+      "自然"
+    ]
+  },
+  {
+    "id": "filial-piety",
+    "emoji": "👨‍👩‍👧",
+    "category": "thought",
+    "province": "全国",
+    "city": "全国",
+    "title_zh": "孝道",
+    "title_en": "Filial Piety",
+    "body_zh": "孝道是中国家庭伦理的核心，强调敬爱父母、奉养长辈、慎终追远。\"百善孝为先\"，逢年过节回家团圆、给长辈拜年，都是孝的体现。",
+    "body_en": "Filial piety is the heart of Chinese family ethics—respecting and caring for parents and elders and honoring ancestors; \"of all virtues, filial piety comes first,\" shown in returning home for festivals and greeting elders at New Year.",
+    "scenario_zh": "看到中国同学每周都给父母打电话，过年一定回家，你想了解\"孝\"。",
+    "scenario_en": "Seeing a Chinese classmate call parents weekly and always go home for New Year, you ask about \"filial piety.\"",
+    "hskRange": [
+      2,
+      4
+    ],
+    "refs": [
+      "孝道",
+      "家庭",
+      "伦理",
+      "长辈",
+      "春节"
+    ]
+  },
+  {
+    "id": "chinese-buddhism",
+    "emoji": "🪷",
+    "category": "thought",
+    "province": "全国",
+    "city": "全国",
+    "title_zh": "中国佛教",
+    "title_en": "Chinese Buddhism",
+    "body_zh": "佛教两千年前由印度沿丝绸之路传入中国，与本土文化融合，形成禅宗等中国化的宗派，\"放下\"\"因果\"\"慈悲\"等观念深入人心，名山古刹遍布全国。",
+    "body_en": "Buddhism came from India along the Silk Road 2,000 years ago and merged with local culture into Chinese schools like Chan (Zen); ideas of \"letting go,\" \"karma\" and \"compassion\" run deep, with sacred mountains and temples nationwide.",
+    "scenario_zh": "在寺庙看到人们烧香拜佛，你想了解佛教如何融入中国文化。",
+    "scenario_en": "Seeing people burn incense and pray at a temple, you ask how Buddhism blended into Chinese culture.",
+    "hskRange": [
+      3,
+      5
+    ],
+    "refs": [
+      "佛教",
+      "印度",
+      "禅宗",
+      "丝绸之路",
+      "慈悲"
+    ]
+  },
+  {
+    "id": "lantern-festival",
+    "emoji": "🏮",
+    "category": "festival",
+    "province": "全国",
+    "city": "全国",
+    "title_zh": "元宵节",
+    "title_en": "Lantern Festival",
+    "body_zh": "元宵节是农历正月十五，春节的尾声，人们赏花灯、猜灯谜、吃汤圆，象征团圆美满，街头张灯结彩、龙灯飞舞，热闹非凡。",
+    "body_en": "The Lantern Festival on the 15th of the first lunar month closes the Spring Festival; people admire lanterns, solve lantern riddles and eat sweet tangyuan for reunion, as streets glow with lights and dragon lanterns dance.",
+    "scenario_zh": "元宵节看到满街花灯还有灯谜，你想试着猜一个灯谜。",
+    "scenario_en": "Seeing streets of lanterns with riddles on Lantern Festival, you want to try solving one.",
+    "hskRange": [
+      2,
+      4
+    ],
+    "refs": [
+      "元宵节",
+      "花灯",
+      "汤圆",
+      "猜灯谜",
+      "春节"
+    ]
+  },
+  {
+    "id": "qingming",
+    "emoji": "🌿",
+    "category": "festival",
+    "province": "全国",
+    "city": "全国",
+    "title_zh": "清明节",
+    "title_en": "Qingming Festival",
+    "body_zh": "清明节在四月初，既是节气也是节日，人们扫墓祭祖、缅怀先人，也踏青郊游、放风筝，体现中国人慎终追远又亲近自然的情怀。",
+    "body_en": "Qingming in early April is both a solar term and a festival; people sweep tombs to honor ancestors while also enjoying spring outings and kite-flying—reflecting both remembrance and closeness to nature.",
+    "scenario_zh": "清明节看到中国同学回乡扫墓，你想了解这个既悲伤又踏青的节日。",
+    "scenario_en": "Seeing a classmate return home to sweep tombs at Qingming, you ask about this day of both mourning and spring outings.",
+    "hskRange": [
+      2,
+      4
+    ],
+    "refs": [
+      "清明节",
+      "扫墓",
+      "祭祖",
+      "踏青",
+      "节气"
+    ]
+  },
+  {
+    "id": "qixi",
+    "emoji": "💕",
+    "category": "festival",
+    "province": "全国",
+    "city": "全国",
+    "title_zh": "七夕节",
+    "title_en": "Qixi Festival",
+    "body_zh": "七夕在农历七月初七，源于牛郎织女鹊桥相会的爱情传说，是中国的\"情人节\"，姑娘们曾在这天乞巧祈愿，如今情侣互赠礼物表达爱意。",
+    "body_en": "Qixi, on the 7th of the 7th lunar month, comes from the love legend of the Cowherd and Weaver Girl meeting on a magpie bridge—China's \"Valentine's Day\"; girls once prayed for skill, and today couples exchange gifts of love.",
+    "scenario_zh": "听说七夕是中国情人节，背后有牛郎织女的故事，你想了解这个传说。",
+    "scenario_en": "Hearing Qixi is China's Valentine's with the Cowherd-Weaver tale, you ask about the legend.",
+    "hskRange": [
+      1,
+      6
+    ],
+    "refs": []
+  },
+  {
+    "id": "double-ninth",
+    "emoji": "🍂",
+    "category": "festival",
+    "province": "全国",
+    "city": "全国",
+    "title_zh": "重阳节",
+    "title_en": "Double Ninth Festival",
+    "body_zh": "重阳节在农历九月初九，\"九九\"谐音\"久久\"，人们登高望远、赏菊、插茱萸，如今也是\"敬老节\"，体现尊老敬老的传统美德。",
+    "body_en": "The Double Ninth Festival on the 9th of the 9th lunar month—\"nine-nine\" echoing \"forever\"—sees people climb heights, enjoy chrysanthemums and wear dogwood; now also \"Seniors' Day,\" it honors respect for the elderly.",
+    "scenario_zh": "重阳节看到大家陪老人登高、赏菊，你想了解这个\"敬老\"的节日。",
+    "scenario_en": "Seeing families take elders to climb hills and view chrysanthemums on Double Ninth, you ask about this day honoring the old.",
+    "hskRange": [
+      1,
+      6
+    ],
+    "refs": []
+  }
+]

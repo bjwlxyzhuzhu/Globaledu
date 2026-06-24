@@ -1,0 +1,111 @@
+{
+  "key": "天津",
+  "name_zh": "天津",
+  "name_en": "Tianjin",
+  "province": "天津",
+  "tier": "new-first",
+  "intro_zh": "天津是中国北方的直辖市，海河蜿蜒穿城，曾是多国租界所在，中西合璧，以相声、煎饼与「哏儿」文化闻名。",
+  "intro_en": "Tianjin is a municipality in northern China where the Hai River winds through town. Once home to foreign concessions, it blends East and West and is famed for crosstalk comedy, jianbing and its humor.",
+  "culture_zh": "天津人幽默乐观，「哏儿都」之名源于相声曲艺。海河两岸的洋楼、古文化街的年画与狗不理包子，交织出独特的津味。",
+  "culture_en": "Tianjin folk are humorous and upbeat; its nickname comes from crosstalk comedy. The riverside villas, New Year prints of the Ancient Culture Street and Goubuli buns weave a flavor all its own.",
+  "attractions": [
+    {
+      "name_zh": "天津之眼",
+      "name_en": "Tianjin Eye",
+      "desc_zh": "建在海河桥上的摩天轮，夜景浪漫。",
+      "desc_en": "A Ferris wheel built atop a bridge over the Hai River, romantic by night.",
+      "img": "天津之眼 摩天轮",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "天津",
+        "天津之眼"
+      ],
+      "category": "heritage"
+    },
+    {
+      "name_zh": "古文化街",
+      "name_en": "Ancient Culture Street",
+      "desc_zh": "杨柳青年画与传统工艺聚集的老街。",
+      "desc_en": "An old street gathering Yangliuqing New Year prints and traditional crafts.",
+      "img": "天津 古文化街",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "天津",
+        "古文化街"
+      ],
+      "category": "art"
+    },
+    {
+      "name_zh": "五大道",
+      "name_en": "Five Great Avenues",
+      "desc_zh": "成片的欧式洋楼街区，可乘马车游览。",
+      "desc_en": "A district of European-style mansions best toured by horse carriage.",
+      "img": "天津 五大道 洋楼",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "天津",
+        "五大道"
+      ],
+      "category": "heritage"
+    }
+  ],
+  "foods": [
+    {
+      "name_zh": "狗不理包子",
+      "name_en": "Goubuli Baozi",
+      "desc_zh": "天津老字号灌汤包，皮薄馅大。",
+      "desc_en": "Tianjin's time-honored soup-filled buns, with thin skins and generous filling.",
+      "img": "天津 狗不理包子",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "天津",
+        "狗不理包子"
+      ],
+      "category": "food"
+    },
+    {
+      "name_zh": "煎饼果子",
+      "name_en": "Jianbing Guozi",
+      "desc_zh": "绿豆面煎饼裹脆果，地道天津早点。",
+      "desc_en": "A mung-bean crepe wrapped around a crisp fritter—the authentic Tianjin breakfast.",
+      "img": "天津 煎饼果子",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "天津",
+        "煎饼果子"
+      ],
+      "category": "food"
+    },
+    {
+      "name_zh": "十八街麻花",
+      "name_en": "Mahua Fried Dough Twists",
+      "desc_zh": "酥脆香甜的传统麻花。",
+      "desc_en": "Traditional fried dough twists, crunchy and sweet.",
+      "img": "天津 麻花",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "天津",
+        "十八街麻花"
+      ],
+      "category": "food"
+    }
+  ]
+}

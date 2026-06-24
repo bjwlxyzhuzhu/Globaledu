@@ -1,0 +1,111 @@
+{
+  "key": "福州",
+  "name_zh": "福州",
+  "name_en": "Fuzhou",
+  "province": "福建",
+  "tier": "second",
+  "intro_zh": "福州是福建省省会，闽江穿城，三山鼎立，是有两千两百多年历史的「榕城」，也是海上丝绸之路的重镇。",
+  "intro_en": "Fuzhou, capital of Fujian, is split by the Min River and ringed by three hills. The 'Banyan City' has over 2,200 years of history and was a key port on the Maritime Silk Road.",
+  "culture_zh": "福州话与闽都文化别具一格，三坊七巷走出无数名人，佛跳墙的鲜香是闽菜的极致。",
+  "culture_en": "The Fuzhou dialect and Mindu culture are distinctive; the Three Lanes and Seven Alleys produced countless luminaries, and Buddha Jumps Over the Wall is the height of Fujian cuisine.",
+  "attractions": [
+    {
+      "name_zh": "三坊七巷",
+      "name_en": "Three Lanes and Seven Alleys",
+      "desc_zh": "明清古建筑街区，名人故居云集。",
+      "desc_en": "A district of Ming-Qing architecture filled with former homes of the famous.",
+      "img": "福州 三坊七巷",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "福州",
+        "三坊七巷"
+      ],
+      "category": "heritage"
+    },
+    {
+      "name_zh": "鼓山",
+      "name_en": "Drum Mountain",
+      "desc_zh": "福州名山，古寺摩崖，登高望江。",
+      "desc_en": "Fuzhou's famous mountain, with ancient temples, cliff carvings and river views.",
+      "img": "福州 鼓山",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "福州",
+        "鼓山"
+      ],
+      "category": "heritage"
+    },
+    {
+      "name_zh": "西湖公园",
+      "name_en": "West Lake Park",
+      "desc_zh": "千年园林，垂柳画船，闹中取静。",
+      "desc_en": "A thousand-year-old garden of willows and painted boats, calm amid the city.",
+      "img": "福州 西湖公园",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "福州",
+        "西湖"
+      ],
+      "category": "art"
+    }
+  ],
+  "foods": [
+    {
+      "name_zh": "佛跳墙",
+      "name_en": "Buddha Jumps Over the Wall",
+      "desc_zh": "汇集山珍海味的名贵汤菜。",
+      "desc_en": "A luxurious soup gathering land and sea delicacies.",
+      "img": "佛跳墙 闽菜",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "福州",
+        "佛跳墙"
+      ],
+      "category": "food"
+    },
+    {
+      "name_zh": "鱼丸",
+      "name_en": "Fuzhou Fish Balls",
+      "desc_zh": "包着肉馅的弹牙鱼丸，鲜香爆汁。",
+      "desc_en": "Springy fish balls with a meat filling—savory and juicy.",
+      "img": "福州 鱼丸",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "福州",
+        "鱼丸"
+      ],
+      "category": "food"
+    },
+    {
+      "name_zh": "荔枝肉",
+      "name_en": "Lychee Pork",
+      "desc_zh": "形似荔枝的酸甜里脊，开胃下饭。",
+      "desc_en": "Sweet-and-sour pork shaped like lychees—bright and appetizing.",
+      "img": "荔枝肉 闽菜",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "福州",
+        "荔枝肉"
+      ],
+      "category": "food"
+    }
+  ]
+}

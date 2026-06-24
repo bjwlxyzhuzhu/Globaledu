@@ -1,0 +1,111 @@
+{
+  "key": "泉州",
+  "name_zh": "泉州",
+  "name_en": "Quanzhou",
+  "province": "福建",
+  "tier": "second",
+  "intro_zh": "泉州是福建东南沿海城市，宋元时期「东方第一大港」、海上丝绸之路起点，2021 年列入世界文化遗产，多元宗教交融。",
+  "intro_en": "Quanzhou, on Fujian's southeast coast, was the 'greatest port of the East' in Song-Yuan times and a start of the Maritime Silk Road—a World Heritage site where many faiths meet.",
+  "culture_zh": "「半城烟火半城仙」的泉州，开元寺的东西塔、街头的南音、多元宗教并存，闽南红砖古厝里满是烟火气。",
+  "culture_en": "Quanzhou blends the sacred and the everyday: the twin pagodas of Kaiyuan Temple, street-side Nanyin music, coexisting religions, and red-brick Minnan houses full of life.",
+  "attractions": [
+    {
+      "name_zh": "开元寺",
+      "name_en": "Kaiyuan Temple",
+      "desc_zh": "千年古刹，东西双塔是泉州的象征。",
+      "desc_en": "A thousand-year-old temple whose twin pagodas symbolize the city.",
+      "img": "泉州 开元寺 东西塔",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "泉州",
+        "开元寺"
+      ],
+      "category": "heritage"
+    },
+    {
+      "name_zh": "清源山",
+      "name_en": "Qingyuan Mountain",
+      "desc_zh": "山上有宋代老君岩巨型石雕，气韵生动。",
+      "desc_en": "Home to a giant Song-era stone statue of Laozi.",
+      "img": "泉州 清源山 老君岩",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "泉州",
+        "清源山"
+      ],
+      "category": "heritage"
+    },
+    {
+      "name_zh": "西街",
+      "name_en": "West Street",
+      "desc_zh": "泉州最古老的街道，古厝、小吃与信仰交织。",
+      "desc_en": "Quanzhou's oldest street, weaving old houses, snacks and faith.",
+      "img": "泉州 西街",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "泉州",
+        "西街"
+      ],
+      "category": "heritage"
+    }
+  ],
+  "foods": [
+    {
+      "name_zh": "面线糊",
+      "name_en": "Misua Soup",
+      "desc_zh": "细面线煮成的糊状汤，配油条小料。",
+      "desc_en": "A thick soup of fine wheat vermicelli with various toppings.",
+      "img": "泉州 面线糊",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "泉州",
+        "面线糊"
+      ],
+      "category": "food"
+    },
+    {
+      "name_zh": "姜母鸭",
+      "name_en": "Ginger Duck",
+      "desc_zh": "老姜与鸭肉同煲，温补香浓。",
+      "desc_en": "Duck stewed with mature ginger—warming and aromatic.",
+      "img": "泉州 姜母鸭",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "泉州",
+        "姜母鸭"
+      ],
+      "category": "food"
+    },
+    {
+      "name_zh": "润饼",
+      "name_en": "Runbing",
+      "desc_zh": "薄饼卷各种菜料的闽南春卷。",
+      "desc_en": "A Minnan fresh spring roll wrapped with many fillings.",
+      "img": "闽南 润饼",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "泉州",
+        "润饼"
+      ],
+      "category": "food"
+    }
+  ]
+}

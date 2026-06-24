@@ -1,0 +1,38 @@
+{
+  "app": {
+    "name": "Huanyu Planet",
+    "tagline": "Agente de aprendizaje de chino y cultura para estudiantes internacionales"
+  },
+  "lang": {
+    "title": "Elige tus idiomas",
+    "subtitle": "El chino y el inglés son los idiomas predeterminados. Puedes añadir una lengua materna.",
+    "default": "Predeterminado",
+    "optional": "Elige uno (opcional)",
+    "enter": "Entrar en Huanyu Planet",
+    "note": "La interfaz y las respuestas del agente usarán los idiomas que elijas."
+  },
+  "opening": {
+    "welcome": "Bienvenido a Huanyu Planet",
+    "subtitle": "Comienza tu viaje por el idioma y la cultura chinos",
+    "guide": "Haz clic en el globo para comenzar tu viaje en chino",
+    "skip": "Saltar",
+    "enter": "Entrar al planeta"
+  },
+  "hud": { "home": "Inicio", "modules": "Módulos", "login": "Entrar" },
+  "common": {
+    "back": "Atrás",
+    "backToGlobe": "Volver al globo",
+    "comingSoon": "Próximamente",
+    "comingSoonNote": "Este módulo está en construcción. Esto es una maqueta de demostración.",
+    "demoMode": "Modo demo"
+  },
+  "chat": {
+    "title": "Tutor de chino graduado",
+    "subtitle": "Graduado · Anti-adulación · Multilingüe",
+    "placeholder": "Pregunta en chino o en tu idioma…",
+    "send": "Enviar",
+    "thinking": "Pensando…",
+    "native": "Traducción",
+    "empty": "¡Hola! Soy tu tutor de chino. Pregúntame sobre este lugar o sobre el chino."
+  }
+}

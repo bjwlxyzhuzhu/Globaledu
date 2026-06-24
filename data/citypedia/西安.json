@@ -1,0 +1,111 @@
+{
+  "key": "西安",
+  "name_zh": "西安",
+  "name_en": "Xi'an",
+  "province": "陕西",
+  "tier": "new-first",
+  "intro_zh": "西安是陕西省省会，古称长安，十三朝古都、丝绸之路起点，拥有兵马俑与古城墙，是中华文明的重要发祥地。",
+  "intro_en": "Xi'an, capital of Shaanxi, was the ancient Chang'an—capital of thirteen dynasties and start of the Silk Road, home to the Terracotta Warriors and the city wall.",
+  "culture_zh": "周秦汉唐的厚重历史、雄伟的城墙与钟鼓楼、回民街的烟火，还有秦腔与皮影，让西安处处是历史。",
+  "culture_en": "The weight of Zhou-Qin-Han-Tang history, the mighty walls and bell tower, the bustle of the Muslim Quarter, Qinqiang opera and shadow puppetry—history is everywhere in Xi'an.",
+  "attractions": [
+    {
+      "name_zh": "兵马俑",
+      "name_en": "Terracotta Warriors",
+      "desc_zh": "秦始皇陵的陪葬军阵，「世界第八大奇迹」。",
+      "desc_en": "The buried army of Emperor Qin—the 'Eighth Wonder of the World'.",
+      "img": "西安 兵马俑",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "西安",
+        "兵马俑"
+      ],
+      "category": "heritage"
+    },
+    {
+      "name_zh": "西安城墙",
+      "name_en": "City Wall",
+      "desc_zh": "保存完整的明代古城墙，可骑行环游。",
+      "desc_en": "A well-preserved Ming-era wall you can cycle around.",
+      "img": "西安 城墙",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "西安",
+        "西安城墙"
+      ],
+      "category": "heritage"
+    },
+    {
+      "name_zh": "大雁塔",
+      "name_en": "Giant Wild Goose Pagoda",
+      "desc_zh": "唐代古塔，玄奘译经之地，夜晚喷泉璀璨。",
+      "desc_en": "A Tang pagoda where Xuanzang translated scriptures; dazzling fountains at night.",
+      "img": "西安 大雁塔",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "西安",
+        "大雁塔"
+      ],
+      "category": "heritage"
+    }
+  ],
+  "foods": [
+    {
+      "name_zh": "肉夹馍",
+      "name_en": "Roujiamo",
+      "desc_zh": "腊汁肉夹在白吉馍里，被称为「中式汉堡」。",
+      "desc_en": "Stewed meat in a baked bun—the 'Chinese hamburger'.",
+      "img": "西安 肉夹馍",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "西安",
+        "肉夹馍"
+      ],
+      "category": "food"
+    },
+    {
+      "name_zh": "凉皮",
+      "name_en": "Liangpi",
+      "desc_zh": "爽滑的米/面皮拌上辣油醋汁，开胃消暑。",
+      "desc_en": "Cool, slippery noodles tossed in chili oil and vinegar.",
+      "img": "西安 凉皮",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "西安",
+        "凉皮"
+      ],
+      "category": "food"
+    },
+    {
+      "name_zh": "羊肉泡馍",
+      "name_en": "Yangrou Paomo",
+      "desc_zh": "掰碎的馍泡进浓郁羊肉汤，西安招牌。",
+      "desc_en": "Torn flatbread soaked in rich mutton soup—a Xi'an signature.",
+      "img": "西安 羊肉泡馍",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "西安",
+        "羊肉泡馍"
+      ],
+      "category": "food"
+    }
+  ]
+}

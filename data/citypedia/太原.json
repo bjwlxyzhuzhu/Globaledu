@@ -1,0 +1,111 @@
+{
+  "key": "太原",
+  "name_zh": "太原",
+  "name_en": "Taiyuan",
+  "province": "山西",
+  "tier": "second",
+  "intro_zh": "太原是山西省省会，两千五百年历史的「龙城」，汾河穿城，以晋商文化、古建与花样繁多的面食闻名。",
+  "intro_en": "Taiyuan, capital of Shanxi, is the 2,500-year-old 'Dragon City' on the Fen River, famed for Shanxi-merchant culture, ancient architecture and an endless variety of noodles.",
+  "culture_zh": "晋祠的古建、晋商票号的传奇，还有数十种花样的山西面食与老陈醋，太原把厚重的三晋文化煮进了一碗面。",
+  "culture_en": "The ancient halls of Jinci, the legend of Shanxi merchant banks, dozens of noodle styles and aged vinegar—Taiyuan simmers its rich heritage into a bowl of noodles.",
+  "attractions": [
+    {
+      "name_zh": "晋祠",
+      "name_en": "Jinci Temple",
+      "desc_zh": "周代以来的古建园林，宋代彩塑精美。",
+      "desc_en": "An ancient temple-garden since the Zhou era, with fine Song-dynasty statues.",
+      "img": "太原 晋祠",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "太原",
+        "晋祠"
+      ],
+      "category": "art"
+    },
+    {
+      "name_zh": "双塔寺",
+      "name_en": "Twin Pagoda Temple",
+      "desc_zh": "明代双塔并立，太原的标志。",
+      "desc_en": "Two Ming-era pagodas standing side by side—a symbol of Taiyuan.",
+      "img": "太原 双塔寺",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "太原",
+        "双塔寺"
+      ],
+      "category": "heritage"
+    },
+    {
+      "name_zh": "柳巷",
+      "name_en": "Liuxiang Street",
+      "desc_zh": "百年商业老街，太原的市井烟火。",
+      "desc_en": "A century-old commercial street full of local life.",
+      "img": "太原 柳巷",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "太原",
+        "柳巷"
+      ],
+      "category": "heritage"
+    }
+  ],
+  "foods": [
+    {
+      "name_zh": "刀削面",
+      "name_en": "Knife-cut Noodles",
+      "desc_zh": "刀削入锅、棱角分明，山西面食代表。",
+      "desc_en": "Noodles shaved straight into the pot—Shanxi's iconic noodle.",
+      "img": "山西 刀削面",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "太原",
+        "刀削面"
+      ],
+      "category": "food"
+    },
+    {
+      "name_zh": "头脑",
+      "name_en": "Tounao",
+      "desc_zh": "黄酒、羊肉、山药熬成的药膳汤，太原早点。",
+      "desc_en": "A medicinal breakfast soup of rice wine, mutton and yam.",
+      "img": "太原 头脑 药膳",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "太原",
+        "头脑"
+      ],
+      "category": "food"
+    },
+    {
+      "name_zh": "莜面栲栳栳",
+      "name_en": "Youmian Kaolaolao",
+      "desc_zh": "莜面卷成蜂窝状蒸制，蘸料而食。",
+      "desc_en": "Oat-flour rolls steamed in a honeycomb shape, eaten with dipping sauce.",
+      "img": "莜面栲栳栳 山西",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "太原",
+        "莜面栲栳栳"
+      ],
+      "category": "food"
+    }
+  ]
+}

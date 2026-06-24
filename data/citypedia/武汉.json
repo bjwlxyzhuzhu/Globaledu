@@ -1,0 +1,111 @@
+{
+  "key": "武汉",
+  "name_zh": "武汉",
+  "name_en": "Wuhan",
+  "province": "湖北",
+  "tier": "new-first",
+  "intro_zh": "武汉是湖北省省会，地处长江与汉江交汇处，自古为「九省通衢」，是华中地区的交通与经济中心。",
+  "intro_en": "Wuhan, capital of Hubei Province, sits where the Yangtze meets the Han River. Long known as a 'thoroughfare to nine provinces', it is the transport and economic hub of central China.",
+  "culture_zh": "武汉三镇（武昌、汉口、汉阳）隔江相望，既有黄鹤楼的千年诗意，也有近代开埠的码头文化，热干面的香气里藏着这座城市的烟火气。",
+  "culture_en": "The three towns of Wuhan face each other across the rivers, blending the ancient poetry of the Yellow Crane Tower with modern port-city culture—and the aroma of hot-dry noodles captures its everyday warmth.",
+  "attractions": [
+    {
+      "name_zh": "黄鹤楼",
+      "name_en": "Yellow Crane Tower",
+      "desc_zh": "江南三大名楼之一，登楼可俯瞰长江与武汉三镇风光。",
+      "desc_en": "One of the three great towers south of the Yangtze; climb it for sweeping views of the river and the city.",
+      "img": "武汉 黄鹤楼",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "武汉",
+        "黄鹤楼"
+      ],
+      "category": "heritage"
+    },
+    {
+      "name_zh": "东湖",
+      "name_en": "East Lake",
+      "desc_zh": "中国最大的城中湖之一，湖光山色，樱花与绿道闻名。",
+      "desc_en": "One of China's largest urban lakes, famous for its scenery, cherry blossoms and greenways.",
+      "img": "武汉 东湖 樱花",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "武汉",
+        "东湖"
+      ],
+      "category": "heritage"
+    },
+    {
+      "name_zh": "户部巷",
+      "name_en": "Hubu Alley",
+      "desc_zh": "老武汉的「汉味小吃第一巷」，汇聚各种地道早点。",
+      "desc_en": "Old Wuhan's premier snack street, packed with authentic local breakfasts.",
+      "img": "武汉 户部巷 小吃街",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "武汉",
+        "户部巷"
+      ],
+      "category": "heritage"
+    }
+  ],
+  "foods": [
+    {
+      "name_zh": "热干面",
+      "name_en": "Hot-dry Noodles",
+      "desc_zh": "武汉人的招牌早点，芝麻酱拌面，香浓筋道。",
+      "desc_en": "Wuhan's signature breakfast: chewy noodles tossed in rich sesame paste.",
+      "img": "武汉 热干面",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "武汉",
+        "热干面"
+      ],
+      "category": "food"
+    },
+    {
+      "name_zh": "豆皮",
+      "name_en": "Doupi",
+      "desc_zh": "糯米与肉丁裹在金黄豆皮里，外脆内糯。",
+      "desc_en": "Glutinous rice and diced meat wrapped in a golden bean-skin crepe—crisp outside, soft within.",
+      "img": "豆皮 武汉小吃",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "武汉",
+        "豆皮"
+      ],
+      "category": "food"
+    },
+    {
+      "name_zh": "鸭脖",
+      "name_en": "Spicy Duck Neck",
+      "desc_zh": "麻辣鲜香的卤味，武汉特色的休闲零食。",
+      "desc_en": "Numbing-spicy braised duck neck, a beloved Wuhan snack.",
+      "img": "武汉 鸭脖",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "武汉",
+        "鸭脖"
+      ],
+      "category": "food"
+    }
+  ]
+}

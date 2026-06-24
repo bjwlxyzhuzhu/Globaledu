@@ -1,0 +1,111 @@
+{
+  "key": "南京",
+  "name_zh": "南京",
+  "name_en": "Nanjing",
+  "province": "江苏",
+  "tier": "new-first",
+  "intro_zh": "南京是江苏省省会，六朝古都、十朝都会，长江穿城，既有厚重的历史与梧桐绿荫，也有现代都市的活力。",
+  "intro_en": "Nanjing, capital of Jiangsu, was the capital of ten dynasties. With the Yangtze running through it, it pairs deep history and plane-tree-lined avenues with modern vitality.",
+  "culture_zh": "明孝陵、中山陵、夫子庙的桨声灯影，梧桐掩映的民国建筑，南京以深沉的历史气质与博爱精神著称。",
+  "culture_en": "The Ming Xiaoling tomb, Sun Yat-sen Mausoleum, the lantern-lit Qinhuai River and Republican-era buildings under plane trees—Nanjing is known for its grave historical character.",
+  "attractions": [
+    {
+      "name_zh": "夫子庙·秦淮河",
+      "name_en": "Confucius Temple & Qinhuai River",
+      "desc_zh": "桨声灯影里的秦淮风光，小吃与古韵并存。",
+      "desc_en": "The lantern-lit Qinhuai River by the Confucius Temple—snacks and old charm.",
+      "img": "南京 夫子庙 秦淮河",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "南京",
+        "夫子庙·秦淮河"
+      ],
+      "category": "heritage"
+    },
+    {
+      "name_zh": "中山陵",
+      "name_en": "Sun Yat-sen Mausoleum",
+      "desc_zh": "依紫金山而建的宏伟陵寝，气势庄严。",
+      "desc_en": "A grand mausoleum on Purple Mountain, solemn and majestic.",
+      "img": "南京 中山陵",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "南京",
+        "中山陵"
+      ],
+      "category": "heritage"
+    },
+    {
+      "name_zh": "明城墙·玄武湖",
+      "name_en": "City Wall & Xuanwu Lake",
+      "desc_zh": "世界最长的古城墙环抱碧波玄武湖。",
+      "desc_en": "The world's longest ancient city wall embracing Xuanwu Lake.",
+      "img": "南京 玄武湖 城墙",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "南京",
+        "明城墙·玄武湖"
+      ],
+      "category": "heritage"
+    }
+  ],
+  "foods": [
+    {
+      "name_zh": "盐水鸭",
+      "name_en": "Salted Duck",
+      "desc_zh": "皮白肉嫩、咸鲜清香，南京「鸭都」名片。",
+      "desc_en": "Pale, tender and savory—the calling card of Nanjing, 'city of duck'.",
+      "img": "南京 盐水鸭",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "南京",
+        "盐水鸭"
+      ],
+      "category": "food"
+    },
+    {
+      "name_zh": "鸭血粉丝汤",
+      "name_en": "Duck Blood & Vermicelli Soup",
+      "desc_zh": "鸭血、鸭杂配粉丝，汤鲜味美。",
+      "desc_en": "Duck blood and offal with vermicelli in a savory broth.",
+      "img": "南京 鸭血粉丝汤",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "南京",
+        "鸭血粉丝汤"
+      ],
+      "category": "food"
+    },
+    {
+      "name_zh": "小笼包",
+      "name_en": "Soup Dumplings",
+      "desc_zh": "皮薄汁多的金陵小笼，鲜香可口。",
+      "desc_en": "Thin-skinned, juicy Jinling soup dumplings.",
+      "img": "南京 小笼包",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "南京",
+        "小笼包"
+      ],
+      "category": "food"
+    }
+  ]
+}
