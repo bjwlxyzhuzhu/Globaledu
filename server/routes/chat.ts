@@ -6,6 +6,8 @@ import { chatJSON, AVAILABLE_MODELS, getModel } from '../llm/deepseek';
 import { retrieveKb } from '../lib/rag';
 import { checkVocab, tabooGuidance, checkTaboo } from '../lib/grading';
 import { getDb } from '../db/index';
+import { currentUser } from '../lib/auth';
+import { award } from '../lib/points';
 import type { ChatRequest, ChatReply, LevelCheck, ReplyItem } from '../../shared/types';
 
 const router = Router();
@@ -118,7 +120,8 @@ router.post('/chat', async (req, res) => {
 
   const reply: ChatReply = { replies, level_check, suggestions, mock, rag_titles: ragTitles };
 
-  // M5：学习指标入库（懒加载 SQLite；失败不影响对话）
+  // M5：学习指标入库（懒加载 SQLite；失败不影响对话）。已登录则记真实 user_id 并发对话积分。
+  const authed = currentUser(req);
   void (async () => {
     try {
       const db = await getDb();
@@ -127,13 +130,14 @@ router.post('/chat', async (req, res) => {
       ) as { run: (...a: unknown[]) => unknown };
       stmt.run(
         randomUUID(),
-        body.sessionId || 'anon',
+        authed?.uid || body.sessionId || 'anon',
         'chat',
         '',
         level_check.vocab_in_level ? 1 : 0,
         JSON.stringify({ ...level_check, hsk, country, model: body.model || 'default', mock, rag: ragTitles.length }),
         Date.now(),
       );
+      if (authed) award(db, authed.uid, 'chat');
     } catch {
       /* 入库失败忽略 */
     }

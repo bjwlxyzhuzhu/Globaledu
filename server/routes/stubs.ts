@@ -6,10 +6,7 @@ const router = Router();
 const todo = (milestone: string, note: string) => (_req: Request, res: Response) =>
   res.json({ todo: true, milestone, note });
 
-// 认证（M1 演示可免密；超星 SSO 为 M7 桩）
-router.post('/auth/login', (_req, res) =>
-  res.json({ ok: true, user: { id: 'demo', name: '演示用户', role: 'student' }, token: 'demo-token' }),
-);
+// 认证已由 routes/auth.ts 实现（学生/管理员登录）；此处仅保留超星 SSO 桩（M7）。
 router.get('/auth/chaoxing/login', todo('M7', '超星账号 SSO 登录桩'));
 
 // 智能体集群产出已在 studio.ts 实现；此处仅留点播动画占位（M6 后续）

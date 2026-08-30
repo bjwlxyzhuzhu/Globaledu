@@ -530,5 +530,173 @@
     "answer": 0,
     "explain_zh": "「精彩绝伦」＝精彩到极点。",
     "explain_en": "精彩绝伦 = \"superbly brilliant\"."
+  },
+  {
+    "id": "we1",
+    "level": 1,
+    "stem_zh": "我 ____ 学生。",
+    "stem_en": "I ___ a student.",
+    "options": [
+      "在",
+      "是",
+      "有"
+    ],
+    "answer": 1,
+    "explain_zh": "「是」表示判断：我是学生。",
+    "explain_en": "是 = to be."
+  },
+  {
+    "id": "we2",
+    "level": 1,
+    "stem_zh": "你好 ____ ？",
+    "stem_en": "How are you?",
+    "options": [
+      "呢",
+      "了",
+      "吗"
+    ],
+    "answer": 2,
+    "explain_zh": "「吗」用于一般疑问句末。",
+    "explain_en": "吗 marks a yes/no question."
+  },
+  {
+    "id": "we3",
+    "level": 2,
+    "stem_zh": "今天天气很 ____ 。",
+    "stem_en": "The weather is very ___ today.",
+    "options": [
+      "好的",
+      "好",
+      "很好"
+    ],
+    "answer": 1,
+    "explain_zh": "「很+形容词」：很好；不再加「的/很」。",
+    "explain_en": "很 + adjective: 很好."
+  },
+  {
+    "id": "we4",
+    "level": 2,
+    "stem_zh": "他比我 ____ 。",
+    "stem_en": "He is ___ than me.",
+    "options": [
+      "很高",
+      "高",
+      "高的"
+    ],
+    "answer": 1,
+    "explain_zh": "「比」字句里形容词前不用「很」。",
+    "explain_en": "In 比 comparisons, no 很 before the adjective."
+  },
+  {
+    "id": "we5",
+    "level": 3,
+    "stem_zh": "这件衣服 ____ 那件贵。",
+    "stem_en": "This shirt is more expensive ___ that one.",
+    "options": [
+      "跟",
+      "和",
+      "比"
+    ],
+    "answer": 2,
+    "explain_zh": "「A 比 B + 形容词」表示比较。",
+    "explain_en": "A 比 B + adj expresses comparison."
+  },
+  {
+    "id": "we6",
+    "level": 3,
+    "stem_zh": "我 ____ 没去过北京。",
+    "stem_en": "I have ___ never been to Beijing.",
+    "options": [
+      "还",
+      "正",
+      "在"
+    ],
+    "answer": 0,
+    "explain_zh": "「还没……（过）」表示到现在仍未发生。",
+    "explain_en": "还没…(过) = still have not done."
+  },
+  {
+    "id": "we7",
+    "level": 4,
+    "stem_zh": "经过努力，他 ____ 通过了考试。",
+    "stem_en": "After hard work, he ___ passed the exam.",
+    "options": [
+      "终点",
+      "终于",
+      "结束"
+    ],
+    "answer": 1,
+    "explain_zh": "「终于」表示经过过程后实现，含期待。",
+    "explain_en": "终于 = finally, after a process."
+  },
+  {
+    "id": "we8",
+    "level": 4,
+    "stem_zh": "这个问题 ____ 复杂。",
+    "stem_en": "This problem is ___ complex.",
+    "options": [
+      "相信",
+      "相同",
+      "相当"
+    ],
+    "answer": 2,
+    "explain_zh": "「相当」＝程度很高，相当于「非常」。",
+    "explain_en": "相当 = quite / considerably."
+  },
+  {
+    "id": "we9",
+    "level": 5,
+    "stem_zh": "他做事很 ____ ，从不马虎。",
+    "stem_en": "He works very ___, never careless.",
+    "options": [
+      "认真",
+      "认识",
+      "认为"
+    ],
+    "answer": 0,
+    "explain_zh": "「认真」＝做事仔细负责。",
+    "explain_en": "认真 = conscientious / serious."
+  },
+  {
+    "id": "we10",
+    "level": 5,
+    "stem_zh": "听到这个好消息，大家都 ____ 不已。",
+    "stem_en": "Everyone was ___ at the good news.",
+    "options": [
+      "兴趣",
+      "兴奋",
+      "高兴"
+    ],
+    "answer": 1,
+    "explain_zh": "固定搭配「兴奋不已」＝非常激动。",
+    "explain_en": "兴奋不已 = thrilled beyond measure."
+  },
+  {
+    "id": "we11",
+    "level": 6,
+    "stem_zh": "面对困难，他始终 ____ ，毫不退缩。",
+    "stem_en": "Facing hardship, he always ___, never flinching.",
+    "options": [
+      "半途而废",
+      "袖手旁观",
+      "迎难而上"
+    ],
+    "answer": 2,
+    "explain_zh": "「迎难而上」＝主动面对困难。",
+    "explain_en": "迎难而上 = rise to the challenge."
+  },
+  {
+    "id": "we12",
+    "level": 6,
+    "stem_zh": "这部小说情节 ____ ，引人入胜。",
+    "stem_en": "The plot of the novel is ___, gripping.",
+    "options": [
+      "跌宕起伏",
+      "平淡无奇",
+      "一帆风顺"
+    ],
+    "answer": 0,
+    "explain_zh": "「跌宕起伏」＝起落变化大，扣人心弦。",
+    "explain_en": "跌宕起伏 = full of ups and downs."
   }
 ]

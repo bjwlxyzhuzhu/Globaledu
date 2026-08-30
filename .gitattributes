@@ -1,0 +1,26 @@
+# 文本统一按 UTF-8 内容管理，并使用 LF，避免 Windows/Linux/Docker 间反复转码。
+* text=auto
+
+*.ts      text eol=lf
+*.tsx     text eol=lf
+*.js      text eol=lf
+*.mjs     text eol=lf
+*.json    text eol=lf
+*.md      text eol=lf
+*.css     text eol=lf
+*.html    text eol=lf
+*.yml     text eol=lf
+*.yaml    text eol=lf
+*.sql     text eol=lf
+*.env     text eol=lf
+
+*.png     binary
+*.jpg     binary
+*.jpeg    binary
+*.gif     binary
+*.mp3     binary
+*.pdf     binary
+*.docx    binary
+*.pptx    binary
+*.sqlite  binary
+

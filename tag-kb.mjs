@@ -5,8 +5,8 @@ import path from 'node:path';
 
 try { process.loadEnvFile('.env'); } catch { /* 无 .env 也继续（走启发式兜底） */ }
 const KEY = process.env.DEEPSEEK_API_KEY || '';
-const BASE = process.env.DEEPSEEK_BASE_URL || 'https://integrate.api.nvidia.com/v1';
-const MODEL = process.env.LLM_MODEL || 'deepseek-ai/deepseek-v4-flash';
+const BASE = process.env.DEEPSEEK_BASE_URL || 'https://api.deepseek.com';
+const MODEL = process.env.LLM_MODEL || 'deepseek-v4-pro';
 const CATS = 'heritage(文物古迹) intangible(非遗技艺) festival(节日节气) food(饮食茶酒) folklore(民俗风情) art(传统艺术) thought(思想哲学) modern(当代中国)';
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));

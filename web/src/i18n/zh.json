@@ -114,6 +114,7 @@
     "listening": "听力", "listening_d": "分级听力 · 影子跟读",
     "speaking": "口语", "speaking_d": "情境对话 · 发音诊断",
     "reading": "阅读", "reading_d": "分级短文 · 即点即查",
+    "writing": "写作", "writing_d": "分级命题 · AI 批改纠错",
     "hsk": "HSK", "hsk_d": "自适应题库 · 模考",
     "hskk": "HSKK", "hskk_d": "口语模考 · 三维打分",
     "culture": "文化", "culture_d": "城市文化 · 情境模拟",
@@ -194,7 +195,7 @@
     "hanziDone": "已掌握汉字",
     "chatTurns": "对话练习",
     "teacherEntry": "教师端",
-    "dims": { "listen": "听力", "speak": "口语", "read": "阅读", "write": "书写", "hanzi": "汉字", "culture": "文化", "hskk": "HSKK" }
+    "dims": { "listen": "听力", "speak": "口语", "read": "阅读", "write": "写作", "hanzi": "汉字", "culture": "文化", "hskk": "HSKK" }
   },
   "teacher": {
     "title": "教师学情看板",

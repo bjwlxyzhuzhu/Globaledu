@@ -1295,5 +1295,173 @@
         "meaning_en": "to gaze"
       }
     ]
+  },
+  {
+    "char": "火",
+    "pinyin": "huǒ",
+    "strokes": 4,
+    "radical": "火",
+    "hsk": 2,
+    "story_zh": "象形字，像跳动的火苗。",
+    "story_native": "A pictograph of leaping flames.",
+    "words": [
+      {
+        "word": "火车",
+        "pinyin": "huǒchē",
+        "meaning_en": "train"
+      },
+      {
+        "word": "火锅",
+        "pinyin": "huǒguō",
+        "meaning_en": "hotpot"
+      }
+    ]
+  },
+  {
+    "char": "牛",
+    "pinyin": "niú",
+    "strokes": 4,
+    "radical": "牛",
+    "hsk": 2,
+    "story_zh": "象形字，像牛头与角。",
+    "story_native": "A pictograph of an ox head with horns.",
+    "words": [
+      {
+        "word": "牛奶",
+        "pinyin": "niúnǎi",
+        "meaning_en": "milk"
+      },
+      {
+        "word": "牛肉",
+        "pinyin": "niúròu",
+        "meaning_en": "beef"
+      }
+    ]
+  },
+  {
+    "char": "雨",
+    "pinyin": "yǔ",
+    "strokes": 8,
+    "radical": "雨",
+    "hsk": 2,
+    "story_zh": "象形字，像云中落下雨点。",
+    "story_native": "A pictograph of raindrops from a cloud.",
+    "words": [
+      {
+        "word": "下雨",
+        "pinyin": "xiàyǔ",
+        "meaning_en": "to rain"
+      },
+      {
+        "word": "雨伞",
+        "pinyin": "yǔsǎn",
+        "meaning_en": "umbrella"
+      }
+    ]
+  },
+  {
+    "char": "鱼",
+    "pinyin": "yú",
+    "strokes": 8,
+    "radical": "鱼",
+    "hsk": 2,
+    "story_zh": "象形字，像一条鱼。",
+    "story_native": "A pictograph of a fish.",
+    "words": [
+      {
+        "word": "钓鱼",
+        "pinyin": "diàoyú",
+        "meaning_en": "to fish"
+      },
+      {
+        "word": "鱼肉",
+        "pinyin": "yúròu",
+        "meaning_en": "fish meat"
+      }
+    ]
+  },
+  {
+    "char": "鸟",
+    "pinyin": "niǎo",
+    "strokes": 5,
+    "radical": "鸟",
+    "hsk": 3,
+    "story_zh": "象形字，像一只小鸟。",
+    "story_native": "A pictograph of a bird.",
+    "words": [
+      {
+        "word": "小鸟",
+        "pinyin": "xiǎoniǎo",
+        "meaning_en": "little bird"
+      },
+      {
+        "word": "鸟巢",
+        "pinyin": "niǎocháo",
+        "meaning_en": "nest"
+      }
+    ]
+  },
+  {
+    "char": "风",
+    "pinyin": "fēng",
+    "strokes": 4,
+    "radical": "风",
+    "hsk": 3,
+    "story_zh": "表示流动的空气。",
+    "story_native": "Represents moving air — wind.",
+    "words": [
+      {
+        "word": "大风",
+        "pinyin": "dàfēng",
+        "meaning_en": "strong wind"
+      },
+      {
+        "word": "风景",
+        "pinyin": "fēngjǐng",
+        "meaning_en": "scenery"
+      }
+    ]
+  },
+  {
+    "char": "田",
+    "pinyin": "tián",
+    "strokes": 5,
+    "radical": "田",
+    "hsk": 3,
+    "story_zh": "象形字，像田地的阡陌。",
+    "story_native": "A pictograph of a field divided by paths.",
+    "words": [
+      {
+        "word": "田地",
+        "pinyin": "tiándì",
+        "meaning_en": "farmland"
+      },
+      {
+        "word": "农田",
+        "pinyin": "nóngtián",
+        "meaning_en": "cropland"
+      }
+    ]
+  },
+  {
+    "char": "桥",
+    "pinyin": "qiáo",
+    "strokes": 10,
+    "radical": "木",
+    "hsk": 5,
+    "story_zh": "木字旁，最早的桥用木头搭成。",
+    "story_native": "Wood radical — early bridges were built of wood.",
+    "words": [
+      {
+        "word": "大桥",
+        "pinyin": "dàqiáo",
+        "meaning_en": "bridge"
+      },
+      {
+        "word": "立交桥",
+        "pinyin": "lìjiāoqiáo",
+        "meaning_en": "overpass"
+      }
+    ]
   }
 ]

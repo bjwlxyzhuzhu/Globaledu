@@ -157,6 +157,44 @@ export interface HskkItem {
   sample_zh: string; // 参考范例答案
 }
 
+/** 写作命题（data/learn/writing.json）——分级写作 + AI 批改 */
+export interface WritingItem {
+  id: string;
+  hsk: HskLevel;
+  title_zh: string;
+  title_en: string;
+  prompt_zh: string; // 题目/要求
+  prompt_en: string;
+  hint_zh?: string; // 写作要点提示（可以写什么）
+  hint_en?: string;
+  minChars: number; // 建议最少字数
+  sample_zh?: string; // 参考范文
+}
+
+/** 写作 AI 批改结果（POST /api/writing/grade） */
+export interface WritingGrade {
+  score: number; // 综合 0~100
+  dims: { content: number; grammar: number; vocab: number; coherence: number }; // 内容/语法/词汇/连贯 各 0~100
+  corrections: { original: string; fixed: string; note_zh: string; note_en: string }[]; // 逐条纠错
+  comment_zh: string; // 总评（中文，鼓励 + 可改进点）
+  comment_native: string; // 总评（母语）
+  mock: boolean;
+}
+
+/** 写作历史记录（已登录学生提交并批改后入库；学生看历史、老师看学情） */
+export interface WritingRecord {
+  id: string;
+  item_id?: string;
+  title?: string;
+  prompt?: string;
+  text: string; // 学生原文
+  score: number;
+  dims: { content: number; grammar: number; vocab: number; coherence: number };
+  corrections: { original: string; fixed: string; note_zh: string; note_en: string }[];
+  comment_zh: string;
+  ts: number;
+}
+
 /** 城市图鉴单项（景点 / 特色美食） */
 export interface CityPediaItem {
   name_zh: string;
@@ -243,4 +281,81 @@ export interface City {
 export interface ApiError {
   error: string;
   detail?: string;
+}
+
+/** 登录用户（去敏；前端 store 持有） */
+export interface AuthUser {
+  id: string;
+  name: string;
+  role: 'student' | 'teacher';
+  username?: string;
+  student_no?: string;
+  country?: string;
+  native_lang?: string;
+  hsk_level?: number;
+  credits: number;
+  total_active_sec: number;
+}
+
+/** 班级（管理端） */
+export interface ClassInfo {
+  id: string;
+  name: string;
+  hsk_default: number;
+  count: number;
+}
+
+/** 花名册一行（管理端聚合学情） */
+export interface RosterRow {
+  id: string;
+  name: string;
+  student_no?: string;
+  country?: string;
+  hsk_level?: number;
+  credits: number;
+  total_active_sec: number; // 互动时长（秒）
+  last_login_date: string;
+  avgScore: number | null; // 各模块平均分（不含对话）
+  records: number; // 学习记录条数
+}
+
+/** 学生详情（管理端） */
+export interface StudentDetail {
+  student: AuthUser & { last_login_date: string };
+  modules: { module: string; best: number; avg: number; count: number }[];
+  radar: { dim: string; score: number }[];
+  points: { type: string; points: number; ts: number }[];
+}
+
+/** 积分兑换奖励（data/rewards.json，老师可编辑） */
+export interface Reward {
+  id: string;
+  emoji?: string;
+  name_zh: string;
+  name_en: string;
+  cost: number;
+  desc_zh?: string;
+  desc_en?: string;
+}
+
+/** 兑换记录 */
+export interface Redemption {
+  id: string;
+  reward_id?: string;
+  reward_name: string;
+  cost: number;
+  status: 'pending' | 'fulfilled';
+  ts: number;
+  name?: string; // 管理端用：学生姓名
+  student_no?: string; // 管理端用：学号
+}
+
+/** 排行榜一行 */
+export interface LeaderboardRow {
+  rank: number;
+  id: string;
+  name: string;
+  student_no?: string;
+  credits: number;
+  me?: boolean;
 }

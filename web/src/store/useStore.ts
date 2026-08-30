@@ -1,5 +1,6 @@
 import { create } from 'zustand';
-import type { HskLevel } from '@shared/types';
+import type { HskLevel, AuthUser } from '@shared/types';
+import { api, setToken, getToken } from '../lib/api';
 
 // localStorage 安全读写（预览沙箱禁用时降级，不崩页）
 function lsGet(k: string): string | null {
@@ -34,6 +35,12 @@ function readUiLangs(): { uiLangs: string[]; extra: string | null } {
 }
 
 const initLangs = readUiLangs();
+const DEEPSEEK_V4_MODELS = new Set(['deepseek-v4-pro', 'deepseek-v4-flash']);
+
+function readModel(): string {
+  const saved = lsGet('hyxq_llm_model') || '';
+  return DEEPSEEK_V4_MODELS.has(saved) ? saved : '';
+}
 
 interface AppState {
   lang: string; // 当前界面语言（uiLangs 之一）
@@ -54,9 +61,14 @@ interface AppState {
   setModel: (m: string) => void;
   zodiac: string; // 选定的生肖数字人老师 id（''=默认第一只）
   setZodiac: (z: string) => void;
+  // —— 登录态 ——
+  currentUser: AuthUser | null; // 当前登录用户（null=游客）
+  login: (user: AuthUser, token: string) => void;
+  logout: () => void;
+  setUser: (user: AuthUser | null) => void; // me() 校验后刷新
 }
 
-export const useStore = create<AppState>((set) => ({
+export const useStore = create<AppState>((set, get) => ({
   lang: lsGet('hyxq_lang') || 'zh',
   uiLangs: initLangs.uiLangs,
   extraLang: initLangs.extra,
@@ -97,6 +109,7 @@ export const useStore = create<AppState>((set) => ({
     set((s) => {
       const next = { ...s.hanziProgress, [char]: Math.max(s.hanziProgress[char] || 0, score) };
       lsSet('hyxq_hanzi', JSON.stringify(next));
+      syncProgress(get, 'hanzi', char, score);
       return { hanziProgress: next };
     }),
   moduleProgress: (() => {
@@ -110,9 +123,11 @@ export const useStore = create<AppState>((set) => ({
     set((s) => {
       const next = { ...s.moduleProgress, [key]: Math.max(s.moduleProgress[key] || 0, score) };
       lsSet('hyxq_module', JSON.stringify(next));
+      const mod = key.split(':')[0]; // "listening:xx" → "listening"
+      syncProgress(get, mod, key, score);
       return { moduleProgress: next };
     }),
-  model: lsGet('hyxq_llm_model') || '',
+  model: readModel(),
   setModel: (m) => {
     lsSet('hyxq_llm_model', m);
     set({ model: m });
@@ -122,4 +137,29 @@ export const useStore = create<AppState>((set) => ({
     lsSet('hyxq_zodiac', z);
     set({ zodiac: z });
   },
+  currentUser: null,
+  login: (user, token) => {
+    setToken(token);
+    set({ currentUser: user });
+  },
+  logout: () => {
+    setToken('');
+    set({ currentUser: null });
+  },
+  setUser: (user) => set({ currentUser: user }),
 }));
+
+// 已登录则把这次成绩同步到服务端（落库 + 重算雷达 + 发学习积分），并刷新本地积分显示。
+// 失败静默：游客或离线时仍走 localStorage，不打断学习。
+function syncProgress(get: () => AppState, module: string, item: string, score: number): void {
+  if (!getToken() || !get().currentUser) return;
+  api
+    .progress({ module, item, score })
+    .then((r) => {
+      const u = get().currentUser;
+      if (u) useStore.setState({ currentUser: { ...u, credits: r.credits } });
+    })
+    .catch(() => {
+      /* 同步失败忽略 */
+    });
+}

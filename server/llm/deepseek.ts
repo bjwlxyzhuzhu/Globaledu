@@ -1,35 +1,37 @@
 import OpenAI from 'openai';
 
 // 大模型配置：均在「运行时」读环境变量，避免 ESM import 提升导致读取过早。
-// 默认指向 NVIDIA NIM / DeepSeek（OpenAI 兼容）；换网关只需改 .env 的 base_url/model。
+// 默认指向 DeepSeek 官方 OpenAI 兼容接口；换网关只需改 .env 的 base_url/model。
 function cfg() {
   return {
     apiKey: process.env.DEEPSEEK_API_KEY || '',
     baseURL: process.env.DEEPSEEK_BASE_URL || 'https://api.deepseek.com',
-    model: process.env.LLM_MODEL || 'deepseek-chat',
+    model: process.env.LLM_MODEL || 'deepseek-v4-pro',
   };
 }
 
-// 对话框可选的大模型清单（NVIDIA NIM 目录里的中文友好/常用模型，均经 catalog 校验存在）。
-// 不支持 response_format:json_object 的模型，由 chatJSON 自动降级兜底。
+// DeepSeek 官方 V4 模型。模型名与 https://api.deepseek.com 的 /models 接口保持一致。
 export const AVAILABLE_MODELS: { id: string; label: string }[] = [
-  { id: 'deepseek-ai/deepseek-v4-flash', label: 'DeepSeek V4 Flash · 快' },
-  { id: 'deepseek-ai/deepseek-v4-pro', label: 'DeepSeek V4 Pro · 更强' },
-  { id: 'qwen/qwen3-next-80b-a3b-instruct', label: 'Qwen3-Next 80B · 中文强' },
-  { id: 'z-ai/glm-5.1', label: 'GLM-5.1 · 中文' },
-  { id: 'minimaxai/minimax-m3', label: 'MiniMax M3 · 中文' },
-  { id: 'meta/llama-3.3-70b-instruct', label: 'Llama 3.3 70B' },
-  { id: 'moonshotai/kimi-k2.6', label: 'Kimi K2.6' },
+  { id: 'deepseek-v4-pro', label: 'DeepSeek V4 Pro · 更强' },
+  { id: 'deepseek-v4-flash', label: 'DeepSeek V4 Flash · 更快' },
 ];
 
+const AVAILABLE_MODEL_IDS = new Set(AVAILABLE_MODELS.map(({ id }) => id));
+
+/** 防止旧浏览器缓存或手工请求把 NVIDIA 风格/未知模型名发给 DeepSeek 官方接口。 */
+export function normalizeModel(model?: string): string {
+  return model && AVAILABLE_MODEL_IDS.has(model) ? model : cfg().model;
+}
+
 let client: OpenAI | null = null;
-let clientKey = '';
+let clientConfigKey = '';
 function getClient(): OpenAI | null {
   const { apiKey, baseURL } = cfg();
   if (!apiKey) return null; // 无 key → 上层走 mock 兜底
-  if (!client || clientKey !== apiKey) {
+  const nextConfigKey = `${baseURL}\n${apiKey}`;
+  if (!client || clientConfigKey !== nextConfigKey) {
     client = new OpenAI({ apiKey, baseURL });
-    clientKey = apiKey;
+    clientConfigKey = nextConfigKey;
   }
   return client;
 }
@@ -66,7 +68,7 @@ function extractJson(text: string): string {
 export async function chatJSON<T = unknown>(opts: ChatJsonOptions): Promise<T | null> {
   const c = getClient();
   if (!c) return null;
-  const model = opts.model || cfg().model;
+  const model = normalizeModel(opts.model);
   const messages: Msg[] = [
     { role: 'system', content: opts.system },
     ...(opts.history ?? []),
@@ -96,7 +98,7 @@ export async function chatJSON<T = unknown>(opts: ChatJsonOptions): Promise<T | 
 export async function chatText(opts: ChatJsonOptions): Promise<string | null> {
   const c = getClient();
   if (!c) return null;
-  const model = opts.model || cfg().model;
+  const model = normalizeModel(opts.model);
   try {
     const messages: Msg[] = [
       { role: 'system', content: opts.system },

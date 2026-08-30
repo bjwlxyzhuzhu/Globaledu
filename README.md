@@ -23,6 +23,60 @@ pnpm dev              # 同时启动 web(5173) + server(8787)
 
 > 没有 DeepSeek key 时，对话/产出会返回占位双语内容，演示线不中断；填入 `DEEPSEEK_API_KEY` 即切真实大模型。
 
+默认使用 DeepSeek 官方 `deepseek-v4-pro`，接口地址为 `https://api.deepseek.com`。密钥只放在本地 `.env`，不要写入源码、镜像或提交到 Git。
+
+### 部署 / 演示运行（单进程，推荐交付与答辩用）
+
+```bash
+pnpm serve            # 先打包前端 web/dist，再由后端一个进程同端口托管页面+接口
+```
+
+打开 **http://localhost:8787** 即可（页面与 `/api` 同端口，无需另开 5173）。
+相比 `pnpm dev`（vite + tsx-watch 多进程、带文件监听），单进程模式进程更少、更稳定，
+也更不易被安全软件（360 / 火绒 / Defender）误杀 node。若仍被误杀，请把 `node.exe`
+或本项目目录加入杀软「信任区 / 排除项」。管理员默认账号 `admin / admin888`（首启自动创建，
+请在 `.env` 设 `ADMIN_PASSWORD` 后重启修改）。
+
+### Docker 部署
+
+前提：已安装 Docker Desktop 或 Docker Engine + Compose。
+
+```bash
+cp .env.example .env       # Windows 可复制后手动填写
+# 在 .env 中设置 DEEPSEEK_API_KEY、ADMIN_PASSWORD、AUTH_SECRET
+docker compose up -d --build
+docker compose ps
+```
+
+打开 **http://localhost:8787**。健康检查：`http://localhost:8787/api/health`。
+SQLite 数据保存在命名卷 `huanyu-data` 中，重新构建镜像不会丢失。停止服务使用
+`docker compose down`；如需连同数据库一起删除，需明确执行 `docker compose down -v`。
+
+### 中文乱码与 UTF-8
+
+仓库使用 UTF-8（无 BOM）和 LF。`.editorconfig`、`.gitattributes` 已统一编辑器、Git 与 Docker 的编码规则。
+
+若 Windows 旧终端或 Vim 显示乱码：
+
+```powershell
+chcp 65001
+$OutputEncoding = [Console]::OutputEncoding = [Console]::InputEncoding = [Text.UTF8Encoding]::new()
+vim -u .vimrc .env
+```
+
+也可以先执行 `powershell -ExecutionPolicy Bypass -File .\scripts\utf8.ps1`，或使用
+`.\scripts\dev-utf8.ps1` 启动开发环境，使 Node、Vite 和 PowerShell 日志在同一 UTF-8 会话中显示。
+
+在已打开的 Vim 中也可执行：
+
+```vim
+:set encoding=utf-8 fileencoding=utf-8
+:edit ++enc=utf-8
+```
+
+若文件过去曾被以 GBK 错误保存，不要直接覆盖；先用 `:edit ++enc=gb18030 文件名` 确认中文正常，
+再执行 `:set fileencoding=utf-8` 和 `:write` 转换。
+
 ## 构建里程碑（对照 PRD）
 
 - [x] **M1** 脚手架：单仓、前后端互通、LLM 代理（含兜底）、i18n、路由骨架、`/api/chat` 双语

@@ -46,23 +46,53 @@ export default function Profile() {
   const hanziProgress = useStore((s) => s.hanziProgress);
   const moduleProgress = useStore((s) => s.moduleProgress);
   const hskLevel = useStore((s) => s.hskLevel);
+  const currentUser = useStore((s) => s.currentUser);
   const [chatTurns, setChatTurns] = useState(0);
   const [name, setName] = useState('');
   const certRef = useRef<HTMLCanvasElement>(null);
+
+  // 改密码表单
+  const [showPwd, setShowPwd] = useState(false);
+  const [oldPwd, setOldPwd] = useState('');
+  const [newPwd, setNewPwd] = useState('');
+  const [pwdMsg, setPwdMsg] = useState('');
 
   useEffect(() => {
     api.metrics().then((m) => setChatTurns(m.count || 0)).catch(() => {});
   }, []);
 
+  // 登录用户：用账户名预填证书姓名
+  useEffect(() => {
+    if (currentUser?.name) setName((n) => n || currentUser.name);
+  }, [currentUser]);
+
+  const changePwd = async () => {
+    setPwdMsg('');
+    if (newPwd.length < 4) {
+      setPwdMsg('新密码至少 4 位');
+      return;
+    }
+    try {
+      await api.changePassword({ oldPassword: oldPwd, newPassword: newPwd });
+      setPwdMsg('✅ 密码已修改');
+      setOldPwd('');
+      setNewPwd('');
+      setTimeout(() => setShowPwd(false), 1200);
+    } catch (e) {
+      setPwdMsg((e as Error).message);
+    }
+  };
+
   const dims = useMemo(() => {
     const avg = (v: number[]) => (v.length ? Math.round(v.reduce((a, b) => a + b, 0) / v.length) : 0);
     const mod = (m: string) => Object.entries(moduleProgress).filter(([k]) => k.startsWith(m + ':')).map(([, v]) => v);
     const hz = Object.values(hanziProgress);
+    const writeScores = mod('writing'); // 写作模块真实成绩；无则回退按汉字掌握数估算
     return [
       { key: 'listen', value: avg(mod('listening')) },
       { key: 'speak', value: avg(mod('speaking')) },
       { key: 'read', value: avg(mod('reading')) },
-      { key: 'write', value: Math.min(100, hz.length * 10) },
+      { key: 'write', value: writeScores.length ? avg(writeScores) : Math.min(100, hz.length * 10) },
       { key: 'hanzi', value: avg(hz) },
       { key: 'culture', value: Math.min(100, chatTurns * 12) },
       { key: 'hskk', value: avg(mod('hskk')) },
@@ -170,6 +200,42 @@ export default function Profile() {
             <canvas ref={certRef} className="hidden" />
           </div>
         </div>
+
+        {/* 账户与积分（登录后显示：积分中心入口 + 改密码） */}
+        {currentUser && (
+          <div className="glass rounded-3xl p-5 mt-6">
+            <div className="flex items-center justify-between flex-wrap gap-3">
+              <div>
+                <h2 className="font-semibold text-glow">👤 {currentUser.name} <span className="text-xs text-white/45 font-normal">{currentUser.student_no ? `学号 ${currentUser.student_no}` : currentUser.role === 'teacher' ? '管理员' : ''}</span></h2>
+                <p className="text-sm text-gold mt-1">{currentUser.credits}💎 积分 · 互动 {Math.floor((currentUser.total_active_sec || 0) / 60)} 分钟</p>
+              </div>
+              <div className="flex gap-2">
+                <button onClick={() => nav('/rewards')} className="glass px-4 py-2 rounded-xl text-sm hover:border-gold/60">💎 积分中心</button>
+                <button onClick={() => setShowPwd((v) => !v)} className="glass px-4 py-2 rounded-xl text-sm hover:border-starcyan/60">🔑 修改密码</button>
+              </div>
+            </div>
+            {showPwd && (
+              <div className="mt-4 grid sm:grid-cols-[1fr_1fr_auto] gap-2 items-center max-w-lg">
+                <input
+                  type="password"
+                  value={oldPwd}
+                  onChange={(e) => setOldPwd(e.target.value)}
+                  placeholder="旧密码"
+                  className="rounded-lg bg-space-900/70 border border-white/15 px-3 py-2 text-sm outline-none focus:border-starcyan/60"
+                />
+                <input
+                  type="password"
+                  value={newPwd}
+                  onChange={(e) => setNewPwd(e.target.value)}
+                  placeholder="新密码（≥4位）"
+                  className="rounded-lg bg-space-900/70 border border-white/15 px-3 py-2 text-sm outline-none focus:border-starcyan/60"
+                />
+                <button onClick={changePwd} className="btn-primary px-4 py-2 rounded-lg text-sm whitespace-nowrap">确认</button>
+                {pwdMsg && <p className="text-xs text-white/70 sm:col-span-3">{pwdMsg}</p>}
+              </div>
+            )}
+          </div>
+        )}
       </div>
     </motion.div>
   );

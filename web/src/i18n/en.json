@@ -114,6 +114,7 @@
     "listening": "Listening", "listening_d": "Graded listening · shadowing",
     "speaking": "Speaking", "speaking_d": "Scenario dialogue · pronunciation",
     "reading": "Reading", "reading_d": "Graded texts · tap to look up",
+    "writing": "Writing", "writing_d": "Graded prompts · AI grading",
     "hsk": "HSK", "hsk_d": "Adaptive bank · mock exam",
     "hskk": "HSKK", "hskk_d": "Speaking mock · 3-D scoring",
     "culture": "Culture", "culture_d": "City culture · scenarios",

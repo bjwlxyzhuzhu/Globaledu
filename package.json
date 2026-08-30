@@ -7,6 +7,7 @@
   "scripts": {
     "dev": "concurrently -k -n web,server -c cyan,magenta \"pnpm -C web dev\" \"pnpm -C server dev\"",
     "build": "pnpm -C web build",
+    "serve": "pnpm -C web build && pnpm -C server start",
     "start": "pnpm -C server start",
     "seed": "pnpm -C server seed",
     "typecheck": "pnpm -C web typecheck && pnpm -C server typecheck"

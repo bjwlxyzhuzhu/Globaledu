@@ -1,0 +1,31 @@
+services:
+  huanyu-planet:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: huanyu-planet:latest
+    container_name: huanyu-planet
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      PORT: "8787"
+      DB_PATH: /app/storage/data.sqlite
+    ports:
+      - "8787:8787"
+    volumes:
+      - huanyu-data:/app/storage
+    healthcheck:
+      test:
+        - CMD
+        - node
+        - -e
+        - "fetch('http://127.0.0.1:8787/api/health').then(r=>{if(!r.ok)process.exit(1)}).catch(()=>process.exit(1))"
+      interval: 30s
+      timeout: 5s
+      start_period: 15s
+      retries: 3
+
+volumes:
+  huanyu-data:
+

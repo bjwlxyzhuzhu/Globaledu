@@ -6,10 +6,17 @@ import Hud from '../components/Hud';
 import { BackButton } from '../components/MapUI';
 import { useStore } from '../store/useStore';
 import { api } from '../lib/api';
+import GuidedTour, { type TourStep } from '../components/GuidedTour';
 import type { HskLevel } from '@shared/types';
 
+// 模块舞台功能导览
+const STAGE_TOUR: TourStep[] = [
+  { sel: '[data-tour="hsk"]', title: { zh: '🎚 选 HSK 等级', en: 'Pick HSK level' }, desc: { zh: '先选你的 HSK 等级（1–6）。所有模块的题目、汉字、短文难度都会随之变化，卡片上的数量也会实时更新。', en: 'Pick your HSK level (1–6). Difficulty across all modules adapts, and the counts on cards update live.' } },
+  { sel: '[data-tour="modules-grid"]', title: { zh: '🪐 八大学习星球', en: 'Eight learning planets' }, desc: { zh: '汉字、听力、口语、阅读、写作、HSK、HSKK、文化闯关——点进任意一个星球开始学习与闯关。', en: 'Hanzi, listening, speaking, reading, writing, HSK, HSKK, culture quiz — tap any planet to start.' } },
+];
+
 // 随 HSK 等级变化的模块，卡片显示该等级条目数（汉字按本级、听力/阅读按≤本级、HSK按本级）
-const UNIT: Record<string, string> = { hanzi: '字', listening: '篇', reading: '篇', hsk: '题' };
+const UNIT: Record<string, string> = { hanzi: '字', listening: '篇', reading: '篇', writing: '题', hsk: '题' };
 
 // 学习星球：七模块 + 文化知识闯关，均已实现。route 不填则默认 /module/<id>。
 const MODULES: { id: string; icon: string; color: string; live: boolean; route?: string }[] = [
@@ -17,6 +24,7 @@ const MODULES: { id: string; icon: string; color: string; live: boolean; route?:
   { id: 'listening', icon: '🎧', color: '#3fd2ff', live: true },
   { id: 'speaking', icon: '🗣️', color: '#7c9cff', live: true },
   { id: 'reading', icon: '📖', color: '#9be15d', live: true },
+  { id: 'writing', icon: '✍️', color: '#ffa94d', live: true },
   { id: 'hsk', icon: '📝', color: '#ff8fab', live: true },
   { id: 'hskk', icon: '🎤', color: '#ffd56b', live: true },
   { id: 'culture', icon: '🏮', color: '#ff6b6b', live: true },
@@ -34,10 +42,11 @@ export default function ModuleStage() {
   const hanziDone = Object.keys(hanziProgress).length;
 
   // 拉取分级模块数据，用于卡片上随等级实时变化的条目计数
-  const [data, setData] = useState<{ hanzi: { hsk: number }[]; listening: { hsk: number }[]; reading: { hsk: number }[]; hsk: { level: number }[] }>({
+  const [data, setData] = useState<{ hanzi: { hsk: number }[]; listening: { hsk: number }[]; reading: { hsk: number }[]; writing: { hsk: number }[]; hsk: { level: number }[] }>({
     hanzi: [],
     listening: [],
     reading: [],
+    writing: [],
     hsk: [],
   });
   useEffect(() => {
@@ -45,14 +54,16 @@ export default function ModuleStage() {
       api.hanzi().catch(() => []),
       api.learn<{ hsk: number }[]>('listening').catch(() => []),
       api.learn<{ hsk: number }[]>('reading').catch(() => []),
+      api.learn<{ hsk: number }[]>('writing').catch(() => []),
       api.learn<{ level: number }[]>('hsk').catch(() => []),
-    ]).then(([hanzi, listening, reading, hsk]) => setData({ hanzi: hanzi as { hsk: number }[], listening, reading, hsk }));
+    ]).then(([hanzi, listening, reading, writing, hsk]) => setData({ hanzi: hanzi as { hsk: number }[], listening, reading, writing, hsk }));
   }, []);
   const counts = useMemo<Record<string, number>>(
     () => ({
       hanzi: data.hanzi.filter((x) => x.hsk === hskLevel).length, // 汉字：本级
       listening: data.listening.filter((x) => x.hsk <= hskLevel).length, // 听力：≤本级
       reading: data.reading.filter((x) => x.hsk <= hskLevel).length, // 阅读：≤本级
+      writing: data.writing.filter((x) => x.hsk <= hskLevel).length, // 写作：≤本级
       hsk: data.hsk.filter((x) => x.level === hskLevel).length, // HSK 题：本级
     }),
     [data, hskLevel],
@@ -87,7 +98,7 @@ export default function ModuleStage() {
         <p className="mt-2 text-white/65 text-sm">{t('modules.subtitle')}</p>
 
         {/* HSK 等级选择器（全局生效） */}
-        <div className="mt-6 inline-flex items-center gap-2 glass rounded-full px-4 py-2">
+        <div data-tour="hsk" className="mt-6 inline-flex items-center gap-2 glass rounded-full px-4 py-2">
           <span className="text-xs text-white/55 mr-1">{t('modules.hskLevel')}</span>
           {HSK_LEVELS.map((lv) => (
             <button
@@ -105,7 +116,7 @@ export default function ModuleStage() {
         </div>
 
         {/* 模块星球卡片 */}
-        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div data-tour="modules-grid" className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {MODULES.map((m, i) => (
             <motion.button
               key={m.id}
@@ -155,6 +166,8 @@ export default function ModuleStage() {
           ))}
         </div>
       </div>
+
+      <GuidedTour id="modules" steps={STAGE_TOUR} />
     </motion.div>
   );
 }

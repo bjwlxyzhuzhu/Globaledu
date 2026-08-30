@@ -39,8 +39,8 @@ router.get('/hanzi', async (_req, res) => {
   res.json(await readJson<HanziItem[]>('hanzi.json', []));
 });
 
-// GET /api/learn/:module —— 学习模块数据（听力/口语/阅读/HSK/HSKK/文化），读 data/learn/<module>.json
-const LEARN_MODULES = ['listening', 'speaking', 'reading', 'hsk', 'hskk', 'culture'];
+// GET /api/learn/:module —— 学习模块数据（听力/口语/阅读/写作/HSK/HSKK/文化），读 data/learn/<module>.json
+const LEARN_MODULES = ['listening', 'speaking', 'reading', 'writing', 'hsk', 'hskk', 'culture'];
 router.get('/learn/:module', async (req, res) => {
   const { module } = req.params;
   if (!LEARN_MODULES.includes(module)) return res.status(404).json([]);

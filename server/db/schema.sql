@@ -26,6 +26,41 @@ CREATE TABLE IF NOT EXISTS class_members (
   PRIMARY KEY (class_id, user_id)
 );
 
+-- 积分流水（登录/每日/学习/对话/兑换各发分扣分的明细，便于审计与排行）。
+CREATE TABLE IF NOT EXISTS point_events (
+  id TEXT PRIMARY KEY,
+  user_id TEXT,
+  type TEXT,
+  points INTEGER,
+  ts INTEGER
+);
+
+-- 积分兑换记录（学生用积分兑换奖励；管理员据此发放）。
+CREATE TABLE IF NOT EXISTS redemptions (
+  id TEXT PRIMARY KEY,
+  user_id TEXT,
+  reward_id TEXT,
+  reward_name TEXT,
+  cost INTEGER,
+  status TEXT DEFAULT 'pending',
+  ts INTEGER
+);
+
+-- 写作批改记录（学生提交的作文原文 + AI 批改结果；学生看历史、老师看学情）。
+CREATE TABLE IF NOT EXISTS writings (
+  id TEXT PRIMARY KEY,
+  user_id TEXT,
+  item_id TEXT,
+  title TEXT,
+  prompt TEXT,
+  text TEXT,
+  score INTEGER,
+  dims_json TEXT,
+  corrections_json TEXT,
+  comment_zh TEXT,
+  ts INTEGER
+);
+
 CREATE TABLE IF NOT EXISTS kb_documents (
   id TEXT PRIMARY KEY,
   title TEXT,
