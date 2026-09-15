@@ -204,6 +204,19 @@ export default function Admin() {
   };
 
   // 导出 PDF：开新窗口写打印视图，调用浏览器「打印 → 另存为 PDF」（中文最稳）
+  const exportResearch = async () => {
+    if (!sel) return;
+    try {
+      const data = await api.adminResearchExport(sel.id);
+      const wb = XLSX.utils.book_new();
+      for (const [name, rows] of Object.entries(data)) {
+        if (!Array.isArray(rows)) continue;
+        XLSX.utils.book_append_sheet(wb, XLSX.utils.json_to_sheet(rows as Record<string, unknown>[]), name.slice(0, 31));
+      }
+      XLSX.writeFile(wb, sel.name + '_research_' + new Date().toISOString().slice(0, 10) + '.xlsx');
+    } catch (e) { setErr((e as Error).message); }
+  };
+
   const exportPdf = () => {
     if (!sel) return;
     const rowsHtml = roster
@@ -410,6 +423,9 @@ th,td{border:1px solid #ccc;padding:6px 8px;text-align:center}th{background:#f0f
                   </button>
                   <button onClick={exportPdf} disabled={!roster.length} className="px-3 py-1.5 rounded-lg glass text-xs hover:border-starcyan/60 disabled:opacity-40">
                     🖨 导出 PDF
+                  </button>
+                  <button onClick={exportResearch} disabled={!roster.length} className="px-3 py-1.5 rounded-lg glass text-xs hover:border-gold/60 disabled:opacity-40">
+                    ??????
                   </button>
                 </div>
               </div>

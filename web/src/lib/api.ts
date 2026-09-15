@@ -118,6 +118,8 @@ export const api = {
     ),
   adminRoster: (classId: string) =>
     jsonFetch<{ class: ClassInfo; roster: RosterRow[] }>(`/api/admin/classes/${encodeURIComponent(classId)}/roster`),
+  adminResearchExport: (classId: string) =>
+    jsonFetch<Record<string, unknown>>('/api/admin/classes/' + encodeURIComponent(classId) + '/research-export'),
   adminStudent: (id: string) => jsonFetch<StudentDetail>(`/api/admin/students/${encodeURIComponent(id)}`),
   adminStudentWritings: (id: string) => jsonFetch<{ writings: WritingRecord[] }>(`/api/admin/students/${encodeURIComponent(id)}/writings`),
   adminResetPassword: (id: string, newPassword?: string) =>

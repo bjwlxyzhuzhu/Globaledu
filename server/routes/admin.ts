@@ -4,14 +4,14 @@ import { getDb } from '../db/index';
 import { requireAdmin, hashPassword, type TokenPayload } from '../lib/auth';
 import { shapeWriting } from './writing';
 
-// 管理端：班级管理 + 学生导入（自动建号）+ 花名册/学情聚合。全部需管理员令牌。
+// ???????? + ??????????+ ???/??????????????
 const router = Router();
 
 type Row = Record<string, unknown>;
 type Stmt = { get: (...a: unknown[]) => Row | undefined; all: (...a: unknown[]) => Row[]; run: (...a: unknown[]) => unknown };
 const adminUid = (req: unknown) => (req as { user: TokenPayload }).user.uid;
 
-// GET /api/admin/classes —— 班级列表（含人数）
+// GET /api/admin/classes ?? ?????????
 router.get('/admin/classes', requireAdmin, async (_req, res) => {
   try {
     const db = await getDb();
@@ -31,7 +31,7 @@ router.post('/admin/classes', requireAdmin, async (req, res) => {
   const name = String((req.body?.name ?? '') as string).trim();
   const hsk = Number(req.body?.hsk_default) || 3;
   if (!name) {
-    res.status(400).json({ error: '请填写班级名称' });
+    res.status(400).json({ error: '???????' });
     return;
   }
   try {
@@ -51,19 +51,19 @@ router.post('/admin/classes', requireAdmin, async (req, res) => {
 });
 
 // POST /api/admin/classes/:id/import { students: [{ name, student_no, country?, hsk? }] }
-// 为每个学号建号（默认密码=学号），加入班级；学号已存在则复用账号。回显初始账号/密码。
+// ????????????=??????????????????????????/???
 router.post('/admin/classes/:id/import', requireAdmin, async (req, res) => {
   const classId = req.params.id;
   const list = Array.isArray(req.body?.students) ? (req.body.students as Row[]) : [];
   if (!list.length) {
-    res.status(400).json({ error: '没有可导入的学生（需要 姓名 与 学号）' });
+    res.status(400).json({ error: '??????????? ?? ? ???' });
     return;
   }
   try {
     const db = await getDb();
     const cls = (db.prepare('SELECT * FROM classes WHERE id = ?') as Stmt).get(classId);
     if (!cls) {
-      res.status(404).json({ error: '班级不存在' });
+      res.status(404).json({ error: '?????' });
       return;
     }
     const created: Row[] = [];
@@ -86,12 +86,12 @@ router.post('/admin/classes/:id/import', requireAdmin, async (req, res) => {
         user = { id: uid, name, student_no: studentNo };
         isNew = true;
       }
-      // 加入班级（复合主键去重）
+      // ????????????
       try {
         (db.prepare('INSERT INTO class_members (class_id, user_id) VALUES (?, ?)') as Stmt).run(classId, user.id);
         added += 1;
       } catch {
-        /* 已在班级，忽略 */
+        /* ??????? */
       }
       if (isNew) created.push({ name, student_no: studentNo, username: studentNo, initialPassword: studentNo });
       else reused += 1;
@@ -102,14 +102,14 @@ router.post('/admin/classes/:id/import', requireAdmin, async (req, res) => {
   }
 });
 
-// GET /api/admin/classes/:id/roster —— 花名册 + 学情聚合
+// GET /api/admin/classes/:id/roster ?? ??? + ????
 router.get('/admin/classes/:id/roster', requireAdmin, async (req, res) => {
   const classId = req.params.id;
   try {
     const db = await getDb();
     const cls = (db.prepare('SELECT * FROM classes WHERE id = ?') as Stmt).get(classId);
     if (!cls) {
-      res.status(404).json({ error: '班级不存在' });
+      res.status(404).json({ error: '?????' });
       return;
     }
     const members = (db.prepare(
@@ -138,14 +138,14 @@ router.get('/admin/classes/:id/roster', requireAdmin, async (req, res) => {
   }
 });
 
-// GET /api/admin/students/:id —— 单个学生详情（各模块成绩 + 雷达 + 积分明细 + 时长）
+// GET /api/admin/students/:id ?? ???????????? + ?? + ???? + ???
 router.get('/admin/students/:id', requireAdmin, async (req, res) => {
   const uid = req.params.id;
   try {
     const db = await getDb();
     const u = (db.prepare('SELECT * FROM users WHERE id = ?') as Stmt).get(uid);
     if (!u) {
-      res.status(404).json({ error: '学生不存在' });
+      res.status(404).json({ error: '?????' });
       return;
     }
     const modules = (db.prepare(
@@ -183,14 +183,14 @@ router.get('/admin/students/:id', requireAdmin, async (req, res) => {
   }
 });
 
-// POST /api/admin/students/:id/reset-password { newPassword? } —— 找回密码：重置为新密码（默认=学号）
+// POST /api/admin/students/:id/reset-password { newPassword? } ?? ??????????????=???
 router.post('/admin/students/:id/reset-password', requireAdmin, async (req, res) => {
   const uid = req.params.id;
   try {
     const db = await getDb();
     const u = (db.prepare('SELECT student_no FROM users WHERE id = ?') as Stmt).get(uid);
     if (!u) {
-      res.status(404).json({ error: '学生不存在' });
+      res.status(404).json({ error: '?????' });
       return;
     }
     const pwd = String((req.body?.newPassword ?? '') as string).trim() || String(u.student_no || '') || '123456';
@@ -201,7 +201,7 @@ router.post('/admin/students/:id/reset-password', requireAdmin, async (req, res)
   }
 });
 
-// GET /api/admin/redemptions —— 兑换记录（待发放在前），含学生姓名/学号
+// GET /api/admin/redemptions ?? ?????????????????/??
 router.get('/admin/redemptions', requireAdmin, async (_req, res) => {
   try {
     const db = await getDb();
@@ -216,7 +216,7 @@ router.get('/admin/redemptions', requireAdmin, async (_req, res) => {
   }
 });
 
-// POST /api/admin/redemptions/:id/fulfill —— 标记某兑换为已发放
+// POST /api/admin/redemptions/:id/fulfill ?? ?????????
 router.post('/admin/redemptions/:id/fulfill', requireAdmin, async (req, res) => {
   try {
     const db = await getDb();
@@ -227,7 +227,7 @@ router.post('/admin/redemptions/:id/fulfill', requireAdmin, async (req, res) => 
   }
 });
 
-// GET /api/admin/students/:id/writings —— 某学生的写作记录（原文 + 批改），供教师查看学情
+// GET /api/admin/students/:id/writings ?? ??????????? + ???????????
 router.get('/admin/students/:id/writings', requireAdmin, async (req, res) => {
   try {
     const db = await getDb();
@@ -241,3 +241,26 @@ router.get('/admin/students/:id/writings', requireAdmin, async (req, res) => {
 });
 
 export default router;
+
+
+// GET /api/admin/classes/:id/research-export ? ???????
+router.get('/admin/classes/:id/research-export', requireAdmin, async (req, res) => {
+  try {
+    const db = await getDb();
+    const classId = req.params.id;
+    const members = (db.prepare('SELECT u.id, u.country, u.native_lang, u.hsk_level FROM class_members m JOIN users u ON u.id = m.user_id WHERE m.class_id = ? ORDER BY u.student_no') as Stmt).all(classId);
+    if (!members.length) { res.status(404).json({ error: '??????' }); return; }
+    const ids = members.map((m, i) => ({ uid: String(m.id), student_id: `C${String(i + 1).padStart(3, '0')}`, country: m.country || '', native_language: m.native_lang || '', hsk_level: m.hsk_level ?? '' }));
+    const idMap = new Map(ids.map((x) => [x.uid, x.student_id]));
+    const q = (sql: string, ...args: unknown[]) => (db.prepare(sql) as Stmt).all(...args).map((r) => ({ ...r, student_id: idMap.get(String(r.user_id ?? '')) || '' }));
+    const userIds = ids.map((x) => x.uid);
+    const placeholders = userIds.map(() => '?').join(',');
+    const students = ids.map(({ uid, ...x }) => x);
+    const learning_records = q(`SELECT user_id, module, item_id, score, metrics_json, ts FROM learning_records WHERE user_id IN (${placeholders}) ORDER BY ts`, ...userIds);
+    const writings = q(`SELECT user_id, item_id, title, prompt, text, score, dims_json, corrections_json, comment_zh, ts FROM writings WHERE user_id IN (${placeholders}) ORDER BY ts`, ...userIds);
+    const chat_messages = q(`SELECT s.user_id, s.id AS session_id, s.context_ids_json, m.role, m.content_zh, m.content_native, m.level_check_json, m.ts FROM chat_sessions s JOIN chat_messages m ON m.session_id = s.id WHERE s.user_id IN (${placeholders}) ORDER BY m.ts`, ...userIds);
+    const point_events = q(`SELECT user_id, type, points, ts FROM point_events WHERE user_id IN (${placeholders}) ORDER BY ts`, ...userIds);
+    const ability_scores = q(`SELECT user_id, dim, score, updated_at FROM ability_scores WHERE user_id IN (${placeholders})`, ...userIds);
+    res.json({ exported_at: new Date().toISOString(), class_id: classId, students, learning_records, writings, chat_messages, point_events, ability_scores });
+  } catch (e) { res.status(500).json({ error: (e as Error).message }); }
+});
