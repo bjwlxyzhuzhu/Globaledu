@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "web",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["scripts/dev-watchdog.mjs"],
+      "port": 3000
+    },
+    {
+      "name": "games",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "8099", "--directory", "../创新创业游戏"],
+      "port": 8099
+    }
+  ]
+}
