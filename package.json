@@ -1,22 +1,38 @@
 {
-  "name": "huanyu-planet",
-  "private": true,
+  "name": "web",
   "version": "0.1.0",
-  "description": "寰语星球 · 来华留学生分级中文与中华文化学习智能体平台",
-  "type": "module",
+  "private": true,
   "scripts": {
-    "dev": "concurrently -k -n web,server -c cyan,magenta \"pnpm -C web dev\" \"pnpm -C server dev\"",
-    "build": "pnpm -C web build",
-    "serve": "pnpm -C web build && pnpm -C server start",
-    "start": "pnpm -C server start",
-    "seed": "pnpm -C server seed",
-    "typecheck": "pnpm -C web typecheck && pnpm -C server typecheck"
+    "dev": "node scripts/dev-watchdog.mjs",
+    "build": "node scripts/ensure-next.mjs && next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@supabase/ssr": "^0.12.0",
+    "@supabase/supabase-js": "^2.108.2",
+    "framer-motion": "^12.40.0",
+    "jszip": "^3.10.1",
+    "lucide-react": "^1.21.0",
+    "next": "14.2.35",
+    "openai": "^6.44.0",
+    "pdf-parse": "^2.4.5",
+    "react": "^18",
+    "react-dom": "^18",
+    "undici": "^8.5.0",
+    "xlsx": "^0.18.5",
+    "zod": "^4.4.3"
   },
   "devDependencies": {
-    "concurrently": "^9.1.2"
-  },
-  "packageManager": "pnpm@10.33.0",
-  "pnpm": {
-    "onlyBuiltDependencies": ["esbuild"]
+    "@types/node": "^20",
+    "@types/pdf-parse": "^1.1.5",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.35",
+    "mammoth": "^1.12.0",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
   }
 }

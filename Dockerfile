@@ -1,51 +1,31 @@
-# syntax=docker/dockerfile:1
+# 双创AI星际 · Next.js standalone 多阶段镜像（为 9 月底阿里云上线备好）
+# 构建：docker compose --env-file .env.local up --build
 
-FROM node:24-bookworm-slim AS build
-
-ENV PNPM_HOME=/pnpm
-ENV PATH=$PNPM_HOME:$PATH
-RUN corepack enable
-
+FROM node:20-alpine AS deps
 WORKDIR /app
-
-# 先复制依赖清单以利用 Docker 缓存。
-COPY package.json pnpm-lock.yaml pnpm-workspace.yaml .npmrc ./
-COPY web/package.json ./web/package.json
-COPY server/package.json ./server/package.json
+RUN corepack enable
+COPY package.json pnpm-lock.yaml .npmrc ./
 RUN pnpm install --frozen-lockfile
 
-COPY web ./web
-COPY server ./server
-COPY shared ./shared
-COPY data ./data
-
-RUN pnpm -C web build \
-    && pnpm -C web typecheck \
-    && pnpm -C server typecheck
-
-FROM node:24-bookworm-slim AS runtime
-
-ENV NODE_ENV=production
-ENV PORT=8787
-ENV DB_PATH=/app/storage/data.sqlite
-
+FROM node:20-alpine AS builder
 WORKDIR /app
+RUN corepack enable
+# NEXT_PUBLIC_* 在构建期内联进前端，需作为 build arg 传入
+ARG NEXT_PUBLIC_SUPABASE_URL
+ARG NEXT_PUBLIC_SUPABASE_ANON_KEY
+ENV NEXT_PUBLIC_SUPABASE_URL=$NEXT_PUBLIC_SUPABASE_URL
+ENV NEXT_PUBLIC_SUPABASE_ANON_KEY=$NEXT_PUBLIC_SUPABASE_ANON_KEY
+COPY --from=deps /app/node_modules ./node_modules
+COPY . .
+RUN pnpm build
 
-COPY --from=build /app/node_modules ./node_modules
-COPY --from=build /app/package.json ./package.json
-COPY --from=build /app/server ./server
-COPY --from=build /app/shared ./shared
-COPY --from=build /app/data ./data
-COPY --from=build /app/web/dist ./web/dist
-
-RUN mkdir -p /app/storage \
-    && chown -R node:node /app
-
-USER node
-EXPOSE 8787
-
-HEALTHCHECK --interval=30s --timeout=5s --start-period=15s --retries=3 \
-  CMD node -e "fetch('http://127.0.0.1:8787/api/health').then(r=>{if(!r.ok)process.exit(1)}).catch(()=>process.exit(1))"
-
-CMD ["node", "node_modules/tsx/dist/cli.mjs", "server/index.ts"]
-
+FROM node:20-alpine AS runner
+WORKDIR /app
+ENV NODE_ENV=production
+ENV PORT=3000
+# 服务端密钥（SUPABASE_SERVICE_ROLE_KEY / APIMART_*）运行期由 env_file 注入，不打进镜像
+COPY --from=builder /app/public ./public
+COPY --from=builder /app/.next/standalone ./
+COPY --from=builder /app/.next/static ./.next/static
+EXPOSE 3000
+CMD ["node", "server.js"]

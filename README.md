@@ -1,93 +1,91 @@
-# 寰语星球 · Huanyu Planet
+# 双创AI星际 · web（M1 骨架）
 
-来华留学生**分级中文与中华文化**学习智能体平台。用于「首届教学智能体大赛（超星泛雅主办）」与「研究生人工智能创新大赛」。
+面向大学生创新创业竞赛的智能体集群网站。本目录是 Next.js 14 应用。
 
-> 演示主线：星门开场 → 旋转地球仪 → 点中国 → 省份地图 → 城市文化页 → 汉字闯关 → 分级反谄媚对话 → 智能体集群产出双语报告+动画PPT → 能力画像与证书。
-
-## 技术栈
-
-- 前端 `web/`：Vite + React 18 + TypeScript + Tailwind + React Router + i18next + Zustand + Framer Motion + globe.gl
-- 后端 `server/`：Express + TypeScript（tsx 直跑免编译）+ OpenAI 兼容大模型层（默认 DeepSeek，含 mock 兜底）+ Node 内置 `node:sqlite`
-- 共享 `shared/`：前后端共用类型
-- 数据 `data/`：**学生扩充区**（国家 / 地理 / 汉字 / HSK 词表 / 文化禁忌 / 知识库），详见 `data/README.md`
-
-## 快速开始
+## 本地运行
 
 ```bash
-pnpm install          # 国内镜像，扁平安装
-cp .env.example .env  # 可不填 key，mock 兜底也能跑
-pnpm dev              # 同时启动 web(5173) + server(8787)
+pnpm install          # 首次（已配国内 npmmirror 源，见 .npmrc）
+pnpm dev              # http://localhost:3000
+pnpm build            # 生产构建（已验证通过）
 ```
 
-打开 http://localhost:5173 。后端健康检查：http://localhost:8787/api/health 。
+## 首次激活（让登录/积分真正可用）
 
-> 没有 DeepSeek key 时，对话/产出会返回占位双语内容，演示线不中断；填入 `DEEPSEEK_API_KEY` 即切真实大模型。
+首页动效无需任何配置即可看；**登录与扣积分**需两步一次性激活：
 
-默认使用 DeepSeek 官方 `deepseek-v4-pro`，接口地址为 `https://api.deepseek.com`。密钥只放在本地 `.env`，不要写入源码、镜像或提交到 Git。
+1. **建表**：打开 Supabase 控制台 → SQL Editor → New query → 粘贴 `supabase/migrations/0001_init.sql` 全文 → Run。
+2. **建演示账号**：
+   ```bash
+   node --env-file=.env.local scripts/seed.mjs
+   ```
 
-### 部署 / 演示运行（单进程，推荐交付与答辩用）
+### 演示账号（登录页用「学号 + 密码」）
+| 角色 | 学号 | 密码 |
+|---|---|---|
+| 学生 | `202596057038` | `Student@2026` |
+| 管理员 | `admin` | `Admin@2026` |
+
+登录后右上角显示真实积分；点右下角**宇航员小航**打开对话，发消息会走 `/api/ai/chat`（APIMart）并**每次扣 1 积分**（数据库 `deduct_credits` 原子扣分 + 写 `usage_logs`）。
+
+## 环境变量（`.env.local`，不提交）
+见 `.env.example`。`NEXT_PUBLIC_*` 为浏览器端（受 RLS）；`SUPABASE_SERVICE_ROLE_KEY` / `APIMART_API_KEY` 仅服务端。
+
+## 目录
+```
+app/                  页面与 API
+  page.tsx            首页（Server Component：读登录积分）
+  login/page.tsx      学号登录
+  api/ai/chat/route.ts  扣积分服务端示例（鉴权→预检→APIMart→原子扣分）
+  api/credits/route.ts  查积分
+  globals.css         设计系统（移植自定稿原型）
+components/
+  GalaxyHome.tsx      首页 React 外壳 + 小航对话
+  galaxyEngine.js     银河动效引擎（机器抽取自原型，勿手改）
+lib/
+  supabase/{client,server,admin}.ts   三类客户端
+  ai/{apimart,models}.ts · credits.ts · auth.ts
+supabase/migrations/0001_init.sql      建表 + RLS + deduct_credits RPC
+scripts/seed.mjs       演示账号
+middleware.ts          会话刷新
+Dockerfile · docker-compose.yml        部署骨架（9 月底阿里云上线用）
+```
+
+## Docker（部署用，9 月底上线）
+```bash
+docker compose --env-file .env.local up --build   # → http://服务器:3000
+```
+
+## 设计来源
+所有动效定稿在 `../设计风格预览/风格A_银河探索.html`；`galaxyEngine.js` 由它机器生成。改设计请改原型再重新抽取，不要直接改引擎。
+
+## 进度
+- ✅ M1：脚手架 · 设计系统/首页移植 · Supabase 登录 · profiles/credits · 扣积分 API · Docker 骨架
+- ⏭ M2 起：学习中心 6 模块 + AI 客服 RAG（知识库在 `../RAG/`）；应用中心各功能；管理端（名单导入、知识库上传带标签）
+
+## 生产运行与开机自启（本机常驻）
+
+平台以**生产模式**常驻本机，脱离编辑器/桌面应用独立运行。
 
 ```bash
-pnpm serve            # 先打包前端 web/dist，再由后端一个进程同端口托管页面+接口
+node node_modules/next/dist/bin/next build   # 改完代码要重新构建，生产模式没有热更新
 ```
 
-打开 **http://localhost:8787** 即可（页面与 `/api` 同端口，无需另开 5173）。
-相比 `pnpm dev`（vite + tsx-watch 多进程、带文件监听），单进程模式进程更少、更稳定，
-也更不易被安全软件（360 / 火绒 / Defender）误杀 node。若仍被误杀，请把 `node.exe`
-或本项目目录加入杀软「信任区 / 排除项」。管理员默认账号 `admin / admin888`（首启自动创建，
-请在 `.env` 设 `ADMIN_PASSWORD` 后重启修改）。
+| 操作 | 命令（PowerShell） |
+|---|---|
+| 启动 | `schtasks /Run /TN "双创AI星际-网站"` |
+| 停止 | `Get-NetTCPConnection -LocalPort 3000 -State Listen \| ForEach-Object { Stop-Process -Id $_.OwningProcess -Force }` 后再 `Get-Process node \| Stop-Process -Force` |
+| 看日志 | `Get-Content web\logs\server.log -Tail 50 -Wait` |
+| 取消开机自启 | `schtasks /Delete /TN "双创AI星际-网站" /F` |
 
-### Docker 部署
+机制：计划任务「双创AI星际-网站」在**登录后 20 秒**触发，并**每 10 分钟**再跑一次；
+`scripts/serve.mjs` 发现 3000 端口已在服务就直接退出，所以重复触发不会起第二个实例，
+真挂了则下一次触发把它拉起来。`serve.mjs` 自身还带看门狗，服务进程异常退出 3 秒后自动重启。
+无窗口启动靠 `scripts/start-hidden.vbs`（**该文件必须保持 CRLF + UTF-16LE 编码**，
+换成 LF 会让 Windows Script Host 静默卡死）。
 
-前提：已安装 Docker Desktop 或 Docker Engine + Compose。
+只监听 `127.0.0.1`。要让同局域网的学生机访问，把 `serve.mjs` 里的 `HOST` 改成 `0.0.0.0`
+并在防火墙放行 3000 端口。
 
-```bash
-cp .env.example .env       # Windows 可复制后手动填写
-# 在 .env 中设置 DEEPSEEK_API_KEY、ADMIN_PASSWORD、AUTH_SECRET
-docker compose up -d --build
-docker compose ps
-```
-
-打开 **http://localhost:8787**。健康检查：`http://localhost:8787/api/health`。
-SQLite 数据保存在命名卷 `huanyu-data` 中，重新构建镜像不会丢失。停止服务使用
-`docker compose down`；如需连同数据库一起删除，需明确执行 `docker compose down -v`。
-
-### 中文乱码与 UTF-8
-
-仓库使用 UTF-8（无 BOM）和 LF。`.editorconfig`、`.gitattributes` 已统一编辑器、Git 与 Docker 的编码规则。
-
-若 Windows 旧终端或 Vim 显示乱码：
-
-```powershell
-chcp 65001
-$OutputEncoding = [Console]::OutputEncoding = [Console]::InputEncoding = [Text.UTF8Encoding]::new()
-vim -u .vimrc .env
-```
-
-也可以先执行 `powershell -ExecutionPolicy Bypass -File .\scripts\utf8.ps1`，或使用
-`.\scripts\dev-utf8.ps1` 启动开发环境，使 Node、Vite 和 PowerShell 日志在同一 UTF-8 会话中显示。
-
-在已打开的 Vim 中也可执行：
-
-```vim
-:set encoding=utf-8 fileencoding=utf-8
-:edit ++enc=utf-8
-```
-
-若文件过去曾被以 GBK 错误保存，不要直接覆盖；先用 `:edit ++enc=gb18030 文件名` 确认中文正常，
-再执行 `:set fileencoding=utf-8` 和 `:write` 转换。
-
-## 构建里程碑（对照 PRD）
-
-- [x] **M1** 脚手架：单仓、前后端互通、LLM 代理（含兜底）、i18n、路由骨架、`/api/chat` 双语
-- [x] **M2** 开场+地球：星门开场动画 + globe.gl 旋转地球 + 国家点选
-- [ ] **M3** 地图下钻：中国→省→市→城市文化页（ECharts + GeoJSON）
-- [ ] **M4** 模块舞台 + 汉字闯关（笔顺/练习/文化故事/计分）
-- [ ] **M5** 分级·反谄媚对话引擎（RAG + 超纲/句长/谄媚/禁忌校验 + 指标）
-- [ ] **M6** 智能体集群产出 + 轻量动画嵌 PPT
-- [ ] **M7** 能力画像/证书 + 教师端 + 超星生态对接桩
-
-## 给后续同学（学生扩充）
-
-要补充国家、城市、汉字、知识库、文化禁忌等内容，**只改 `data/` 下的文件即可**，无需动代码。
-字段格式与步骤见 [`data/README.md`](data/README.md)。
+> 注意：生产服务占用 3000 端口，此时再跑 `pnpm dev` / `node scripts/dev-watchdog.mjs` 会端口冲突。
+> 要开发就先停掉常驻服务，或给 dev 换个端口。
