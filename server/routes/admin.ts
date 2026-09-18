@@ -396,4 +396,28 @@ router.post('/admin/classes/:id/reset-passwords', requireAdmin, async (req, res)
   }
 });
 
+// GET /api/admin/classes/:id/research-export —— 匿名化科研数据导出。
+// 学号与姓名不出库：每名学生用 C001 这样的序号代替，只导出研究需要的字段。
+// 来自上游 5160caf；该提交在 main 上的中文已损坏成 ?，此处按原意重写。
+router.get('/admin/classes/:id/research-export', requireAdmin, async (req, res) => {
+  try {
+    const db = await getDb();
+    const classId = req.params.id;
+    const members = (db.prepare('SELECT u.id, u.country, u.native_lang, u.hsk_level FROM class_members m JOIN users u ON u.id = m.user_id WHERE m.class_id = ? ORDER BY u.student_no') as Stmt).all(classId);
+    if (!members.length) { res.status(404).json({ error: '班级内没有学生' }); return; }
+    const ids = members.map((m, i) => ({ uid: String(m.id), student_id: `C${String(i + 1).padStart(3, '0')}`, country: m.country || '', native_language: m.native_lang || '', hsk_level: m.hsk_level ?? '' }));
+    const idMap = new Map(ids.map((x) => [x.uid, x.student_id]));
+    const q = (sql: string, ...args: unknown[]) => (db.prepare(sql) as Stmt).all(...args).map((r) => ({ ...r, student_id: idMap.get(String(r.user_id ?? '')) || '' }));
+    const userIds = ids.map((x) => x.uid);
+    const placeholders = userIds.map(() => '?').join(',');
+    const students = ids.map(({ uid, ...x }) => x);
+    const learning_records = q(`SELECT user_id, module, item_id, score, metrics_json, ts FROM learning_records WHERE user_id IN (${placeholders}) ORDER BY ts`, ...userIds);
+    const writings = q(`SELECT user_id, item_id, title, prompt, text, score, dims_json, corrections_json, comment_zh, ts FROM writings WHERE user_id IN (${placeholders}) ORDER BY ts`, ...userIds);
+    const chat_messages = q(`SELECT s.user_id, s.id AS session_id, s.context_ids_json, m.role, m.content_zh, m.content_native, m.level_check_json, m.ts FROM chat_sessions s JOIN chat_messages m ON m.session_id = s.id WHERE s.user_id IN (${placeholders}) ORDER BY m.ts`, ...userIds);
+    const point_events = q(`SELECT user_id, type, points, ts FROM point_events WHERE user_id IN (${placeholders}) ORDER BY ts`, ...userIds);
+    const ability_scores = q(`SELECT user_id, dim, score, updated_at FROM ability_scores WHERE user_id IN (${placeholders})`, ...userIds);
+    res.json({ exported_at: new Date().toISOString(), class_id: classId, students, learning_records, writings, chat_messages, point_events, ability_scores });
+  } catch (e) { res.status(500).json({ error: (e as Error).message }); }
+});
+
 export default router;
