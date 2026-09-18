@@ -1,0 +1,111 @@
+{
+  "key": "济南",
+  "name_zh": "济南",
+  "name_en": "Jinan",
+  "province": "山东",
+  "tier": "second",
+  "intro_zh": "济南是山东省省会，以「泉城」闻名，七十二名泉散布城中，自古有「家家泉水，户户垂杨」之说。",
+  "intro_en": "Jinan, capital of Shandong, is famed as the 'City of Springs', with seventy-two renowned springs across town—'every home has spring water, every door a willow'.",
+  "culture_zh": "泉水滋养了济南的温润，老舍笔下的济南冬天令人神往，把子肉与甜沫是地道的济南味道。",
+  "culture_en": "The springs give Jinan its gentle character; Lao She's essay on its winters is beloved, and bazi pork and tianmo are its authentic flavors.",
+  "attractions": [
+    {
+      "name_zh": "趵突泉",
+      "name_en": "Baotu Spring",
+      "desc_zh": "「天下第一泉」，三股泉水喷涌不息。",
+      "desc_en": "The 'finest spring under heaven', where three jets bubble up endlessly.",
+      "img": "济南 趵突泉",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "济南",
+        "趵突泉"
+      ],
+      "category": "heritage"
+    },
+    {
+      "name_zh": "大明湖",
+      "name_en": "Daming Lake",
+      "desc_zh": "城中湖泊，夏日荷花满湖。",
+      "desc_en": "A lake in the heart of the city, covered in lotus blooms in summer.",
+      "img": "济南 大明湖 荷花",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "济南",
+        "大明湖"
+      ],
+      "category": "heritage"
+    },
+    {
+      "name_zh": "千佛山",
+      "name_en": "Thousand-Buddha Mountain",
+      "desc_zh": "依山而凿的佛像群，可俯瞰泉城。",
+      "desc_en": "Buddhas carved into the hillside, with views over the City of Springs.",
+      "img": "济南 千佛山",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "济南",
+        "千佛山"
+      ],
+      "category": "heritage"
+    }
+  ],
+  "foods": [
+    {
+      "name_zh": "把子肉",
+      "name_en": "Bazi Rou",
+      "desc_zh": "酱香软糯的红烧肉，配米饭一绝。",
+      "desc_en": "Soy-braised pork belly, savory and tender—perfect over rice.",
+      "img": "济南 把子肉",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "济南",
+        "把子肉"
+      ],
+      "category": "food"
+    },
+    {
+      "name_zh": "甜沫",
+      "name_en": "Tianmo",
+      "desc_zh": "名为甜实为咸的糊状早餐汤。",
+      "desc_en": "A savory (despite its name 'sweet') breakfast porridge-soup.",
+      "img": "甜沫 济南早餐",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "济南",
+        "甜沫"
+      ],
+      "category": "food"
+    },
+    {
+      "name_zh": "油旋",
+      "name_en": "Youxuan",
+      "desc_zh": "层层葱油的旋饼，外酥里嫩。",
+      "desc_en": "A spiral scallion-oil pastry, crisp outside and soft within.",
+      "img": "济南 油旋 葱油饼",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "济南",
+        "油旋"
+      ],
+      "category": "food"
+    }
+  ]
+}

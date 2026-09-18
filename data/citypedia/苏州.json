@@ -1,0 +1,110 @@
+{
+  "key": "苏州",
+  "name_zh": "苏州",
+  "name_en": "Suzhou",
+  "province": "江苏",
+  "tier": "new-first",
+  "intro_zh": "苏州是江苏南部城市，以典雅的古典园林与小桥流水的水乡风貌闻名，被誉为「人间天堂」，也是现代制造与创新高地。",
+  "intro_en": "Suzhou, in southern Jiangsu, is famed for elegant classical gardens and water-town scenes of little bridges and flowing streams—'paradise on earth'—and a modern manufacturing hub.",
+  "culture_zh": "园林的移步换景、评弹的吴侬软语、苏绣的精致、平江路的枕河人家，苏州把江南的雅致演绎到极致。",
+  "culture_en": "Gardens where every step reveals a new view, the soft Wu dialect of pingtan ballads, fine Su embroidery and riverside homes on Pingjiang Road—Suzhou is the height of Jiangnan grace.",
+  "attractions": [
+    {
+      "name_zh": "拙政园",
+      "name_en": "Humble Administrator's Garden",
+      "desc_zh": "中国古典园林典范，水景与亭台相映。",
+      "desc_en": "A masterpiece of classical Chinese gardens, with water and pavilions in harmony.",
+      "img": "苏州 拙政园",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "苏州",
+        "拙政园"
+      ],
+      "category": "art"
+    },
+    {
+      "name_zh": "平江路",
+      "name_en": "Pingjiang Road",
+      "desc_zh": "枕河而居的古街，摇橹船穿巷而过。",
+      "desc_en": "An old riverside street where rowing boats glide through the lanes.",
+      "img": "苏州 平江路",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "苏州",
+        "平江路"
+      ],
+      "category": "heritage"
+    },
+    {
+      "name_zh": "苏州博物馆",
+      "name_en": "Suzhou Museum",
+      "desc_zh": "贝聿铭设计的现代园林式博物馆。",
+      "desc_en": "A modern garden-style museum designed by I. M. Pei.",
+      "img": "苏州博物馆 贝聿铭",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "苏州"
+      ],
+      "category": "art"
+    }
+  ],
+  "foods": [
+    {
+      "name_zh": "松鼠桂鱼",
+      "name_en": "Squirrel Mandarin Fish",
+      "desc_zh": "形似松鼠的酸甜鳜鱼，苏帮名菜。",
+      "desc_en": "Sweet-and-sour mandarin fish shaped like a squirrel—a Su classic.",
+      "img": "松鼠桂鱼 苏帮菜",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "苏州",
+        "松鼠桂鱼"
+      ],
+      "category": "food"
+    },
+    {
+      "name_zh": "苏式汤面",
+      "name_en": "Suzhou Noodle Soup",
+      "desc_zh": "讲究汤头与浇头的精致汤面。",
+      "desc_en": "Refined noodles in a carefully made broth with delicate toppings.",
+      "img": "苏式汤面",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "苏州",
+        "苏式汤面"
+      ],
+      "category": "food"
+    },
+    {
+      "name_zh": "蟹粉小笼",
+      "name_en": "Crab Roe Soup Dumplings",
+      "desc_zh": "蟹粉入馅的小笼包，鲜香满口。",
+      "desc_en": "Soup dumplings filled with crab roe—rich and fragrant.",
+      "img": "蟹粉小笼",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "苏州",
+        "蟹粉小笼"
+      ],
+      "category": "food"
+    }
+  ]
+}

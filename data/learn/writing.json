@@ -1,0 +1,110 @@
+[
+  {
+    "id": "w1",
+    "hsk": 1,
+    "title_zh": "介绍你自己",
+    "title_en": "Introduce Yourself",
+    "prompt_zh": "用中文写三句话介绍你自己：名字、国家、你喜欢什么。",
+    "prompt_en": "Write three sentences in Chinese to introduce yourself: your name, country, and what you like.",
+    "hint_zh": "可以用：我叫……／我是……人／我喜欢……",
+    "hint_en": "You can use: 我叫… / 我是…人 / 我喜欢…",
+    "minChars": 15,
+    "sample_zh": "我叫安娜。我是俄罗斯人。我喜欢中国菜和汉语。"
+  },
+  {
+    "id": "w2",
+    "hsk": 2,
+    "title_zh": "我的一天",
+    "title_en": "My Day",
+    "prompt_zh": "写一写你昨天做了什么。用上时间词（早上、中午、晚上）。",
+    "prompt_en": "Write about what you did yesterday. Use time words (morning, noon, evening).",
+    "hint_zh": "可以用：早上我……／中午我……／晚上我……",
+    "hint_en": "You can use: 早上我… / 中午我… / 晚上我…",
+    "minChars": 30,
+    "sample_zh": "昨天早上我七点起床，去学校上课。中午我和朋友一起吃饭。晚上我在家看电视，十一点睡觉。"
+  },
+  {
+    "id": "w3",
+    "hsk": 3,
+    "title_zh": "我的家乡",
+    "title_en": "My Hometown",
+    "prompt_zh": "写一篇短文，介绍你的家乡：在哪里、有什么有名的地方或美食。",
+    "prompt_en": "Write a short passage introducing your hometown: where it is, and any famous places or food.",
+    "hint_zh": "可以写：位置、天气、有名的地方、特色美食、你的感受。",
+    "hint_en": "You can write about: location, weather, famous places, special food, your feelings.",
+    "minChars": 60,
+    "sample_zh": "我的家乡在韩国首尔。那里又大又热闹，有很多商店和好吃的东西。最有名的是泡菜和烤肉。我很想念我的家乡。"
+  },
+  {
+    "id": "w4",
+    "hsk": 3,
+    "title_zh": "给朋友的一封信",
+    "title_en": "A Letter to a Friend",
+    "prompt_zh": "给一个中国朋友写一封短信，邀请他周末一起去公园。",
+    "prompt_en": "Write a short letter to a Chinese friend, inviting them to a park this weekend.",
+    "hint_zh": "可以用：你好／这个周末……怎么样？／我们一起……／请回信。",
+    "hint_en": "You can use: 你好 / 这个周末…怎么样？/ 我们一起… / 请回信。",
+    "minChars": 60,
+    "sample_zh": "小明：\n你好！这个周末天气很好，我想去公园玩。我们一起去怎么样？可以一起照相、吃东西。你有时间吗？请回信。\n你的朋友 大卫"
+  },
+  {
+    "id": "w5",
+    "hsk": 4,
+    "title_zh": "我学汉语的故事",
+    "title_en": "My Story of Learning Chinese",
+    "prompt_zh": "写一篇短文，说说你为什么学汉语、遇到过什么困难、有什么进步。",
+    "prompt_en": "Write a passage about why you study Chinese, the difficulties you faced, and your progress.",
+    "hint_zh": "可以写：学习的原因、最难的部分（如声调/汉字）、怎么克服、现在的感受。",
+    "hint_en": "Cover: why you started, the hardest part (tones/characters), how you overcame it, how you feel now.",
+    "minChars": 100,
+    "sample_zh": "我学汉语已经两年了。一开始我觉得声调特别难，常常说错。后来我每天听录音、跟着练习，慢慢就好了。汉字也很难，但是我发现写汉字很有意思。现在我可以用中文和朋友聊天，我觉得很开心，也更喜欢中国文化了。"
+  },
+  {
+    "id": "w6",
+    "hsk": 4,
+    "title_zh": "一次难忘的旅行",
+    "title_en": "An Unforgettable Trip",
+    "prompt_zh": "写一写你在中国（或你的国家）一次难忘的旅行，发生了什么，你的感受。",
+    "prompt_en": "Write about an unforgettable trip in China (or your country): what happened and how you felt.",
+    "hint_zh": "可以写：去了哪里、和谁一起、做了什么、最难忘的事、你的感受。",
+    "hint_en": "Cover: where you went, with whom, what you did, the most memorable moment, your feelings.",
+    "minChars": 100,
+    "sample_zh": "去年暑假，我和同学一起去了西安。我们参观了兵马俑，真的非常震撼，几千个兵马俑各不相同。晚上我们去回民街吃了肉夹馍和凉皮，特别好吃。这次旅行让我更了解中国的历史和文化，我永远不会忘记。"
+  },
+  {
+    "id": "w7",
+    "hsk": 5,
+    "title_zh": "网络的利与弊",
+    "title_en": "Pros and Cons of the Internet",
+    "prompt_zh": "写一篇议论文，谈谈网络给我们的生活带来的好处和问题，并说说你的看法。",
+    "prompt_en": "Write an argumentative essay on the benefits and problems the Internet brings, and your view.",
+    "hint_zh": "结构建议：提出话题 → 好处（如方便、信息多）→ 问题（如沉迷、虚假信息）→ 你的结论。",
+    "hint_en": "Suggested structure: topic → benefits → problems → your conclusion.",
+    "minChars": 150,
+    "sample_zh": "随着科技的发展，网络已经成为我们生活中不可缺少的一部分。一方面，网络给我们带来了很多方便：我们可以随时查找信息、和远方的朋友联系、在网上购物和学习。另一方面，网络也带来了一些问题，比如有些人沉迷于游戏，影响了学习和健康；网上还有许多虚假信息，容易让人受骗。在我看来，网络本身没有好坏，关键在于我们如何使用它。我们应该合理安排时间，学会分辨信息的真假，让网络真正为我们服务。"
+  },
+  {
+    "id": "w8",
+    "hsk": 5,
+    "title_zh": "谈谈中外文化的不同",
+    "title_en": "Differences Between Cultures",
+    "prompt_zh": "选一个方面（如饮食、节日、礼仪），比较你的国家和中国的不同，并谈谈你的体会。",
+    "prompt_en": "Pick one aspect (food, festivals, etiquette) and compare your country with China, with reflection.",
+    "hint_zh": "结构建议：选一个角度 → 你国家的情况 → 中国的情况 → 不同与原因 → 你的体会。",
+    "hint_en": "Suggested structure: one angle → your country → China → differences and reasons → reflection.",
+    "minChars": 150,
+    "sample_zh": "不同的国家有不同的文化，饮食就是一个很有意思的例子。在我的国家，人们习惯每个人吃自己盘子里的食物。而在中国，大家常常围着一张桌子，把菜放在中间一起分享，这体现了中国人重视家庭和团圆的观念。刚来的时候我不太习惯，但是慢慢地，我感受到了这种'一起吃饭'的温暖。我认为，了解不同的文化能让我们更加尊重和包容彼此。"
+  },
+  {
+    "id": "w9",
+    "hsk": 6,
+    "title_zh": "科技改变生活",
+    "title_en": "Technology Changes Life",
+    "prompt_zh": "以「科技改变生活」为题，写一篇议论文，结合具体例子，阐述你的观点。",
+    "prompt_en": "Write an argumentative essay titled 'Technology Changes Life', with concrete examples and your view.",
+    "hint_zh": "可从人工智能、移动支付、高铁、在线教育等切入；注意提出论点、举例论证、辩证分析、总结升华。",
+    "hint_en": "Angles: AI, mobile payment, high-speed rail, online education. Use thesis, examples, balanced analysis, conclusion.",
+    "minChars": 200,
+    "sample_zh": "近年来，科技以惊人的速度改变着我们的生活方式。以移动支付为例，如今在中国，无论是街边小摊还是大型商场，人们只需用手机扫一扫便可完成支付，既方便又高效。再如高铁的普及，使得'千里江陵一日还'不再是诗人的夸张，而成为现实，极大地拉近了城市之间的距离。然而，我们也应当辩证地看待这一现象：当人们越来越依赖科技，是否也在不知不觉中失去了某些传统的能力与人情味？因此，我认为，真正智慧的生活，不是被科技裹挟，而是善用科技、又不被其奴役。唯有如此，科技才能成为照亮人类前行的明灯，而非束缚我们的枷锁。"
+  }
+]

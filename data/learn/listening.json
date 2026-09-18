@@ -1,0 +1,274 @@
+[
+  {
+    "id": "l1",
+    "hsk": 1,
+    "title_zh": "自我介绍",
+    "title_en": "Introducing Myself",
+    "text_zh": "你好！我叫小明。我是学生，今年二十岁。",
+    "pinyin": "Nǐ hǎo! Wǒ jiào Xiǎo Míng. Wǒ shì xuésheng, jīnnián èrshí suì.",
+    "translation_en": "Hello! My name is Xiao Ming. I'm a student, twenty years old this year.",
+    "question_zh": "小明是做什么的？",
+    "question_en": "What does Xiao Ming do?",
+    "options": [
+      { "zh": "学生", "en": "Student" },
+      { "zh": "老师", "en": "Teacher" },
+      { "zh": "医生", "en": "Doctor" }
+    ],
+    "answer": 0
+  },
+  {
+    "id": "l2",
+    "hsk": 2,
+    "title_zh": "周末计划",
+    "title_en": "Weekend Plan",
+    "text_zh": "今天天气很好，我们一起去公园走走吧。",
+    "pinyin": "Jīntiān tiānqì hěn hǎo, wǒmen yìqǐ qù gōngyuán zǒuzou ba.",
+    "translation_en": "The weather is nice today, let's go for a walk in the park together.",
+    "question_zh": "他们想去哪里？",
+    "question_en": "Where do they want to go?",
+    "options": [
+      { "zh": "公园", "en": "Park" },
+      { "zh": "学校", "en": "School" },
+      { "zh": "商店", "en": "Shop" }
+    ],
+    "answer": 0
+  },
+  {
+    "id": "l3",
+    "hsk": 2,
+    "title_zh": "我的一天",
+    "title_en": "My Day",
+    "text_zh": "我每天早上七点起床，八点去上班，晚上十一点睡觉。",
+    "pinyin": "Wǒ měitiān zǎoshang qī diǎn qǐchuáng, bā diǎn qù shàngbān, wǎnshang shíyī diǎn shuìjiào.",
+    "translation_en": "Every day I get up at 7, go to work at 8, and sleep at 11 at night.",
+    "question_zh": "他几点起床？",
+    "question_en": "What time does he get up?",
+    "options": [
+      { "zh": "七点", "en": "7 o'clock" },
+      { "zh": "八点", "en": "8 o'clock" },
+      { "zh": "十一点", "en": "11 o'clock" }
+    ],
+    "answer": 0
+  },
+  {
+    "id": "l4",
+    "hsk": 3,
+    "title_zh": "爱好",
+    "title_en": "Hobbies",
+    "text_zh": "周末我喜欢和朋友一起去爬山，因为爬山可以锻炼身体，还能看风景。",
+    "pinyin": "Zhōumò wǒ xǐhuan hé péngyou yìqǐ qù páshān, yīnwèi páshān kěyǐ duànliàn shēntǐ, hái néng kàn fēngjǐng.",
+    "translation_en": "On weekends I like to hike with friends, because hiking exercises the body and you can enjoy the scenery.",
+    "question_zh": "他为什么喜欢爬山？",
+    "question_en": "Why does he like hiking?",
+    "options": [
+      { "zh": "可以锻炼身体、看风景", "en": "It exercises the body and offers scenery" },
+      { "zh": "因为很便宜", "en": "Because it is cheap" },
+      { "zh": "因为离家很近", "en": "Because it is close to home" }
+    ],
+    "answer": 0
+  },
+  {
+    "id": "l5",
+    "hsk": 3,
+    "title_zh": "上海印象",
+    "title_en": "Impressions of Shanghai",
+    "text_zh": "上海是中国最大的城市之一，这里有很多高楼，交通也很方便。",
+    "pinyin": "Shànghǎi shì Zhōngguó zuì dà de chéngshì zhī yī, zhèlǐ yǒu hěn duō gāolóu, jiāotōng yě hěn fāngbiàn.",
+    "translation_en": "Shanghai is one of China's largest cities, with many tall buildings and very convenient transport.",
+    "question_zh": "上海的交通怎么样？",
+    "question_en": "What is transport like in Shanghai?",
+    "options": [
+      { "zh": "很麻烦", "en": "Very inconvenient" },
+      { "zh": "很方便", "en": "Very convenient" },
+      { "zh": "很贵", "en": "Very expensive" }
+    ],
+    "answer": 1
+  },
+  {
+    "id": "l6",
+    "hsk": 4,
+    "title_zh": "成都火锅",
+    "title_en": "Chengdu Hotpot",
+    "text_zh": "成都的火锅又麻又辣，很受欢迎。第一次吃的人最好点微辣的锅底。",
+    "pinyin": "Chéngdū de huǒguō yòu má yòu là, hěn shòu huānyíng. Dì-yī cì chī de rén zuìhǎo diǎn wēilà de guōdǐ.",
+    "translation_en": "Chengdu hotpot is numbing and spicy, and very popular. First-timers should order a mildly spicy broth.",
+    "question_zh": "第一次吃火锅的人最好点什么？",
+    "question_en": "What should first-timers order?",
+    "options": [
+      { "zh": "最辣的锅底", "en": "The spiciest broth" },
+      { "zh": "微辣的锅底", "en": "A mildly spicy broth" },
+      { "zh": "不要锅底", "en": "No broth at all" }
+    ],
+    "answer": 1
+  },
+  {
+    "id": "l7",
+    "hsk": 4,
+    "title_zh": "改变计划",
+    "title_en": "Changing Plans",
+    "text_zh": "天气预报说明天有大雨，所以我们把爬山的计划改到了下周末。",
+    "pinyin": "Tiānqì yùbào shuō míngtiān yǒu dàyǔ, suǒyǐ wǒmen bǎ páshān de jìhuà gǎi dào le xià zhōumò.",
+    "translation_en": "The forecast says heavy rain tomorrow, so we moved the hiking plan to next weekend.",
+    "question_zh": "他们为什么改变计划？",
+    "question_en": "Why did they change their plan?",
+    "options": [
+      { "zh": "因为明天要下大雨", "en": "Because of heavy rain tomorrow" },
+      { "zh": "因为太累了", "en": "Because they were too tired" },
+      { "zh": "因为没有时间", "en": "Because they had no time" }
+    ],
+    "answer": 0
+  },
+  {
+    "id": "l8",
+    "hsk": 5,
+    "title_zh": "网上购物",
+    "title_en": "Online Shopping",
+    "text_zh": "现在越来越多的人喜欢网上购物，因为不但方便，而且常常更便宜。不过收到的东西有时和图片不太一样。",
+    "pinyin": "Xiànzài yuèláiyuè duō de rén xǐhuan wǎngshàng gòuwù, yīnwèi búdàn fāngbiàn, érqiě chángcháng gèng piányi. Búguò shōudào de dōngxi yǒushí hé túpiàn bú tài yíyàng.",
+    "translation_en": "More and more people like online shopping because it's convenient and often cheaper. But sometimes what arrives doesn't quite match the picture.",
+    "question_zh": "网上购物有什么缺点？",
+    "question_en": "What is a downside of online shopping?",
+    "options": [
+      { "zh": "太贵了", "en": "It is too expensive" },
+      { "zh": "收到的东西有时和图片不一样", "en": "Items sometimes differ from the photos" },
+      { "zh": "很不方便", "en": "It is inconvenient" }
+    ],
+    "answer": 1
+  },
+  {
+    "id": "l9",
+    "hsk": 5,
+    "title_zh": "留学生活",
+    "title_en": "Life as an Exchange Student",
+    "text_zh": "刚来中国的时候，我连点菜都不会，现在不但能用中文聊天，还交了很多中国朋友。",
+    "pinyin": "Gāng lái Zhōngguó de shíhou, wǒ lián diǎncài dōu bú huì, xiànzài búdàn néng yòng Zhōngwén liáotiān, hái jiāo le hěn duō Zhōngguó péngyou.",
+    "translation_en": "When I first came to China I couldn't even order food; now I can chat in Chinese and have made many Chinese friends.",
+    "question_zh": "他现在的中文怎么样？",
+    "question_en": "How is his Chinese now?",
+    "options": [
+      { "zh": "还是不会说", "en": "Still can't speak" },
+      { "zh": "只会点菜", "en": "Can only order food" },
+      { "zh": "能聊天，进步很大", "en": "Can chat; big progress" }
+    ],
+    "answer": 2
+  },
+  {
+    "id": "l10",
+    "hsk": 6,
+    "title_zh": "入乡随俗",
+    "title_en": "When in Rome",
+    "text_zh": "中国有句俗话叫「入乡随俗」，意思是到了一个新地方，就要尊重并适应当地的风俗习惯。",
+    "pinyin": "Zhōngguó yǒu jù súhuà jiào 'rù xiāng suí sú', yìsi shì dào le yí ge xīn dìfang, jiù yào zūnzhòng bìng shìyìng dāngdì de fēngsú xíguàn.",
+    "translation_en": "There's a Chinese saying, 'When in a village, follow its customs'—on arriving somewhere new, respect and adapt to local customs.",
+    "question_zh": "「入乡随俗」是什么意思？",
+    "question_en": "What does this saying mean?",
+    "options": [
+      { "zh": "想念家乡", "en": "To miss one's hometown" },
+      { "zh": "尊重并适应当地风俗", "en": "Respect and adapt to local customs" },
+      { "zh": "不喜欢出门", "en": "To dislike going out" }
+    ],
+    "answer": 1
+  },
+  {
+    "id": "l11",
+    "hsk": 4,
+    "title_zh": "青铜器之乡",
+    "title_en": "Hometown of Bronze Ware",
+    "text_zh": "宝鸡是炎帝的故乡，也被称为青铜器之乡。这里出土了很多西周的青铜器，吸引了不少历史爱好者。",
+    "pinyin": "Bǎojī shì Yándì de gùxiāng, yě bèi chēng wéi qīngtóngqì zhī xiāng. Zhèlǐ chūtǔ le hěn duō Xīzhōu de qīngtóngqì, xīyǐn le bù shǎo lìshǐ àihàozhě.",
+    "translation_en": "Baoji is the hometown of the Yan Emperor and is also called the hometown of bronze ware. Many Western Zhou bronzes were unearthed here, attracting many history enthusiasts.",
+    "question_zh": "宝鸡以什么闻名？",
+    "question_en": "What is Baoji famous for?",
+    "options": [
+      { "zh": "青铜器", "en": "Bronze ware" },
+      { "zh": "海鲜", "en": "Seafood" },
+      { "zh": "冰雕", "en": "Ice sculptures" }
+    ],
+    "answer": 0
+  },
+  {
+    "id": "l12",
+    "hsk": 4,
+    "title_zh": "广州早茶",
+    "title_en": "Morning Tea in Guangzhou",
+    "text_zh": "广州人喜欢喝早茶，周末一家人会去茶楼，一边吃点心一边聊天，常常一坐就是一上午。",
+    "pinyin": "Guǎngzhōu rén xǐhuan hē zǎochá, zhōumò yìjiā rén huì qù chálóu, yìbiān chī diǎnxin yìbiān liáotiān, chángcháng yí zuò jiùshì yí shàngwǔ.",
+    "translation_en": "People in Guangzhou love morning tea; on weekends families go to teahouses, eating dim sum and chatting, often staying a whole morning.",
+    "question_zh": "广州人周末喜欢做什么？",
+    "question_en": "What do Guangzhou people like to do on weekends?",
+    "options": [
+      { "zh": "喝早茶、聊天", "en": "Have morning tea and chat" },
+      { "zh": "去爬山", "en": "Go hiking" },
+      { "zh": "去滑雪", "en": "Go skiing" }
+    ],
+    "answer": 0
+  },
+  {
+    "id": "l13",
+    "hsk": 5,
+    "title_zh": "冰城的冬天",
+    "title_en": "Winter in the Ice City",
+    "text_zh": "在哈尔滨，冬天的气温常常低到零下二十多度。虽然天气寒冷，但是冰雪大世界让这座城市充满了魅力。",
+    "pinyin": "Zài Hā'ěrbīn, dōngtiān de qìwēn chángcháng dī dào língxià èrshí duō dù. Suīrán tiānqì hánlěng, dànshì bīngxuě dà shìjiè ràng zhè zuò chéngshì chōngmǎn le mèilì.",
+    "translation_en": "In Harbin, winter temperatures often drop below minus twenty. Though it's cold, the Ice and Snow World fills the city with charm.",
+    "question_zh": "哈尔滨冬天的天气怎么样？",
+    "question_en": "What is Harbin's winter weather like?",
+    "options": [
+      { "zh": "非常寒冷", "en": "Very cold" },
+      { "zh": "很炎热", "en": "Very hot" },
+      { "zh": "很潮湿", "en": "Very humid" }
+    ],
+    "answer": 0
+  },
+  {
+    "id": "l14",
+    "hsk": 5,
+    "title_zh": "年轻的深圳",
+    "title_en": "Young Shenzhen",
+    "text_zh": "深圳是一座年轻的城市，平均年龄只有三十多岁。这里节奏快、机会多，吸引了来自全国各地的年轻人来打拼。",
+    "pinyin": "Shēnzhèn shì yí zuò niánqīng de chéngshì, píngjūn niánlíng zhǐyǒu sānshí duō suì. Zhèlǐ jiézòu kuài, jīhuì duō, xīyǐn le láizì quánguó gèdì de niánqīngrén lái dǎpīn.",
+    "translation_en": "Shenzhen is a young city with an average age of only thirty-something. Fast-paced and full of opportunity, it draws young people from all over the country to strive.",
+    "question_zh": "年轻人为什么愿意去深圳？",
+    "question_en": "Why are young people willing to go to Shenzhen?",
+    "options": [
+      { "zh": "节奏快、机会多", "en": "Fast pace and many opportunities" },
+      { "zh": "天气特别好", "en": "The weather is great" },
+      { "zh": "房子很便宜", "en": "Housing is cheap" }
+    ],
+    "answer": 0
+  },
+  {
+    "id": "l15",
+    "hsk": 6,
+    "title_zh": "江山形胜话镇江",
+    "title_en": "Zhenjiang: Land of Rivers and Legends",
+    "text_zh": "镇江地处长江与京杭大运河的交汇处，自古以来就是水路交通的要道。这里不仅有「天下第一江山」的美誉，还流传着许多动人的传说。其中，《白蛇传》里白娘子水漫金山的故事，更是让金山寺名扬天下。如今的镇江，既保留着深厚的历史文化，又发展出现代化的城市面貌。",
+    "pinyin": "Zhènjiāng dì chǔ Chángjiāng yǔ Jīng-Háng Dàyùnhé de jiāohuì chù, zìgǔ-yǐlái jiùshì shuǐlù jiāotōng de yàodào. Zhèlǐ bùjǐn yǒu 'tiānxià dì-yī jiāngshān' de měiyù, hái liúchuán zhe xǔduō dòngrén de chuánshuō. Qízhōng, 《Báishé Zhuàn》lǐ Bái Niángzǐ shuǐ màn Jīnshān de gùshi, gèngshì ràng Jīnshān Sì míng yáng tiānxià. Rújīn de Zhènjiāng, jì bǎoliú zhe shēnhòu de lìshǐ wénhuà, yòu fāzhǎn chū xiàndàihuà de chéngshì miànmào.",
+    "translation_en": "Zhenjiang lies where the Yangtze meets the Grand Canal and has been a key waterway hub since ancient times. Praised as 'the finest landscape under heaven', it also carries many moving legends—among them, Lady White flooding Jinshan in the Legend of the White Snake, which made Jinshan Temple famous everywhere. Today's Zhenjiang preserves deep history while developing a modern cityscape.",
+    "question_zh": "金山寺为什么名扬天下？",
+    "question_en": "Why did Jinshan Temple become famous?",
+    "options": [
+      { "zh": "因为《白蛇传》的传说", "en": "Because of the Legend of the White Snake" },
+      { "zh": "因为出产香醋", "en": "Because it produces vinegar" },
+      { "zh": "因为有冰雕", "en": "Because of ice sculptures" }
+    ],
+    "answer": 0
+  },
+  {
+    "id": "l16",
+    "hsk": 6,
+    "title_zh": "中西交融话澳门",
+    "title_en": "Macau: Where East Meets West",
+    "text_zh": "澳门虽然面积不大，却有着独特的魅力。四百多年的中西交流，使这座小城形成了多元的文化。漫步在老城区，你会发现中式庙宇与欧式教堂比邻而立，街边既能买到地道的中式糕点，也能尝到香甜的葡式蛋挞。正是这种东西方文化的和谐共存，让澳门历史城区被列入了世界文化遗产名录。",
+    "pinyin": "Àomén suīrán miànjī bú dà, què yǒuzhe dútè de mèilì. Sìbǎi duō nián de zhōng-xī jiāoliú, shǐ zhè zuò xiǎo chéng xíngchéng le duōyuán de wénhuà. Mànbù zài lǎo chéngqū, nǐ huì fāxiàn zhōngshì miàoyǔ yǔ ōushì jiàotáng bǐlín ér lì, jiē biān jì néng mǎidào dìdao de zhōngshì gāodiǎn, yě néng chángdào xiāngtián de pútàshì dàntǎ. Zhèngshì zhè zhǒng dōng-xīfāng wénhuà de héxié gòngcún, ràng Àomén lìshǐ chéngqū bèi lièrù le shìjiè wénhuà yíchǎn mínglù.",
+    "translation_en": "Though small, Macau has a unique charm. Over four centuries of East-West exchange gave this little city a diverse culture. Strolling the old town, you find Chinese temples beside European churches, and can buy authentic Chinese pastries as well as sweet Portuguese egg tarts. It is precisely this harmonious coexistence of East and West that saw Macau's historic center inscribed on the World Heritage List.",
+    "question_zh": "澳门历史城区为什么被列入世界文化遗产？",
+    "question_en": "Why was Macau's historic center listed as World Heritage?",
+    "options": [
+      { "zh": "因为东西方文化和谐共存", "en": "Because of the harmonious blend of East and West" },
+      { "zh": "因为面积很大", "en": "Because it is large" },
+      { "zh": "因为科技发达", "en": "Because of advanced technology" }
+    ],
+    "answer": 0
+  }
+]

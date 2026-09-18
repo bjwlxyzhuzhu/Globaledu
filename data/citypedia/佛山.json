@@ -1,0 +1,111 @@
+{
+  "key": "佛山",
+  "name_zh": "佛山",
+  "name_en": "Foshan",
+  "province": "广东",
+  "tier": "second",
+  "intro_zh": "佛山是广东省珠三角城市，岭南文化重镇，黄飞鸿、叶问的故乡，以武术（咏春）、陶瓷与粤剧闻名。",
+  "intro_en": "Foshan, in Guangdong's Pearl River Delta, is a center of Lingnan culture and the home of Wong Fei-hung and Ip Man—famed for martial arts (Wing Chun), ceramics and Cantonese opera.",
+  "culture_zh": "佛山是南派武术与粤剧的发源地之一，祖庙香火、石湾陶瓷、舞狮醒狮，处处是浓郁的岭南风情。",
+  "culture_en": "A cradle of southern martial arts and Cantonese opera; the Ancestral Temple, Shiwan ceramics and lion dances fill the city with Lingnan flavor.",
+  "attractions": [
+    {
+      "name_zh": "祖庙",
+      "name_en": "Zumiao (Ancestral Temple)",
+      "desc_zh": "供奉北帝的古庙，内有黄飞鸿、叶问纪念馆。",
+      "desc_en": "An old temple to the Northern Emperor, with halls honoring Wong Fei-hung and Ip Man.",
+      "img": "佛山 祖庙",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "佛山",
+        "祖庙"
+      ],
+      "category": "heritage"
+    },
+    {
+      "name_zh": "岭南天地",
+      "name_en": "Lingnan Tiandi",
+      "desc_zh": "由岭南古建改造的街区，骑楼与文创并存。",
+      "desc_en": "A district of restored Lingnan architecture—arcades and creative shops.",
+      "img": "佛山 岭南天地",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "佛山",
+        "岭南天地"
+      ],
+      "category": "heritage"
+    },
+    {
+      "name_zh": "西樵山",
+      "name_en": "Xiqiao Mountain",
+      "desc_zh": "岭南名山，湖光山色与巨型观音坐像。",
+      "desc_en": "A famous Lingnan mountain of lakes, hills and a giant Guanyin statue.",
+      "img": "佛山 西樵山",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "佛山",
+        "西樵山"
+      ],
+      "category": "heritage"
+    }
+  ],
+  "foods": [
+    {
+      "name_zh": "双皮奶",
+      "name_en": "Double-skin Milk",
+      "desc_zh": "顺德名甜品，奶香浓郁、滑嫩如脂。",
+      "desc_en": "A Shunde dessert—rich, silky steamed milk custard.",
+      "img": "双皮奶 顺德",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "佛山",
+        "双皮奶"
+      ],
+      "category": "food"
+    },
+    {
+      "name_zh": "柱侯鸡",
+      "name_en": "Zhuhou Chicken",
+      "desc_zh": "用佛山柱侯酱焖制，咸香入味。",
+      "desc_en": "Chicken braised in Foshan's Zhuhou sauce—savory and fragrant.",
+      "img": "柱侯鸡 佛山菜",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "佛山",
+        "柱侯鸡"
+      ],
+      "category": "food"
+    },
+    {
+      "name_zh": "九江煎堆",
+      "name_en": "Jiujiang Jiandui",
+      "desc_zh": "芝麻裹身的糯米炸球，外脆内糯。",
+      "desc_en": "Sesame-coated fried glutinous balls—crisp outside, chewy within.",
+      "img": "九江煎堆",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "佛山",
+        "九江煎堆"
+      ],
+      "category": "food"
+    }
+  ]
+}

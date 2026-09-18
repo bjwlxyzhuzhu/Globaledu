@@ -1,0 +1,29 @@
+node_modules/
+dist/
+build/
+.env
+.env.local
+*.local
+
+# SQLite 运行期文件
+*.sqlite
+*.sqlite-journal
+*.sqlite-wal
+*.sqlite-shm
+
+# 日志与系统
+*.log
+.DS_Store
+Thumbs.db
+
+# 编辑器
+.vscode/
+.idea/
+
+# 安全与交付文档：渗透测试报告、整改报告等不进版本库
+*.docx
+*.pdf
+*.xlsx
+
+# 打包产物
+*.tar.gz

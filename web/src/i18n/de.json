@@ -1,0 +1,38 @@
+{
+  "app": {
+    "name": "Huanyu Planet",
+    "tagline": "Lern-Agent für Chinesisch und Kultur für internationale Studierende"
+  },
+  "lang": {
+    "title": "Wähle deine Sprachen",
+    "subtitle": "Chinesisch und Englisch sind die Standardsprachen. Du kannst eine Muttersprache hinzufügen.",
+    "default": "Standard",
+    "optional": "Wähle eine (optional)",
+    "enter": "Huanyu Planet betreten",
+    "note": "Die Oberfläche und die Antworten des Assistenten verwenden deine gewählten Sprachen."
+  },
+  "opening": {
+    "welcome": "Willkommen auf Huanyu Planet",
+    "subtitle": "Beginne deine Reise in die chinesische Sprache und Kultur",
+    "guide": "Klicke auf den Globus, um deine Chinesisch-Reise zu beginnen",
+    "skip": "Überspringen",
+    "enter": "Planet betreten"
+  },
+  "hud": { "home": "Start", "modules": "Module", "login": "Anmelden" },
+  "common": {
+    "back": "Zurück",
+    "backToGlobe": "Zurück zum Globus",
+    "comingSoon": "Demnächst",
+    "comingSoonNote": "Dieses Modul ist in Arbeit. Dies ist ein Demo-Gerüst.",
+    "demoMode": "Demomodus"
+  },
+  "chat": {
+    "title": "Gestufter Chinesisch-Tutor",
+    "subtitle": "Gestuft · Anti-Schmeichelei · Mehrsprachig",
+    "placeholder": "Frag auf Chinesisch oder in deiner Sprache…",
+    "send": "Senden",
+    "thinking": "Denke nach…",
+    "native": "Übersetzung",
+    "empty": "Hallo! Ich bin dein Chinesisch-Tutor. Frag mich über diesen Ort oder über Chinesisch."
+  }
+}

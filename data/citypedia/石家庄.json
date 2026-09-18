@@ -1,0 +1,111 @@
+{
+  "key": "石家庄",
+  "name_zh": "石家庄",
+  "name_en": "Shijiazhuang",
+  "province": "河北",
+  "tier": "second",
+  "intro_zh": "石家庄是河北省省会，由铁路枢纽发展而来的年轻省会，临近正定古城与赵州桥，是华北平原上的交通要地。",
+  "intro_en": "Shijiazhuang, capital of Hebei, is a young provincial capital grown from a railway hub, near the old town of Zhengding and the Zhaozhou Bridge—a transport node on the North China Plain.",
+  "culture_zh": "近郊正定古城的隋唐古寺、世界最古老的敞肩石拱桥赵州桥，加上河北梆子与冀菜，石家庄在朴实中藏着燕赵底蕴。",
+  "culture_en": "The Sui-Tang temples of nearby Zhengding, the world's oldest open-spandrel stone arch bridge at Zhaozhou, plus Hebei opera and cuisine—an unassuming city with deep roots.",
+  "attractions": [
+    {
+      "name_zh": "正定古城",
+      "name_en": "Zhengding Old Town",
+      "desc_zh": "隋唐古城，隆兴寺等古寺塔林立。",
+      "desc_en": "A Sui-Tang old town with ancient temples like Longxing.",
+      "img": "正定古城 隆兴寺",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "石家庄",
+        "正定"
+      ],
+      "category": "heritage"
+    },
+    {
+      "name_zh": "赵州桥",
+      "name_en": "Zhaozhou Bridge",
+      "desc_zh": "隋代李春所建，世界现存最古老的敞肩石拱桥。",
+      "desc_en": "Built in the Sui dynasty—the world's oldest surviving open-spandrel stone arch bridge.",
+      "img": "赵州桥",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "石家庄",
+        "赵州桥"
+      ],
+      "category": "heritage"
+    },
+    {
+      "name_zh": "苍岩山",
+      "name_en": "Cangyan Mountain",
+      "desc_zh": "悬空古寺横跨峡谷，险峻壮观。",
+      "desc_en": "A cliff temple spanning a gorge—steep and spectacular.",
+      "img": "石家庄 苍岩山",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "石家庄",
+        "苍岩山"
+      ],
+      "category": "heritage"
+    }
+  ],
+  "foods": [
+    {
+      "name_zh": "正定八大碗",
+      "name_en": "Zhengding Eight Bowls",
+      "desc_zh": "正定传统宴席的八道蒸碗硬菜。",
+      "desc_en": "Eight steamed banquet dishes of traditional Zhengding.",
+      "img": "正定八大碗",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "石家庄",
+        "正定八大碗"
+      ],
+      "category": "food"
+    },
+    {
+      "name_zh": "金凤扒鸡",
+      "name_en": "Jinfeng Braised Chicken",
+      "desc_zh": "石家庄老字号卤鸡，肉烂脱骨。",
+      "desc_en": "A time-honored Shijiazhuang braised chicken, tender to the bone.",
+      "img": "金凤扒鸡",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "石家庄",
+        "金凤扒鸡"
+      ],
+      "category": "food"
+    },
+    {
+      "name_zh": "缸炉烧饼",
+      "name_en": "Ganglu Sesame Cake",
+      "desc_zh": "缸壁烤制的酥脆烧饼，外焦里嫩。",
+      "desc_en": "Sesame cakes baked on a jar-oven wall—crisp outside, soft within.",
+      "img": "缸炉烧饼 河北",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "石家庄",
+        "缸炉烧饼"
+      ],
+      "category": "food"
+    }
+  ]
+}

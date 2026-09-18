@@ -1,0 +1,127 @@
+{
+  "key": "上海",
+  "name_zh": "上海",
+  "name_en": "Shanghai",
+  "province": "上海",
+  "tier": "first",
+  "intro_zh": "上海是中国最大的城市与国际金融中心。黄浦江畔，万国建筑与摩天大楼交相辉映，海派文化中西交融、新旧并存。",
+  "intro_en": "Shanghai is China's largest city and an international financial center. Along the Huangpu River, historic façades and skyscrapers face each other, and Haipai culture blends East and West, old and new.",
+  "culture_zh": "石库门弄堂的市井与外滩洋楼的摩登并存，旗袍、爵士、小笼与本帮菜，构成精致而开放的海派气质。",
+  "culture_en": "The street life of Shikumen lanes meets the glamour of the Bund's mansions; cheongsams, jazz, soup dumplings and Benbang cuisine form a refined yet open Shanghai character.",
+  "attractions": [
+    {
+      "name_zh": "外滩",
+      "name_en": "The Bund",
+      "desc_zh": "黄浦江畔的万国建筑群，遥望陆家嘴天际线。",
+      "desc_en": "A row of historic buildings on the Huangpu, facing the Lujiazui skyline.",
+      "img": "上海 外滩 夜景",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "上海",
+        "外滩"
+      ],
+      "category": "heritage"
+    },
+    {
+      "name_zh": "东方明珠",
+      "name_en": "Oriental Pearl Tower",
+      "desc_zh": "陆家嘴的标志性电视塔，灯光璀璨。",
+      "desc_en": "The iconic TV tower of Lujiazui, brilliantly lit at night.",
+      "img": "上海 东方明珠",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "上海",
+        "东方明珠"
+      ],
+      "category": "modern"
+    },
+    {
+      "name_zh": "豫园",
+      "name_en": "Yu Garden",
+      "desc_zh": "明代古典园林，毗邻热闹的城隍庙商圈。",
+      "desc_en": "A classical Ming garden beside the lively City God Temple bazaar.",
+      "img": "上海 豫园",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "上海",
+        "豫园"
+      ],
+      "category": "modern"
+    },
+    {
+      "name_zh": "田子坊",
+      "name_en": "Tianzifang",
+      "desc_zh": "石库门改造的文创弄堂，小店林立。",
+      "desc_en": "A creative lane of small shops converted from Shikumen houses.",
+      "img": "上海 田子坊 弄堂",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "上海",
+        "田子坊"
+      ],
+      "category": "heritage"
+    }
+  ],
+  "foods": [
+    {
+      "name_zh": "小笼包",
+      "name_en": "Xiaolongbao",
+      "desc_zh": "南翔小笼皮薄汁多，蟹粉尤鲜。",
+      "desc_en": "Nanxiang soup dumplings with thin skins and rich juice—crab roe is best.",
+      "img": "上海 小笼包",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "上海",
+        "小笼包"
+      ],
+      "category": "food"
+    },
+    {
+      "name_zh": "生煎馒头",
+      "name_en": "Shengjian",
+      "desc_zh": "底脆汁多的煎制小包，撒上葱花芝麻。",
+      "desc_en": "Pan-fried buns with crisp bottoms and juicy filling, dusted with scallion and sesame.",
+      "img": "上海 生煎",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "上海",
+        "生煎馒头"
+      ],
+      "category": "food"
+    },
+    {
+      "name_zh": "本帮红烧肉",
+      "name_en": "Shanghai Braised Pork",
+      "desc_zh": "浓油赤酱、肥而不腻的本帮名菜。",
+      "desc_en": "Glossy soy-braised pork belly, rich but not greasy—a Benbang classic.",
+      "img": "本帮红烧肉 上海菜",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "上海",
+        "本帮红烧肉"
+      ],
+      "category": "food"
+    }
+  ]
+}

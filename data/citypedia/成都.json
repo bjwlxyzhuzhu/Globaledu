@@ -1,0 +1,111 @@
+{
+  "key": "成都",
+  "name_zh": "成都",
+  "name_en": "Chengdu",
+  "province": "四川",
+  "tier": "new-first",
+  "intro_zh": "成都是四川省省会，「天府之国」的中心，以悠闲的生活节奏、麻辣火锅与可爱的大熊猫闻名，是一座「来了就不想走」的城市。",
+  "intro_en": "Chengdu, capital of Sichuan and heart of the 'Land of Abundance', is famed for its laid-back pace, spicy hotpot and adorable giant pandas—a city you won't want to leave.",
+  "culture_zh": "茶馆里的盖碗茶、街边的麻将声、川剧的变脸，构成了成都安逸巴适的市井文化；这里还是大熊猫的故乡。",
+  "culture_en": "Covered-bowl tea in teahouses, the clatter of mahjong, and the face-changing of Sichuan opera form Chengdu's easygoing street culture—and it's the home of the giant panda.",
+  "attractions": [
+    {
+      "name_zh": "宽窄巷子",
+      "name_en": "Kuanzhai Alley",
+      "desc_zh": "由宽巷子、窄巷子组成的清代古街，茶馆小吃林立。",
+      "desc_en": "Qing-era lanes of teahouses and snacks—Wide and Narrow Alleys.",
+      "img": "成都 宽窄巷子",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "成都",
+        "宽窄巷子"
+      ],
+      "category": "heritage"
+    },
+    {
+      "name_zh": "大熊猫繁育基地",
+      "name_en": "Panda Breeding Base",
+      "desc_zh": "近距离看憨态可掬的大熊猫，萌翻全场。",
+      "desc_en": "See adorable giant pandas up close.",
+      "img": "成都 大熊猫基地",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "成都",
+        "大熊猫繁育基地"
+      ],
+      "category": "heritage"
+    },
+    {
+      "name_zh": "锦里",
+      "name_en": "Jinli Street",
+      "desc_zh": "三国文化古街，红灯笼下满是川味小吃。",
+      "desc_en": "An old street steeped in Three Kingdoms lore, lit by red lanterns and full of Sichuan snacks.",
+      "img": "成都 锦里 古街",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "成都",
+        "锦里"
+      ],
+      "category": "heritage"
+    }
+  ],
+  "foods": [
+    {
+      "name_zh": "火锅",
+      "name_en": "Sichuan Hotpot",
+      "desc_zh": "红汤翻滚、麻辣鲜香，成都人的最爱。",
+      "desc_en": "Numbing-spicy red broth—Chengdu's favorite.",
+      "img": "成都 火锅",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "成都",
+        "火锅"
+      ],
+      "category": "food"
+    },
+    {
+      "name_zh": "串串香",
+      "name_en": "Chuanchuan Skewers",
+      "desc_zh": "签签上的小火锅，按签计费，市井又过瘾。",
+      "desc_en": "Hotpot on skewers, priced by the stick—street-style fun.",
+      "img": "成都 串串香",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "成都",
+        "串串香"
+      ],
+      "category": "food"
+    },
+    {
+      "name_zh": "担担面",
+      "name_en": "Dandan Noodles",
+      "desc_zh": "麻辣鲜香、芽菜肉末的经典川味小面。",
+      "desc_en": "Classic Sichuan noodles—spicy, savory, with minced pork and preserved veg.",
+      "img": "担担面 川菜",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "成都",
+        "担担面"
+      ],
+      "category": "food"
+    }
+  ]
+}

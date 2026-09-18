@@ -1,0 +1,111 @@
+{
+  "key": "杭州",
+  "name_zh": "杭州",
+  "name_en": "Hangzhou",
+  "province": "浙江",
+  "tier": "new-first",
+  "intro_zh": "杭州是浙江省省会，以西湖闻名天下，自古「上有天堂，下有苏杭」，是江南山水与现代数字经济交融的城市。",
+  "intro_en": "Hangzhou, capital of Zhejiang, is famed for West Lake—'in heaven there is paradise; on earth, Suzhou and Hangzhou'—where southern scenery meets a modern digital economy.",
+  "culture_zh": "西湖的诗情画意、龙井茶的清香、丝绸与南宋古都的底蕴，加上互联网经济的活力，让杭州古今交融。",
+  "culture_en": "West Lake's poetry, the fragrance of Longjing tea, silk and Southern-Song heritage, plus the energy of the internet economy—Hangzhou blends old and new.",
+  "attractions": [
+    {
+      "name_zh": "西湖",
+      "name_en": "West Lake",
+      "desc_zh": "秀美的湖光山色，断桥、苏堤、三潭印月十景皆美。",
+      "desc_en": "Graceful lake scenery with the Broken Bridge, Su Causeway and ten famous views.",
+      "img": "杭州 西湖",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "杭州",
+        "西湖"
+      ],
+      "category": "heritage"
+    },
+    {
+      "name_zh": "灵隐寺",
+      "name_en": "Lingyin Temple",
+      "desc_zh": "千年古刹，飞来峰石窟造像精美。",
+      "desc_en": "A thousand-year-old temple beside the carved grottoes of Feilai Peak.",
+      "img": "杭州 灵隐寺",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "杭州",
+        "灵隐寺"
+      ],
+      "category": "heritage"
+    },
+    {
+      "name_zh": "西溪湿地",
+      "name_en": "Xixi Wetland",
+      "desc_zh": "城市中的湿地公园，芦苇摇曳、水道纵横。",
+      "desc_en": "An urban wetland park of swaying reeds and winding waterways.",
+      "img": "杭州 西溪湿地",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "杭州",
+        "西溪湿地"
+      ],
+      "category": "heritage"
+    }
+  ],
+  "foods": [
+    {
+      "name_zh": "西湖醋鱼",
+      "name_en": "West Lake Sweet-Sour Fish",
+      "desc_zh": "草鱼浇糖醋汁，酸甜鲜嫩。",
+      "desc_en": "Grass carp in a sweet-and-sour sauce—tender and bright.",
+      "img": "西湖醋鱼",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "杭州",
+        "西湖醋鱼"
+      ],
+      "category": "food"
+    },
+    {
+      "name_zh": "龙井虾仁",
+      "name_en": "Longjing Tea Shrimp",
+      "desc_zh": "用龙井茶炒河虾仁，清香雅致。",
+      "desc_en": "River shrimp stir-fried with Longjing tea leaves—delicate and fragrant.",
+      "img": "龙井虾仁",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "杭州",
+        "龙井虾仁"
+      ],
+      "category": "food"
+    },
+    {
+      "name_zh": "东坡肉",
+      "name_en": "Dongpo Pork",
+      "desc_zh": "浓油赤酱、肥而不腻的红烧肉块。",
+      "desc_en": "Glossy braised pork belly, rich but not greasy.",
+      "img": "东坡肉 杭帮菜",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "杭州",
+        "东坡肉"
+      ],
+      "category": "food"
+    }
+  ]
+}

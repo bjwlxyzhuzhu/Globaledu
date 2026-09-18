@@ -1,0 +1,111 @@
+{
+  "key": "哈尔滨",
+  "name_zh": "哈尔滨",
+  "name_en": "Harbin",
+  "province": "黑龙江",
+  "tier": "second",
+  "intro_zh": "哈尔滨是黑龙江省省会，「冰城」与「东方小巴黎」，受俄罗斯文化影响，以冰雪大世界、欧式建筑与红肠啤酒闻名。",
+  "intro_en": "Harbin, capital of Heilongjiang, is the 'Ice City' and 'Little Paris of the East'. Shaped by Russian influence, it is famed for its Ice and Snow World, European buildings, sausage and beer.",
+  "culture_zh": "中央大街的欧式建筑、圣索菲亚教堂的穹顶、冬日晶莹的冰雕，加上红肠与啤酒，哈尔滨中西交融、热情豪爽。",
+  "culture_en": "The European buildings of Central Street, the dome of St. Sophia, glittering winter ice sculptures, plus sausage and beer—Harbin blends East and West with bold warmth.",
+  "attractions": [
+    {
+      "name_zh": "圣索菲亚教堂",
+      "name_en": "St. Sophia Cathedral",
+      "desc_zh": "拜占庭风格的红砖教堂，哈尔滨地标。",
+      "desc_en": "A Byzantine-style red-brick cathedral—Harbin's landmark.",
+      "img": "哈尔滨 圣索菲亚教堂",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "哈尔滨",
+        "圣索菲亚教堂"
+      ],
+      "category": "modern"
+    },
+    {
+      "name_zh": "中央大街",
+      "name_en": "Central Street",
+      "desc_zh": "百年面包石步行街，欧式建筑林立。",
+      "desc_en": "A century-old cobblestone pedestrian street lined with European architecture.",
+      "img": "哈尔滨 中央大街",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "哈尔滨",
+        "中央大街"
+      ],
+      "category": "modern"
+    },
+    {
+      "name_zh": "冰雪大世界",
+      "name_en": "Ice and Snow World",
+      "desc_zh": "巨型冰雕在灯光下晶莹璀璨，冬日奇景。",
+      "desc_en": "Giant ice sculptures glittering under the lights—a winter wonder.",
+      "img": "哈尔滨 冰雪大世界",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "哈尔滨",
+        "冰雪大世界"
+      ],
+      "category": "heritage"
+    }
+  ],
+  "foods": [
+    {
+      "name_zh": "哈尔滨红肠",
+      "name_en": "Harbin Sausage",
+      "desc_zh": "受俄式工艺影响的烟熏灌肠，咸香有嚼劲。",
+      "desc_en": "A Russian-influenced smoked sausage—savory and chewy.",
+      "img": "哈尔滨 红肠",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "哈尔滨",
+        "哈尔滨红肠"
+      ],
+      "category": "food"
+    },
+    {
+      "name_zh": "锅包肉",
+      "name_en": "Guobaorou",
+      "desc_zh": "酸甜酥脆的炸里脊，东北名菜。",
+      "desc_en": "Sweet-and-sour crispy fried pork—a Northeastern classic.",
+      "img": "锅包肉 东北菜",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "哈尔滨",
+        "锅包肉"
+      ],
+      "category": "food"
+    },
+    {
+      "name_zh": "马迭尔冰棍",
+      "name_en": "Modern Ice Cream",
+      "desc_zh": "中央大街百年老字号，冬天也排队。",
+      "desc_en": "A century-old ice-cream brand on Central Street—queued for even in winter.",
+      "img": "哈尔滨 马迭尔冰棍",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "哈尔滨",
+        "马迭尔冰棍"
+      ],
+      "category": "food"
+    }
+  ]
+}

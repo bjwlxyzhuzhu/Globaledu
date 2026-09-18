@@ -1,0 +1,111 @@
+{
+  "key": "长沙",
+  "name_zh": "长沙",
+  "name_en": "Changsha",
+  "province": "湖南",
+  "tier": "new-first",
+  "intro_zh": "长沙是湖南省省会，湘江穿城而过，是一座有两千多年历史的文化名城，也是充满活力的「网红城市」。",
+  "intro_en": "Changsha, capital of Hunan, is split by the Xiang River. A cultural city with over two thousand years of history, it is also one of China's most vibrant trend-setting cities.",
+  "culture_zh": "长沙人热情豪爽，湘菜以香辣著称。岳麓书院延续着千年文脉，橘子洲头见证着历史，夜晚的解放西路又洋溢着年轻的烟火气。",
+  "culture_en": "Changsha people are warm and bold, and Hunan cuisine is famously spicy. The millennium-old Yuelu Academy carries on its scholarly tradition while the city's nightlife pulses with youthful energy.",
+  "attractions": [
+    {
+      "name_zh": "岳麓山·岳麓书院",
+      "name_en": "Yuelu Mountain & Academy",
+      "desc_zh": "千年学府所在，红枫与古建筑相映成趣。",
+      "desc_en": "Home to a thousand-year-old academy, where red maples set off the ancient halls.",
+      "img": "长沙 岳麓书院",
+      "category": "art",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "长沙",
+        "岳麓山·岳麓书院"
+      ]
+    },
+    {
+      "name_zh": "橘子洲",
+      "name_en": "Orange Isle",
+      "desc_zh": "湘江中的狭长小岛，可观赏两岸城市风光。",
+      "desc_en": "A long narrow islet in the Xiang River with views of the city on both banks.",
+      "img": "长沙 橘子洲",
+      "category": "heritage",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "长沙",
+        "橘子洲"
+      ]
+    },
+    {
+      "name_zh": "太平街",
+      "name_en": "Taiping Street",
+      "desc_zh": "古色古香的老街，小吃与文创店铺聚集。",
+      "desc_en": "An antique old street full of snacks and creative shops.",
+      "img": "长沙 太平街 老街",
+      "category": "heritage",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "长沙",
+        "太平街"
+      ]
+    }
+  ],
+  "foods": [
+    {
+      "name_zh": "臭豆腐",
+      "name_en": "Stinky Tofu",
+      "desc_zh": "长沙臭豆腐外焦里嫩，闻着臭吃着香。",
+      "desc_en": "Changsha's stinky tofu is crisp outside and tender within—pungent to smell, delicious to eat.",
+      "img": "长沙 臭豆腐",
+      "category": "food",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "长沙",
+        "臭豆腐"
+      ]
+    },
+    {
+      "name_zh": "剁椒鱼头",
+      "name_en": "Fish Head with Chopped Chili",
+      "desc_zh": "湘菜名肴，红椒铺满，鲜辣开胃。",
+      "desc_en": "A classic Hunan dish: a fish head smothered in red chilies, fresh and fiery.",
+      "img": "剁椒鱼头 湘菜",
+      "category": "food",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "长沙",
+        "剁椒鱼头"
+      ]
+    },
+    {
+      "name_zh": "糖油粑粑",
+      "name_en": "Tangyou Baba",
+      "desc_zh": "糯米团裹糖浆炸制，甜糯可口。",
+      "desc_en": "Glutinous rice balls fried in syrup—sweet, sticky and irresistible.",
+      "img": "长沙 糖油粑粑",
+      "category": "food",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "长沙",
+        "糖油粑粑"
+      ]
+    }
+  ]
+}

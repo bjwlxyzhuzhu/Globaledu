@@ -1,0 +1,111 @@
+{
+  "key": "合肥",
+  "name_zh": "合肥",
+  "name_en": "Hefei",
+  "province": "安徽",
+  "tier": "second",
+  "intro_zh": "合肥是安徽省省会，临近巢湖，是三国故地与包公故里，近年崛起为重要的科技创新之城。",
+  "intro_en": "Hefei, capital of Anhui, sits beside Chao Lake. A land of Three Kingdoms history and the hometown of the upright Judge Bao, it has risen in recent years as a hub of scientific innovation.",
+  "culture_zh": "包公的清廉故事在这里代代相传，科教与创新塑造着新合肥，李鸿章故居见证着近代风云。",
+  "culture_en": "The tales of Judge Bao's integrity pass down through generations; science and innovation shape the new Hefei, while Li Hongzhang's residence recalls modern history.",
+  "attractions": [
+    {
+      "name_zh": "包公园",
+      "name_en": "Lord Bao Park",
+      "desc_zh": "纪念清官包拯的园林，祠堂与墓园相连。",
+      "desc_en": "A garden honoring the upright official Bao Zheng, with his shrine and tomb.",
+      "img": "合肥 包公园",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "合肥",
+        "包"
+      ],
+      "category": "art"
+    },
+    {
+      "name_zh": "三河古镇",
+      "name_en": "Sanhe Ancient Town",
+      "desc_zh": "水乡古镇，小桥流水，徽派民居。",
+      "desc_en": "A water town of little bridges, streams and Huizhou-style houses.",
+      "img": "合肥 三河古镇",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "合肥",
+        "三河"
+      ],
+      "category": "heritage"
+    },
+    {
+      "name_zh": "巢湖",
+      "name_en": "Chao Lake",
+      "desc_zh": "中国五大淡水湖之一，烟波浩渺。",
+      "desc_en": "One of China's five great freshwater lakes, vast and misty.",
+      "img": "合肥 巢湖",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "合肥",
+        "巢湖"
+      ],
+      "category": "heritage"
+    }
+  ],
+  "foods": [
+    {
+      "name_zh": "李鸿章杂烩",
+      "name_en": "Li Hongzhang Hotchpotch",
+      "desc_zh": "多种食材烩成一锅，鲜香丰盛。",
+      "desc_en": "A hearty hotchpotch of many ingredients stewed together.",
+      "img": "李鸿章杂烩 徽菜",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "合肥",
+        "李鸿章杂烩"
+      ],
+      "category": "food"
+    },
+    {
+      "name_zh": "庐州烤鸭",
+      "name_en": "Luzhou Roast Duck",
+      "desc_zh": "皮酥肉嫩的合肥风味烤鸭。",
+      "desc_en": "Hefei-style roast duck with crisp skin and tender meat.",
+      "img": "庐州烤鸭",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "合肥",
+        "庐州烤鸭"
+      ],
+      "category": "food"
+    },
+    {
+      "name_zh": "三河米饺",
+      "name_en": "Sanhe Rice Dumplings",
+      "desc_zh": "米粉皮包馅油炸，金黄酥香。",
+      "desc_en": "Fried rice-flour dumplings, golden and crisp.",
+      "img": "三河米饺",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "合肥",
+        "三河米饺"
+      ],
+      "category": "food"
+    }
+  ]
+}

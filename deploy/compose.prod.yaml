@@ -1,0 +1,9 @@
+# 生产覆盖文件：容器只监听回环，由 Nginx 对外提供 lxsznt.ujs.edu.cn。
+# 用法：docker compose -f compose.yaml -f deploy/compose.prod.yaml up -d
+#
+# 注意：Compose 对 ports 列表是「追加」而非「替换」，若不加 !override，
+# 会同时绑定 0.0.0.0:8787 和 127.0.0.1:8787 而导致端口冲突。
+services:
+  huanyu-planet:
+    ports: !override
+      - "127.0.0.1:8787:8787"

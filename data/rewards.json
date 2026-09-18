@@ -1,0 +1,56 @@
+[
+  {
+    "id": "badge_culture",
+    "emoji": "🏵️",
+    "name_zh": "文化达人电子徽章",
+    "name_en": "Culture Explorer Badge",
+    "cost": 50,
+    "desc_zh": "专属电子徽章，秀出你的中华文化探索成就。",
+    "desc_en": "An exclusive digital badge to show off your culture-exploring achievements."
+  },
+  {
+    "id": "hsk_priority",
+    "emoji": "🎯",
+    "name_zh": "HSK 模拟测优先批改",
+    "name_en": "Priority HSK Mock Review",
+    "cost": 80,
+    "desc_zh": "你的下一次 HSK 模拟测获得老师优先批改与点评。",
+    "desc_en": "Your next HSK mock test gets prioritized teacher grading and feedback."
+  },
+  {
+    "id": "hw_pass",
+    "emoji": "📝",
+    "name_zh": "作业免做券 ×1",
+    "name_en": "Homework Pass ×1",
+    "cost": 100,
+    "desc_zh": "可抵扣一次课后作业（需老师确认）。",
+    "desc_en": "Skip one homework assignment (subject to teacher confirmation)."
+  },
+  {
+    "id": "tutor15",
+    "emoji": "👩‍🏫",
+    "name_zh": "老师一对一辅导 15 分钟",
+    "name_en": "15-min 1-on-1 Tutoring",
+    "cost": 120,
+    "desc_zh": "与中文老师一对一答疑、纠音 15 分钟。",
+    "desc_en": "15 minutes of 1-on-1 Q&A and pronunciation coaching with a teacher."
+  },
+  {
+    "id": "culture_gift",
+    "emoji": "🎁",
+    "name_zh": "中华文化小礼品",
+    "name_en": "Chinese Culture Souvenir",
+    "cost": 200,
+    "desc_zh": "剪纸 / 书签 / 生肖卡等文化纪念品一份。",
+    "desc_en": "A cultural souvenir such as paper-cutting, a bookmark, or a zodiac card."
+  },
+  {
+    "id": "cert_premium",
+    "emoji": "📜",
+    "name_zh": "精美纸质能力证书",
+    "name_en": "Printed Proficiency Certificate",
+    "cost": 300,
+    "desc_zh": "线下颁发的精美纸质《国际中文能力证书》。",
+    "desc_en": "A beautifully printed International Chinese Proficiency Certificate, awarded offline."
+  }
+]

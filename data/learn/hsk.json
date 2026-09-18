@@ -1,0 +1,702 @@
+[
+  {
+    "id": "q1",
+    "level": 1,
+    "stem_zh": "我 ____ 学生。",
+    "stem_en": "I ____ a student.",
+    "options": [
+      "是",
+      "有",
+      "在"
+    ],
+    "answer": 0,
+    "explain_zh": "「是」用来表示身份：我是学生。",
+    "explain_en": "Use 是 (shì) to state identity: 我是学生 (I am a student)."
+  },
+  {
+    "id": "q2",
+    "level": 1,
+    "stem_zh": "____ 好吗？",
+    "stem_en": "How are ____ ?",
+    "options": [
+      "你",
+      "我",
+      "他"
+    ],
+    "answer": 0,
+    "explain_zh": "「你好吗？」是问候对方，用「你」。",
+    "explain_en": "你好吗? asks about the listener, so use 你 (you)."
+  },
+  {
+    "id": "q3",
+    "level": 2,
+    "stem_zh": "桌子上有一 ____ 书。",
+    "stem_en": "There is one ____ of book on the table.",
+    "options": [
+      "本",
+      "个",
+      "只"
+    ],
+    "answer": 0,
+    "explain_zh": "书的量词是「本」：一本书。",
+    "explain_en": "The measure word for books is 本: 一本书 (one book)."
+  },
+  {
+    "id": "q4",
+    "level": 2,
+    "stem_zh": "他正 ____ 看电视。",
+    "stem_en": "He is ____ watching TV.",
+    "options": [
+      "在",
+      "了",
+      "过"
+    ],
+    "answer": 0,
+    "explain_zh": "「正在」表示动作进行中：正在看电视。",
+    "explain_en": "正在 marks an action in progress: 正在看电视 (is watching TV)."
+  },
+  {
+    "id": "q5",
+    "level": 2,
+    "stem_zh": "今天比昨天 ____ 。",
+    "stem_en": "Today is ____ than yesterday.",
+    "options": [
+      "冷",
+      "很冷",
+      "最冷"
+    ],
+    "answer": 0,
+    "explain_zh": "「比」字句里形容词前不用「很」：今天比昨天冷。",
+    "explain_en": "In 比 comparisons, don't use 很 before the adjective: 今天比昨天冷."
+  },
+  {
+    "id": "q6",
+    "level": 3,
+    "stem_zh": "虽然下雨，____ 我还是去了。",
+    "stem_en": "Although it rained, ____ I still went.",
+    "options": [
+      "但是",
+      "因为",
+      "所以"
+    ],
+    "answer": 0,
+    "explain_zh": "「虽然……但是……」是转折关系。",
+    "explain_en": "虽然…但是… is a concessive pair (although…still/but…)."
+  },
+  {
+    "id": "q7",
+    "level": 3,
+    "stem_zh": "请你把门 ____ 。",
+    "stem_en": "Please ____ the door.",
+    "options": [
+      "关上",
+      "上关",
+      "开上"
+    ],
+    "answer": 0,
+    "explain_zh": "「把」字句：把门关上。「关上」是动词+结果补语。",
+    "explain_en": "In the 把 construction: 把门关上 (close the door); 关上 = verb + result complement."
+  },
+  {
+    "id": "q8",
+    "level": 3,
+    "stem_zh": "这本书 ____ 那本有意思。",
+    "stem_en": "This book is more interesting ____ that one.",
+    "options": [
+      "比",
+      "和",
+      "跟"
+    ],
+    "answer": 0,
+    "explain_zh": "比较用「比」：这本书比那本有意思。",
+    "explain_en": "Use 比 for comparison: 这本书比那本有意思 (more interesting than)."
+  },
+  {
+    "id": "q9",
+    "level": 4,
+    "stem_zh": "他工作很认真，从不 ____ 。",
+    "stem_en": "He works conscientiously and is never ____ .",
+    "options": [
+      "马上",
+      "马虎",
+      "明白"
+    ],
+    "answer": 1,
+    "explain_zh": "「马虎」指做事不仔细、草率。",
+    "explain_en": "马虎 (mǎhu) means careless/sloppy."
+  },
+  {
+    "id": "q10",
+    "level": 4,
+    "stem_zh": "这个问题很复杂，我们需要进一步 ____ 。",
+    "stem_en": "This issue is complex; we need to ____ further.",
+    "options": [
+      "参观",
+      "讨论",
+      "休息"
+    ],
+    "answer": 1,
+    "explain_zh": "「讨论」指就某问题交换意见。",
+    "explain_en": "讨论 (tǎolùn) means to discuss / exchange views."
+  },
+  {
+    "id": "q11",
+    "level": 4,
+    "stem_zh": "____ 天气不好，比赛还是照常进行。",
+    "stem_en": "____ the weather was bad, the match went ahead as usual.",
+    "options": [
+      "只要",
+      "尽管",
+      "因为"
+    ],
+    "answer": 1,
+    "explain_zh": "「尽管……还是……」表示让步转折。",
+    "explain_en": "尽管…还是… expresses concession (even though…still…)."
+  },
+  {
+    "id": "q12",
+    "level": 4,
+    "stem_zh": "为了 ____ 时间，我们坐了飞机。",
+    "stem_en": "To ____ time, we took a plane.",
+    "options": [
+      "节目",
+      "节省",
+      "节日"
+    ],
+    "answer": 1,
+    "explain_zh": "「节省时间」是常用搭配，意为减少花费的时间。",
+    "explain_en": "节省时间 (jiéshěng shíjiān) = to save time, a common collocation."
+  },
+  {
+    "id": "q13",
+    "level": 5,
+    "stem_zh": "他不但学习好，____ 很热心助人。",
+    "stem_en": "He not only studies well, ____ is also helpful to others.",
+    "options": [
+      "但是",
+      "而且",
+      "虽然"
+    ],
+    "answer": 1,
+    "explain_zh": "「不但……而且……」表示递进关系。",
+    "explain_en": "不但…而且… expresses progression (not only…but also…)."
+  },
+  {
+    "id": "q14",
+    "level": 5,
+    "stem_zh": "这件事让他 ____ ，不知道该怎么办。",
+    "stem_en": "This matter left him ____ , not knowing what to do.",
+    "options": [
+      "一帆风顺",
+      "左右为难",
+      "三心二意"
+    ],
+    "answer": 1,
+    "explain_zh": "「左右为难」形容两方面都难处理、很难抉择。",
+    "explain_en": "左右为难 (zuǒyòu-wéinán) = caught in a dilemma."
+  },
+  {
+    "id": "q15",
+    "level": 5,
+    "stem_zh": "经过这次失败，他 ____ 了很多经验。",
+    "stem_en": "After this failure, he ____ a lot of experience.",
+    "options": [
+      "积极",
+      "成绩",
+      "积累"
+    ],
+    "answer": 2,
+    "explain_zh": "「积累经验」是常用搭配，指逐渐聚集。",
+    "explain_en": "积累经验 (jīlěi jīngyàn) = to accumulate experience."
+  },
+  {
+    "id": "q16",
+    "level": 5,
+    "stem_zh": "他的建议很有 ____ ，值得认真考虑。",
+    "stem_en": "His suggestion has real ____ and is worth considering.",
+    "options": [
+      "价格",
+      "价值",
+      "代价"
+    ],
+    "answer": 1,
+    "explain_zh": "「价值」指意义、作用；价格是钱数，代价是付出。",
+    "explain_en": "价值 = value/worth; 价格 = price; 代价 = cost paid."
+  },
+  {
+    "id": "q17",
+    "level": 6,
+    "stem_zh": "面对困难，他从不 ____ ，总是积极想办法。",
+    "stem_en": "Facing difficulties, he never ____ , always seeking solutions.",
+    "options": [
+      "后退",
+      "退步",
+      "退缩"
+    ],
+    "answer": 2,
+    "explain_zh": "「退缩」指因害怕困难而向后缩、不敢前进。",
+    "explain_en": "退缩 (tuìsuō) = to shrink back / flinch from difficulty."
+  },
+  {
+    "id": "q18",
+    "level": 6,
+    "stem_zh": "这部纪录片 ____ 地展现了大自然的美。",
+    "stem_en": "The documentary ____ portrays the beauty of nature.",
+    "options": [
+      "热闹",
+      "生动",
+      "活泼"
+    ],
+    "answer": 1,
+    "explain_zh": "「生动」形容描写真实而有感染力；活泼多形容人或气氛。",
+    "explain_en": "生动 (shēngdòng) = vivid/lifelike (of depiction); 活泼 describes people/mood."
+  },
+  {
+    "id": "q19",
+    "level": 6,
+    "stem_zh": "他的发言 ____ 了大家的强烈反响。",
+    "stem_en": "His speech ____ a strong response from everyone.",
+    "options": [
+      "引导",
+      "引用",
+      "引起"
+    ],
+    "answer": 2,
+    "explain_zh": "「引起反响」是常用搭配，意为导致、激起。",
+    "explain_en": "引起反响 (yǐnqǐ fǎnxiǎng) = to provoke/arouse a response."
+  },
+  {
+    "id": "q20",
+    "level": 4,
+    "stem_zh": "他对这座城市还不 ____ ，经常迷路。",
+    "stem_en": "He isn't ____ with this city yet and often gets lost.",
+    "options": [
+      "熟悉",
+      "熟练",
+      "成熟"
+    ],
+    "answer": 0,
+    "explain_zh": "「熟悉」指对人或事物了解得清楚。",
+    "explain_en": "熟悉 (shúxī) = familiar with (people/places/things)."
+  },
+  {
+    "id": "qx1",
+    "level": 1,
+    "stem_zh": "我 ____ 中国人。",
+    "stem_en": "I ____ Chinese.",
+    "options": [
+      "是",
+      "有",
+      "在"
+    ],
+    "answer": 0,
+    "explain_zh": "「是」表示身份：我是中国人。",
+    "explain_en": "是 (shì) states identity."
+  },
+  {
+    "id": "qx2",
+    "level": 1,
+    "stem_zh": "现在 ____ 点？",
+    "stem_en": "What time is it now?",
+    "options": [
+      "几",
+      "多",
+      "什么"
+    ],
+    "answer": 0,
+    "explain_zh": "「几点」问时间。",
+    "explain_en": "几点 (jǐ diǎn) asks the time."
+  },
+  {
+    "id": "qx3",
+    "level": 1,
+    "stem_zh": "我有三 ____ 书。",
+    "stem_en": "I have three ___ books.",
+    "options": [
+      "本",
+      "个",
+      "只"
+    ],
+    "answer": 0,
+    "explain_zh": "书用量词「本」。",
+    "explain_en": "本 (běn) is the measure word for books."
+  },
+  {
+    "id": "qx4",
+    "level": 2,
+    "stem_zh": "昨天我 ____ 了一本书。",
+    "stem_en": "Yesterday I ___ a book.",
+    "options": [
+      "买",
+      "买的",
+      "在买"
+    ],
+    "answer": 0,
+    "explain_zh": "「买了」表示完成。",
+    "explain_en": "买了 (mǎi le) marks a completed action."
+  },
+  {
+    "id": "qx5",
+    "level": 2,
+    "stem_zh": "他 ____ 我高。",
+    "stem_en": "He is taller ___ me.",
+    "options": [
+      "比",
+      "和",
+      "跟"
+    ],
+    "answer": 0,
+    "explain_zh": "「A 比 B + 形容词」表比较。",
+    "explain_en": "A 比 (bǐ) B + adjective expresses comparison."
+  },
+  {
+    "id": "qx6",
+    "level": 2,
+    "stem_zh": "你 ____ 过北京吗？",
+    "stem_en": "Have you ___ been to Beijing?",
+    "options": [
+      "去",
+      "去了",
+      "在去"
+    ],
+    "answer": 0,
+    "explain_zh": "「去过」表示经历。",
+    "explain_en": "去过 (qù guo) expresses past experience."
+  },
+  {
+    "id": "qx7",
+    "level": 3,
+    "stem_zh": "这个问题我 ____ 解决了。",
+    "stem_en": "I have ___ solved this problem.",
+    "options": [
+      "已经",
+      "正在",
+      "将要"
+    ],
+    "answer": 0,
+    "explain_zh": "「已经…了」表示完成。",
+    "explain_en": "已经…了 means \"already\"."
+  },
+  {
+    "id": "qx8",
+    "level": 3,
+    "stem_zh": "____ 下雨，我们还是去了。",
+    "stem_en": "___ it rained, we still went.",
+    "options": [
+      "虽然",
+      "因为",
+      "如果"
+    ],
+    "answer": 0,
+    "explain_zh": "「虽然…但是/还是」表转折。",
+    "explain_en": "虽然…还是 = \"although… still\"."
+  },
+  {
+    "id": "qx9",
+    "level": 3,
+    "stem_zh": "他汉语说得 ____ 流利。",
+    "stem_en": "He speaks Chinese ___ fluently.",
+    "options": [
+      "非常",
+      "很多",
+      "太了"
+    ],
+    "answer": 0,
+    "explain_zh": "「非常」修饰程度。",
+    "explain_en": "非常 (fēicháng) = \"very / extremely\"."
+  },
+  {
+    "id": "qx10",
+    "level": 4,
+    "stem_zh": "这件事 ____ 我来负责。",
+    "stem_en": "This matter ___ be handled by me.",
+    "options": [
+      "由",
+      "被",
+      "把"
+    ],
+    "answer": 0,
+    "explain_zh": "「由…负责」表示责任归属。",
+    "explain_en": "由 (yóu) indicates who is responsible."
+  },
+  {
+    "id": "qx11",
+    "level": 4,
+    "stem_zh": "天气 ____ 冷了。",
+    "stem_en": "The weather is getting ___ colder.",
+    "options": [
+      "越来越",
+      "非常的",
+      "太地"
+    ],
+    "answer": 0,
+    "explain_zh": "「越来越…」表递进。",
+    "explain_en": "越来越 = \"more and more\"."
+  },
+  {
+    "id": "qx12",
+    "level": 4,
+    "stem_zh": "____ 多难，他都不放弃。",
+    "stem_en": "No matter how hard, he never gives up.",
+    "options": [
+      "无论",
+      "虽然",
+      "因为"
+    ],
+    "answer": 0,
+    "explain_zh": "「无论…都」表示无条件。",
+    "explain_en": "无论…都 = \"no matter… always\"."
+  },
+  {
+    "id": "qx13",
+    "level": 5,
+    "stem_zh": "这部电影 ____ 我深受感动。",
+    "stem_en": "This film ___ me deeply moved.",
+    "options": [
+      "使",
+      "让的",
+      "被"
+    ],
+    "answer": 0,
+    "explain_zh": "「使…感动」表使役。",
+    "explain_en": "使 (shǐ) = \"to make/cause\"."
+  },
+  {
+    "id": "qx14",
+    "level": 5,
+    "stem_zh": "____ 努力，就会成功。",
+    "stem_en": "___ you work hard, you will succeed.",
+    "options": [
+      "只要",
+      "只有",
+      "无论"
+    ],
+    "answer": 0,
+    "explain_zh": "「只要…就」表充分条件。",
+    "explain_en": "只要…就 = \"as long as… then\"."
+  },
+  {
+    "id": "qx15",
+    "level": 5,
+    "stem_zh": "他的方案 ____ 可行。",
+    "stem_en": "His plan is ___ feasible.",
+    "options": [
+      "完全",
+      "很的",
+      "非常地"
+    ],
+    "answer": 0,
+    "explain_zh": "「完全」表程度，完全可行。",
+    "explain_en": "完全 (wánquán) = \"completely\"."
+  },
+  {
+    "id": "qx16",
+    "level": 6,
+    "stem_zh": "面对困难，他 ____ ，迎难而上。",
+    "stem_en": "Facing hardship, he ___ and pushed forward.",
+    "options": [
+      "毫不退缩",
+      "很退缩的",
+      "不太退缩"
+    ],
+    "answer": 0,
+    "explain_zh": "成语式表达「毫不退缩」＝一点也不退。",
+    "explain_en": "毫不退缩 = \"without flinching at all\"."
+  },
+  {
+    "id": "qx17",
+    "level": 6,
+    "stem_zh": "这项改革 ____ 了经济发展。",
+    "stem_en": "This reform ___ economic growth.",
+    "options": [
+      "促进",
+      "促进的",
+      "很促进"
+    ],
+    "answer": 0,
+    "explain_zh": "「促进」＝推动、促使发展。",
+    "explain_en": "促进 (cùjìn) = \"to promote / boost\"."
+  },
+  {
+    "id": "qx18",
+    "level": 6,
+    "stem_zh": "他的演讲 ____ ，赢得满堂掌声。",
+    "stem_en": "His speech was ___, winning applause.",
+    "options": [
+      "精彩绝伦",
+      "很精彩的",
+      "太精彩"
+    ],
+    "answer": 0,
+    "explain_zh": "「精彩绝伦」＝精彩到极点。",
+    "explain_en": "精彩绝伦 = \"superbly brilliant\"."
+  },
+  {
+    "id": "we1",
+    "level": 1,
+    "stem_zh": "我 ____ 学生。",
+    "stem_en": "I ___ a student.",
+    "options": [
+      "在",
+      "是",
+      "有"
+    ],
+    "answer": 1,
+    "explain_zh": "「是」表示判断：我是学生。",
+    "explain_en": "是 = to be."
+  },
+  {
+    "id": "we2",
+    "level": 1,
+    "stem_zh": "你好 ____ ？",
+    "stem_en": "How are you?",
+    "options": [
+      "呢",
+      "了",
+      "吗"
+    ],
+    "answer": 2,
+    "explain_zh": "「吗」用于一般疑问句末。",
+    "explain_en": "吗 marks a yes/no question."
+  },
+  {
+    "id": "we3",
+    "level": 2,
+    "stem_zh": "今天天气很 ____ 。",
+    "stem_en": "The weather is very ___ today.",
+    "options": [
+      "好的",
+      "好",
+      "很好"
+    ],
+    "answer": 1,
+    "explain_zh": "「很+形容词」：很好；不再加「的/很」。",
+    "explain_en": "很 + adjective: 很好."
+  },
+  {
+    "id": "we4",
+    "level": 2,
+    "stem_zh": "他比我 ____ 。",
+    "stem_en": "He is ___ than me.",
+    "options": [
+      "很高",
+      "高",
+      "高的"
+    ],
+    "answer": 1,
+    "explain_zh": "「比」字句里形容词前不用「很」。",
+    "explain_en": "In 比 comparisons, no 很 before the adjective."
+  },
+  {
+    "id": "we5",
+    "level": 3,
+    "stem_zh": "这件衣服 ____ 那件贵。",
+    "stem_en": "This shirt is more expensive ___ that one.",
+    "options": [
+      "跟",
+      "和",
+      "比"
+    ],
+    "answer": 2,
+    "explain_zh": "「A 比 B + 形容词」表示比较。",
+    "explain_en": "A 比 B + adj expresses comparison."
+  },
+  {
+    "id": "we6",
+    "level": 3,
+    "stem_zh": "我 ____ 没去过北京。",
+    "stem_en": "I have ___ never been to Beijing.",
+    "options": [
+      "还",
+      "正",
+      "在"
+    ],
+    "answer": 0,
+    "explain_zh": "「还没……（过）」表示到现在仍未发生。",
+    "explain_en": "还没…(过) = still have not done."
+  },
+  {
+    "id": "we7",
+    "level": 4,
+    "stem_zh": "经过努力，他 ____ 通过了考试。",
+    "stem_en": "After hard work, he ___ passed the exam.",
+    "options": [
+      "终点",
+      "终于",
+      "结束"
+    ],
+    "answer": 1,
+    "explain_zh": "「终于」表示经过过程后实现，含期待。",
+    "explain_en": "终于 = finally, after a process."
+  },
+  {
+    "id": "we8",
+    "level": 4,
+    "stem_zh": "这个问题 ____ 复杂。",
+    "stem_en": "This problem is ___ complex.",
+    "options": [
+      "相信",
+      "相同",
+      "相当"
+    ],
+    "answer": 2,
+    "explain_zh": "「相当」＝程度很高，相当于「非常」。",
+    "explain_en": "相当 = quite / considerably."
+  },
+  {
+    "id": "we9",
+    "level": 5,
+    "stem_zh": "他做事很 ____ ，从不马虎。",
+    "stem_en": "He works very ___, never careless.",
+    "options": [
+      "认真",
+      "认识",
+      "认为"
+    ],
+    "answer": 0,
+    "explain_zh": "「认真」＝做事仔细负责。",
+    "explain_en": "认真 = conscientious / serious."
+  },
+  {
+    "id": "we10",
+    "level": 5,
+    "stem_zh": "听到这个好消息，大家都 ____ 不已。",
+    "stem_en": "Everyone was ___ at the good news.",
+    "options": [
+      "兴趣",
+      "兴奋",
+      "高兴"
+    ],
+    "answer": 1,
+    "explain_zh": "固定搭配「兴奋不已」＝非常激动。",
+    "explain_en": "兴奋不已 = thrilled beyond measure."
+  },
+  {
+    "id": "we11",
+    "level": 6,
+    "stem_zh": "面对困难，他始终 ____ ，毫不退缩。",
+    "stem_en": "Facing hardship, he always ___, never flinching.",
+    "options": [
+      "半途而废",
+      "袖手旁观",
+      "迎难而上"
+    ],
+    "answer": 2,
+    "explain_zh": "「迎难而上」＝主动面对困难。",
+    "explain_en": "迎难而上 = rise to the challenge."
+  },
+  {
+    "id": "we12",
+    "level": 6,
+    "stem_zh": "这部小说情节 ____ ，引人入胜。",
+    "stem_en": "The plot of the novel is ___, gripping.",
+    "options": [
+      "跌宕起伏",
+      "平淡无奇",
+      "一帆风顺"
+    ],
+    "answer": 0,
+    "explain_zh": "「跌宕起伏」＝起落变化大，扣人心弦。",
+    "explain_en": "跌宕起伏 = full of ups and downs."
+  }
+]

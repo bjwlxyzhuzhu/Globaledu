@@ -1,0 +1,101 @@
+[
+  {
+    "id": "s1",
+    "hsk": 1,
+    "scene_zh": "在餐厅点菜",
+    "scene_en": "Ordering at a restaurant",
+    "prompt_zh": "你在一家中餐馆吃饭，我来当服务员。请你用中文点菜、问价钱。",
+    "prompt_en": "You're dining at a Chinese restaurant; I'll be the waiter. Order food and ask about prices in Chinese.",
+    "target_zh": "你好，我要一碗牛肉面。",
+    "target_pinyin": "Nǐ hǎo, wǒ yào yì wǎn niúròu miàn.",
+    "target_en": "Hello, I'd like a bowl of beef noodles."
+  },
+  {
+    "id": "s2",
+    "hsk": 1,
+    "scene_zh": "问路",
+    "scene_en": "Asking for directions",
+    "prompt_zh": "你在街上找地铁站，我是路人。请你用中文问路。",
+    "prompt_en": "You're looking for a subway station on the street; I'm a passer-by. Ask for directions in Chinese.",
+    "target_zh": "请问，地铁站在哪里？",
+    "target_pinyin": "Qǐngwèn, dìtiězhàn zài nǎlǐ?",
+    "target_en": "Excuse me, where is the subway station?"
+  },
+  {
+    "id": "s3",
+    "hsk": 2,
+    "scene_zh": "自我介绍",
+    "scene_en": "Introducing yourself",
+    "prompt_zh": "第一天上课，老师请你做自我介绍。请用中文介绍你的名字、国家和爱好。",
+    "prompt_en": "It's the first day of class and the teacher asks you to introduce yourself. Give your name, country and hobbies in Chinese.",
+    "target_zh": "你好，我叫安娜，来自法国，我喜欢画画。",
+    "target_pinyin": "Nǐ hǎo, wǒ jiào Ānnà, láizì Fǎguó, wǒ xǐhuan huàhuà.",
+    "target_en": "Hi, I'm Anna, from France, and I like painting."
+  },
+  {
+    "id": "s4",
+    "hsk": 2,
+    "scene_zh": "买东西讲价",
+    "scene_en": "Shopping and bargaining",
+    "prompt_zh": "你在市场买纪念品，我是卖家。请用中文问价、讲价。",
+    "prompt_en": "You're buying a souvenir at a market; I'm the seller. Ask the price and bargain in Chinese.",
+    "target_zh": "这个多少钱？太贵了，便宜一点儿吧。",
+    "target_pinyin": "Zhège duōshao qián? Tài guì le, piányi yìdiǎnr ba.",
+    "target_en": "How much is this? That's too expensive—make it a bit cheaper."
+  },
+  {
+    "id": "s5",
+    "hsk": 3,
+    "scene_zh": "看医生",
+    "scene_en": "Seeing a doctor",
+    "prompt_zh": "你感冒了去医院，我是医生。请用中文说说你哪里不舒服。",
+    "prompt_en": "You've caught a cold and go to the hospital; I'm the doctor. Describe your symptoms in Chinese.",
+    "target_zh": "医生，我有点儿不舒服，头疼，还发烧。",
+    "target_pinyin": "Yīshēng, wǒ yǒudiǎnr bù shūfu, tóuténg, hái fāshāo.",
+    "target_en": "Doctor, I feel a bit unwell—I have a headache and a fever."
+  },
+  {
+    "id": "s6",
+    "hsk": 3,
+    "scene_zh": "打电话预约",
+    "scene_en": "Booking by phone",
+    "prompt_zh": "你想预约理发，我是店员。请用中文打电话预约时间。",
+    "prompt_en": "You want to book a haircut; I'm the clerk. Make an appointment by phone in Chinese.",
+    "target_zh": "你好，我想预约明天下午三点的时间。",
+    "target_pinyin": "Nǐ hǎo, wǒ xiǎng yùyuē míngtiān xiàwǔ sān diǎn de shíjiān.",
+    "target_en": "Hello, I'd like to book an appointment for 3 p.m. tomorrow."
+  },
+  {
+    "id": "s7",
+    "hsk": 4,
+    "scene_zh": "约朋友出去",
+    "scene_en": "Inviting a friend out",
+    "prompt_zh": "你想约朋友周末一起活动，我是你的朋友。请用中文提出建议并说明理由。",
+    "prompt_en": "You want to invite a friend out this weekend; I'm your friend. Suggest a plan and give your reason in Chinese.",
+    "target_zh": "周末我打算去爬山，又能锻炼身体又能看风景，你愿意一起去吗？",
+    "target_pinyin": "Zhōumò wǒ dǎsuàn qù páshān, yòu néng duànliàn shēntǐ yòu néng kàn fēngjǐng, nǐ yuànyì yìqǐ qù ma?",
+    "target_en": "I plan to go hiking this weekend—it's good exercise and the views are nice. Would you like to come?"
+  },
+  {
+    "id": "s8",
+    "hsk": 4,
+    "scene_zh": "租房",
+    "scene_en": "Renting an apartment",
+    "prompt_zh": "你在看房子，我是房东。请用中文说说你的看法和顾虑。",
+    "prompt_en": "You're viewing an apartment; I'm the landlord. Share your opinion and concerns in Chinese.",
+    "target_zh": "我觉得这个房子位置不错，就是房租有点贵，能不能再商量一下？",
+    "target_pinyin": "Wǒ juéde zhège fángzi wèizhi búcuò, jiùshì fángzū yǒudiǎn guì, néng bu néng zài shāngliang yíxià?",
+    "target_en": "I think the location is good; it's just that the rent is a bit high—could we discuss it a little?"
+  },
+  {
+    "id": "s9",
+    "hsk": 5,
+    "scene_zh": "谈留学",
+    "scene_en": "Talking about studying abroad",
+    "prompt_zh": "朋友在犹豫要不要出国留学，我是你的朋友。请用中文谈谈你的看法。",
+    "prompt_en": "A friend is unsure whether to study abroad; I'm your friend. Share your view in Chinese.",
+    "target_zh": "出国留学既能开阔眼界，也能锻炼独立生活的能力，我觉得很值得。",
+    "target_pinyin": "Chūguó liúxué jì néng kāikuò yǎnjiè, yě néng duànliàn dúlì shēnghuó de nénglì, wǒ juéde hěn zhídé.",
+    "target_en": "Studying abroad broadens your horizons and builds independence—I think it's well worth it."
+  }
+]

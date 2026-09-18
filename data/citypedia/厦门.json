@@ -1,0 +1,111 @@
+{
+  "key": "厦门",
+  "name_zh": "厦门",
+  "name_en": "Xiamen",
+  "province": "福建",
+  "tier": "second",
+  "intro_zh": "厦门是福建沿海城市，依山傍海，气候宜人，以鼓浪屿的琴声与清新文艺的气质闻名。",
+  "intro_en": "Xiamen is a coastal city in Fujian, set between hills and sea with a pleasant climate, famed for the piano music of Gulangyu and its fresh, artsy vibe.",
+  "culture_zh": "厦门融合了闽南文化与海洋气息，闽南语、功夫茶、海鲜与南音构成了独特的生活方式，鼓浪屿上中西建筑并存。",
+  "culture_en": "Xiamen blends Minnan culture with sea air; the Hokkien language, gongfu tea, seafood and Nanyin music form a distinctive way of life, while East and West coexist on Gulangyu.",
+  "attractions": [
+    {
+      "name_zh": "鼓浪屿",
+      "name_en": "Gulangyu Island",
+      "desc_zh": "世界文化遗产，钢琴之岛，万国建筑与花园。",
+      "desc_en": "A World Heritage 'piano island' of gardens and architecture from many nations.",
+      "img": "厦门 鼓浪屿",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "厦门",
+        "鼓浪屿"
+      ],
+      "category": "heritage"
+    },
+    {
+      "name_zh": "南普陀寺",
+      "name_en": "Nanputuo Temple",
+      "desc_zh": "依山面海的千年古刹，香火鼎盛。",
+      "desc_en": "A thousand-year-old temple between hill and sea, busy with worshippers.",
+      "img": "厦门 南普陀寺",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "厦门",
+        "南普陀寺"
+      ],
+      "category": "heritage"
+    },
+    {
+      "name_zh": "厦门大学",
+      "name_en": "Xiamen University",
+      "desc_zh": "中国最美校园之一，依山傍海。",
+      "desc_en": "One of China's most beautiful campuses, nestled between mountain and sea.",
+      "img": "厦门大学 校园",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "厦门",
+        "厦门大学"
+      ],
+      "category": "heritage"
+    }
+  ],
+  "foods": [
+    {
+      "name_zh": "沙茶面",
+      "name_en": "Satay Noodles",
+      "desc_zh": "厦门特色，沙茶汤底浓郁鲜香。",
+      "desc_en": "A Xiamen specialty: noodles in a rich, savory satay broth.",
+      "img": "厦门 沙茶面",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "厦门",
+        "沙茶面"
+      ],
+      "category": "food"
+    },
+    {
+      "name_zh": "海蛎煎",
+      "name_en": "Oyster Omelette",
+      "desc_zh": "闽南风味，鲜嫩的海蛎裹蛋煎制。",
+      "desc_en": "A Minnan favorite: tender oysters fried in egg.",
+      "img": "海蛎煎 闽南",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "厦门",
+        "海蛎煎"
+      ],
+      "category": "food"
+    },
+    {
+      "name_zh": "土笋冻",
+      "name_en": "Tusundong",
+      "desc_zh": "用海产沙虫熬制的冻品，Q弹爽口。",
+      "desc_en": "A chilled jelly made from sea worms—springy and refreshing.",
+      "img": "厦门 土笋冻",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "厦门",
+        "土笋冻"
+      ],
+      "category": "food"
+    }
+  ]
+}

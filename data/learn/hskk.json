@@ -1,0 +1,44 @@
+[
+  {
+    "id": "k1",
+    "band": "beginner",
+    "prompt_zh": "请介绍一下你的家庭。（说 3~5 句）",
+    "prompt_en": "Please introduce your family. (3–5 sentences)",
+    "sample_zh": "我家有四口人，爸爸、妈妈、我和妹妹。爸爸是医生，妈妈是老师。我很爱我的家。"
+  },
+  {
+    "id": "k4",
+    "band": "beginner",
+    "prompt_zh": "请说一说你现在住的城市，你喜欢它吗？",
+    "prompt_en": "Talk about the city you live in now. Do you like it?",
+    "sample_zh": "我现在住在西安。西安是一座古老的城市，有很多名胜古迹。这里的小吃很好吃，人也很热情，我很喜欢这里。"
+  },
+  {
+    "id": "k2",
+    "band": "intermediate",
+    "prompt_zh": "请说说你最喜欢的一个节日，以及你为什么喜欢它。",
+    "prompt_en": "Talk about your favorite festival and why you like it.",
+    "sample_zh": "我最喜欢春节。因为春节的时候全家人都会回家，一起吃年夜饭、放鞭炮，非常热闹，也很温暖。"
+  },
+  {
+    "id": "k5",
+    "band": "intermediate",
+    "prompt_zh": "请谈谈你的一个爱好，以及它给你带来了什么。",
+    "prompt_en": "Talk about a hobby of yours and what it brings you.",
+    "sample_zh": "我的爱好是跑步。每天早上跑步让我精神很好，也让我的身体更健康。坚持一件事还能让我变得更有耐心。"
+  },
+  {
+    "id": "k3",
+    "band": "advanced",
+    "prompt_zh": "有人说手机让人们更亲近，也有人说手机让人们更疏远。请谈谈你的看法。",
+    "prompt_en": "Some say phones bring people closer, others say they push people apart. Share your view.",
+    "sample_zh": "我认为手机本身是中性的，关键在于怎么使用。它让远方的人随时联系，但如果在聚会上只看手机，反而会忽略身边的人。所以我们应该合理使用手机。"
+  },
+  {
+    "id": "k6",
+    "band": "advanced",
+    "prompt_zh": "随着人工智能的发展，有人担心很多工作会被机器取代。请谈谈你的看法。",
+    "prompt_en": "As AI develops, some worry many jobs will be replaced by machines. Share your view.",
+    "sample_zh": "我认为人工智能会取代一些重复性的工作，但同时也会创造新的岗位。与其担心被取代，不如学习如何与人工智能合作，不断提升自己的能力，这样才能适应时代的变化。"
+  }
+]

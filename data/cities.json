@@ -1,0 +1,92 @@
+[
+  {
+    "id": "xian",
+    "province": "shaanxi",
+    "name_zh": "西安市",
+    "short_zh": "西安",
+    "name_en": "Xi'an",
+    "hasContent": true,
+    "intro_zh": "十三朝古都，丝绸之路起点。城墙、钟楼、兵马俑与古乐，处处是盛唐气象。",
+    "intro_en": "Ancient capital of thirteen dynasties and the start of the Silk Road — city walls, the Bell Tower, the Terracotta Army and ancient music."
+  },
+  {
+    "id": "baoji",
+    "province": "shaanxi",
+    "name_zh": "宝鸡市",
+    "short_zh": "宝鸡",
+    "name_en": "Baoji",
+    "hasContent": true,
+    "intro_zh": "炎帝故里、青铜器之乡，周秦文明的重要发源地。",
+    "intro_en": "Hometown of Emperor Yan and 'Land of Bronze', a cradle of the Zhou and Qin civilizations."
+  },
+  {
+    "id": "nanjing",
+    "province": "jiangsu",
+    "name_zh": "南京市",
+    "short_zh": "南京",
+    "name_en": "Nanjing",
+    "hasContent": true,
+    "intro_zh": "六朝古都，江南文枢。秦淮河畔，古今交融。",
+    "intro_en": "Capital of six dynasties and a cultural hub of the Jiangnan region, where past and present meet along the Qinhuai River."
+  },
+  {
+    "id": "zhenjiang",
+    "province": "jiangsu",
+    "name_zh": "镇江市",
+    "short_zh": "镇江",
+    "name_en": "Zhenjiang",
+    "hasContent": true,
+    "intro_zh": "长江与运河交汇的山水名城，「白蛇传」与香醋的故乡。",
+    "intro_en": "A scenic city where the Yangtze meets the Grand Canal — home of the Legend of the White Snake and famous aromatic vinegar."
+  },
+  {
+    "id": "chengdu",
+    "province": "sichuan",
+    "name_zh": "成都市",
+    "short_zh": "成都",
+    "name_en": "Chengdu",
+    "hasContent": true,
+    "intro_zh": "天府之国，大熊猫的家乡。川剧变脸、火锅与悠闲的茶馆生活。",
+    "intro_en": "The 'Land of Abundance' and home of the giant panda — Sichuan opera face-changing, hotpot and leisurely teahouse life."
+  },
+  {
+    "id": "beijing",
+    "province": "beijing",
+    "name_zh": "北京市",
+    "short_zh": "北京",
+    "name_en": "Beijing",
+    "hasContent": true,
+    "intro_zh": "千年古都，故宫、长城、胡同。传统与现代交织的国家中心。",
+    "intro_en": "A thousand-year-old capital — the Forbidden City, the Great Wall and hutongs, where tradition meets the modern."
+  },
+  {
+    "id": "shanghai",
+    "province": "shanghai",
+    "name_zh": "上海市",
+    "short_zh": "上海",
+    "name_en": "Shanghai",
+    "hasContent": true,
+    "intro_zh": "东方明珠，万国建筑。外滩、弄堂与摩登都市的交汇。",
+    "intro_en": "The 'Pearl of the Orient' — the Bund, lane houses and a dazzling modern metropolis."
+  },
+  {
+    "id": "hangzhou",
+    "province": "zhejiang",
+    "name_zh": "杭州市",
+    "short_zh": "杭州",
+    "name_en": "Hangzhou",
+    "hasContent": true,
+    "intro_zh": "上有天堂，下有苏杭。西湖山水、龙井茶香、宋韵流芳。",
+    "intro_en": "'Paradise on earth' — West Lake, Longjing tea and the elegance of the Song dynasty."
+  },
+  {
+    "id": "suzhou",
+    "province": "jiangsu",
+    "name_zh": "苏州市",
+    "short_zh": "苏州",
+    "name_en": "Suzhou",
+    "hasContent": true,
+    "intro_zh": "园林之城，江南水乡。小桥流水、粉墙黛瓦、昆曲评弹。",
+    "intro_en": "City of classical gardens and Jiangnan water towns — bridges, white walls and Kunqu opera."
+  }
+]

@@ -1,0 +1,111 @@
+{
+  "key": "温州",
+  "name_zh": "温州",
+  "name_en": "Wenzhou",
+  "province": "浙江",
+  "tier": "second",
+  "intro_zh": "温州是浙江东南沿海城市，以敢闯敢拼的「温州人」与发达的民营经济闻名，山海兼备，瓯江穿城。",
+  "intro_en": "Wenzhou, on Zhejiang's southeast coast, is famed for its daring entrepreneurs and thriving private economy, with mountains, sea and the Ou River running through it.",
+  "culture_zh": "温州人「白天当老板，晚上睡地板」的创业精神闻名全国；瓯绣、瓯塑等「瓯文化」与山水海岛共同塑造了温州。",
+  "culture_en": "Wenzhou's enterprising spirit is famous nationwide; Ou embroidery and sculpture, together with its mountains, rivers and islands, shape the city's character.",
+  "attractions": [
+    {
+      "name_zh": "雁荡山",
+      "name_en": "Yandang Mountain",
+      "desc_zh": "奇峰飞瀑的名山，灵峰夜景尤为奇绝。",
+      "desc_en": "A famous mountain of strange peaks and waterfalls, magical at night.",
+      "img": "温州 雁荡山",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "温州",
+        "雁荡山"
+      ],
+      "category": "heritage"
+    },
+    {
+      "name_zh": "江心屿",
+      "name_en": "Jiangxin Islet",
+      "desc_zh": "瓯江中的孤屿，东西双塔倒映江中。",
+      "desc_en": "A lone islet in the Ou River with twin pagodas mirrored in the water.",
+      "img": "温州 江心屿 双塔",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "温州",
+        "江心屿"
+      ],
+      "category": "heritage"
+    },
+    {
+      "name_zh": "楠溪江",
+      "name_en": "Nanxi River",
+      "desc_zh": "清澈蜿蜒的江流与古村落，山水田园。",
+      "desc_en": "A clear, winding river among old villages—pastoral scenery.",
+      "img": "温州 楠溪江",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "温州",
+        "楠溪江"
+      ],
+      "category": "heritage"
+    }
+  ],
+  "foods": [
+    {
+      "name_zh": "温州鱼丸",
+      "name_en": "Wenzhou Fish Balls",
+      "desc_zh": "条状鱼丸配酸辣汤，鲜滑爽口。",
+      "desc_en": "Strip-shaped fish balls in a hot-and-sour soup—fresh and smooth.",
+      "img": "温州 鱼丸",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "温州",
+        "温州鱼丸"
+      ],
+      "category": "food"
+    },
+    {
+      "name_zh": "灯盏糕",
+      "name_en": "Dengzhan Cake",
+      "desc_zh": "外酥里嫩的油炸米浆饼，温州街头小吃。",
+      "desc_en": "A deep-fried rice-batter cake, crisp outside and soft within.",
+      "img": "温州 灯盏糕",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "温州",
+        "灯盏糕"
+      ],
+      "category": "food"
+    },
+    {
+      "name_zh": "猪脏粉",
+      "name_en": "Pig Offal Rice Noodles",
+      "desc_zh": "米粉配卤猪杂与鸭血，汤浓味鲜。",
+      "desc_en": "Rice noodles with braised pork offal and duck blood in a rich broth.",
+      "img": "温州 猪脏粉",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "温州",
+        "猪脏粉"
+      ],
+      "category": "food"
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "key": "长春",
+  "name_zh": "长春",
+  "name_en": "Changchun",
+  "province": "吉林",
+  "tier": "second",
+  "intro_zh": "长春是吉林省省会，「汽车城」与「电影城」，曾是伪满洲国的「新京」，宽阔的街道与众多公园让它有「森林城市」之称。",
+  "intro_en": "Changchun, capital of Jilin, is China's 'Auto City' and 'Movie City'. Once the puppet-Manchukuo capital, its broad avenues and many parks earn it the name 'Forest City'.",
+  "culture_zh": "长春有中国汽车工业的摇篮与长影制片厂的光影记忆，伪满皇宫见证近代历史，冬日雾凇与净月潭别有韵味。",
+  "culture_en": "Cradle of China's auto industry and home to the Changchun Film Studio, with the Puppet Palace recalling modern history and winter rime over Jingyue Pool.",
+  "attractions": [
+    {
+      "name_zh": "伪满皇宫博物院",
+      "name_en": "Puppet Emperor's Palace",
+      "desc_zh": "末代皇帝溥仪的伪满皇宫，近代历史见证。",
+      "desc_en": "The puppet palace of last emperor Puyi—a witness to modern history.",
+      "img": "长春 伪满皇宫",
+      "category": "heritage",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "长春",
+        "伪满皇宫博物院"
+      ]
+    },
+    {
+      "name_zh": "净月潭",
+      "name_en": "Jingyue Pool",
+      "desc_zh": "城郊森林环抱的湖泊，四季皆景。",
+      "desc_en": "A lake cradled by suburban forest, scenic in every season.",
+      "img": "长春 净月潭",
+      "category": "heritage",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "长春",
+        "净月潭"
+      ]
+    },
+    {
+      "name_zh": "长影世纪城",
+      "name_en": "Changying Century City",
+      "desc_zh": "电影主题乐园，体验光影特效。",
+      "desc_en": "A film-themed park to experience movie-magic effects.",
+      "img": "长春 长影世纪城",
+      "category": "modern",
+      "hskRange": [
+        2,
+        5
+      ],
+      "refs": [
+        "长春",
+        "长影世纪城"
+      ]
+    }
+  ],
+  "foods": [
+    {
+      "name_zh": "锅包肉",
+      "name_en": "Guobaorou",
+      "desc_zh": "酸甜酥脆的炸里脊，东北人的心头好。",
+      "desc_en": "Sweet-and-sour crispy fried pork, a Northeastern favorite.",
+      "img": "长春 锅包肉",
+      "category": "food",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "长春",
+        "锅包肉"
+      ]
+    },
+    {
+      "name_zh": "朝鲜冷面",
+      "name_en": "Korean Cold Noodles",
+      "desc_zh": "筋道冷面配酸甜汤底，夏日开胃。",
+      "desc_en": "Chewy cold noodles in a sweet-sour broth—refreshing in summer.",
+      "img": "朝鲜冷面",
+      "category": "food",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "长春",
+        "朝鲜冷面"
+      ]
+    },
+    {
+      "name_zh": "酱骨头",
+      "name_en": "Braised Pork Bones",
+      "desc_zh": "大骨慢炖入味，啃骨吸髓最过瘾。",
+      "desc_en": "Slow-braised meaty bones—gnawing them is half the fun.",
+      "img": "东北 酱骨头",
+      "category": "food",
+      "hskRange": [
+        2,
+        4
+      ],
+      "refs": [
+        "长春",
+        "酱骨头"
+      ]
+    }
+  ]
+}
