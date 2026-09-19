@@ -9,6 +9,14 @@
 
 set -euo pipefail
 
+# ⚠ 地图合规改造：生产环境上的 data/geo/world.json 与 data/geo/cn-islands.json
+# 含四处国界修正（藏南、克里米亚、加沙、北塞浦路斯）与南海诸岛/断续线/钓鱼岛图层。
+# 这版改造目前只在本机分支 map-compliance-local 上，尚未推到仓库。
+# 因此：若从仓库重新拉取覆盖部署，地图会悄悄退回未修正版本且不会报错。
+# 覆盖前请先确认 world.json 板块数为 176（未修正版是 177）：
+#   docker exec huanyu-planet node -e "console.log(require('/app/data/geo/world.json').features.length)"
+
+
 cd "$(dirname "$0")/.."
 ROOT="$(pwd)"
 OFFLINE=0
