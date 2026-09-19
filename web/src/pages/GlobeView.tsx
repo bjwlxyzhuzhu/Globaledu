@@ -23,6 +23,8 @@ export default function GlobeView() {
   const nav = useNavigate();
   const [countries, setCountries] = useState<Country[]>([]);
   const [worldGeo, setWorldGeo] = useState<GeoJson | null>(null);
+  // 南海断续线 + 南海诸岛 + 钓鱼岛（由 scripts/gen-cn-islands.mjs 从 china.json 生成）
+  const [islands, setIslands] = useState<GeoJson | null>(null);
   const [err, setErr] = useState(false);
 
   useEffect(() => {
@@ -34,6 +36,10 @@ export default function GlobeView() {
     api
       .geo('world')
       .then((g) => alive && setWorldGeo(g))
+      .catch(() => {});
+    api
+      .geo('cn-islands')
+      .then((g) => alive && setIslands(g))
       .catch(() => {});
     return () => {
       alive = false;
@@ -68,7 +74,7 @@ export default function GlobeView() {
       <div className="absolute inset-0">
         <SpaceBackdrop className="absolute inset-0 w-full h-full z-0" />
         <div className="absolute inset-0 z-10" data-tour="globe">
-          <GlobeCanvas countries={countries} geo={worldGeo} onSelect={handleSelect} />
+          <GlobeCanvas countries={countries} geo={worldGeo} islands={islands} onSelect={handleSelect} />
         </div>
       </div>
 

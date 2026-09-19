@@ -12,6 +12,14 @@ import { regionColor } from '../lib/regionColor';
 import { api } from '../lib/api';
 import type { Province } from '@shared/types';
 
+// china.json 里南海断续线是一个没有名字的要素（adcode 100000_JD，JD = 九段）。
+// 它与 34 个省级行政区并列在同一份 GeoJSON 中，但并不是省份：
+// 若按省份渲染，name 为空会导致 provs.find 落空，点一下断续线会跳到 /city/place_ 空页面，
+// 悬停还会弹一个空提示框。因此配色、提示与点击都要单独排除。
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const isNanhai = (f: any): boolean =>
+  f?.properties?.adcode === '100000_JD' || f?.properties?.adchar === 'JD';
+
 // 中国省份地图：真实地势瓦片底图 + 蒙版（只显示中国板块）+ 省份覆盖 + 北京首都红点 + 中英标注。
 export default function ChinaMap() {
   const { t, i18n } = useTranslation();
@@ -44,6 +52,10 @@ export default function ChinaMap() {
         const layer = L.geoJSON(g, {
           // eslint-disable-next-line @typescript-eslint/no-explicit-any
           style: (f: any) => {
+            // 断续线按制图惯例画成金色细线、不填充，不参与省份配色
+            if (isNanhai(f)) {
+              return { color: 'rgba(245,197,66,0.95)', weight: 1.6, fillOpacity: 0 };
+            }
             const name = f?.properties?.name as string;
             const c = content.has(name);
             return c
@@ -52,6 +64,10 @@ export default function ChinaMap() {
           },
           // eslint-disable-next-line @typescript-eslint/no-explicit-any
           onEachFeature: (f: any, lyr: any) => {
+            if (isNanhai(f)) {
+              lyr.bindTooltip('南海断续线 · Nine-dash Line', { sticky: true, className: 'hyxq-tip' });
+              return; // 不绑点击、不绑悬停配色
+            }
             const name = f?.properties?.name as string;
             const en = PROVINCE_EN[name];
             lyr.on('mouseover', () => lyr.setStyle({ weight: 2.6, color: '#fff7d6', fillOpacity: 0.55 }));

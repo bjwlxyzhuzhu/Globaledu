@@ -14,9 +14,13 @@ import earthBump from '../assets/earth-topology.png';
 interface Props {
   countries: Country[]; // 我们有内容/元数据的国家（含中文名）
   geo: GeoJson | null; // 世界各国 GeoJSON（板块）
+  islands?: GeoJson | null; // 南海断续线 + 南海诸岛 + 钓鱼岛（data/geo/cn-islands.json）
   onSelect: (code: string, name: string, tz: string) => void;
   autoRotate?: boolean;
 }
+
+// 注记分级的相机高度阈值：高于此值只显示「南海诸岛」总注记，低于则展开四个分组。
+const LABEL_TIER_ALT = 1;
 
 const flagImg = (iso?: string) =>
   iso && iso !== '-99'
@@ -27,7 +31,7 @@ const flagImg = (iso?: string) =>
 const isChina = (code: string) => code === 'CN' || code === 'TW';
 
 // globe.gl 封装：明亮蓝色弹珠（地形地貌）地球 + 各国板块（悬停凸起+边线高亮+国旗中英名+时区）。
-export default function GlobeCanvas({ countries, geo, onSelect, autoRotate = true }: Props) {
+export default function GlobeCanvas({ countries, geo, islands, onSelect, autoRotate = true }: Props) {
   const ref = useRef<HTMLDivElement>(null);
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const globeRef = useRef<any>(null);
@@ -135,7 +139,16 @@ export default function GlobeCanvas({ countries, geo, onSelect, autoRotate = tru
     };
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const features = (((geo as any)?.features as any[]) || []) as any[];
+    const base = (((geo as any)?.features as any[]) || []) as any[];
+    // 南海诸岛与钓鱼岛并入板块图层：它们带 ISO_A2:'CN'，因此自动与中国同为金色、
+    // 点击同样进省份地图。注意没有并进 world.json 的中国板块本身——前端的
+    // centroidLng/Lat 取顶点平均，700 多个小岛的顶点会把中国质心从华中拖到南海，
+    // 影响相机飞行与标注定位。
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const islandPolys = ((((islands as any)?.features as any[]) || []) as any[]).filter(
+      (f) => f?.geometry?.type === 'Polygon',
+    );
+    const features = [...base, ...islandPolys];
     g.polygonsData(features)
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       .polygonCapColor((f: any) => capColor(f, false))
@@ -173,7 +186,67 @@ export default function GlobeCanvas({ countries, geo, onSelect, autoRotate = tru
       .ringColor((d: Country) => (t: number) =>
         d.code === 'CN' ? `rgba(245,197,66,${1 - t})` : `rgba(63,210,255,${1 - t})`,
       );
-  }, [geo, countries]);
+  }, [geo, countries, islands]);
+
+  // 断续线与岛名注记：两条独立通道，不走板块图层。
+  useEffect(() => {
+    const g = globeRef.current;
+    if (!g || !islands) return;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const feats = (((islands as any).features as any[]) || []) as any[];
+
+    // 断续线：pathsData。金色、线宽 2.5，不参与悬停凸起与点击。
+    const dashes = feats
+      .filter((f) => f?.geometry?.type === 'LineString')
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      .map((f) => (f.geometry.coordinates as number[][]).map((c) => [c[1], c[0]]));
+    g.pathsData(dashes)
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      .pathPoints((d: any) => d)
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      .pathPointLat((p: any) => p[0])
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      .pathPointLng((p: any) => p[1])
+      .pathColor(() => 'rgba(245,197,66,0.95)')
+      .pathStroke(2.5)
+      .pathTransitionDuration(0);
+
+    // 岛名注记：用 HTML 而不是 labelsData —— three 的 3D 文字字体不含中文字形，
+    // 「南沙群岛」会渲染成四个方块。
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const labels = (((islands as any).labels as any[]) || []) as any[];
+    const forAlt = (alt: number) =>
+      labels.filter((l) => l.scope === 'both' || (alt > LABEL_TIER_ALT ? l.scope === 'far' : l.scope === 'near'));
+
+    g.htmlElementsData(forAlt(2.2))
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      .htmlLat((d: any) => d.lat)
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      .htmlLng((d: any) => d.lng)
+      .htmlAltitude(0.01)
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      .htmlElement((d: any) => {
+        const el = document.createElement('div');
+        el.style.cssText =
+          'pointer-events:none;white-space:nowrap;text-align:center;font-family:"Noto Sans SC",system-ui,sans-serif;' +
+          'color:#f5c542;text-shadow:0 0 6px rgba(0,0,0,.95),0 0 2px rgba(0,0,0,1);transform:translate(-50%,-50%)';
+        el.innerHTML =
+          `<div style="font-size:12px;font-weight:700;line-height:1.15">${d.zh}</div>` +
+          `<div style="font-size:9px;opacity:.85;line-height:1.15">${d.en}</div>`;
+        return el;
+      });
+
+    // 缩放时切换注记分级（整球视角下西沙与中沙实际质心只差约 4° 经度，必然压盖）
+    let tier = 2.2 > LABEL_TIER_ALT;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    g.onZoom((pov: any) => {
+      const next = (pov?.altitude ?? 2.2) > LABEL_TIER_ALT;
+      if (next !== tier) {
+        tier = next;
+        g.htmlElementsData(forAlt(pov.altitude));
+      }
+    });
+  }, [islands]);
 
   return <div ref={ref} className="w-full h-full" />;
 }
