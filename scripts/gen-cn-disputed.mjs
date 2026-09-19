@@ -108,7 +108,8 @@ for (const f of src.features) {
   const coords = normalize(multi(f));
   features.push({
     type: 'Feature',
-    properties: { kind: 'disputed', id: f.properties.id, zh: f.properties.zh, en: f.properties.en },
+    // 不带 ISO_A2，因此不会被当成某个国家；NAME 只用于配色，界面上不显示。
+    properties: { kind: 'disputed', id: f.properties.id, zh: f.properties.zh, en: f.properties.en, NAME: f.properties.id },
     geometry: coords.length === 1
       ? { type: 'Polygon', coordinates: coords[0] }
       : { type: 'MultiPolygon', coordinates: coords },

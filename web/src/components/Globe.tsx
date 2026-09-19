@@ -20,9 +20,6 @@ interface Props {
   autoRotate?: boolean;
 }
 
-// 注记分级的相机高度阈值：高于此值只显示「南海诸岛」总注记，低于则展开四个分组。
-const LABEL_TIER_ALT = 1;
-
 const flagImg = (iso?: string) =>
   iso && iso !== '-99'
     ? `<img src="${flagUrl(iso, 'w40')}" alt="${iso}" style="width:34px;height:auto;border-radius:3px;box-shadow:0 1px 5px rgba(0,0,0,.5)"/>`
@@ -107,7 +104,6 @@ export default function GlobeCanvas({ countries, geo, islands, disputed, onSelec
     const baseAlt = (f: any) => (isChina(iso(f)) || byIso.get(iso(f))?.hasContent ? 0.02 : 0.012);
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const capColor = (f: any, hi: boolean) => {
-      if (f?.properties?.kind === 'disputed') return hi ? 'rgba(168,172,186,0.42)' : 'rgba(150,155,170,0.30)';
       const code = iso(f);
       const c = byIso.get(code);
       if (isChina(code)) return hi ? 'rgba(245,197,66,0.95)' : 'rgba(245,197,66,0.72)';
@@ -118,8 +114,6 @@ export default function GlobeCanvas({ countries, geo, islands, disputed, onSelec
     };
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const strokeColor = (f: any, hi: boolean) => {
-      // 争议控制线：浅灰细线。真正的虚线由下面 pathsData 那条通道画。
-      if (f?.properties?.kind === 'disputed') return 'rgba(210,214,226,0.55)';
       if (hi) return '#fff7d6';
       if (isChina(iso(f))) return 'rgba(245,197,66,0.7)';
       return byIso.get(iso(f)) ? 'rgba(150,200,255,0.75)' : 'rgba(170,190,240,0.4)';
@@ -220,72 +214,19 @@ export default function GlobeCanvas({ countries, geo, islands, disputed, onSelec
       .filter((f) => f?.geometry?.type === 'LineString')
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       .map((f) => (f.geometry.coordinates as number[][]).map((c) => [c[1], c[0]]));
-    // 争议控制线：取争议区外环画成虚线（规范：争议控制线/停火线用虚线，主权国界用实线）
-    const ringsOf = (f: any): number[][][] =>
-      f.geometry.type === 'MultiPolygon' ? f.geometry.coordinates.map((p: any) => p[0]) : [f.geometry.coordinates[0]];
-    const disputedLines = dFeats
-      .filter((f) => f?.geometry?.type === 'Polygon' || f?.geometry?.type === 'MultiPolygon')
-      .flatMap((f) => ringsOf(f))
-      .map((ring) => ({ pts: ring.map((c) => [c[1], c[0]]), dashed: true }));
-    const solidDashes = dashes.map((d: any) => ({ pts: d, dashed: false }));
-
-    g.pathsData([...solidDashes, ...disputedLines])
+    g.pathsData(dashes)
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      .pathPoints((d: any) => d.pts)
+      .pathPoints((d: any) => d)
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       .pathPointLat((p: any) => p[0])
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       .pathPointLng((p: any) => p[1])
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      .pathColor((d: any) => (d.dashed ? 'rgba(214,218,230,0.7)' : 'rgba(245,197,66,0.95)'))
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      .pathStroke((d: any) => (d.dashed ? 1.1 : 2.5))
-      // 虚线：争议控制线；断续线本身是十段独立线，保持实线
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      .pathDashLength((d: any) => (d.dashed ? 0.035 : 1))
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      .pathDashGap((d: any) => (d.dashed ? 0.022 : 0))
-      .pathDashAnimateTime(0)
+      .pathColor(() => 'rgba(245,197,66,0.95)')
+      .pathStroke(2.5)
       .pathTransitionDuration(0);
 
-    // 岛名注记：用 HTML 而不是 labelsData —— three 的 3D 文字字体不含中文字形，
-    // 「南沙群岛」会渲染成四个方块。
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const labels = [
-      ...((((islands as any).labels as any[]) || []) as any[]),
-      ...((((disputed as any)?.labels as any[]) || []) as any[]),
-    ];
-    const forAlt = (alt: number) =>
-      labels.filter((l) => l.scope === 'both' || (alt > LABEL_TIER_ALT ? l.scope === 'far' : l.scope === 'near'));
-
-    g.htmlElementsData(forAlt(2.2))
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      .htmlLat((d: any) => d.lat)
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      .htmlLng((d: any) => d.lng)
-      .htmlAltitude(0.01)
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      .htmlElement((d: any) => {
-        const el = document.createElement('div');
-        el.style.cssText =
-          'pointer-events:none;white-space:nowrap;text-align:center;font-family:"Noto Sans SC",system-ui,sans-serif;' +
-          'color:#f5c542;text-shadow:0 0 6px rgba(0,0,0,.95),0 0 2px rgba(0,0,0,1);transform:translate(-50%,-50%)';
-        el.innerHTML =
-          `<div style="font-size:12px;font-weight:700;line-height:1.15">${d.zh}</div>` +
-          `<div style="font-size:9px;opacity:.85;line-height:1.15">${d.en}</div>`;
-        return el;
-      });
-
-    // 缩放时切换注记分级（整球视角下西沙与中沙实际质心只差约 4° 经度，必然压盖）
-    let tier = 2.2 > LABEL_TIER_ALT;
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    g.onZoom((pov: any) => {
-      const next = (pov?.altitude ?? 2.2) > LABEL_TIER_ALT;
-      if (next !== tier) {
-        tier = next;
-        g.htmlElementsData(forAlt(pov.altitude));
-      }
-    });
+    // 地名注记整体移除：按要求地球仪上不出文字，岛屿与争议地区都不加注记。
+    g.htmlElementsData([]);
   }, [islands, disputed]);
 
   return <div ref={ref} className="w-full h-full" />;
