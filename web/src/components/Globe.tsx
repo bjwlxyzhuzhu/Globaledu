@@ -150,9 +150,8 @@ export default function GlobeCanvas({ countries, geo, islands, disputed, onSelec
     // centroidLng/Lat 取顶点平均，700 多个小岛的顶点会把中国质心从华中拖到南海，
     // 影响相机飞行与标注定位。
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const islandPolys = ((((islands as any)?.features as any[]) || []) as any[]).filter(
-      (f) => f?.geometry?.type === 'Polygon',
-    );
+    const islandFeats = (((islands as any)?.features as any[]) || []) as any[];
+    const islandPolys = islandFeats.filter((f) => f?.geometry?.type === 'Polygon');
     // 争议地区：已从各国板块中扣除，这里单独补回来渲染。
     // 李老师要求「争议不用很明显出来」，因此用低饱和中性色、不发光、不参与悬停凸起。
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -181,7 +180,7 @@ export default function GlobeCanvas({ countries, geo, islands, disputed, onSelec
       })
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       .onPolygonClick((f: any) => {
-        if (f?.properties?.kind === 'disputed') return; // 争议地区不做归属，不导航
+        if (f?.properties?.kind === 'disputed' || f?.properties?.kind === 'dash') return;
         const code = iso(f);
         if (!code || code === '-99') return;
         const c = byIsoRef.current.get(code);
@@ -200,16 +199,14 @@ export default function GlobeCanvas({ countries, geo, islands, disputed, onSelec
       );
   }, [geo, countries, islands, disputed]);
 
-  // 断续线与岛名注记：两条独立通道，不走板块图层。
+  // 南海断续线：画每段的中心线，细线、柔和金色、贴着海面。
+  // 李老师反馈原来「粗的黄色断断续续的线，像衣服破了打补丁」——症结是当时
+  // 按细长闭合块的外环描边，等于绕了一圈，线又粗又回头。
   useEffect(() => {
     const g = globeRef.current;
-    if (!g || !islands) return;
+    if (!g) return;
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const dFeats = (((disputed as any)?.features as any[]) || []) as any[];
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const feats = (((islands as any).features as any[]) || []) as any[];
-
-    // 断续线：pathsData。金色、线宽 2.5，不参与悬停凸起与点击。
+    const feats = (((islands as any)?.features as any[]) || []) as any[];
     const dashes = feats
       .filter((f) => f?.geometry?.type === 'LineString')
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -221,11 +218,10 @@ export default function GlobeCanvas({ countries, geo, islands, disputed, onSelec
       .pathPointLat((p: any) => p[0])
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       .pathPointLng((p: any) => p[1])
-      .pathColor(() => 'rgba(245,197,66,0.95)')
-      .pathStroke(2.5)
+      .pathColor(() => 'rgba(240,200,104,0.72)')
+      .pathStroke(0.9)
+      .pathPointAlt(0.005)
       .pathTransitionDuration(0);
-
-    // 地名注记整体移除：按要求地球仪上不出文字，岛屿与争议地区都不加注记。
     g.htmlElementsData([]);
   }, [islands, disputed]);
 
