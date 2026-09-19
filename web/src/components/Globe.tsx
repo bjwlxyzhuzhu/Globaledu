@@ -15,6 +15,7 @@ interface Props {
   countries: Country[]; // 我们有内容/元数据的国家（含中文名）
   geo: GeoJson | null; // 世界各国 GeoJSON（板块）
   islands?: GeoJson | null; // 南海断续线 + 南海诸岛 + 钓鱼岛（data/geo/cn-islands.json）
+  disputed?: GeoJson | null; // 国际争议地区（data/geo/cn-disputed.json）
   onSelect: (code: string, name: string, tz: string) => void;
   autoRotate?: boolean;
 }
@@ -31,7 +32,7 @@ const flagImg = (iso?: string) =>
 const isChina = (code: string) => code === 'CN' || code === 'TW';
 
 // globe.gl 封装：明亮蓝色弹珠（地形地貌）地球 + 各国板块（悬停凸起+边线高亮+国旗中英名+时区）。
-export default function GlobeCanvas({ countries, geo, islands, onSelect, autoRotate = true }: Props) {
+export default function GlobeCanvas({ countries, geo, islands, disputed, onSelect, autoRotate = true }: Props) {
   const ref = useRef<HTMLDivElement>(null);
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const globeRef = useRef<any>(null);
@@ -106,6 +107,7 @@ export default function GlobeCanvas({ countries, geo, islands, onSelect, autoRot
     const baseAlt = (f: any) => (isChina(iso(f)) || byIso.get(iso(f))?.hasContent ? 0.02 : 0.012);
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const capColor = (f: any, hi: boolean) => {
+      if (f?.properties?.kind === 'disputed') return hi ? 'rgba(168,172,186,0.42)' : 'rgba(150,155,170,0.30)';
       const code = iso(f);
       const c = byIso.get(code);
       if (isChina(code)) return hi ? 'rgba(245,197,66,0.95)' : 'rgba(245,197,66,0.72)';
@@ -116,12 +118,21 @@ export default function GlobeCanvas({ countries, geo, islands, onSelect, autoRot
     };
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const strokeColor = (f: any, hi: boolean) => {
+      // 争议控制线：浅灰细线。真正的虚线由下面 pathsData 那条通道画。
+      if (f?.properties?.kind === 'disputed') return 'rgba(210,214,226,0.55)';
       if (hi) return '#fff7d6';
       if (isChina(iso(f))) return 'rgba(245,197,66,0.7)';
       return byIso.get(iso(f)) ? 'rgba(150,200,255,0.75)' : 'rgba(170,190,240,0.4)';
     };
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const label = (f: any) => {
+      if (f?.properties?.kind === 'disputed') {
+        // 规范：地图 UI 弹窗只放地名，不做单方面归属定性
+        return `<div style="background:rgba(8,12,30,.93);border:1px solid rgba(190,196,214,.5);padding:6px 10px;border-radius:10px;color:#e6eaf5;font-size:12px;font-family:'Noto Sans SC',system-ui,sans-serif">
+          <div style="font-weight:700">${f.properties.zh}</div>
+          <div style="font-size:11px;opacity:.75">${f.properties.en}</div>
+        </div>`;
+      }
       const code = iso(f);
       const c = byIso.get(code);
       // 台湾此级并入中国，不单独标注「台湾」
@@ -148,7 +159,13 @@ export default function GlobeCanvas({ countries, geo, islands, onSelect, autoRot
     const islandPolys = ((((islands as any)?.features as any[]) || []) as any[]).filter(
       (f) => f?.geometry?.type === 'Polygon',
     );
-    const features = [...base, ...islandPolys];
+    // 争议地区：已从各国板块中扣除，这里单独补回来渲染。
+    // 李老师要求「争议不用很明显出来」，因此用低饱和中性色、不发光、不参与悬停凸起。
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const disputedPolys = ((((disputed as any)?.features as any[]) || []) as any[]).filter(
+      (f) => f?.geometry?.type === 'Polygon' || f?.geometry?.type === 'MultiPolygon',
+    );
+    const features = [...base, ...islandPolys, ...disputedPolys];
     g.polygonsData(features)
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       .polygonCapColor((f: any) => capColor(f, false))
@@ -170,6 +187,7 @@ export default function GlobeCanvas({ countries, geo, islands, onSelect, autoRot
       })
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       .onPolygonClick((f: any) => {
+        if (f?.properties?.kind === 'disputed') return; // 争议地区不做归属，不导航
         const code = iso(f);
         if (!code || code === '-99') return;
         const c = byIsoRef.current.get(code);
@@ -186,12 +204,14 @@ export default function GlobeCanvas({ countries, geo, islands, onSelect, autoRot
       .ringColor((d: Country) => (t: number) =>
         d.code === 'CN' ? `rgba(245,197,66,${1 - t})` : `rgba(63,210,255,${1 - t})`,
       );
-  }, [geo, countries, islands]);
+  }, [geo, countries, islands, disputed]);
 
   // 断续线与岛名注记：两条独立通道，不走板块图层。
   useEffect(() => {
     const g = globeRef.current;
     if (!g || !islands) return;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const dFeats = (((disputed as any)?.features as any[]) || []) as any[];
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const feats = (((islands as any).features as any[]) || []) as any[];
 
@@ -200,21 +220,41 @@ export default function GlobeCanvas({ countries, geo, islands, onSelect, autoRot
       .filter((f) => f?.geometry?.type === 'LineString')
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       .map((f) => (f.geometry.coordinates as number[][]).map((c) => [c[1], c[0]]));
-    g.pathsData(dashes)
+    // 争议控制线：取争议区外环画成虚线（规范：争议控制线/停火线用虚线，主权国界用实线）
+    const ringsOf = (f: any): number[][][] =>
+      f.geometry.type === 'MultiPolygon' ? f.geometry.coordinates.map((p: any) => p[0]) : [f.geometry.coordinates[0]];
+    const disputedLines = dFeats
+      .filter((f) => f?.geometry?.type === 'Polygon' || f?.geometry?.type === 'MultiPolygon')
+      .flatMap((f) => ringsOf(f))
+      .map((ring) => ({ pts: ring.map((c) => [c[1], c[0]]), dashed: true }));
+    const solidDashes = dashes.map((d: any) => ({ pts: d, dashed: false }));
+
+    g.pathsData([...solidDashes, ...disputedLines])
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      .pathPoints((d: any) => d)
+      .pathPoints((d: any) => d.pts)
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       .pathPointLat((p: any) => p[0])
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       .pathPointLng((p: any) => p[1])
-      .pathColor(() => 'rgba(245,197,66,0.95)')
-      .pathStroke(2.5)
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      .pathColor((d: any) => (d.dashed ? 'rgba(214,218,230,0.7)' : 'rgba(245,197,66,0.95)'))
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      .pathStroke((d: any) => (d.dashed ? 1.1 : 2.5))
+      // 虚线：争议控制线；断续线本身是十段独立线，保持实线
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      .pathDashLength((d: any) => (d.dashed ? 0.035 : 1))
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      .pathDashGap((d: any) => (d.dashed ? 0.022 : 0))
+      .pathDashAnimateTime(0)
       .pathTransitionDuration(0);
 
     // 岛名注记：用 HTML 而不是 labelsData —— three 的 3D 文字字体不含中文字形，
     // 「南沙群岛」会渲染成四个方块。
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const labels = (((islands as any).labels as any[]) || []) as any[];
+    const labels = [
+      ...((((islands as any).labels as any[]) || []) as any[]),
+      ...((((disputed as any)?.labels as any[]) || []) as any[]),
+    ];
     const forAlt = (alt: number) =>
       labels.filter((l) => l.scope === 'both' || (alt > LABEL_TIER_ALT ? l.scope === 'far' : l.scope === 'near'));
 
@@ -246,7 +286,7 @@ export default function GlobeCanvas({ countries, geo, islands, onSelect, autoRot
         g.htmlElementsData(forAlt(pov.altitude));
       }
     });
-  }, [islands]);
+  }, [islands, disputed]);
 
   return <div ref={ref} className="w-full h-full" />;
 }

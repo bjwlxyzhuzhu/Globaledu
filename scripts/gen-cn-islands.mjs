@@ -102,14 +102,16 @@ const labels = [
   { id: 'zangnan', zh: '藏南地区', en: 'Zangnan', lng: 93.5, lat: 28.0, scope: 'near' },
   { id: 'aksai', zh: '阿克赛钦', en: 'Aksai Chin', lng: 79.12, lat: 34.84, scope: 'near' },
   // —— 南海诸岛 ——
-  { id: 'nanhai', zh: '南海诸岛', en: 'South China Sea Islands', lng: 114.0, lat: 12.5, scope: 'far' },
+  // 李老师反馈：整球视角下这些注记相对实际面积显得过大，故一律降为 near 级，
+  // 只在拉近后出现。规范「全局小比例尺只显示国家名称」本就是这个口径。
+  { id: 'nanhai', zh: '南海诸岛', en: 'South China Sea Islands', lng: 114.0, lat: 12.5, scope: 'near' },
   { id: 'dongsha', zh: '东沙群岛', en: 'Dongsha Islands', lng: 116.72, lat: 20.70, scope: 'near' },
   // 西沙与中沙的锚点做了错开，两个点都仍在各自群岛的实际范围内
   { id: 'xisha', zh: '西沙群岛', en: 'Xisha Islands', lng: 111.6, lat: 16.9, scope: 'near' },
   { id: 'zhongsha', zh: '中沙群岛', en: 'Zhongsha Islands', lng: 115.9, lat: 15.0, scope: 'near' },
   { id: 'nansha', zh: '南沙群岛', en: 'Nansha Islands', lng: 114.5, lat: 10.0, scope: 'near' },
   // 钓鱼岛三块彼此只隔 20–110 公里，任何缩放下分开标注都会压盖，固定用一个注记
-  { id: 'diaoyu', zh: '钓鱼岛', en: 'Diaoyu Islands', lng: 123.478, lat: 25.744, scope: 'both' },
+  { id: 'diaoyu', zh: '钓鱼岛', en: 'Diaoyu Islands', lng: 123.478, lat: 25.744, scope: 'near' },
 ];
 
 const out = { type: 'FeatureCollection', labels, features };
