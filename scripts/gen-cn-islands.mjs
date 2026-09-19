@@ -82,7 +82,26 @@ for (const poly of diaoyu) {
 // ── 4. 注记锚点（按相机高度分级，避免互相压盖）────────────────────────
 // 整球视角下西沙与中沙实际质心只差约 4° 经度（屏幕约 30px），而标签宽约 70px，
 // 必然压盖，因此像纸质地图那样按比例尺分级：拉远只显示总注记，拉近才展开分组。
+// 这与《地球地图界面标注规范清单》的交互规则一致：
+// 「全局小比例尺只显示国家名称，放大至指定层级才加载注记」。
+//
+// 除南海诸岛外，这里还承载规范清单「中国领土区域（强制）」要求的文字标注：
+// 台湾省、钓鱼岛、赤尾屿、藏南地区、阿克赛钦。
+const taiwanMain = parts(byName('台湾省')).filter((p) => p[0].some((c) => c[0] < 123));
+const twAnchor = centroid(
+  taiwanMain.reduce((a, p) => (p[0].length > a[0].length ? p : a), taiwanMain[0])[0],
+);
+
 const labels = [
+  // —— 中国领土区域（强制）——
+  { id: 'taiwan', zh: '台湾省', en: 'Taiwan Province', lng: twAnchor[0], lat: twAnchor[1], scope: 'near' },
+  // 赤尾屿单独标注：规范清单明确要求，与钓鱼岛分列
+  { id: 'chiwei', zh: '赤尾屿', en: 'Chiwei Islet', lng: 124.568, lat: 25.922, scope: 'near' },
+  // 藏南与阿克赛钦：边界已划入中国，此处补规范要求的地名注记。
+  // 严禁使用印度单方面地名，故只标「藏南地区」。
+  { id: 'zangnan', zh: '藏南地区', en: 'Zangnan', lng: 93.5, lat: 28.0, scope: 'near' },
+  { id: 'aksai', zh: '阿克赛钦', en: 'Aksai Chin', lng: 79.12, lat: 34.84, scope: 'near' },
+  // —— 南海诸岛 ——
   { id: 'nanhai', zh: '南海诸岛', en: 'South China Sea Islands', lng: 114.0, lat: 12.5, scope: 'far' },
   { id: 'dongsha', zh: '东沙群岛', en: 'Dongsha Islands', lng: 116.72, lat: 20.70, scope: 'near' },
   // 西沙与中沙的锚点做了错开，两个点都仍在各自群岛的实际范围内
