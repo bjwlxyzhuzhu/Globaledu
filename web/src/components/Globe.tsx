@@ -199,29 +199,11 @@ export default function GlobeCanvas({ countries, geo, islands, disputed, onSelec
       );
   }, [geo, countries, islands, disputed]);
 
-  // 南海断续线：画每段的中心线，细线、柔和金色、贴着海面。
-  // 李老师反馈原来「粗的黄色断断续续的线，像衣服破了打补丁」——症结是当时
-  // 按细长闭合块的外环描边，等于绕了一圈，线又粗又回头。
+  // 断续线与地名注记均已按要求移除，这里只负责清空这两条图层。
   useEffect(() => {
     const g = globeRef.current;
     if (!g) return;
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const feats = (((islands as any)?.features as any[]) || []) as any[];
-    const dashes = feats
-      .filter((f) => f?.geometry?.type === 'LineString')
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      .map((f) => (f.geometry.coordinates as number[][]).map((c) => [c[1], c[0]]));
-    g.pathsData(dashes)
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      .pathPoints((d: any) => d)
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      .pathPointLat((p: any) => p[0])
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      .pathPointLng((p: any) => p[1])
-      .pathColor(() => 'rgba(240,200,104,0.72)')
-      .pathStroke(0.9)
-      .pathPointAlt(0.005)
-      .pathTransitionDuration(0);
+    g.pathsData([]);
     g.htmlElementsData([]);
   }, [islands, disputed]);
 

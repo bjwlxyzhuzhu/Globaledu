@@ -33,63 +33,13 @@ const centroid = (ring) => {
 
 const features = [];
 
-// ── 1. 南海断续线：china.json 里 adchar === 'JD' 的要素 ──────────────
-// 实际是 10 段（比常说的九段多台湾以东那一段），这是 DataV 官方数据的原样，
-// 也是 2023 年版标准地图的画法。
-// 注意：DataV 里每一段本身是一个细长的闭合多边形，即「一笔短线」的形状，不是折线。
-// 直接按外环描边会沿着细长方块绕一圈，线又粗又回头，看起来像贴在海面上的补丁；
-// 直接填充又不行——各段宽度从 0.76° 到 0.02° 不等，细的那几段填出来几乎看不见。
-// 因此取每段的中心线：把闭合环首尾对折，对应点取中点，得到沿长轴的一条折线，
-// 再用统一的细线宽去画，粗细就与多边形本身的宽窄无关了。
-const centerline = (ring) => {
-  const pts = ring.slice(0, -1); // 去掉闭合重复点
-  const n = pts.length;
-  // 先找出相距最远的两点，即这根「短线」的两端。
-  // 不能想当然地把环的首点当成端点——DataV 的环常常从侧边起笔，
-  // 那样对折出来的中心线会折回去（起点终点几乎重合）。
-  let a = 0, b = 0, best = -1;
-  for (let i = 0; i < n; i++)
-    for (let j = i + 1; j < n; j++) {
-      const d = (pts[i][0] - pts[j][0]) ** 2 + (pts[i][1] - pts[j][1]) ** 2;
-      if (d > best) { best = d; a = i; b = j; }
-    }
-  // 两端把环切成两条链，分别从 a 走到 b
-  const chain = (from, to, step) => {
-    const out = [];
-    for (let i = from; ; i = (i + step + n) % n) {
-      out.push(pts[i]);
-      if (i === to) break;
-    }
-    return out;
-  };
-  const c1 = chain(a, b, 1);
-  const c2 = chain(a, b, -1);
-  // 按比例重采样到同样点数后取中点
-  const steps = Math.max(c1.length, c2.length);
-  const at = (c, t) => {
-    const x = t * (c.length - 1);
-    const i = Math.min(Math.floor(x), c.length - 2);
-    const f = x - i;
-    return [c[i][0] + (c[i + 1][0] - c[i][0]) * f, c[i][1] + (c[i + 1][1] - c[i][1]) * f];
-  };
-  const line = [];
-  for (let k = 0; k < steps; k++) {
-    const t = k / (steps - 1);
-    const p1 = at(c1, t), p2 = at(c2, t);
-    line.push([(p1[0] + p2[0]) / 2, (p1[1] + p2[1]) / 2]);
-  }
-  return line;
-};
-const jd = china.features.find((f) => f.properties.adchar === 'JD');
-if (!jd) throw new Error('china.json 中未找到断续线要素（adchar=JD）');
-parts(jd).forEach((poly, i) => {
-  features.push({
-    type: 'Feature',
-    properties: { kind: 'dash', index: i, name_zh: '南海断续线', name_en: 'Nine-dash Line' },
-    geometry: { type: 'LineString', coordinates: centerline(poly[0]) },
-  });
-});
-const dashCount = parts(jd).length;
+// ── 1. 南海断续线 ──────────────────────────────────────────────────
+// 按要求不再绘制。china.json 里仍有 adchar === 'JD' 的要素，只是不取用。
+// 注意：《地球地图界面标注规范清单》「南海诸岛」一行的禁止项写明「不得省略断续线」，
+// 移除属于对该条的偏离，是产品侧的决定，不是数据缺失。
+// 若要恢复：把下面 dashCount 改回 parts(jd).length，并按 centerline() 取中心线输出
+// LineString，Globe.tsx 的 pathsData 再接回来即可。
+const dashCount = 0;
 
 // ── 2. 南海诸岛：海南省第 1 块起全部 + 广东省东沙群岛 ────────────────
 // 海南省第 0 块是海南岛本身，从第 1 块起才是南海各岛礁。
