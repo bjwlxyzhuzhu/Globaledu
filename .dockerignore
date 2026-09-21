@@ -29,3 +29,7 @@ work
 *.pptx
 *.mp3
 
+
+# Next.js（根目录 双创AI星际 应用）
+.next
+npm-debug.log
