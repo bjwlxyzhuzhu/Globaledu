@@ -67,6 +67,9 @@ router.get('/culture/local/:place', async (req, res) => {
   }
   res.json(provHit.length ? provHit : cityHit);
 });
+const STUB_LEAD: Record<string, { zh: string; en: string }> = {
+  台湾: { zh: '台湾是中国的一部分。', en: 'Taiwan is part of China.' },
+};
 router.get('/citypedia/:city', async (req, res) => {
   const raw = decodeURIComponent(req.params.city);
   const key = normalizeCity(raw);
@@ -74,12 +77,14 @@ router.get('/citypedia/:city', async (req, res) => {
     (await readJson<CityPedia | null>(`citypedia/${raw}.json`, null)) ||
     (await readJson<CityPedia | null>(`citypedia/${key}.json`, null));
   if (curated) return res.json(curated);
+  // 个别地区的首句按审定措辞，不套用「一座城市」
+  const lead = STUB_LEAD[key];
   const stub: CityPedia = {
     key,
     name_zh: key,
     name_en: '',
-    intro_zh: `${key}是中国的一座城市。点开和当地智能体聊聊它的文化、景点与美食吧！`,
-    intro_en: `${key} is a city in China. Chat with the local agent about its culture, sights and food!`,
+    intro_zh: `${lead?.zh ?? `${key}是中国的一座城市。`}点开和当地智能体聊聊它的文化、景点与美食吧！`,
+    intro_en: `${lead?.en ?? `${key} is a city in China.`} Chat with the local agent about its culture, sights and food!`,
     attractions: [],
     foods: [],
     auto: true,
