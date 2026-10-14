@@ -2,7 +2,7 @@ import { useCallback, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import GlobeCanvas from '../components/Globe';
+import GlobeCanvas, { TIANDITU_APPROVAL, usingTianditu } from '../components/Globe';
 import SpaceBackdrop from '../components/SpaceBackdrop';
 import CountrySelect from '../components/CountrySelect';
 import Hud from '../components/Hud';
@@ -105,6 +105,13 @@ export default function GlobeView() {
       <div className="absolute bottom-8 inset-x-0 flex justify-center pointer-events-none px-4 z-20">
         <div className="glass rounded-full px-5 py-2 text-sm text-white/80">{t('globe.hint')}</div>
       </div>
+
+      {/* 标准地图要求：底图审图号常驻可见 */}
+      {usingTianditu && (
+        <div className="absolute bottom-3 right-3 z-20 glass rounded-lg px-3 py-1.5 text-[11px] text-white/85 pointer-events-none">
+          审图号：{TIANDITU_APPROVAL} · 底图来源：天地图
+        </div>
+      )}
 
       <GuidedTour id="globe" steps={GLOBE_TOUR} />
 

@@ -11,6 +11,15 @@ import { flagUrl } from '../lib/flag';
 import earthTexture from '../assets/earth-blue-marble.jpg';
 import earthBump from '../assets/earth-topology.png';
 
+// 天地图（国家地理信息公共服务平台，自然资源部主办）矢量底图，带国界与南海断续线，审图号见 TIANDITU_APPROVAL。
+// key 在构建时由 web/.env 的 VITE_TIANDITU_KEY 注入（浏览器端 key，本来就公开，靠控制台的域名白名单限制）。
+// 没配 key 时退回原来的本地贴图，保证页面照常能打开——但那种情况下不符合标准地图要求。
+const TDT_KEY = (import.meta.env.VITE_TIANDITU_KEY as string | undefined)?.trim();
+export const TIANDITU_APPROVAL = 'GS（2026）4921号';
+export const usingTianditu = !!TDT_KEY;
+const tdtTile = (x: number, y: number, l: number) =>
+  `https://t${(x + y) % 8}.tianditu.gov.cn/DataServer?T=vec_w&x=${x}&y=${y}&l=${l}&tk=${TDT_KEY}`;
+
 interface Props {
   countries: Country[]; // 我们有内容/元数据的国家（含中文名）
   geo: GeoJson | null; // 世界各国 GeoJSON（板块）
@@ -43,8 +52,8 @@ export default function GlobeCanvas({ countries, geo, islands, disputed, onSelec
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const g: any = new (Globe as any)(el, { rendererConfig: { antialias: true, alpha: true } })
       .backgroundColor('rgba(0,0,0,0)') // 透明 → 露出后面的宇宙背景
-      .globeImageUrl(earthTexture)
-      .bumpImageUrl(earthBump)
+      .globeImageUrl(TDT_KEY ? null : earthTexture)
+      .bumpImageUrl(TDT_KEY ? null : earthBump)
       .showAtmosphere(true)
       .atmosphereColor('#86c8ff')
       .atmosphereAltitude(0.22)
@@ -68,9 +77,34 @@ export default function GlobeCanvas({ countries, geo, islands, disputed, onSelec
       /* 控件初始化异常不致命 */
     }
 
+    let boostTimer: ReturnType<typeof setInterval> | undefined;
+    if (TDT_KEY) {
+      g.globeTileEngineUrl(tdtTile).globeTileEngineMaxLevel(10);
+      // 天地图没有 0 级瓦片；默认分级在常用视距只到 2 级、整球糊成一片，国界与断续线细线会被缩没，
+      // 这里整体提高一级（默认视距 3 级、全球 64 块）。4 级以下是整球一次性全部加载，
+      // 实测 4 级（256 块）、5 级（1024 块）都会被天地图限流返回 429、球面出现空洞，也太耗配额；放大后会按视野加载更高级别。
+      // 瓦片图层挂进场景的时机不固定（onGlobeReady 在瓦片模式下也不触发），所以短轮询找到为止，
+      // 改完立刻按当前相机重算一次层级。
+      let tries = 0;
+      boostTimer = setInterval(() => {
+        let done = false;
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        g.scene().traverse((o: any) => {
+          if (Array.isArray(o.thresholds) && 'minLevel' in o) {
+            o.minLevel = 1;
+            o.thresholds = o.thresholds.map((t: number) => t * 2);
+            o.updatePov?.(g.camera());
+            done = true;
+          }
+        });
+        if (done || ++tries > 50) clearInterval(boostTimer);
+      }, 200);
+    }
+
     globeRef.current = g;
     return () => {
       window.removeEventListener('resize', resize);
+      if (boostTimer) clearInterval(boostTimer);
       try {
         g._destructor?.();
       } catch {
@@ -106,6 +140,11 @@ export default function GlobeCanvas({ countries, geo, islands, disputed, onSelec
     const capColor = (f: any, hi: boolean) => {
       const code = iso(f);
       const c = byIso.get(code);
+      // 天地图底图上：中国半透明金色，让底图自带的国界透出来；其它国家平时完全透明、不另画界线
+      if (TDT_KEY) {
+        if (isChina(code)) return hi ? 'rgba(245,197,66,0.6)' : 'rgba(245,197,66,0.42)';
+        return hi ? 'rgba(127,201,255,0.3)' : 'rgba(0,0,0,0)';
+      }
       if (isChina(code)) return hi ? 'rgba(245,197,66,0.95)' : 'rgba(245,197,66,0.72)';
       // 每个国家按名称分配鲜明颜色（与地图省/市一致）；内容国略强
       const nm = (f?.properties?.NAME as string) || code;
@@ -114,6 +153,7 @@ export default function GlobeCanvas({ countries, geo, islands, disputed, onSelec
     };
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const strokeColor = (f: any, hi: boolean) => {
+      if (TDT_KEY) return false; // 界线一律以底图为准
       if (hi) return '#fff7d6';
       if (isChina(iso(f))) return 'rgba(245,197,66,0.7)';
       return byIso.get(iso(f)) ? 'rgba(150,200,255,0.75)' : 'rgba(170,190,240,0.4)';
@@ -162,7 +202,7 @@ export default function GlobeCanvas({ countries, geo, islands, disputed, onSelec
     g.polygonsData(features)
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       .polygonCapColor((f: any) => capColor(f, false))
-      .polygonSideColor(() => 'rgba(99,80,200,0.22)')
+      .polygonSideColor(() => (TDT_KEY ? 'rgba(0,0,0,0)' : 'rgba(99,80,200,0.22)'))
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       .polygonStrokeColor((f: any) => strokeColor(f, false))
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
