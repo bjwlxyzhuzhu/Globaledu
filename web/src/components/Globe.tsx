@@ -52,8 +52,8 @@ export default function GlobeCanvas({ countries, geo, islands, disputed, onSelec
       .globeImageUrl(TDT_KEY ? null : earthTexture)
       .bumpImageUrl(TDT_KEY ? null : earthBump)
       .showAtmosphere(true)
-      .atmosphereColor('#86c8ff')
-      .atmosphereAltitude(0.22)
+      .atmosphereColor(TDT_KEY ? '#3d9bff' : '#86c8ff')
+      .atmosphereAltitude(TDT_KEY ? 0.28 : 0.22)
       .polygonsTransitionDuration(300);
 
     const resize = () => {
@@ -112,6 +112,17 @@ export default function GlobeCanvas({ countries, geo, islands, disputed, onSelec
           };
           g.camera().layers.enable(1);
           o.parent.add(borders);
+          // 蓝色调罩层：影像底图偏绿，与后续全蓝色基调的画面不搭。不改底图本身，
+          // 而是在影像与境界层之间罩一层半透明蓝色球壳（类似中国地图页外围的压暗层），界线仍清晰地盖在最上面。
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          const back = borders.children.find((c: any) => c.isMesh);
+          const tint = new back.constructor(
+            new back.geometry.constructor(g.getGlobeRadius() * 1.0015, 180, 90),
+            new back.material.constructor({ color: '#1f7bff', transparent: true, opacity: 0.32, depthWrite: false }),
+          );
+          tint.layers.set(1);
+          tint.renderOrder = -2;
+          o.parent.add(tint);
           const follow = () => borders.updatePov(g.camera());
           g.controls().addEventListener('change', follow);
           follow();
@@ -119,6 +130,7 @@ export default function GlobeCanvas({ countries, geo, islands, disputed, onSelec
             g.controls().removeEventListener('change', follow);
             borders.clearTiles?.();
             borders.parent?.remove(borders);
+            tint.parent?.remove(tint);
           };
         });
         if (done || ++tries > 50) clearInterval(boostTimer);
