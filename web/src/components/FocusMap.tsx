@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { loadLeaflet } from '../lib/leaflet';
+import { TIANDITU_APPROVAL, addBaseLayers, usingTianditu } from '../lib/tianditu';
 import { maskOutside, redDot } from '../lib/mapFocus';
 
 interface Props {
@@ -25,11 +26,16 @@ export default function FocusMap({ geojson, capital, onCapitalClick, className }
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       .then((L: any) => {
         if (!alive || !elRef.current) return;
-        map = L.map(elRef.current, { zoomControl: false, attributionControl: true, scrollWheelZoom: false });
-        L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', { maxZoom: 18, attribution: 'Esri' }).addTo(map);
-        L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Elevation/World_Hillshade/MapServer/tile/{z}/{y}/{x}', { maxZoom: 18, opacity: 0.22 }).addTo(map);
+        // 滚轮缩放默认关（页面要能正常上下滚动），用左下角 +/- 按钮、双击或双指缩放
+        map = L.map(elRef.current, { zoomControl: false, attributionControl: !usingTianditu, scrollWheelZoom: false });
+        L.control.zoom({ position: 'bottomleft' }).addTo(map);
+        addBaseLayers(L, map);
         maskOutside(L, geojson).addTo(map);
-        const layer = L.geoJSON(geojson, { style: { color: '#f5c542', weight: 1.4, fillColor: '#f5c542', fillOpacity: 0.22 } }).addTo(map);
+        // 天地图底图下不再自己描国界（外国轮廓数据在争议地区未必与标准地图一致），只留淡金色填充
+        const style = usingTianditu
+          ? { stroke: false, fillColor: '#f5c542', fillOpacity: 0.12 }
+          : { color: '#f5c542', weight: 1.4, fillColor: '#f5c542', fillOpacity: 0.22 };
+        const layer = L.geoJSON(geojson, { style, interactive: false }).addTo(map);
         if (capital && Number.isFinite(capital.lat) && Number.isFinite(capital.lng)) {
           redDot(L, capital.lat, capital.lng, capital.label, () => onCapRef.current?.()).addTo(map);
         }
@@ -37,6 +43,7 @@ export default function FocusMap({ geojson, capital, onCapitalClick, className }
           map.fitBounds(layer.getBounds(), { padding: [20, 20] });
           const z = map.getZoom();
           map.setMinZoom(Math.max(2, Math.floor(z) - 1));
+          map.setMaxZoom(12);
           map.setMaxBounds(layer.getBounds().pad(0.5));
         } catch {
           /* ignore */
@@ -51,5 +58,14 @@ export default function FocusMap({ geojson, capital, onCapitalClick, className }
     };
   }, [geojson, capital]);
 
-  return <div ref={elRef} className={className} />;
+  return (
+    <div className={`relative ${className ?? ''}`}>
+      <div ref={elRef} className="absolute inset-0" />
+      {usingTianditu && (
+        <div className="absolute bottom-1 right-1 z-[500] rounded bg-black/55 px-1.5 py-0.5 text-[10px] text-white/80 pointer-events-none">
+          审图号：{TIANDITU_APPROVAL} · 天地图
+        </div>
+      )}
+    </div>
+  );
 }

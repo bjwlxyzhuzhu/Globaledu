@@ -2,7 +2,7 @@ import { useCallback, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import GlobeCanvas from '../components/Globe';
+import GlobeCanvas, { TIANDITU_APPROVAL, usingTianditu } from '../components/Globe';
 import SpaceBackdrop from '../components/SpaceBackdrop';
 import CountrySelect from '../components/CountrySelect';
 import Hud from '../components/Hud';
@@ -23,6 +23,10 @@ export default function GlobeView() {
   const nav = useNavigate();
   const [countries, setCountries] = useState<Country[]>([]);
   const [worldGeo, setWorldGeo] = useState<GeoJson | null>(null);
+  // 南海断续线 + 南海诸岛 + 钓鱼岛（由 scripts/gen-cn-islands.mjs 从 china.json 生成）
+  const [islands, setIslands] = useState<GeoJson | null>(null);
+  // 国际争议地区（由 scripts/gen-cn-disputed.mjs 生成）
+  const [disputed, setDisputed] = useState<GeoJson | null>(null);
   const [err, setErr] = useState(false);
 
   useEffect(() => {
@@ -34,6 +38,14 @@ export default function GlobeView() {
     api
       .geo('world')
       .then((g) => alive && setWorldGeo(g))
+      .catch(() => {});
+    api
+      .geo('cn-islands')
+      .then((g) => alive && setIslands(g))
+      .catch(() => {});
+    api
+      .geo('cn-disputed')
+      .then((g) => alive && setDisputed(g))
       .catch(() => {});
     return () => {
       alive = false;
@@ -68,7 +80,7 @@ export default function GlobeView() {
       <div className="absolute inset-0">
         <SpaceBackdrop className="absolute inset-0 w-full h-full z-0" />
         <div className="absolute inset-0 z-10" data-tour="globe">
-          <GlobeCanvas countries={countries} geo={worldGeo} onSelect={handleSelect} />
+          <GlobeCanvas countries={countries} geo={worldGeo} islands={islands} disputed={disputed} onSelect={handleSelect} />
         </div>
       </div>
 
@@ -93,6 +105,13 @@ export default function GlobeView() {
       <div className="absolute bottom-8 inset-x-0 flex justify-center pointer-events-none px-4 z-20">
         <div className="glass rounded-full px-5 py-2 text-sm text-white/80">{t('globe.hint')}</div>
       </div>
+
+      {/* 标准地图要求：底图审图号常驻可见 */}
+      {usingTianditu && (
+        <div className="absolute bottom-3 right-3 z-20 glass rounded-lg px-3 py-1.5 text-[11px] text-white/85 pointer-events-none">
+          审图号：{TIANDITU_APPROVAL} · 底图来源：天地图
+        </div>
+      )}
 
       <GuidedTour id="globe" steps={GLOBE_TOUR} />
 

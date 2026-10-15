@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import type { GeoJson } from '../lib/api';
 import { tzLabel, centroidLng } from '../lib/tz';
 import { CN_NAME } from '../lib/countryNames';
+import { flagUrl } from '../lib/flag';
 
 interface CountryRow {
   code: string;
@@ -93,7 +94,7 @@ export default function CountrySelect({ geo, onSelect }: Props) {
                         className="w-full flex items-center gap-2 px-2 py-1.5 rounded-lg hover:bg-starviolet/15 text-xs transition"
                       >
                         <img
-                          src={`https://flagcdn.com/w20/${r.code.toLowerCase()}.png`}
+                          src={flagUrl(r.code, 'w20')}
                           className="w-5 rounded-sm shrink-0"
                           alt=""
                         />

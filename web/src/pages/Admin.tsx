@@ -43,6 +43,20 @@ const MOD_LABEL: Record<string, string> = {
 
 type ImportRow = { name: string; student_no: string; country?: string; hsk?: number };
 
+// 九个学习模块（与学生端 ModuleStage 的 MODULES 一致）
+const ALL_MODULE_IDS = ['hanzi', 'listening', 'speaking', 'reading', 'writing', 'hsk', 'hskk', 'culture', 'culturequiz'];
+const MODULE_NAME: Record<string, string> = {
+  hanzi: '🈶 汉字',
+  listening: '🎧 听力',
+  speaking: '🗣️ 口语',
+  reading: '📖 阅读',
+  writing: '✍️ 写作',
+  hsk: '📝 HSK',
+  hskk: '🎤 HSKK',
+  culture: '🏮 文化',
+  culturequiz: '🎮 文化闯关',
+};
+
 // 管理后台：班级管理 + 学生导入(Excel) + 花名册 + 学情导出(Excel/PDF) + 学生详情。
 export default function Admin() {
   const nav = useNavigate();
@@ -61,6 +75,24 @@ export default function Admin() {
   const [importRows, setImportRows] = useState<ImportRow[]>([]);
   const [importMsg, setImportMsg] = useState('');
   const [created, setCreated] = useState<{ name: string; student_no: string; initialPassword: string }[]>([]);
+
+  // 手动添加单个学生（与 Excel 导入共用后端接口，规则一致：用户名=学号，初始密码=学号）
+  const [addOpen, setAddOpen] = useState(false);
+  const [addName, setAddName] = useState('');
+  const [addNo, setAddNo] = useState('');
+  const [addCountry, setAddCountry] = useState('');
+  const [addHsk, setAddHsk] = useState(3);
+  const [adding, setAdding] = useState(false);
+
+  // 班级改名 / 删除、学生移出与彻底删除：全部用「点两次」内联确认，不用浏览器弹窗。
+  const [renaming, setRenaming] = useState(false);
+  const [renameText, setRenameText] = useState('');
+  const [confirmDelClass, setConfirmDelClass] = useState(false);
+  const [confirmRow, setConfirmRow] = useState<{ uid: string; kind: 'remove' | 'purge' } | null>(null);
+  const [confirmResetAll, setConfirmResetAll] = useState(false);
+  const [rowMsg, setRowMsg] = useState('');
+  const [modOpen, setModOpen] = useState(false);
+  const [modSaving, setModSaving] = useState(false);
 
   const [detail, setDetail] = useState<StudentDetail | null>(null);
   const [detailWritings, setDetailWritings] = useState<WritingRecord[]>([]);
@@ -121,6 +153,16 @@ export default function Admin() {
       .finally(() => setLoading(false));
   };
 
+  // 只刷新花名册，不清空导入提示与新建账号列表（openClass 会清空，导入后不能用它）。
+  // 同时刷新班级列表，让左侧与顶部的人数统计跟着更新。
+  const refreshRoster = (c: ClassInfo) => {
+    api
+      .adminRoster(c.id)
+      .then((r) => setRoster(r.roster))
+      .catch((e) => setErr((e as Error).message));
+    loadClasses();
+  };
+
   const createClass = async () => {
     if (!newName.trim()) return;
     try {
@@ -128,6 +170,161 @@ export default function Admin() {
       setNewName('');
       setClasses((cs) => [r.class, ...cs]);
       openClass(r.class);
+    } catch (e) {
+      setErr((e as Error).message);
+    }
+  };
+
+  // 下载导入模板：仅表头，列名与下方 onFile 的识别规则完全一致。
+  const downloadTemplate = () => {
+    const ws = XLSX.utils.aoa_to_sheet([['姓名', '学号', '国家', 'HSK']]);
+    ws['!cols'] = [{ wch: 18 }, { wch: 14 }, { wch: 10 }, { wch: 6 }];
+    const wb = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, '学生名单');
+    XLSX.writeFile(wb, '学生导入模板.xlsx');
+  };
+
+  // 手动添加一名学生：复用批量导入接口（单行），语义与 Excel 导入完全相同。
+  const addOneStudent = async () => {
+    if (!sel) return;
+    const student_no = addNo.trim();
+    if (!student_no) {
+      setImportMsg('请填写学号（学号即初始账号与初始密码）。');
+      return;
+    }
+    setAdding(true);
+    setImportMsg('');
+    setCreated([]);
+    try {
+      const r = await api.adminImport(sel.id, [
+        { name: addName.trim() || student_no, student_no, country: addCountry, hsk: addHsk },
+      ]);
+      setImportMsg(
+        r.createdCount > 0
+          ? `已新建账号 ${student_no}，并加入本班。`
+          : `学号 ${student_no} 已存在，已复用该账号并加入本班。`,
+      );
+      setCreated(r.created);
+      setAddName('');
+      setAddNo('');
+      setAddCountry('');
+      setAddOpen(false);
+      refreshRoster(sel); // 只刷新名单，保留上方账号提示
+    } catch (e) {
+      setImportMsg('添加失败：' + (e as Error).message);
+    } finally {
+      setAdding(false);
+    }
+  };
+
+  // —— 班级改名 / 删除 ——
+  const saveRename = async () => {
+    if (!sel || !renameText.trim()) return;
+    try {
+      const r = await api.adminUpdateClass(sel.id, { name: renameText.trim() });
+      setSel({ ...sel, name: r.class.name });
+      setRenaming(false);
+      loadClasses();
+    } catch (e) {
+      setErr((e as Error).message);
+    }
+  };
+
+  const deleteClass = async () => {
+    if (!sel) return;
+    try {
+      const r = await api.adminDeleteClass(sel.id);
+      setConfirmDelClass(false);
+      setSel(null);
+      setRoster([]);
+      setImportMsg(`已删除班级「${sel.name}」（移出 ${r.removedMembers} 名学生，学生账号与学习数据保留）。`);
+      loadClasses();
+    } catch (e) {
+      setErr((e as Error).message);
+    }
+  };
+
+  // —— 模块开关：空数组＝全部开放 ——
+  const toggleModule = async (id: string) => {
+    if (!sel) return;
+    const current = sel.enabled_modules && sel.enabled_modules.length ? sel.enabled_modules : ALL_MODULE_IDS;
+    let next = current.includes(id) ? current.filter((m) => m !== id) : [...current, id];
+    if (!next.length) {
+      setRowMsg('至少要开放一个模块。');
+      return;
+    }
+    // 全选时存空数组，语义为「全部开放」，与旧数据一致。
+    if (next.length === ALL_MODULE_IDS.length) next = [];
+    setModSaving(true);
+    try {
+      const r = await api.adminUpdateClass(sel.id, { enabled_modules: next });
+      setSel({ ...sel, enabled_modules: r.class.enabled_modules ?? [] });
+      setClasses((cs) => cs.map((c) => (c.id === sel.id ? { ...c, enabled_modules: r.class.enabled_modules ?? [] } : c)));
+    } catch (e) {
+      setErr((e as Error).message);
+    } finally {
+      setModSaving(false);
+    }
+  };
+
+  // —— 移出班级 / 彻底删除账号 ——
+  const removeMember = async (uid: string) => {
+    if (!sel) return;
+    try {
+      await api.adminRemoveMember(sel.id, uid);
+      setConfirmRow(null);
+      setRowMsg('已移出班级（账号与学习数据保留，可再次导入）。');
+      refreshRoster(sel);
+    } catch (e) {
+      setRowMsg('移出失败：' + (e as Error).message);
+    }
+  };
+
+  const purgeStudent = async (uid: string) => {
+    if (!sel) return;
+    try {
+      const r = await api.adminDeleteStudent(uid);
+      setConfirmRow(null);
+      setRowMsg(`已彻底删除账号 ${r.deleted.student_no}（${r.deleted.name}）。`);
+      refreshRoster(sel);
+    } catch (e) {
+      setConfirmRow(null);
+      setRowMsg((e as Error).message); // 有学习痕迹时后端会说明原因
+    }
+  };
+
+  // —— 账号发放单：安全导出（不改密码）——
+  const exportAccounts = () => {
+    if (!sel) return;
+    const data = roster.map((s) => ({
+      姓名: s.name,
+      账号: s.student_no || '',
+      初始密码: s.student_no || '',
+      是否已登录: s.last_login_date ? `是（${s.last_login_date}，密码可能已改）` : '否（初始密码有效）',
+      国家: s.country || '',
+      HSK: s.hsk_level ?? '',
+    }));
+    const ws = XLSX.utils.json_to_sheet(data);
+    ws['!cols'] = [{ wch: 18 }, { wch: 14 }, { wch: 14 }, { wch: 30 }, { wch: 8 }, { wch: 6 }];
+    const wb = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, '账号发放单');
+    XLSX.writeFile(wb, `${sel.name}_账号发放单_${new Date().toISOString().slice(0, 10)}.xlsx`);
+  };
+
+  // —— 重置全班密码为学号并导出（破坏性，需二次确认）——
+  const resetAllAndExport = async () => {
+    if (!sel) return;
+    try {
+      const r = await api.adminResetClassPasswords(sel.id);
+      setConfirmResetAll(false);
+      const data = r.list.map((x) => ({ 姓名: x.name, 账号: x.student_no, 密码: x.password }));
+      const ws = XLSX.utils.json_to_sheet(data);
+      ws['!cols'] = [{ wch: 18 }, { wch: 14 }, { wch: 14 }];
+      const wb = XLSX.utils.book_new();
+      XLSX.utils.book_append_sheet(wb, ws, '账号发放单');
+      XLSX.writeFile(wb, `${sel.name}_重置账号单_${new Date().toISOString().slice(0, 10)}.xlsx`);
+      setImportMsg(`已重置 ${r.count} 名学生的密码为学号，并导出发放单。`);
+      refreshRoster(sel);
     } catch (e) {
       setErr((e as Error).message);
     }
@@ -176,7 +373,7 @@ export default function Admin() {
       setImportMsg(`导入完成：新建 ${r.createdCount} 个账号，复用 ${r.reused} 个，已加入班级。`);
       setCreated(r.created);
       setImportRows([]);
-      openClass(sel); // 刷新花名册
+      refreshRoster(sel); // 只刷新名单，保留新建账号/密码提示
     } catch (e) {
       setImportMsg('导入失败：' + (e as Error).message);
     }
@@ -405,10 +602,67 @@ th,td{border:1px solid #ccc;padding:6px 8px;text-align:center}th{background:#f0f
           ) : (
             <>
               <div className="flex flex-wrap items-center justify-between gap-2 mb-4">
-                <h2 className="text-base font-semibold">
-                  {sel.name} <span className="text-xs text-white/45">· {roster.length} 名学生</span>
-                </h2>
-                <div className="flex items-center gap-2">
+                {renaming ? (
+                  <div className="flex items-center gap-2">
+                    <input
+                      value={renameText}
+                      onChange={(e) => setRenameText(e.target.value)}
+                      onKeyDown={(e) => e.key === 'Enter' && saveRename()}
+                      className="bg-white/5 rounded-lg px-3 py-1 text-sm outline-none border border-white/10 focus:border-gold/60"
+                    />
+                    <button onClick={saveRename} className="px-2 py-1 rounded-lg glass text-xs hover:border-gold/60">
+                      保存
+                    </button>
+                    <button onClick={() => setRenaming(false)} className="px-2 py-1 rounded-lg glass text-xs">
+                      取消
+                    </button>
+                  </div>
+                ) : (
+                  <h2 className="text-base font-semibold flex items-center gap-2">
+                    {sel.name} <span className="text-xs text-white/45">· {roster.length} 名学生</span>
+                    <button
+                      onClick={() => {
+                        setRenameText(sel.name);
+                        setRenaming(true);
+                      }}
+                      title="重命名班级"
+                      className="text-xs text-white/40 hover:text-gold"
+                    >
+                      ✏️
+                    </button>
+                    {confirmDelClass ? (
+                      <span className="flex items-center gap-1">
+                        <button onClick={deleteClass} className="text-xs px-2 py-0.5 rounded bg-red-500/25 text-red-200 hover:bg-red-500/40">
+                          确认删除班级？
+                        </button>
+                        <button onClick={() => setConfirmDelClass(false)} className="text-xs text-white/40 hover:text-white/70">
+                          取消
+                        </button>
+                      </span>
+                    ) : (
+                      <button
+                        onClick={() => setConfirmDelClass(true)}
+                        title="删除班级（学生账号与数据保留）"
+                        className="text-xs text-white/40 hover:text-red-300"
+                      >
+                        🗑
+                      </button>
+                    )}
+                  </h2>
+                )}
+                <div className="flex flex-wrap items-center gap-2">
+                  <button
+                    onClick={() => {
+                      setAddHsk(sel.hsk_default || 3);
+                      setAddOpen((v) => !v);
+                    }}
+                    className="px-3 py-1.5 rounded-lg glass text-xs hover:border-gold/60"
+                  >
+                    ➕ 手动添加学生
+                  </button>
+                  <button onClick={downloadTemplate} className="px-3 py-1.5 rounded-lg glass text-xs hover:border-gold/60">
+                    📄 下载导入模板
+                  </button>
                   <label className="px-3 py-1.5 rounded-lg glass text-xs hover:border-gold/60 cursor-pointer">
                     📥 导入学生(Excel)
                     <input
@@ -418,6 +672,37 @@ th,td{border:1px solid #ccc;padding:6px 8px;text-align:center}th{background:#f0f
                       onChange={(e) => e.target.files?.[0] && onFile(e.target.files[0])}
                     />
                   </label>
+                  <button
+                    onClick={() => setModOpen((v) => !v)}
+                    className="px-3 py-1.5 rounded-lg glass text-xs hover:border-starcyan/60"
+                  >
+                    🎛 模块开关
+                    <span className="ml-1 text-white/40">
+                      {sel.enabled_modules && sel.enabled_modules.length ? `${sel.enabled_modules.length}/9` : '全开'}
+                    </span>
+                  </button>
+                  <button onClick={exportAccounts} disabled={!roster.length} className="px-3 py-1.5 rounded-lg glass text-xs hover:border-gold/60 disabled:opacity-40">
+                    📤 导出账号单
+                  </button>
+                  {confirmResetAll ? (
+                    <span className="flex items-center gap-1">
+                      <button onClick={resetAllAndExport} className="px-3 py-1.5 rounded-lg text-xs bg-red-500/25 text-red-200 hover:bg-red-500/40">
+                        确认重置全班密码？
+                      </button>
+                      <button onClick={() => setConfirmResetAll(false)} className="px-2 py-1.5 rounded-lg glass text-xs">
+                        取消
+                      </button>
+                    </span>
+                  ) : (
+                    <button
+                      onClick={() => setConfirmResetAll(true)}
+                      disabled={!roster.length}
+                      title="把全班密码重置为各自学号，并导出发放单（学生已改的密码会失效）"
+                      className="px-3 py-1.5 rounded-lg glass text-xs hover:border-red-400/60 disabled:opacity-40"
+                    >
+                      🔑 重置并导出
+                    </button>
+                  )}
                   <button onClick={exportExcel} disabled={!roster.length} className="px-3 py-1.5 rounded-lg glass text-xs hover:border-starcyan/60 disabled:opacity-40">
                     📊 导出 Excel
                   </button>
@@ -429,6 +714,89 @@ th,td{border:1px solid #ccc;padding:6px 8px;text-align:center}th{background:#f0f
                   </button>
                 </div>
               </div>
+
+              {/* 模块开关：控制本班学生在「学习星球」里能看到哪些模块 */}
+              {modOpen && (
+                <div className="mb-3 rounded-lg border border-white/10 bg-white/5 p-3">
+                  <p className="text-xs text-white/60 mb-2">
+                    勾选本班开放的模块，学生端只显示已开放的星球。全部勾选＝全部开放（默认）。
+                    {modSaving && <span className="text-gold ml-2">保存中…</span>}
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {ALL_MODULE_IDS.map((id) => {
+                      const on = !sel.enabled_modules || !sel.enabled_modules.length || sel.enabled_modules.includes(id);
+                      return (
+                        <button
+                          key={id}
+                          onClick={() => toggleModule(id)}
+                          className={
+                            'px-3 py-1.5 rounded-lg text-xs border transition ' +
+                            (on
+                              ? 'bg-starcyan/20 text-starcyan border-starcyan/40'
+                              : 'bg-white/5 text-white/35 border-white/10 hover:border-white/25')
+                          }
+                        >
+                          {on ? '✓ ' : ''}
+                          {MODULE_NAME[id]}
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
+
+              {/* 手动添加单个学生 */}
+              {addOpen && (
+                <div className="mb-3 rounded-lg border border-white/10 bg-white/5 p-3">
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-2 mb-2">
+                    <input
+                      value={addName}
+                      onChange={(e) => setAddName(e.target.value)}
+                      placeholder="姓名"
+                      className="bg-white/5 rounded-lg px-3 py-1.5 text-sm outline-none focus:border-gold/60 border border-white/10"
+                    />
+                    <input
+                      value={addNo}
+                      onChange={(e) => setAddNo(e.target.value)}
+                      onKeyDown={(e) => e.key === 'Enter' && addOneStudent()}
+                      placeholder="学号（必填）"
+                      className="bg-white/5 rounded-lg px-3 py-1.5 text-sm outline-none focus:border-gold/60 border border-white/10"
+                    />
+                    <select
+                      value={addCountry}
+                      onChange={(e) => setAddCountry(e.target.value)}
+                      className="bg-white/5 rounded-lg px-3 py-1.5 text-sm outline-none border border-white/10"
+                    >
+                      <option value="">国家（可选）</option>
+                      <option value="ID">印度尼西亚 ID</option>
+                      <option value="TH">泰国 TH</option>
+                      <option value="PK">巴基斯坦 PK</option>
+                      <option value="VN">越南 VN</option>
+                      <option value="CN">中国 CN</option>
+                    </select>
+                    <select
+                      value={addHsk}
+                      onChange={(e) => setAddHsk(Number(e.target.value))}
+                      className="bg-white/5 rounded-lg px-3 py-1.5 text-sm outline-none border border-white/10"
+                    >
+                      {[1, 2, 3, 4, 5, 6].map((n) => (
+                        <option key={n} value={n}>
+                          HSK {n}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <button onClick={addOneStudent} disabled={adding} className="btn-primary rounded-lg text-sm px-4 py-1.5 disabled:opacity-40">
+                      {adding ? '添加中…' : '✅ 添加'}
+                    </button>
+                    <button onClick={() => setAddOpen(false)} className="px-3 py-1.5 rounded-lg glass text-xs hover:border-white/30">
+                      取消
+                    </button>
+                    <span className="text-xs text-white/45">账号＝学号，初始密码＝学号</span>
+                  </div>
+                </div>
+              )}
 
               {/* 导入预览 / 结果 */}
               {importMsg && <p className="text-xs text-gold bg-gold/10 rounded-lg px-3 py-2 mb-3">{importMsg}</p>}
@@ -463,7 +831,9 @@ th,td{border:1px solid #ccc;padding:6px 8px;text-align:center}th{background:#f0f
               {loading ? (
                 <p className="text-white/40 text-sm py-8 text-center">加载中…</p>
               ) : roster.length === 0 ? (
-                <p className="text-white/40 text-sm py-8 text-center">本班还没有学生，点「导入学生」上传 Excel 名单。</p>
+                <p className="text-white/40 text-sm py-8 text-center">
+                  本班还没有学生。点「手动添加学生」逐个建号，或下载模板填好后用「导入学生」批量上传。
+                </p>
               ) : (
                 <div className="overflow-x-auto">
                   <table className="w-full text-sm">
@@ -476,6 +846,7 @@ th,td{border:1px solid #ccc;padding:6px 8px;text-align:center}th{background:#f0f
                         <th className="px-2">互动时长</th>
                         <th className="px-2">平均分</th>
                         <th className="px-2">最近登录</th>
+                        <th className="px-2">操作</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -492,11 +863,53 @@ th,td{border:1px solid #ccc;padding:6px 8px;text-align:center}th{background:#f0f
                           <td className="px-2 text-center text-white/70">{fmtTime(s.total_active_sec)}</td>
                           <td className="px-2 text-center text-starcyan">{s.avgScore ?? '-'}</td>
                           <td className="px-2 text-center text-white/50 text-xs">{s.last_login_date || '-'}</td>
+                          <td className="px-2 text-center whitespace-nowrap" onClick={(e) => e.stopPropagation()}>
+                            {confirmRow?.uid === s.id ? (
+                              <span className="flex items-center justify-center gap-1">
+                                <button
+                                  onClick={() => (confirmRow.kind === 'remove' ? removeMember(s.id) : purgeStudent(s.id))}
+                                  className="text-[11px] px-2 py-0.5 rounded bg-red-500/25 text-red-200 hover:bg-red-500/40"
+                                >
+                                  {confirmRow.kind === 'remove' ? '确认移出？' : '确认彻底删除？'}
+                                </button>
+                                <button onClick={() => setConfirmRow(null)} className="text-[11px] text-white/40 hover:text-white/70">
+                                  取消
+                                </button>
+                              </span>
+                            ) : (
+                              <span className="flex items-center justify-center gap-2">
+                                <button
+                                  onClick={() => setConfirmRow({ uid: s.id, kind: 'remove' })}
+                                  title="移出班级（账号与学习数据保留）"
+                                  className="text-[11px] text-white/45 hover:text-gold"
+                                >
+                                  移出
+                                </button>
+                                <button
+                                  onClick={() => setConfirmRow({ uid: s.id, kind: 'purge' })}
+                                  title="彻底删除账号（仅限没有任何学习记录的误建账号）"
+                                  className="text-[11px] text-white/30 hover:text-red-300"
+                                >
+                                  删号
+                                </button>
+                              </span>
+                            )}
+                          </td>
                         </tr>
                       ))}
                     </tbody>
                   </table>
-                  <p className="text-[11px] text-white/35 mt-2">点击某行查看该学生的成绩、能力雷达与积分明细。</p>
+                  {rowMsg && (
+                    <p className="text-[11px] text-gold bg-gold/10 rounded-lg px-3 py-2 mt-2">
+                      {rowMsg}
+                      <button onClick={() => setRowMsg('')} className="ml-2 text-white/40 hover:text-white/70">
+                        ✕
+                      </button>
+                    </p>
+                  )}
+                  <p className="text-[11px] text-white/35 mt-2">
+                    点击某行查看该学生的成绩、能力雷达与积分明细。「移出」只把学生移出本班，账号与学习数据保留；「删号」仅可用于没有任何学习记录的误建账号。
+                  </p>
                 </div>
               )}
             </>

@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Hud from '../components/Hud';
 import { BackButton } from '../components/MapUI';
 import { useStore } from '../store/useStore';
+import { authHeaders } from '../lib/api';
 
 interface Slide {
   heading_zh: string;
@@ -53,9 +54,14 @@ export default function Studio() {
     try {
       const resp = await fetch('/api/studio/generate', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: authHeaders({ 'Content-Type': 'application/json' }),
         body: JSON.stringify({ taskType, topic, hskLevel }),
       });
+      if (!resp.ok) {
+        // gate/限流是 JSON 响应而非 SSE 流，按后端文案提示
+        const j = (await resp.json().catch(() => null)) as { error?: string } | null;
+        throw new Error(j?.error || `HTTP ${resp.status}`);
+      }
       const reader = resp.body?.getReader();
       if (!reader) throw new Error('no stream');
       const dec = new TextDecoder();

@@ -1,4 +1,5 @@
 import { Router } from 'express';
+import { aiRateLimit } from '../lib/ratelimit';
 import { randomUUID } from 'node:crypto';
 import { chatJSON } from '../llm/deepseek';
 import { getDb } from '../db/index';
@@ -15,7 +16,7 @@ function zhLen(s: string): number {
   return (s.match(/[一-鿿]/g) || []).length;
 }
 
-router.post('/writing/grade', async (req, res) => {
+router.post('/writing/grade', aiRateLimit, async (req, res) => {
   const {
     text = '',
     hskLevel = 3,

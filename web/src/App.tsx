@@ -22,6 +22,8 @@ import Writing from './pages/Writing';
 import HskQuiz from './pages/HskQuiz';
 import Hskk from './pages/Hskk';
 import ModulePage from './pages/ModulePage';
+import ModuleGuard from './components/ModuleGuard';
+import RequireAuth from './components/RequireAuth';
 import Studio from './pages/Studio';
 import Profile from './pages/Profile';
 import TeacherDashboard from './pages/TeacherDashboard';
@@ -68,21 +70,22 @@ export default function App() {
         <Route path="/city/:cityId" element={<CityHub />} />
         <Route path="/cities" element={<CityDirectory />} />
         <Route path="/modules" element={<ModuleStage />} />
-        <Route path="/module/hanzi" element={<HanziChallenge />} />
-        <Route path="/module/culture" element={<Culture />} />
-        <Route path="/module/culture-quiz" element={<CultureQuiz />} />
-        <Route path="/module/listening" element={<Listening />} />
-        <Route path="/module/speaking" element={<Speaking />} />
-        <Route path="/module/reading" element={<Reading />} />
-        <Route path="/module/writing" element={<Writing />} />
-        <Route path="/module/hsk" element={<HskQuiz />} />
-        <Route path="/module/hskk" element={<Hskk />} />
-        <Route path="/module/:moduleId" element={<ModulePage />} />
-        <Route path="/studio" element={<Studio />} />
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/teacher" element={<TeacherDashboard />} />
-        <Route path="/admin" element={<Admin />} />
-        <Route path="/rewards" element={<Rewards />} />
+        {/* 学习模块：会调用付费 AI 接口（听写批改/出题/语音），后端要求登录 */}
+        <Route path="/module/hanzi" element={<RequireAuth><ModuleGuard id="hanzi"><HanziChallenge /></ModuleGuard></RequireAuth>} />
+        <Route path="/module/culture" element={<RequireAuth><ModuleGuard id="culture"><Culture /></ModuleGuard></RequireAuth>} />
+        <Route path="/module/culture-quiz" element={<RequireAuth><ModuleGuard id="culturequiz"><CultureQuiz /></ModuleGuard></RequireAuth>} />
+        <Route path="/module/listening" element={<RequireAuth><ModuleGuard id="listening"><Listening /></ModuleGuard></RequireAuth>} />
+        <Route path="/module/speaking" element={<RequireAuth><ModuleGuard id="speaking"><Speaking /></ModuleGuard></RequireAuth>} />
+        <Route path="/module/reading" element={<RequireAuth><ModuleGuard id="reading"><Reading /></ModuleGuard></RequireAuth>} />
+        <Route path="/module/writing" element={<RequireAuth><ModuleGuard id="writing"><Writing /></ModuleGuard></RequireAuth>} />
+        <Route path="/module/hsk" element={<RequireAuth><ModuleGuard id="hsk"><HskQuiz /></ModuleGuard></RequireAuth>} />
+        <Route path="/module/hskk" element={<RequireAuth><ModuleGuard id="hskk"><Hskk /></ModuleGuard></RequireAuth>} />
+        <Route path="/module/:moduleId" element={<RequireAuth><ModulePage /></RequireAuth>} />
+        <Route path="/studio" element={<RequireAuth><Studio /></RequireAuth>} />
+        <Route path="/profile" element={<RequireAuth><Profile /></RequireAuth>} />
+        <Route path="/teacher" element={<RequireAuth teacherOnly><TeacherDashboard /></RequireAuth>} />
+        <Route path="/admin" element={<RequireAuth teacherOnly><Admin /></RequireAuth>} />
+        <Route path="/rewards" element={<RequireAuth><Rewards /></RequireAuth>} />
         <Route path="/settings" element={<Settings />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

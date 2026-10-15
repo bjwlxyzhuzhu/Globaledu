@@ -49,6 +49,16 @@ export default function ModuleStage() {
     writing: [],
     hsk: [],
   });
+  // 本班开放的模块（教师在管理后台设置）；未限制时返回全部。
+  const [allowed, setAllowed] = useState<string[] | null>(null);
+  useEffect(() => {
+    api
+      .myModules()
+      .then((r) => setAllowed(r.all ? null : r.modules))
+      .catch(() => setAllowed(null));
+  }, []);
+  const visibleModules = allowed ? MODULES.filter((m) => allowed.includes(m.id)) : MODULES;
+
   useEffect(() => {
     Promise.all([
       api.hanzi().catch(() => []),
@@ -117,7 +127,7 @@ export default function ModuleStage() {
 
         {/* 模块星球卡片 */}
         <div data-tour="modules-grid" className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {MODULES.map((m, i) => (
+          {visibleModules.map((m, i) => (
             <motion.button
               key={m.id}
               initial={{ opacity: 0, y: 24 }}

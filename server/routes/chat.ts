@@ -6,7 +6,8 @@ import { chatJSON, AVAILABLE_MODELS, getModel } from '../llm/deepseek';
 import { retrieveKb } from '../lib/rag';
 import { checkVocab, tabooGuidance, checkTaboo } from '../lib/grading';
 import { getDb } from '../db/index';
-import { currentUser } from '../lib/auth';
+import { currentUser, requireAdmin } from '../lib/auth';
+import { aiRateLimit } from '../lib/ratelimit';
 import { award } from '../lib/points';
 import type { ChatRequest, ChatReply, LevelCheck, ReplyItem } from '../../shared/types';
 
@@ -57,11 +58,31 @@ function detectSycophancy(zh: string): boolean {
   return /(你真棒|太棒了|完全正确|非常完美|你太厉害|棒极了)/.test(zh);
 }
 
+// 学情记录里的学习者属性一律以服务端档案为准，不采信客户端声明。
+// 客户端传来的 country/hskLevel 只用于「当场对话的措辞」（学生想练别的等级是正当需求），
+// 但写进教师看板的必须是花名册里的值——否则任何登录用户都能凭 body 伪造看板数据。
+async function profileOf(uid: string): Promise<{ country: string; hsk: number | null }> {
+  try {
+    const db = await getDb();
+    const row = (db.prepare('SELECT country, hsk_level FROM users WHERE id = ?') as {
+      get: (...a: unknown[]) => { country?: string | null; hsk_level?: number | null } | undefined;
+    }).get(uid);
+    return { country: row?.country || '', hsk: row?.hsk_level ?? null };
+  } catch {
+    return { country: '', hsk: null };
+  }
+}
+
 // POST /api/chat —— 分级反谄媚 · 多语言对话（PRD §6）
-router.post('/chat', async (req, res) => {
+router.post('/chat', aiRateLimit, async (req, res) => {
   const body = (req.body || {}) as ChatRequest;
+  const authed = currentUser(req)!; // gate 已保证登录，这里不会是 null
+  const profile = await profileOf(authed.uid);
+  // 措辞用客户端值（允许学生自选练习等级），入库用档案值（教师看板只信服务端）
   const hsk = body.hskLevel || 3;
   const country = body.country || '';
+  const recordHsk = profile.hsk ?? hsk;
+  const recordCountry = profile.country;
   const langs = body.outputLangs && body.outputLangs.length ? body.outputLangs : ['zh', 'en'];
   const nativeLang = langs.filter((l) => l !== 'zh').map((l) => LANG_NAMES[l] || l).join(' / ') || 'English';
   const msgs = Array.isArray(body.messages) ? body.messages : [];
@@ -115,13 +136,13 @@ router.post('/chat', async (req, res) => {
     over_words: vc.over,
     max_sentence_len: maxSentenceLen(zhText),
     sycophancy_flag: detectSycophancy(zhText),
-    taboo_flag: checkTaboo(zhText, country),
+    // 用档案国别判禁忌：这是要进看板的质检指标，不能让客户端左右
+    taboo_flag: checkTaboo(zhText, recordCountry),
   };
 
   const reply: ChatReply = { replies, level_check, suggestions, mock, rag_titles: ragTitles };
 
-  // M5：学习指标入库（懒加载 SQLite；失败不影响对话）。已登录则记真实 user_id 并发对话积分。
-  const authed = currentUser(req);
+  // M5：学习指标入库（懒加载 SQLite；失败不影响对话）。记真实 user_id 并发对话积分。
   void (async () => {
     try {
       const db = await getDb();
@@ -130,14 +151,21 @@ router.post('/chat', async (req, res) => {
       ) as { run: (...a: unknown[]) => unknown };
       stmt.run(
         randomUUID(),
-        authed?.uid || body.sessionId || 'anon',
+        authed.uid,
         'chat',
         '',
         level_check.vocab_in_level ? 1 : 0,
-        JSON.stringify({ ...level_check, hsk, country, model: body.model || 'default', mock, rag: ragTitles.length }),
+        JSON.stringify({
+          ...level_check,
+          hsk: recordHsk,
+          country: recordCountry,
+          model: body.model || 'default',
+          mock,
+          rag: ragTitles.length,
+        }),
         Date.now(),
       );
-      if (authed) award(db, authed.uid, 'chat');
+      award(db, authed.uid, 'chat');
     } catch {
       /* 入库失败忽略 */
     }
@@ -146,8 +174,9 @@ router.post('/chat', async (req, res) => {
   res.json(reply);
 });
 
-// GET /api/metrics —— 学情聚合（M5；M7 教师看板用）
-router.get('/metrics', async (_req, res) => {
+// GET /api/metrics —— 学情聚合（M5；M7 教师看板用）。仅教师可读：gate 已挡下匿名，
+// 这里再加角色判定，避免任何已登录学生都能看到全班质检数据。
+router.get('/metrics', requireAdmin, async (_req, res) => {
   try {
     const db = await getDb();
     const stmt = db.prepare('SELECT metrics_json, ts FROM learning_records WHERE module = ? ORDER BY ts DESC LIMIT 200') as {

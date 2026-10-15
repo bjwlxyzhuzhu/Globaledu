@@ -6,6 +6,7 @@ import { useStore } from '../store/useStore';
 import { ZODIACS } from '../lib/zodiac';
 import { speakSmart } from '../lib/speech';
 import ZodiacImg from '../components/ZodiacImg';
+import { flagUrl as localFlagUrl } from '../lib/flag';
 
 // 进入前两步走：第一步选语言（中文必选 + 下拉添加英语等可选），第二步选数字老师。
 const LANGS = [
@@ -16,7 +17,7 @@ const LANGS = [
   { code: 'ar', label: 'العربية', flag: 'sa' },
   { code: 'de', label: 'Deutsch', flag: 'de' },
 ];
-const flagUrl = (f: string) => `https://flagcdn.com/w40/${f}.png`;
+const flagUrl = (f: string) => localFlagUrl(f, 'w40');
 const labelOf = (code: string) => LANGS.find((l) => l.code === code)?.label || code;
 const flagOf = (code: string) => LANGS.find((l) => l.code === code)?.flag || '';
 

@@ -21,12 +21,24 @@ export function setToken(t: string): void {
   }
 }
 
-async function jsonFetch<T>(url: string, init?: RequestInit): Promise<T> {
+/**
+ * 统一的请求头：带上登录令牌。
+ * 不走 jsonFetch 的裸 fetch（流式 SSE、二进制音频）也必须用它，
+ * 否则后端 gate 会以未登录拒绝——/api/tts 与 /api/studio/generate 就是这种情况。
+ */
+export function authHeaders(extra?: Record<string, string>): Record<string, string> {
   const token = getToken();
+  return {
+    ...(token ? { Authorization: `Bearer ${token}` } : {}),
+    ...(extra || {}),
+  };
+}
+
+async function jsonFetch<T>(url: string, init?: RequestInit): Promise<T> {
   const res = await fetch(url, {
     headers: {
       'Content-Type': 'application/json',
-      ...(token ? { Authorization: `Bearer ${token}` } : {}),
+      ...authHeaders(),
       ...(init?.headers || {}),
     },
     ...init,
@@ -127,6 +139,31 @@ export const api = {
       method: 'POST',
       body: JSON.stringify(newPassword ? { newPassword } : {}),
     }),
+  myModules: () => jsonFetch<{ modules: string[]; all: boolean }>('/api/my/modules'),
+  adminUpdateClass: (classId: string, body: { name?: string; hsk_default?: number; enabled_modules?: string[] }) =>
+    jsonFetch<{ class: ClassInfo }>(`/api/admin/classes/${encodeURIComponent(classId)}`, {
+      method: 'POST',
+      body: JSON.stringify(body),
+    }),
+  adminDeleteClass: (classId: string) =>
+    jsonFetch<{ ok: boolean; removedMembers: number }>(`/api/admin/classes/${encodeURIComponent(classId)}`, {
+      method: 'DELETE',
+    }),
+  adminRemoveMember: (classId: string, uid: string) =>
+    jsonFetch<{ ok: boolean }>(
+      `/api/admin/classes/${encodeURIComponent(classId)}/members/${encodeURIComponent(uid)}`,
+      { method: 'DELETE' },
+    ),
+  adminDeleteStudent: (uid: string) =>
+    jsonFetch<{ ok: boolean; deleted: { name: string; student_no: string } }>(
+      `/api/admin/students/${encodeURIComponent(uid)}`,
+      { method: 'DELETE' },
+    ),
+  adminResetClassPasswords: (classId: string, userIds?: string[]) =>
+    jsonFetch<{ ok: boolean; count: number; list: { name: string; student_no: string; password: string }[] }>(
+      `/api/admin/classes/${encodeURIComponent(classId)}/reset-passwords`,
+      { method: 'POST', body: JSON.stringify(userIds && userIds.length ? { userIds } : {}) },
+    ),
   adminRedemptions: () => jsonFetch<{ redemptions: Redemption[] }>('/api/admin/redemptions'),
   adminFulfill: (id: string) =>
     jsonFetch<{ ok: boolean }>(`/api/admin/redemptions/${encodeURIComponent(id)}/fulfill`, { method: 'POST' }),

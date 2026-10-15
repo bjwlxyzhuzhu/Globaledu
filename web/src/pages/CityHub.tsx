@@ -13,6 +13,7 @@ import { regionColorRgba } from '../lib/regionColor';
 import FocusMap from '../components/FocusMap';
 import { useStore } from '../store/useStore';
 import type { KbDoc, CityPedia, CityPediaItem, CultureItem } from '@shared/types';
+import { flagUrl } from '../lib/flag';
 
 // 文化主题分类标签（与 Culture 模块一致）
 const CAT_LABEL: Record<string, { emoji: string; zh: string; en: string }> = {
@@ -183,7 +184,7 @@ export default function CityHub() {
 
       <div className="max-w-5xl mx-auto px-6 pt-24 pb-16">
         <motion.div initial={{ y: 12, opacity: 0 }} animate={{ y: 0, opacity: 1 }} className="flex items-center gap-4">
-          {info?.flag && <img src={`https://flagcdn.com/w80/${info.flag.toLowerCase()}.png`} alt={info.flag} className="w-14 h-auto rounded shadow-lg" />}
+          {info?.flag && <img src={flagUrl(info.flag, 'w80')} alt={info.flag} className="w-14 h-auto rounded shadow-lg" />}
           <h1 className="text-3xl font-bold text-glow">
             {info?.zh || '…'}
             {info?.en && <span className="text-white/45 text-lg font-normal ml-3">{info.en}</span>}
@@ -222,7 +223,7 @@ export default function CityHub() {
             geojson={geoFeature}
             capital={capital || undefined}
             onCapitalClick={() => setChat({ title: `${capitalName || info?.zh || ''}（首都）` })}
-            className="mt-5 h-72 w-full rounded-2xl overflow-hidden border border-white/10"
+            className="mt-5 h-[60vh] min-h-[22rem] w-full rounded-2xl overflow-hidden border border-white/10"
           />
         )}
 

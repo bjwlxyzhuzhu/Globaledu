@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
-import { api } from '../lib/api';
+import { api, getToken } from '../lib/api';
 import { useStore } from '../store/useStore';
 import { zodiacById, ZODIACS } from '../lib/zodiac';
 import { speakSmart, stopSpeak, startListening, asrSupported } from '../lib/speech';
@@ -121,8 +121,15 @@ export default function GradedChat({ open, onClose, contextTitle, contextText, c
       // 老师用绑定音色朗读首条回复（按其语言）
       const first = reply.replies?.[0];
       if (autoSpeak && first) speakText(first.text, first.lang);
-    } catch {
-      setItems((prev) => [...prev, { role: 'assistant', replies: [{ lang: 'zh', text: '（出错了，请稍后再试）' }] }]);
+    } catch (e) {
+      // AI 助教现在需要登录（后端 /api/* 默认拒绝），未登录时给明确指引而不是笼统报错；
+      // 限流(429)等情况则把后端文案直接显示出来。
+      const msg = !getToken()
+        ? '请先登录后使用 AI 助教。Please log in to use the AI tutor.'
+        : (e as Error)?.message === 'unauthorized'
+          ? '登录已过期，请重新登录。Your session expired, please log in again.'
+          : `（${(e as Error)?.message || '出错了，请稍后再试'}）`;
+      setItems((prev) => [...prev, { role: 'assistant', replies: [{ lang: 'zh', text: msg }] }]);
     } finally {
       setLoading(false);
     }

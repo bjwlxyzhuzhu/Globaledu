@@ -1,24 +1,48 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+node_modules/
+dist/
+build/
+.env
+.env.local
+*.local
 
-# dependencies
-/node_modules
-/.pnp
+# SQLite 运行期文件
+*.sqlite
+*.sqlite-journal
+*.sqlite-wal
+*.sqlite-shm
+
+# 日志与系统
+*.log
+.DS_Store
+Thumbs.db
+
+# 编辑器
+.vscode/
+.idea/
+
+# 安全与交付文档：渗透测试报告、整改报告等不进版本库
+*.docx
+*.pdf
+*.xlsx
+
+# 打包产物
+*.tar.gz
+
+# 地图改造的原始备份，留在本机即可，不进版本库
+outputs/
+
+# 交接笔记：含服务器/堡垒机等基础设施信息，仓库公开，不进版本库
+HANDOFF.md
+
+# ===== 以下为根目录 双创AI星际 (Next.js) 应用引入 =====
+# next.js
+.next/
+out/
+.pnp
 .pnp.js
 .yarn/install-state.gz
-
-# testing
-/coverage
-
-# next.js
-/.next/
-/out/
-
-# production
-/build
-
-# misc
-.DS_Store
-*.pem
+next-env.d.ts
+*.tsbuildinfo
 
 # debug
 npm-debug.log*
@@ -40,9 +64,6 @@ yarn-error.log*
 # vercel
 .vercel
 
-# typescript
-*.tsbuildinfo
-next-env.d.ts
-
-# 本地环境备份（含密钥，勿提交）
-.env.local.bak.*
+# testing
+/coverage
+*.pem

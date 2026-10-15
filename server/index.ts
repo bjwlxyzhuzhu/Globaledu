@@ -24,12 +24,30 @@ import progressRouter from './routes/progress';
 import adminRouter from './routes/admin';
 import rewardsRouter from './routes/rewards';
 import stubsRouter from './routes/stubs';
+import { gate } from './lib/gate';
+import { assertAuthSecret } from './lib/auth';
 import { hasLLM, getModel } from './llm/deepseek';
 import { hasMiniMaxTTS } from './tts/minimax';
 
+// 启动自检：此处 .env 已加载完毕（import 会先于模块体求值，loadEnvFile 在模块体最前）。
+// 放在这里而不是 auth.ts 顶层，否则读到的永远是兜底密钥。
+assertAuthSecret();
+
 const app = express();
-app.use(cors());
+
+// CORS：默认不允许任何跨源访问。
+// 开发时前端走 vite 代理、生产时前端由本服务同端口托管，两种模式都是同源，用不到 CORS。
+// 确有跨源需求（例如独立部署的前端）时，用 CORS_ORIGINS=https://a.example,https://b.example 显式放行。
+const CORS_ORIGINS = (process.env.CORS_ORIGINS || '')
+  .split(',')
+  .map((s) => s.trim())
+  .filter(Boolean);
+app.use(cors({ origin: CORS_ORIGINS.length ? CORS_ORIGINS : false }));
+
 app.use(express.json({ limit: '4mb' }));
+
+// 默认拒绝：/api/* 一律需要登录，白名单见 lib/gate.ts。必须挂在所有业务路由之前。
+app.use('/api', gate);
 
 // 健康检查
 app.get('/api/health', (_req, res) => {

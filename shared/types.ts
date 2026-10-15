@@ -303,6 +303,8 @@ export interface ClassInfo {
   name: string;
   hsk_default: number;
   count: number;
+  /** 本班开放的模块 id 列表；空数组＝全部开放（旧数据默认如此）。 */
+  enabled_modules?: string[];
 }
 
 /** 花名册一行（管理端聚合学情） */

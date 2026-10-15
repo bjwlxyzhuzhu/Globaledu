@@ -136,8 +136,8 @@ export default function Login() {
         {tab === 'admin' && (
           <p className="text-[11px] text-white/40 mt-4 leading-relaxed">
             {zh
-              ? '默认管理员 admin / admin888，请在 .env 设置 ADMIN_PASSWORD 后修改。'
-              : 'Default admin: admin / admin888. Set ADMIN_PASSWORD in .env to change.'}
+              ? '管理员账号由系统管理员分配，忘记密码请联系系统管理员重置。'
+              : 'Admin accounts are issued by the system administrator. Contact them to reset a password.'}
           </p>
         )}
       </motion.div>

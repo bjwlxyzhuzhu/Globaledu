@@ -1,4 +1,5 @@
 import { Router } from 'express';
+import { aiRateLimit } from '../lib/ratelimit';
 import { chatJSON } from '../llm/deepseek';
 import { retrieveKb } from '../lib/rag';
 import { readJson } from '../lib/data';
@@ -12,7 +13,7 @@ function normalizeCity(raw: string): string {
 }
 
 // POST /api/quiz/generate —— 中文语言导师：按某城市/主题的知识库 + 目标 HSK 等级，AI 现场出分级题
-router.post('/quiz/generate', async (req, res) => {
+router.post('/quiz/generate', aiRateLimit, async (req, res) => {
   const { topic = '', hskLevel = 3, count = 5, nativeLang = 'English', model } = (req.body || {}) as {
     topic?: string;
     hskLevel?: number;

@@ -1,5 +1,6 @@
 // Web Speech API 封装：TTS（朗读，可调速）+ ASR（语音识别，浏览器兜底）。
 // 全部能力检测 + 优雅降级——不支持时返回 false / 回调 error，页面给打字兜底。
+import { authHeaders } from './api';
 
 // ---------- TTS 朗读 ----------
 export function ttsSupported(): boolean {
@@ -174,11 +175,13 @@ export async function speakRemote(text: string, opts: RemoteOpts = {}): Promise<
   try {
     const res = await fetch('/api/tts', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: authHeaders({ 'Content-Type': 'application/json' }),
       body: JSON.stringify({ text, voiceId: opts.voiceId, edgeVoice: opts.edgeVoice, lang: opts.lang, speed: opts.speed, pitch: opts.pitch }),
     });
     if (res.status !== 200) {
-      remoteOk = false;
+      // 401（未登录）/429（限流）都只是这次拿不到真人语音，回退浏览器 TTS 即可；
+      // 但不要像「后端没配语音」那样永久缓存跳过——登录或限流窗口过后应当重试。
+      if (res.status !== 401 && res.status !== 429) remoteOk = false;
       return false;
     }
     const blob = await res.blob();

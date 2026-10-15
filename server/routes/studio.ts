@@ -1,4 +1,5 @@
 import { Router } from 'express';
+import { aiRateLimit } from '../lib/ratelimit';
 import { chatJSON, hasLLM } from '../llm/deepseek';
 
 // M6：Studio 智能体集群产出。SSE 流式推送「智能体协作 trace」+ 最终双语结构化幻灯内容。
@@ -43,7 +44,7 @@ function mockDoc(taskType: string, topic: string): StudioDoc {
   };
 }
 
-router.post('/studio/generate', async (req, res) => {
+router.post('/studio/generate', aiRateLimit, async (req, res) => {
   const { taskType = 'doc', topic = '', hskLevel = 3 } = (req.body || {}) as { taskType?: string; topic?: string; hskLevel?: number };
   res.setHeader('Content-Type', 'text/event-stream; charset=utf-8');
   res.setHeader('Cache-Control', 'no-cache, no-transform');

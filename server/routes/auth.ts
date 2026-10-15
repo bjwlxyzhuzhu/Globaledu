@@ -2,12 +2,13 @@ import { Router } from 'express';
 import { getDb } from '../db/index';
 import { verifyPassword, signToken, currentUser, hashPassword } from '../lib/auth';
 import { award } from '../lib/points';
+import { ALL_MODULES, parseModules } from './admin';
 
 // 认证路由：学生(学号+密码) / 管理员(账号+密码) 登录、当前用户、心跳计时。
 const router = Router();
 
 type Row = Record<string, unknown>;
-type Stmt = { get: (...a: unknown[]) => Row | undefined; run: (...a: unknown[]) => unknown };
+type Stmt = { get: (...a: unknown[]) => Row | undefined; all: (...a: unknown[]) => Row[]; run: (...a: unknown[]) => unknown };
 
 // 去敏后的用户对象（前端用）
 function userPublic(u: Row) {
@@ -143,6 +144,40 @@ router.post('/auth/change-password', async (req, res) => {
     }
     (db.prepare('UPDATE users SET password_hash = ? WHERE id = ?') as Stmt).run(hashPassword(newPassword), u.uid);
     res.json({ ok: true });
+  } catch (e) {
+    res.status(500).json({ error: (e as Error).message });
+  }
+});
+
+// GET /api/my/modules —— 当前学生可用的学习模块。
+// 规则：取该生所有班级开放模块的并集；任一班级为空数组（＝全部开放）或该生不属于任何班级时，返回全部。
+router.get('/my/modules', async (req, res) => {
+  const u = currentUser(req);
+  if (!u) {
+    res.json({ modules: ALL_MODULES, all: true });
+    return;
+  }
+  try {
+    const db = await getDb();
+    const rows = (db.prepare(
+      `SELECT c.enabled_modules_json AS j FROM class_members m
+       JOIN classes c ON c.id = m.class_id
+       WHERE m.user_id = ?`,
+    ) as Stmt).all(u.uid);
+    if (!rows.length) {
+      res.json({ modules: ALL_MODULES, all: true });
+      return;
+    }
+    const union = new Set<string>();
+    for (const r of rows) {
+      const mods = parseModules(r.j);
+      if (!mods.length) {
+        res.json({ modules: ALL_MODULES, all: true }); // 有班级未做限制 → 全部开放
+        return;
+      }
+      mods.forEach((m) => union.add(m));
+    }
+    res.json({ modules: ALL_MODULES.filter((m) => union.has(m)), all: false });
   } catch (e) {
     res.status(500).json({ error: (e as Error).message });
   }

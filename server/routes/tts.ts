@@ -1,4 +1,5 @@
 import { Router } from 'express';
+import { aiRateLimit } from '../lib/ratelimit';
 import type { Response } from 'express';
 import { synthMiniMax, hasMiniMaxTTS } from '../tts/minimax';
 import { synthEdge } from '../tts/edge';
@@ -28,7 +29,7 @@ router.get('/tts/health', (_req, res) => {
 });
 
 // POST /api/tts —— 文本转语音。MiniMax(有 key)→Edge 免费神经语音→204(前端回退浏览器 TTS)。
-router.post('/tts', async (req, res) => {
+router.post('/tts', aiRateLimit, async (req, res) => {
   const { text, voiceId, edgeVoice, lang, speed, pitch } = (req.body || {}) as {
     text?: string;
     voiceId?: string;

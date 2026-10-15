@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Hud from '../components/Hud';
 import { BackButton } from '../components/MapUI';
 import { api } from '../lib/api';
-import { loadHanziWriter } from '../lib/hanziWriter';
+import { loadHanziWriter, localCharDataLoader } from '../lib/hanziWriter';
 import { useStore } from '../store/useStore';
 import type { HanziItem, HskLevel } from '@shared/types';
 
@@ -61,6 +61,7 @@ export default function HanziChallenge() {
           width: 230,
           height: 230,
           padding: 10,
+          charDataLoader: localCharDataLoader, // 自托管笔顺数据，不再走 jsdelivr
           showCharacter: false,
           showOutline: true,
           showHintAfterMisses: 1,

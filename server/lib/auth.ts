@@ -25,7 +25,34 @@ export function verifyPassword(plain: string, stored: string | null | undefined)
 }
 
 // —— 无状态令牌（HMAC 签名）——
-const SECRET = process.env.AUTH_SECRET || 'huanyu-dev-secret-change-me';
+// 已知的不安全取值：代码内置兜底 + .env.example 里的占位串。
+// 令牌是无状态 HMAC 且自带 role 字段，密钥一旦可猜，任何人都能伪造 teacher 令牌
+// 直通全部 requireAdmin 接口（花名册、成绩、改密码），所以生产必须硬失败而不是继续跑。
+const DEV_SECRET = 'huanyu-dev-secret-change-me';
+const WEAK_SECRETS = new Set([DEV_SECRET, 'please-change-this-to-a-long-random-string', '']);
+
+// 必须**运行时**读 env，不能在模块顶层读：
+// ESM 的 import 会先于 index.ts 的模块体求值，而 .env 是在 index.ts 体内用
+// process.loadEnvFile() 加载的。顶层读取会早于它执行，结果是 .env 里的 AUTH_SECRET
+// 被静默忽略、回落到上面的开发兜底密钥（Docker 部署因为 compose 用 env_file 注入真环境变量
+// 才没暴露这个问题，裸 `pnpm start` 则一直在用可猜的默认密钥签令牌）。
+let secretCache: string | null = null;
+function getSecret(): string {
+  if (secretCache === null) secretCache = process.env.AUTH_SECRET || DEV_SECRET;
+  return secretCache;
+}
+
+/**
+ * 启动自检：在 index.ts 加载完 .env 之后立刻调用。
+ * 生产环境密钥不合格直接拒绝启动，开发环境只告警。
+ */
+export function assertAuthSecret(): void {
+  if (!WEAK_SECRETS.has(getSecret())) return;
+  const msg = 'AUTH_SECRET 未设置或仍是默认占位值——令牌可被任意伪造，请在 .env 填入一个长随机串。';
+  if (process.env.NODE_ENV === 'production') throw new Error(`[auth] ${msg}`);
+  console.warn(`[auth] 警告：${msg}（开发模式暂不阻断）`);
+}
+
 const TOKEN_TTL_MS = 1000 * 60 * 60 * 24 * 30; // 30 天
 
 export interface TokenPayload {
@@ -41,7 +68,7 @@ function unb64url(s: string): string {
   return Buffer.from(s, 'base64url').toString('utf-8');
 }
 function sign(data: string): string {
-  return createHmac('sha256', SECRET).update(data).digest('base64url');
+  return createHmac('sha256', getSecret()).update(data).digest('base64url');
 }
 
 export function signToken(uid: string, role: 'student' | 'teacher'): string {

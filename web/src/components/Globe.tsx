@@ -4,24 +4,38 @@ import type { Country } from '@shared/types';
 import type { GeoJson } from '../lib/api';
 import { tzLabel, centroidLng } from '../lib/tz';
 import { regionColorRgba } from '../lib/regionColor';
+import { flagUrl } from '../lib/flag';
+// 地球贴图改为本地自托管：校园网/WebVPN 下 cdn.jsdelivr.net 不可达，
+// 贴图加载失败又不会抛错，结果是地球渲染成无纹理球体、在星空背景上完全看不见。
+// 走 Vite import 让它们打进 /assets/（该路径已验证能被 WebVPN 正确改写）。
+import earthTexture from '../assets/earth-blue-marble.jpg';
+import earthBump from '../assets/earth-topology.png';
+
+// 天地图影像底图（img_w）+ 上面再叠一层全球境界（ibo_w，国界与南海断续线），色调与站内其他地图一致。没配 key 时退回原来的本地贴图，保证页面照常能打开——但那种情况下不符合标准地图要求。
+import { TDT_KEY, tdtTile as tdt } from '../lib/tianditu';
+export { TIANDITU_APPROVAL, usingTianditu } from '../lib/tianditu';
+const tdtTile = (x: number, y: number, l: number) => tdt('img', x, y, l);
+const tdtBorderTile = (x: number, y: number, l: number) => tdt('ibo', x, y, l);
 
 interface Props {
   countries: Country[]; // 我们有内容/元数据的国家（含中文名）
   geo: GeoJson | null; // 世界各国 GeoJSON（板块）
+  islands?: GeoJson | null; // 南海断续线 + 南海诸岛 + 钓鱼岛（data/geo/cn-islands.json）
+  disputed?: GeoJson | null; // 国际争议地区（data/geo/cn-disputed.json）
   onSelect: (code: string, name: string, tz: string) => void;
   autoRotate?: boolean;
 }
 
 const flagImg = (iso?: string) =>
   iso && iso !== '-99'
-    ? `<img src="https://flagcdn.com/w40/${iso.toLowerCase()}.png" alt="${iso}" style="width:34px;height:auto;border-radius:3px;box-shadow:0 1px 5px rgba(0,0,0,.5)"/>`
+    ? `<img src="${flagUrl(iso, 'w40')}" alt="${iso}" style="width:34px;height:auto;border-radius:3px;box-shadow:0 1px 5px rgba(0,0,0,.5)"/>`
     : '';
 
 // 台湾属于中国：地球上与中国同为金色高亮、联动凸起，此级不单独标注（省份级再出现）。
 const isChina = (code: string) => code === 'CN' || code === 'TW';
 
 // globe.gl 封装：明亮蓝色弹珠（地形地貌）地球 + 各国板块（悬停凸起+边线高亮+国旗中英名+时区）。
-export default function GlobeCanvas({ countries, geo, onSelect, autoRotate = true }: Props) {
+export default function GlobeCanvas({ countries, geo, islands, disputed, onSelect, autoRotate = true }: Props) {
   const ref = useRef<HTMLDivElement>(null);
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const globeRef = useRef<any>(null);
@@ -35,11 +49,11 @@ export default function GlobeCanvas({ countries, geo, onSelect, autoRotate = tru
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const g: any = new (Globe as any)(el, { rendererConfig: { antialias: true, alpha: true } })
       .backgroundColor('rgba(0,0,0,0)') // 透明 → 露出后面的宇宙背景
-      .globeImageUrl('https://cdn.jsdelivr.net/npm/three-globe/example/img/earth-blue-marble.jpg')
-      .bumpImageUrl('https://cdn.jsdelivr.net/npm/three-globe/example/img/earth-topology.png')
+      .globeImageUrl(TDT_KEY ? null : earthTexture)
+      .bumpImageUrl(TDT_KEY ? null : earthBump)
       .showAtmosphere(true)
-      .atmosphereColor('#86c8ff')
-      .atmosphereAltitude(0.22)
+      .atmosphereColor(TDT_KEY ? '#3d9bff' : '#86c8ff')
+      .atmosphereAltitude(TDT_KEY ? 0.28 : 0.22)
       .polygonsTransitionDuration(300);
 
     const resize = () => {
@@ -60,9 +74,74 @@ export default function GlobeCanvas({ countries, geo, onSelect, autoRotate = tru
       /* 控件初始化异常不致命 */
     }
 
+    let boostTimer: ReturnType<typeof setInterval> | undefined;
+    let cleanupBorders: (() => void) | undefined;
+    if (TDT_KEY) {
+      g.globeTileEngineUrl(tdtTile).globeTileEngineMaxLevel(10);
+      // 天地图没有 0 级瓦片；默认分级在常用视距只到 2 级、整球糊成一片，国界与断续线细线会被缩没，
+      // 这里整体提高一级（默认视距 3 级、全球 64 块）。4 级以下是整球一次性全部加载，
+      // 实测 4 级（256 块）、5 级（1024 块）都会被天地图限流返回 429、球面出现空洞，也太耗配额；放大后会按视野加载更高级别。
+      // 瓦片图层挂进场景的时机不固定（onGlobeReady 在瓦片模式下也不触发），所以短轮询找到为止，
+      // 改完立刻按当前相机重算一次层级。
+      let tries = 0;
+      boostTimer = setInterval(() => {
+        let done = false;
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        g.scene().traverse((o: any) => {
+          if (done || !Array.isArray(o.thresholds) || !('minLevel' in o)) return;
+          o.minLevel = 1;
+          o.thresholds = o.thresholds.map((t: number) => t * 2);
+          o.updatePov?.(g.camera());
+          done = true;
+          // 境界层：用同一个瓦片球类再建一层，透明 PNG 叠在影像上。
+          // 瓦片球面是按 5° 一段拼的折面，弦的下垂约为半径的 0.1%；境界层只抬高 0.05% 时两层折面互相穿插，
+          // 转动时界线一闪一闪。抬高 0.3% 稳稳盖过底图，又仍低于国家多边形（海拔 ≥ 1.2%）。
+          // 只挂在图层 1（相机可见、拾取射线默认只查图层 0），不挡国家的悬停与点击。
+          const borders = new o.constructor(g.getGlobeRadius() * 1.003, { tileUrl: tdtBorderTile, minLevel: 1, maxLevel: 10 });
+          borders.thresholds = o.thresholds;
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          const addTile = borders.add.bind(borders);
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          borders.add = (tile: any) => {
+            tile.layers.set(1);
+            tile.material.transparent = true;
+            tile.material.depthWrite = false;
+            // 国家多边形的顶面虽然全透明，仍会写深度；境界层要排在它们之前画，否则被整片挡掉
+            tile.renderOrder = -1;
+            return addTile(tile);
+          };
+          g.camera().layers.enable(1);
+          o.parent.add(borders);
+          // 蓝色调罩层：影像底图偏绿，与后续全蓝色基调的画面不搭。不改底图本身，
+          // 而是在影像与境界层之间罩一层半透明蓝色球壳（类似中国地图页外围的压暗层），界线仍清晰地盖在最上面。
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          const back = borders.children.find((c: any) => c.isMesh);
+          const tint = new back.constructor(
+            new back.geometry.constructor(g.getGlobeRadius() * 1.0015, 180, 90),
+            new back.material.constructor({ color: '#1f7bff', transparent: true, opacity: 0.32, depthWrite: false }),
+          );
+          tint.layers.set(1);
+          tint.renderOrder = -2;
+          o.parent.add(tint);
+          const follow = () => borders.updatePov(g.camera());
+          g.controls().addEventListener('change', follow);
+          follow();
+          cleanupBorders = () => {
+            g.controls().removeEventListener('change', follow);
+            borders.clearTiles?.();
+            borders.parent?.remove(borders);
+            tint.parent?.remove(tint);
+          };
+        });
+        if (done || ++tries > 50) clearInterval(boostTimer);
+      }, 200);
+    }
+
     globeRef.current = g;
     return () => {
       window.removeEventListener('resize', resize);
+      if (boostTimer) clearInterval(boostTimer);
+      cleanupBorders?.();
       try {
         g._destructor?.();
       } catch {
@@ -98,6 +177,11 @@ export default function GlobeCanvas({ countries, geo, onSelect, autoRotate = tru
     const capColor = (f: any, hi: boolean) => {
       const code = iso(f);
       const c = byIso.get(code);
+      // 天地图底图上：中国半透明金色，让底图自带的国界透出来；其它国家平时完全透明、不另画界线
+      if (TDT_KEY) {
+        if (isChina(code)) return hi ? 'rgba(245,197,66,0.6)' : 'rgba(245,197,66,0.42)';
+        return hi ? 'rgba(127,201,255,0.3)' : 'rgba(0,0,0,0)';
+      }
       if (isChina(code)) return hi ? 'rgba(245,197,66,0.95)' : 'rgba(245,197,66,0.72)';
       // 每个国家按名称分配鲜明颜色（与地图省/市一致）；内容国略强
       const nm = (f?.properties?.NAME as string) || code;
@@ -106,12 +190,20 @@ export default function GlobeCanvas({ countries, geo, onSelect, autoRotate = tru
     };
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const strokeColor = (f: any, hi: boolean) => {
+      if (TDT_KEY) return false; // 界线一律以底图为准
       if (hi) return '#fff7d6';
       if (isChina(iso(f))) return 'rgba(245,197,66,0.7)';
       return byIso.get(iso(f)) ? 'rgba(150,200,255,0.75)' : 'rgba(170,190,240,0.4)';
     };
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const label = (f: any) => {
+      if (f?.properties?.kind === 'disputed') {
+        // 规范：地图 UI 弹窗只放地名，不做单方面归属定性
+        return `<div style="background:rgba(8,12,30,.93);border:1px solid rgba(190,196,214,.5);padding:6px 10px;border-radius:10px;color:#e6eaf5;font-size:12px;font-family:'Noto Sans SC',system-ui,sans-serif">
+          <div style="font-weight:700">${f.properties.zh}</div>
+          <div style="font-size:11px;opacity:.75">${f.properties.en}</div>
+        </div>`;
+      }
       const code = iso(f);
       const c = byIso.get(code);
       // 台湾此级并入中国，不单独标注「台湾」
@@ -129,11 +221,40 @@ export default function GlobeCanvas({ countries, geo, onSelect, autoRotate = tru
     };
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const features = (((geo as any)?.features as any[]) || []) as any[];
+    const base = (((geo as any)?.features as any[]) || []) as any[];
+    // 南海诸岛与钓鱼岛并入板块图层：它们带 ISO_A2:'CN'，因此自动与中国同为金色、
+    // 点击同样进省份地图。注意没有并进 world.json 的中国板块本身——前端的
+    // centroidLng/Lat 取顶点平均，700 多个小岛的顶点会把中国质心从华中拖到南海，
+    // 影响相机飞行与标注定位。
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const islandFeats = (((islands as any)?.features as any[]) || []) as any[];
+    const islandPolys = islandFeats.filter((f) => f?.geometry?.type === 'Polygon');
+    // 争议地区：已从各国板块中扣除，这里单独补回来渲染。
+    // 李老师要求「争议不用很明显出来」，因此用低饱和中性色、不发光、不参与悬停凸起。
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const disputedPolys = ((((disputed as any)?.features as any[]) || []) as any[]).filter(
+      (f) => f?.geometry?.type === 'Polygon' || f?.geometry?.type === 'MultiPolygon',
+    );
+    const features = [...base, ...islandPolys, ...disputedPolys];
+    // 天地图底图下其它国家的顶面全透明，却仍要逐帧绘制几百个网格，地球转起来明显变慢（WebVPN 下尤甚）。
+    // 这里把它们设为不可见：three 的拾取射线只看图层、不看 visible，悬停与点击照常；悬停到哪个就临时显示哪个。
+    // 等 globe.gl 下一帧把数据落到网格上之后再改。
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const syncVisible = (h?: any) => {
+      if (!TDT_KEY) return;
+      setTimeout(() => {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        g.scene().traverse((o: any) => {
+          if (o.__globeObjType !== 'polygon' || !o.children[0]) return;
+          const f = o.__data?.data;
+          o.children[0].visible = isChina(iso(f)) || (!!h && f === h);
+        });
+      }, 60);
+    };
     g.polygonsData(features)
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       .polygonCapColor((f: any) => capColor(f, false))
-      .polygonSideColor(() => 'rgba(99,80,200,0.22)')
+      .polygonSideColor(() => (TDT_KEY ? false : 'rgba(99,80,200,0.22)'))
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       .polygonStrokeColor((f: any) => strokeColor(f, false))
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -142,6 +263,7 @@ export default function GlobeCanvas({ countries, geo, onSelect, autoRotate = tru
       // 悬停：板块凸起 + 边线高亮；中国与台湾联动一起凸起
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       .onPolygonHover((h: any) => {
+        syncVisible(h);
         const hCN = h && isChina(iso(h));
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         const lift = (f: any) => (hCN && isChina(iso(f))) || f === h;
@@ -151,11 +273,13 @@ export default function GlobeCanvas({ countries, geo, onSelect, autoRotate = tru
       })
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       .onPolygonClick((f: any) => {
+        if (f?.properties?.kind === 'disputed' || f?.properties?.kind === 'dash') return;
         const code = iso(f);
         if (!code || code === '-99') return;
         const c = byIsoRef.current.get(code);
         onSelectRef.current(code, c?.name_en || f?.properties?.NAME || code, featTz(f));
       });
+    syncVisible();
 
     const content = countries.filter((c) => c.hasContent);
     g.ringsData(content)
@@ -167,7 +291,15 @@ export default function GlobeCanvas({ countries, geo, onSelect, autoRotate = tru
       .ringColor((d: Country) => (t: number) =>
         d.code === 'CN' ? `rgba(245,197,66,${1 - t})` : `rgba(63,210,255,${1 - t})`,
       );
-  }, [geo, countries]);
+  }, [geo, countries, islands, disputed]);
+
+  // 断续线与地名注记均已按要求移除，这里只负责清空这两条图层。
+  useEffect(() => {
+    const g = globeRef.current;
+    if (!g) return;
+    g.pathsData([]);
+    g.htmlElementsData([]);
+  }, [islands, disputed]);
 
   return <div ref={ref} className="w-full h-full" />;
 }
