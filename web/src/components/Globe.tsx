@@ -11,10 +11,11 @@ import { flagUrl } from '../lib/flag';
 import earthTexture from '../assets/earth-blue-marble.jpg';
 import earthBump from '../assets/earth-topology.png';
 
-// 天地图矢量底图（vec_w）。没配 key 时退回原来的本地贴图，保证页面照常能打开——但那种情况下不符合标准地图要求。
+// 天地图影像底图（img_w）+ 上面再叠一层全球境界（ibo_w，国界与南海断续线），色调与站内其他地图一致。没配 key 时退回原来的本地贴图，保证页面照常能打开——但那种情况下不符合标准地图要求。
 import { TDT_KEY, tdtTile as tdt } from '../lib/tianditu';
 export { TIANDITU_APPROVAL, usingTianditu } from '../lib/tianditu';
-const tdtTile = (x: number, y: number, l: number) => tdt('vec', x, y, l);
+const tdtTile = (x: number, y: number, l: number) => tdt('img', x, y, l);
+const tdtBorderTile = (x: number, y: number, l: number) => tdt('ibo', x, y, l);
 
 interface Props {
   countries: Country[]; // 我们有内容/元数据的国家（含中文名）
@@ -74,6 +75,7 @@ export default function GlobeCanvas({ countries, geo, islands, disputed, onSelec
     }
 
     let boostTimer: ReturnType<typeof setInterval> | undefined;
+    let cleanupBorders: (() => void) | undefined;
     if (TDT_KEY) {
       g.globeTileEngineUrl(tdtTile).globeTileEngineMaxLevel(10);
       // 天地图没有 0 级瓦片；默认分级在常用视距只到 2 级、整球糊成一片，国界与断续线细线会被缩没，
@@ -86,12 +88,38 @@ export default function GlobeCanvas({ countries, geo, islands, disputed, onSelec
         let done = false;
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         g.scene().traverse((o: any) => {
-          if (Array.isArray(o.thresholds) && 'minLevel' in o) {
-            o.minLevel = 1;
-            o.thresholds = o.thresholds.map((t: number) => t * 2);
-            o.updatePov?.(g.camera());
-            done = true;
-          }
+          if (done || !Array.isArray(o.thresholds) || !('minLevel' in o)) return;
+          o.minLevel = 1;
+          o.thresholds = o.thresholds.map((t: number) => t * 2);
+          o.updatePov?.(g.camera());
+          done = true;
+          // 境界层：用同一个瓦片球类再建一层，透明 PNG 叠在影像上。
+          // 瓦片球面是按 5° 一段拼的折面，弦的下垂约为半径的 0.1%；境界层只抬高 0.05% 时两层折面互相穿插，
+          // 转动时界线一闪一闪。抬高 0.3% 稳稳盖过底图，又仍低于国家多边形（海拔 ≥ 1.2%）。
+          // 只挂在图层 1（相机可见、拾取射线默认只查图层 0），不挡国家的悬停与点击。
+          const borders = new o.constructor(g.getGlobeRadius() * 1.003, { tileUrl: tdtBorderTile, minLevel: 1, maxLevel: 10 });
+          borders.thresholds = o.thresholds;
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          const addTile = borders.add.bind(borders);
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          borders.add = (tile: any) => {
+            tile.layers.set(1);
+            tile.material.transparent = true;
+            tile.material.depthWrite = false;
+            // 国家多边形的顶面虽然全透明，仍会写深度；境界层要排在它们之前画，否则被整片挡掉
+            tile.renderOrder = -1;
+            return addTile(tile);
+          };
+          g.camera().layers.enable(1);
+          o.parent.add(borders);
+          const follow = () => borders.updatePov(g.camera());
+          g.controls().addEventListener('change', follow);
+          follow();
+          cleanupBorders = () => {
+            g.controls().removeEventListener('change', follow);
+            borders.clearTiles?.();
+            borders.parent?.remove(borders);
+          };
         });
         if (done || ++tries > 50) clearInterval(boostTimer);
       }, 200);
@@ -101,6 +129,7 @@ export default function GlobeCanvas({ countries, geo, islands, disputed, onSelec
     return () => {
       window.removeEventListener('resize', resize);
       if (boostTimer) clearInterval(boostTimer);
+      cleanupBorders?.();
       try {
         g._destructor?.();
       } catch {
@@ -195,10 +224,25 @@ export default function GlobeCanvas({ countries, geo, islands, disputed, onSelec
       (f) => f?.geometry?.type === 'Polygon' || f?.geometry?.type === 'MultiPolygon',
     );
     const features = [...base, ...islandPolys, ...disputedPolys];
+    // 天地图底图下其它国家的顶面全透明，却仍要逐帧绘制几百个网格，地球转起来明显变慢（WebVPN 下尤甚）。
+    // 这里把它们设为不可见：three 的拾取射线只看图层、不看 visible，悬停与点击照常；悬停到哪个就临时显示哪个。
+    // 等 globe.gl 下一帧把数据落到网格上之后再改。
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const syncVisible = (h?: any) => {
+      if (!TDT_KEY) return;
+      setTimeout(() => {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        g.scene().traverse((o: any) => {
+          if (o.__globeObjType !== 'polygon' || !o.children[0]) return;
+          const f = o.__data?.data;
+          o.children[0].visible = isChina(iso(f)) || (!!h && f === h);
+        });
+      }, 60);
+    };
     g.polygonsData(features)
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       .polygonCapColor((f: any) => capColor(f, false))
-      .polygonSideColor(() => (TDT_KEY ? 'rgba(0,0,0,0)' : 'rgba(99,80,200,0.22)'))
+      .polygonSideColor(() => (TDT_KEY ? false : 'rgba(99,80,200,0.22)'))
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       .polygonStrokeColor((f: any) => strokeColor(f, false))
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -207,6 +251,7 @@ export default function GlobeCanvas({ countries, geo, islands, disputed, onSelec
       // 悬停：板块凸起 + 边线高亮；中国与台湾联动一起凸起
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       .onPolygonHover((h: any) => {
+        syncVisible(h);
         const hCN = h && isChina(iso(h));
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         const lift = (f: any) => (hCN && isChina(iso(f))) || f === h;
@@ -222,6 +267,7 @@ export default function GlobeCanvas({ countries, geo, islands, disputed, onSelec
         const c = byIsoRef.current.get(code);
         onSelectRef.current(code, c?.name_en || f?.properties?.NAME || code, featTz(f));
       });
+    syncVisible();
 
     const content = countries.filter((c) => c.hasContent);
     g.ringsData(content)
