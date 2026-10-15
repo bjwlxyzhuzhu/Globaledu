@@ -223,7 +223,7 @@ export default function CityHub() {
             geojson={geoFeature}
             capital={capital || undefined}
             onCapitalClick={() => setChat({ title: `${capitalName || info?.zh || ''}（首都）` })}
-            className="mt-5 h-72 w-full rounded-2xl overflow-hidden border border-white/10"
+            className="mt-5 h-[60vh] min-h-[22rem] w-full rounded-2xl overflow-hidden border border-white/10"
           />
         )}
 

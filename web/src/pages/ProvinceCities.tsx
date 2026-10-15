@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import Hud from '../components/Hud';
 import { BackButton } from '../components/MapUI';
 import { loadLeaflet } from '../lib/leaflet';
+import { TIANDITU_APPROVAL, addBaseLayers, usingTianditu } from '../lib/tianditu';
 import { maskOutside, redDot } from '../lib/mapFocus';
 import { centroidLat, centroidLng } from '../lib/tz';
 import { CITY_EN, PROVINCE_CAPITAL } from '../lib/cnRegions';
@@ -39,10 +40,9 @@ export default function ProvinceCities() {
         }
         setMeta(m);
         if (!elRef.current) return;
-        map = L.map(elRef.current, { center: [34, 108], zoom: 6, minZoom: 4, maxZoom: 10, zoomControl: false, attributionControl: true });
+        map = L.map(elRef.current, { center: [34, 108], zoom: 6, minZoom: 4, maxZoom: 10, zoomControl: false, attributionControl: !usingTianditu });
         L.control.zoom({ position: 'bottomleft' }).addTo(map);
-        L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', { maxZoom: 18, attribution: 'Esri World Imagery' }).addTo(map);
-        L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Elevation/World_Hillshade/MapServer/tile/{z}/{y}/{x}', { maxZoom: 18, opacity: 0.22 }).addTo(map);
+        addBaseLayers(L, map);
 
         const [geo, cs] = await Promise.all([api.geo(province), api.cities(province)]);
         if (!alive) return;
@@ -121,6 +121,11 @@ export default function ProvinceCities() {
       </div>
       <div ref={elRef} className="absolute inset-0 z-0" />
       <div className="absolute inset-0 z-[400] pointer-events-none" style={{ boxShadow: 'inset 0 0 200px 60px rgba(5,6,15,0.8)' }} />
+      {usingTianditu && (
+        <div className="absolute bottom-3 right-3 z-[600] glass rounded-lg px-3 py-1.5 text-[11px] text-white/85 pointer-events-none">
+          审图号：{TIANDITU_APPROVAL} · 底图来源：天地图
+        </div>
+      )}
     </motion.div>
   );
 }

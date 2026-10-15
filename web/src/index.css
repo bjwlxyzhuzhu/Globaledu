@@ -80,3 +80,9 @@ body {
 .leaflet-tooltip.hyxq-tip::before {
   display: none;
 }
+
+/* 中国地图页「标准地图」模式：原图白底，加圆角与淡青光晕，和深色页面过渡得柔和些（不改图内容） */
+.hyxq-stdmap {
+  border-radius: 10px;
+  box-shadow: 0 0 0 1px rgba(127, 201, 255, 0.35), 0 0 60px rgba(63, 210, 255, 0.18);
+}

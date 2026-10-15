@@ -11,14 +11,10 @@ import { flagUrl } from '../lib/flag';
 import earthTexture from '../assets/earth-blue-marble.jpg';
 import earthBump from '../assets/earth-topology.png';
 
-// 天地图（国家地理信息公共服务平台，自然资源部主办）矢量底图，带国界与南海断续线，审图号见 TIANDITU_APPROVAL。
-// key 在构建时由 web/.env 的 VITE_TIANDITU_KEY 注入（浏览器端 key，本来就公开，靠控制台的域名白名单限制）。
-// 没配 key 时退回原来的本地贴图，保证页面照常能打开——但那种情况下不符合标准地图要求。
-const TDT_KEY = (import.meta.env.VITE_TIANDITU_KEY as string | undefined)?.trim();
-export const TIANDITU_APPROVAL = 'GS（2026）4921号';
-export const usingTianditu = !!TDT_KEY;
-const tdtTile = (x: number, y: number, l: number) =>
-  `https://t${(x + y) % 8}.tianditu.gov.cn/DataServer?T=vec_w&x=${x}&y=${y}&l=${l}&tk=${TDT_KEY}`;
+// 天地图矢量底图（vec_w）。没配 key 时退回原来的本地贴图，保证页面照常能打开——但那种情况下不符合标准地图要求。
+import { TDT_KEY, tdtTile as tdt } from '../lib/tianditu';
+export { TIANDITU_APPROVAL, usingTianditu } from '../lib/tianditu';
+const tdtTile = (x: number, y: number, l: number) => tdt('vec', x, y, l);
 
 interface Props {
   countries: Country[]; // 我们有内容/元数据的国家（含中文名）
